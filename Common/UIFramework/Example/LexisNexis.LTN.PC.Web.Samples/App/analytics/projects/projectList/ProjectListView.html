@@ -1,0 +1,31 @@
+﻿<div ln-breadcrumbs breadcrumbs="ProjectListController.breadcrumbs"></div>
+<!-- Page Title -->
+<div class="page-header">
+    <h3>{{ ProjectListController.pagetitle }}</h3>
+</div>
+
+<div class="container-fluid">
+    <!-- Toolbar -->
+    <div class="btn-group btn-group-sm">
+        <a id="addNewProject" ng-href="#/wizard" class="btn btn-default">{{ ProjectListController.localized.NewProject }}</a>
+        <a id="refreshProjectList" ng-click="ProjectListController.refresh()" class="btn btn-default">{{ ProjectListController.localized.Refresh }}</a>
+    </div>
+
+    <!-- Filters -->
+    <div class="row">
+        <div class="col-sm-9">
+            &nbsp;
+        </div>
+        <div class="col-sm-3 text-right">
+            <div class="btn-group">
+                <a class="btn btn-xs btn-default" ng-click="ProjectListController.clear()"><span class="glyphicon glyphicon-ban-circle"></span> {{ ProjectListController.localized.Clear }}</a>
+                <a class="btn btn-xs btn-default" ng-click="ProjectListController.refresh()"><span class="glyphicon glyphicon-refresh"></span>{{ ProjectListController.localized.Refresh }}</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">&nbsp;</div>
+
+    <!-- Grid -->
+    <div kendo-grid k-options="ProjectListController.gridProjectsConfig"></div>
+
+</div>

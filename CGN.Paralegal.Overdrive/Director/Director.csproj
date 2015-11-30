@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F2D5D870-EBE3-4229-BFD8-BD059C4802A0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LexisNexis.Evolution.Overdrive</RootNamespace>
+    <AssemblyName>Director</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost:8080/</PublishUrl>
+    <Install>false</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>LexisNexis.Evolution.Overdrive.Director</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>E770D8B90937B415F95B6E645F1116777ACFE8DF</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>LexisNexis.Evolution.Infrastructure.Director_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\Common\Overdrive\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>..\..\..\CHEV.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>..\..\Common\Overdrive\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>..\..\..\CHEV.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LexisNexis.Evolution.TraceServices">
+      <HintPath>..\..\..\Libraries\TraceServices\LexisNexis.Evolution.TraceServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq, Version=4.1.1309.1617, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libraries\Moq\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Version\SharedAssemblyFileVersion.cs">
+      <Link>Properties\SharedAssemblyFileVersion.cs</Link>
+    </Compile>
+    <Compile Include="ActiveJob.cs" />
+    <Compile Include="App_Resources\Notifications.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Notifications.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ClusterJobWrapper.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Core Services Implementation\DirectorCoreServices.cs" />
+    <Compile Include="Core Services Implementation\DirectorCoreServicesHost.cs" />
+    <Compile Include="Core Services Implementation\IDirectorCoreServices.cs" />
+    <Compile Include="DataAccess.cs" />
+    <Compile Include="Director.cs" />
+    <Compile Include="EVPipelines\Analytics\CategorizeProjectDocumentsPipeline.cs" />
+    <Compile Include="EVPipelines\Analytics\DeleteProjectPipeline.cs" />
+    <Compile Include="EVPipelines\Analytics\IncludeDocumentsPipeline.cs" />
+    <Compile Include="EVPipelines\Analytics\IncludeSubSystemsPipeline.cs" />
+    <Compile Include="EVPipelines\ClassicJobPipeline.cs" />
+    <Compile Include="EVPipelines\EVPipeline.cs" />
+    <Compile Include="EVPipelines\ExportLoadFilePipeline.cs" />
+    <Compile Include="EVPipelines\ImportLawPipeLine.cs" />
+    <Compile Include="EVPipelines\ImportPipeline.cs" />
+    <Compile Include="EVPipelines\LawSyncPipeline.cs" />
+    <Compile Include="EVPipelines\MatterBackupRestorePipeline.cs" />
+    <Compile Include="EVPipelines\NearDuplicationPipeline.cs" />
+    <Compile Include="EVPipelines\PrintPipeline.cs" />
+    <Compile Include="EVPipelines\ProductionPipeline.cs" />
+    <Compile Include="EVPipelines\TestPipeline.cs" />
+    <Compile Include="Host Implementation\ProjectInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Host Implementation\ProjectInstaller.Designer.cs">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobTypePipelineMappingConfigurationHandler.cs" />
+    <Compile Include="MockWebOperationContext.cs" />
+    <Compile Include="NotificationWrapper.cs" />
+    <Compile Include="OverdriveConfigWrapper.cs" />
+    <Compile Include="PipelineBuildOrderConfigurationHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScheduleMonitor\Constants.cs" />
+    <Compile Include="ScheduleMonitor\JobSchedule.cs" />
+    <Compile Include="ScheduleMonitor\JobScheduleDetails.cs" />
+    <Compile Include="ScheduleMonitor\JobScheduleMonitorDAO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App_Resources\Notifications.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Notifications.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Host Implementation\ProjectInstaller.resx">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="Overdrive.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\LexisNexis.Evolution.BusinessEntities\LexisNexis.Evolution.BusinessEntities.csproj">
+      <Project>{871e0448-3406-4e6c-8a75-461ec243af60}</Project>
+      <Name>LexisNexis.Evolution.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LexisNexis.Evolution.Business\LexisNexis.Evolution.Business.csproj">
+      <Project>{001be572-9dea-4927-b1f6-705b7e387bda}</Project>
+      <Name>LexisNexis.Evolution.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LexisNexis.Evolution.External\LexisNexis.Evolution.External.csproj">
+      <Project>{f896a7c3-23a3-4921-98de-9d95581db0e7}</Project>
+      <Name>LexisNexis.Evolution.External</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LexisNexis.Evolution.Infrastructure\LexisNexis.Evolution.Infrastructure.csproj">
+      <Project>{cdf65c13-5ad0-4966-ad9e-108d1ad70d23}</Project>
+      <Name>LexisNexis.Evolution.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LexisNexis.Evolution.Master\LexisNexis.Evolution.Master.csproj">
+      <Project>{a4c80be8-c267-417c-8aa3-f100db8b545c}</Project>
+      <Name>LexisNexis.Evolution.Master</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LexisNexis.Evolution.ServiceContracts\LexisNexis.Evolution.ServiceContracts.csproj">
+      <Project>{45a47ec2-adab-4e1d-b9e4-62ff8d3deeae}</Project>
+      <Name>LexisNexis.Evolution.ServiceContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LexisNexis.Evolution.Services\LexisNexis.Evolution.Services.csproj">
+      <Project>{863c09d9-e943-4876-a354-bc966c66d035}</Project>
+      <Name>LexisNexis.Evolution.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassicJobs\ClassicJobs.csproj">
+      <Project>{114F7547-6600-4C40-8354-67FFC4629E1C}</Project>
+      <Name>ClassicJobs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OverdriveCore\OverdriveCore.csproj">
+      <Project>{1DDE1A5C-9D6D-4E49-AFE9-13F3A935A3BB}</Project>
+      <Name>OverdriveCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,137 @@
+﻿<div class="modal fade in"
+     ng-if="ReviewerDirectiveController.showFinishModal()">
+    <div class="modal-backdrop fade in"></div>
+    <div class="modal-dialog" id="modalDialog">
+        <div class="modal-content" id="modalContent">
+            <div class="modal-header">
+                <h3 class="modal-title"
+                    ng-if="ReviewerDirectiveController.isControlSet()">
+                    {{ ReviewerDirectiveController.localized.ControlSetReviewComplete }}
+                    <span id="closeFinishReviewPopup" class="pull-right"
+                          ng-click="ReviewerDirectiveController.hideFinishModal()">
+                        <i class="glyphicon glyphicon-remove-circle"></i>
+                    </span>
+                </h3>
+                <h3 class="modal-title"
+                    ng-if="ReviewerDirectiveController.isTrainingRoundOneContinued()">
+                    {{ ReviewerDirectiveController.localized.ContinueTraining }}
+                </h3>
+                <h3 class="modal-title"
+                    ng-if="ReviewerDirectiveController.isTrainingSetReviewInProgress() && !ReviewerDirectiveController.isTrainingRoundOneContinued()">
+                    {{ ReviewerDirectiveController.localized.TrainingSetReviewComplete }}
+                    <span class="pull-right"
+                          ng-click="ReviewerDirectiveController.hideFinishModal()">
+                        <i class="glyphicon glyphicon-remove-circle"></i>
+                    </span>
+                </h3>
+                <h3 class="modal-title"
+                    id="reviewComplete"
+                    ng-if="ReviewerDirectiveController.isTrainingSetReviewCompleted()">
+                    {{ ReviewerDirectiveController.localized.TrainingSetReviewComplete }}
+                    <span class="pull-right"
+                          ng-click="ReviewerDirectiveController.hideFinishModal()">
+                        <i class="glyphicon glyphicon-remove-circle"></i>
+                    </span>
+                </h3>
+                <h3 class="modal-title"
+                    ng-if="ReviewerDirectiveController.isQCSet()">
+                    {{ ReviewerDirectiveController.localized.QCSetReviewComplete }}
+                    <span class="pull-right"
+                          ng-click="ReviewerDirectiveController.hideFinishModal()">
+                        <i class="glyphicon glyphicon-remove-circle"></i>
+                    </span>
+                </h3>
+
+            </div>
+            <div class="modal-body clearfix">
+                <div class="text-center col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <p ng-if="ReviewerDirectiveController.isControlSet()">
+                        {{ ReviewerDirectiveController.localized.FinishControlText1 }}
+                    </p>
+                    <p ng-if="ReviewerDirectiveController.isTrainingRoundOneContinued()">
+                        {{ ReviewerDirectiveController.localized.ContinueTrainingText }}
+                    </p>
+                    <p ng-if="ReviewerDirectiveController.isTrainingSetReviewInProgress() && !ReviewerDirectiveController.isTrainingRoundOneContinued()">
+                        {{ ReviewerDirectiveController.localized.FinishTrainingRoundText1 }}
+                        {{ReviewerDirectiveController.currentSetRound}}
+                        {{ReviewerDirectiveController.localized.documents}}.
+                    </p>
+                    <p ng-if="ReviewerDirectiveController.isTrainingSetReviewCompleted()">
+                        {{ ReviewerDirectiveController.localized.FinishTrainingSetText1 }}
+                    </p>
+                    <p ng-if="ReviewerDirectiveController.isQCSet()">
+                        {{ ReviewerDirectiveController.localized.FinishQCText1 }}
+                    </p>
+
+                    <p ng-if="!ReviewerDirectiveController.isTrainingRoundOneContinued() && !ReviewerDirectiveController.isControlSet()">
+                        {{ ReviewerDirectiveController.localized.NextStep }} :
+                        <b ng-if="ReviewerDirectiveController.isTrainingSetReviewInProgress()">
+                            {{ReviewerDirectiveController.localized.StartTrainingSetRound}}
+                            {{ReviewerDirectiveController.nextSetRound}}
+                        </b>
+                        <b ng-if="ReviewerDirectiveController.isTrainingSetReviewCompleted()">
+                            {{ReviewerDirectiveController.localized.PredictAll}}
+                        </b>
+                        <b ng-if="ReviewerDirectiveController.isQCSet()">
+                            {{ ReviewerDirectiveController.localized.FinalizeProject }}
+                        </b>
+                        <br ng-if="ReviewerDirectiveController.isTrainingSetReviewCompleted()" />
+                        <span class="text-danger"
+                              ng-if="ReviewerDirectiveController.isTrainingSetReviewCompleted()">
+                            ({{ReviewerDirectiveController.localized.AdminNeedsToStartJob}})
+                        </span>
+                        <br ng-if="ReviewerDirectiveController.isQCSet()" />
+                        <span class="text-danger"
+                              ng-if="ReviewerDirectiveController.isQCSet()">
+                            ({{ReviewerDirectiveController.localized.AdminNeedsToStartJob}})
+                        </span>
+                    </p>
+                    <br />
+                    <p ng-if="!ReviewerDirectiveController.isTrainingRoundOneContinued() && !ReviewerDirectiveController.isControlSet()">{{ ReviewerDirectiveController.localized.NextStepText }}</p>
+                    <p ng-if="ReviewerDirectiveController.isControlSet()">{{ ReviewerDirectiveController.localized.FinishControlText2 }}</p>
+
+                </div>
+                <div class="col-lg-8 col-md-8 col-xs-12 col-sm-12 col-lg-offset-2 col-md-offset-2">
+                    <a href="javascript:void(0)"
+                       class="btn btn-primary btn-block"
+                       ng-click="ReviewerDirectiveController.goToParentDashboard()"
+                       ng-if="ReviewerDirectiveController.isControlSet()">
+                        <b>{{ ReviewerDirectiveController.localized.OK }}</b>
+                    </a>
+                    <a href="javascript:void(0)"
+                       class="btn btn-primary btn-block"
+                       id="continueReviewBtn"
+                       ng-click="ReviewerDirectiveController.continueTraining()"
+                       ng-if="ReviewerDirectiveController.isTrainingSetReviewInProgress() && !ReviewerDirectiveController.isTrainingRoundOneContinued()">
+                        <b>{{ ReviewerDirectiveController.localized.ContinueTrainingSetReview }}</b>
+                    </a>
+                    <a href="javascript:void(0)"
+                       class="btn btn-primary btn-block"
+                       id="finishReview"
+                       ng-click="ReviewerDirectiveController.finishCompleteSetReview()"
+                       ng-if="ReviewerDirectiveController.isTrainingSetReviewCompleted()">
+                        <b>{{ ReviewerDirectiveController.localized.FinishTrainingSetReview }}</b>
+                    </a>
+                    <a href="javascript:void(0)"
+                       class="btn btn-primary btn-block"
+                       id="finishQcSetReview"
+                       ng-click="ReviewerDirectiveController.finishCompleteSetReview()"
+                       ng-if="ReviewerDirectiveController.isQCSet()">
+                        <b>{{ ReviewerDirectiveController.localized.FinishQCSetReview }}</b>
+                    </a>
+                    <a class="pull-right btn btn-primary"
+                       href="javascript:void(0)" ng-if="ReviewerDirectiveController.isTrainingRoundOneContinued()"
+                       ng-click="ReviewerDirectiveController.hideFinishModalAndContinueTrainingReview()">{{ ReviewerDirectiveController.localized.Close }}</a>
+                    <br />
+                    <a class="pull-left btn btn-default"
+                       href="javascript:void(0)" ng-if="!ReviewerDirectiveController.isTrainingRoundOneContinued() && !ReviewerDirectiveController.isControlSet()"
+                       ng-click="ReviewerDirectiveController.goToParentDashboard()">{{ ReviewerDirectiveController.localized.ProjectDashboard }}</a>
+                    <a class="pull-right btn btn-default"
+                       href="javascript:void(0)" id="cancelBtn" ng-if="!ReviewerDirectiveController.isTrainingRoundOneContinued() && !ReviewerDirectiveController.isControlSet()"
+                       ng-click="ReviewerDirectiveController.hideFinishModal()">{{ ReviewerDirectiveController.localized.Cancel }}</a>
+                   </div>
+            </div>
+
+        </div>
+    </div>
+</div>

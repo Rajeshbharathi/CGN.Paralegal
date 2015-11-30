@@ -1,0 +1,257 @@
+﻿<div ng-hide="ProjectWizardController.isLoading">
+    <div ln-breadcrumbs breadcrumbs="ProjectWizardController.breadcrumbs"></div>
+
+    <!-- Page Title -->
+    <div class="page-header">
+        <h1>{{ProjectWizardController.pagetitle}}</h1>
+    </div>
+
+    <div class="container-fluid">
+
+        <div class="">
+            <div class="row">
+                <div class="col-sm-12">
+                    <form name="testform" novalidate>
+                        <tabset class="tabs-left clearfix">
+                            <tab heading="Settings" active="ProjectWizardController.tabs[0].active" select="ProjectWizardController.setTab(0)">
+                                <div class="row" ng-form="settings">
+                                    <div class="col-xs-6">
+                                        <fieldset id="settingsForm">
+                                            <legend>{{ProjectWizardController.localized.ProjectSettings}}</legend>
+                                            <div class="form-group" id="projectName">
+                                                <label class=" control-label" for="txtName">{{ProjectWizardController.localized.Name}}</label>
+                                                <input id="txtName" name="txtName"
+                                                       type="text"
+                                                       class="form-control"
+                                                       ng-model="ProjectWizardController.project.name"
+                                                       ng-model-options="{updateOn:'blur'}"
+                                                       required
+                                                       ng-minlength="2"
+                                                       ng-maxlength="200"
+                                                       ng-pattern="/^[a-zA-Z0-9 -]*$/"
+                                                       ln-input-validation
+                                                       ln-input-validation-async="ProjectWizardController.ProjectNameValidations.async" />
+                                                <div ng-if="settings.txtName.$pending">
+                                                    Checking Username...
+                                                </div>
+                                                <div ng-messages for="settings.txtName.$error" class="help-block text-error">
+                                                    <span ng-message="required">{{ProjectWizardController.localized.NameRequired}}</span>
+                                                    <span ng-message="minlength">{{ProjectWizardController.localized.NameInvalid}}</span>
+                                                    <span ng-message="pattern">{{ProjectWizardController.localized.NameInvalid}}</span>
+                                                    
+                                                    <span ng-message="ProjectNameAvailability">Project with same name already exists</span>
+                                                </div>
+                                                <!--<p class="help-block text-error" ng-if="(ProjectWizardController.submitted || settings.txtName.$dirty) && settings.txtName.$required">{{ProjectWizardController.localized.NameRequired}}</p>-->
+                                                <!--<p class="help-block text-error" ng-if="(ProjectWizardController.submitted || settings.txtName.$dirty) && settings.txtName.$invalid">{{ProjectWizardController.localized.NameInvalid}}</p>-->
+                                            </div>
+                                            <div class="form-group">
+                                                <label class=" control-label" for="txtDescription">{{ProjectWizardController.localized.Description}}</label>
+                                                <textarea class="form-control"
+                                                          ln-input-validation
+                                                          ln-input-validation-patterns="ProjectWizardController.ProjectDescriptionValidations.patterns"
+                                                          ng-model-options="{ updateOn: 'blur' }"
+                                                          ng-model="ProjectWizardController.project.description"
+                                                          name="txtDescription"
+                                                          id="txtDescription"></textarea>
+                                                <div ng-messages for="settings.txtDescription.$error" class="help-block text-error">
+                                                    <span ng-message="whitespace">{{ProjectWizardController.localized.NoWhiteSpaceValidation}}</span>
+                                                    <span ng-message="numeric">{{ProjectWizardController.localized.NumericValidation}}</span>
+                                                    <span ng-message="lowercase">{{ProjectWizardController.localized.LowercaseValidation}}</span>
+                                                    <span ng-message="uppercase">{{ProjectWizardController.localized.UppercaseValidation}}</span>
+                                                    <span ng-message="special">{{ProjectWizardController.localized.SpecialValidation}}</span>
+                                                </div>
+                                            </div>
+                                            <h3>{{ProjectWizardController.localized.DocSourceOptions}}</h3>
+                                            <div class="form-group">
+                                                <div class="">
+                                                    <label class="radio-inline" for="rbAll">
+                                                        <input type="radio" name="docsource" id="rbAll" value="All" ng-model="ProjectWizardController.project.docSource">
+                                                        {{ProjectWizardController.localized.AllDocs}}
+                                                    </label>
+                                                    <label class="radio-inline" for="rbTag">
+                                                        <input type="radio" name="docsource" id="rbTag" value="Tag" ng-model="ProjectWizardController.project.docSource">
+                                                        {{ProjectWizardController.localized.Tag}}
+                                                    </label>
+                                                    <label class="radio-inline" for="rbSavedSearch">
+                                                        <input type="radio" name="docsource" id="rbSavedSearch" value="Saved" ng-model="ProjectWizardController.project.docSource">
+                                                        {{ProjectWizardController.localized.SavedSearch}}
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group rb-options" ng-if="ProjectWizardController.project.docSource == 'Tag'">
+                                                <select id="selTag" name="selTag" class="form-control" ng-model="ProjectWizardController.project.tag">
+                                                    <option ng-repeat="item in ProjectWizardController.tagoptions"
+                                                            value="{{item.value}}"
+                                                            ng-selected="{{item.value == ProjectWizardController.project.tag}}">
+                                                        {{item.text}}
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group rb-options" ng-if="ProjectWizardController.project.docSource == 'Saved'">
+                                                <select id="selSavedSearches" name="selSavedSearches" class="form-control">
+                                                    <option ng-repeat="item in ProjectWizardController.savedsearchoptions"
+                                                            value="{{item.value}}">
+                                                        {{item.text}}
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="checkbox">
+                                                    <label for="checkboxes-0">
+                                                        <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1" ng-model="ProjectWizardController.project.identifyRepeatedContent">
+                                                        {{ProjectWizardController.localized.IdentifyRepeatedContent}}
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <a class="btn btn-primary" validation-submit ng-click="ProjectWizardController.next(settings)">{{ProjectWizardController.localized.Next}}</a>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </tab>
+                            <tab heading="Control" active="ProjectWizardController.tabs[1].active" select="ProjectWizardController.setTab(1)">
+                                <div class="row" ng-form="control">
+                                    <div class="col-xs-6">
+                                        <fieldset id="controlsForm">
+                                            <legend>Control Set</legend>
+                                            <div class="form-group">
+                                                <label class=" control-label" for="selectbasic">{{ProjectWizardController.localized.Confidence}}</label>
+                                                <div>
+                                                    <select id="selConfidence" name="selConfidence" class="form-control" ng-model="ProjectWizardController.project.confidence">
+                                                        <option ng-repeat="item in ProjectWizardController.confidenceoptions"
+                                                                value="{{item.value}}" 
+                                                                ng-selected="{{item.value == ProjectWizardController.project.confidence}}">{{item.text}}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class=" control-label" for="selectbasic">{{ProjectWizardController.localized.MarginOfError}}</label>
+                                                <div>
+                                                    <select id="selMarginOfError" name="selMarginOfError" class="form-control" ng-model="ProjectWizardController.project.marginOfError">
+                                                        <option ng-repeat="item in ProjectWizardController.marginoferrorsoptions"
+                                                                value="{{item.value}}" 
+                                                                ng-selected="{{item.value == ProjectWizardController.project.marginOfError}}">{{item.text}}</option>
+                                                    </select>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div>
+                                                    <label class="checkbox-inline" for="checkboxes-1">
+                                                        <input type="checkbox" name="checkboxes" id="checkboxes-1" value="1" ng-model="ProjectWizardController.project.stratifyByCustodian">
+                                                        {{ProjectWizardController.localized.StratifyByCustodian}}
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group" ng-if="ProjectWizardController.project.stratifyByCustodian">
+                                                <label class=" control-label" for="selectbasic">{{ProjectWizardController.localized.CustodianField}}</label>
+                                                <div>
+                                                    <select id="selCustodianFields" name="selCustodianFields" class="form-control" ng-model="ProjectWizardController.project.custodianField">
+                                                        <option ng-repeat="item in ProjectWizardController.custodianfields"
+                                                                value="{{item.value}}" 
+                                                                ng-selected="{{item.value == ProjectWizardController.project.custodianField}}">{{item.text}}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class=" control-label" for="calculateLimit">{{ProjectWizardController.localized.SampleSize}}</label>
+                                                <div>
+                                                    <span>{{ProjectWizardController.project.sampleSize}}</span>
+                                                    <button id="calculateLimit" name="calculateLimit" type="button" class="btn btn-default btn-sm" ng-click="ProjectWizardController.calculate()">{{ProjectWizardController.localized.Calculate}}</button>
+                                                </div>
+                                            </div>
+                                            <a class="btn btn-default prev" ng-click="ProjectWizardController.back(control)">{{ProjectWizardController.localized.Prev}}</a>
+                                            <a class="btn btn-primary next" ng-click="ProjectWizardController.next(control)">{{ProjectWizardController.localized.Next}}</a>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </tab>
+                            <tab heading="Examples" active="ProjectWizardController.tabs[2].active" select="ProjectWizardController.setTab(2)">
+                                <div class="row" ng-form="examples">
+                                    <div class="col-xs-6">
+                                        <fieldset id="examplesForm">
+                                            <legend>{{ProjectWizardController.localized.ExampleSetOptions}}</legend>
+
+                                            <tabset type="pills">
+                                                <tab heading="{{ProjectWizardController.localized.Recommended}}">
+                                                    <div class="form-group">
+                                                        <div>
+                                                            <label class="checkbox-inline" for="examplelimit-0">
+                                                                <input type="checkbox" name="examplelimit" id="examplelimit-0" value="1" ng-model="ProjectWizardController.project.limitExamples">
+                                                                {{ProjectWizardController.localized.LimitExamples}}
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label" for="numOfExamples">{{ProjectWizardController.localized.NumExamples}}</label>
+                                                        <div>
+                                                            <input id="numOfExamples" name="numOfExamples" type="text" placeholder="" class="form-control input-sm"
+                                                                   ng-model="ProjectWizardController.project.numExamples" required ng-pattern="/^\d+$/">
+                                                        </div>
+                                                    </div>
+                                                </tab>
+                                                <tab heading="{{ProjectWizardController.localized.PreCoded}}"></tab>
+                                            </tabset>
+                                            <a class="btn btn-default prev" ng-click="ProjectWizardController.back(examples)">{{ProjectWizardController.localized.Prev}}</a>
+                                            <a class="btn btn-primary next" ng-click="ProjectWizardController.next(examples)">{{ProjectWizardController.localized.Next}}</a>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </tab>
+                            <tab heading="Summary" active="ProjectWizardController.tabs[3].active" select="ProjectWizardController.setTab(3)">
+                                <div class="row" ng-form="summary">
+                                    <div class="col-xs-6">
+                                        <fieldset id="summaryForm">
+                                            <legend>Summary</legend>
+                                            <div class="form-group">
+                                                <label class=" control-label">{{ProjectWizardController.localized.ProjectName}}</label>
+                                                <div>{{ProjectWizardController.project.name}}</div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class=" control-label">{{ProjectWizardController.localized.Source}}</label>
+                                                <div>
+                                                    {{ProjectWizardController.project.docSource}}
+                                                    <span ng-show="ProjectWizardController.project.docSource == 'Tag'">- {{ProjectWizardController.project.tag}}</span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class=" control-label">{{ProjectWizardController.localized.TotalDocuments}}</label>
+                                                <div>{{ProjectWizardController.totalDocs}}</div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class=" control-label">{{ProjectWizardController.localized.DocumentTextField
+}}</label>
+                                                <div>{{ProjectWizardController.localized.DocumentText}}</div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class=" control-label">{{ProjectWizardController.localized.CrossReferenceField}}</label>
+                                                <div>{{ProjectWizardController.localized.DCN}}</div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class=" control-label">{{ProjectWizardController.localized.CustodianField}}</label>
+                                                <div>{{ProjectWizardController.project.custodianField}}</div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class=" control-label">{{ProjectWizardController.localized.ControlSet}}</label>
+                                                <div>
+                                                    {{ProjectWizardController.project.confidence}}{{ProjectWizardController.localized.PercentConfidence}}<br />
+                                                    {{ProjectWizardController.project.marginOfError}}{{ProjectWizardController.localized.PercentMarginOfError}}<br />
+                                                    <span ng-show="ProjectWizardController.project.stratifyByCustodian">{{ProjectWizardController.localized.StratifybyCustodian}}</span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class=" control-label">{{ProjectWizardController.localized.TrainingSet}}</label>
+                                                <div>{{ProjectWizardController.localized.Recommended}}</div>
+                                            </div>
+                                            <a class="btn btn-default prev" ng-click="ProjectWizardController.back(summary)">{{ProjectWizardController.localized.Prev}}</a>
+                                            <a class="btn btn-success submit" ng-click="ProjectWizardController.save(summary)">{{ProjectWizardController.localized.Finish}}</a>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </tab>
+                        </tabset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

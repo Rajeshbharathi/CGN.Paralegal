@@ -1,0 +1,31 @@
+﻿<div class="panel card">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-xs-4">
+                <h5>{{configInfo.Label}}</h5>
+            </div>
+            <div class="col-xs-8" ng-show="showToggle === true">
+                <i id="listView" class="fa fa-th-list icon-large icon-toggle pull-right" ng-show="viewToggled === false" ng-click="toggleView()"></i>
+                <i id="gridView" class="fa fa-th-large icon-large icon-toggle pull-right" ng-show="viewToggled === true" ng-click="toggleView()"></i>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h5 class="text-muted">{{configInfo.Header}}</h5>
+                <h4>{{configInfo.Headline}}</h4>
+                <br />
+            </div>
+            <div class="col-md-8">
+                <div id="{{item.Type}}" ng-class="item.Data !== 0 ? 'pointerCursor' : ''" ng-repeat="item in configInfo.Items" ng-click="item.Data === 0 || navigate({coding:item.Type})">
+                    <h5><strong id="{{item.Type}}Count">{{item.Data | number:0}} {{item.Text}}</strong><i class="{{item.Icon}} {{item.ClassName}} icon-large pull-right"></i></h5>
+                    <div class="progress progress-custom">
+                        <div class="progress-bar {{item.ClassName}}-background" role="progressbar"
+                             aria-valuenow="{{item.Percent}}" aria-valuemin="0" aria-valuemax="100" ng-style="{ 'width' : item.Width}">
+                            <span class="sr-only">{{item.Percent}} Percent {{item.Text}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

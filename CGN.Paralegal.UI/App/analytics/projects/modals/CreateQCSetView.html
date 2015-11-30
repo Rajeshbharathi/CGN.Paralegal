@@ -1,0 +1,148 @@
+﻿<div ln-modal="TrainingSetController.modals.qcset"
+     ln-modal-title="{{ TrainingSetController.localized.CreateVerificationsSet }}"
+     ln-modal-on-confirm="TrainingSetController.createQCSet()"
+     ln-modal-validate-confirm="TrainingSetController.EnableQCSetModalConfirm"
+     ln-modal-confirm-label="{{TrainingSetController.localized.Create}}">
+
+    <b>{{TrainingSetController.localized.VerificationSetOptions}}</b>
+    <p>{{TrainingSetController.localized.VerificationSetOptionsText}}</p>
+
+    <div class="form" ng-form="TrainingSetController.qcSetForm" novalidate>
+        <fieldset>
+            <p ng-show="TrainingSetController.ShowQcSetPrerequisiteErrorMessage"
+               class="text-danger">
+                {{TrainingSetController.localized.ErrorPredictionNotCategorized}}
+            </p>
+            <div class="form-group form-inline">
+                <h5 class="content-title alert-info">{{ TrainingSetController.localized.SetName }}</h5>
+                <div class="form-group col-lg-12">
+                    <label class="col-sm-5" for="qcSetName">{{TrainingSetController.localized.VerificationSetName}} : </label>
+                    <div class="col-sm-7">
+                        <input type="text" name="qcSetName" id="qcSetName"
+                               ng-model="TrainingSetController.qcSetOptions.Name"
+                               class="form-control" />
+                    </div>
+                    <br />
+                    <p ng-if="TrainingSetController.qcSetNameInvalid"
+                       class="text-danger">
+                        {{TrainingSetController.localized.QCSetNameInvalid}}
+                    </p>
+                </div>
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+            <div class="form-group">
+                <h5 class="content-title alert-info">{{ TrainingSetController.localized.Type }}</h5>
+                <p class="col-lg-12">{{TrainingSetController.localized.VerificationSetTypeText}}</p>
+                <div class="form-group col-lg-12">
+                    <div class="radio">
+                        <label>
+                            <input type="radio"
+                                   ng-model="TrainingSetController.qcSetOptions.Type"
+                                   name="RelevantNotRelevant"
+                                   id="RelevantNotRelevant"
+                                   ng-value="'RelevantNotRelevant'">
+                            {{TrainingSetController.localized.BothRelevantAndNotRelevant}}
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group  col-lg-12">
+                    <div class="radio disabled">
+                        <label>
+                            <input type="radio"
+                                   ng-model="TrainingSetController.qcSetOptions.Type"
+                                   name="OnlyNotRelevant"
+                                   id="OnlyNotRelevant"
+                                   disabled="disabled"
+                                   ng-value="'OnlyNotRelevant'">
+                            {{TrainingSetController.localized.OnlyNotRelevant}}
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+
+        </fieldset>
+
+
+        <fieldset>
+            <h5 class="content-title alert-info">{{ TrainingSetController.localized.SamplingOptions }}</h5>
+            <div class="form-group col-lg-12">
+                <div class="radio">
+                    <label>
+                        <input type="radio"
+                               ng-model="TrainingSetController.qcSetOptions.SamplingOptions"
+                               name="StatisticalSample"
+                               id="StatisticalSample"
+                               ng-change="TrainingSetController.resetSamplingOptions()"
+                               ng-value="'Statistical'">
+                        {{TrainingSetController.localized.StatisticalSample}}
+                    </label>
+                </div>
+                <div class="col-lg-12" ng-if="TrainingSetController.isStatisticalOptionsSelected()">
+                    <label class="col-sm-5" for="qcSetConfidenceSelect">{{ TrainingSetController.localized.ConfidenceLevel }} :</label>
+                    <p class="col-sm-7">
+                        <select id="qcSetConfidenceSelect"
+                                kendo-drop-down-list=""
+                                k-data-source="TrainingSetController.confidences"
+                                k-data-value-field="'name'"
+                                k-data-text-field="'value'"
+                                k-on-data-bound="TrainingSetController.setDefaultConfidence(kendoEvent)"
+                                k-on-select="TrainingSetController.setSelectedConfidence(kendoEvent)"></select>
+                    </p>
+                    <label class="col-sm-5" for="qcSetErrorMarginSelect">{{ TrainingSetController.localized.MarginOfError }} :</label>
+                    <p class="col-sm-7">
+                        <select id="qcSetErrorMarginSelect"
+                                kendo-drop-down-list=""
+                                k-data-source="TrainingSetController.errorMargins"
+                                k-data-value-field="'name'"
+                                k-data-text-field="'value'"
+                                k-on-data-bound="TrainingSetController.setDefaultMargin(kendoEvent)"
+                                k-on-select="TrainingSetController.setSelectedMargin(kendoEvent)"></select>
+                    </p>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+
+            <div class="form-group form-inline col-lg-12">
+
+                <div class="radio">
+                    <label>
+                        <input type="radio"
+                               ng-model="TrainingSetController.qcSetOptions.SamplingOptions"
+                               name="FixedSize"
+                               id="FixedSize"
+                               ng-value="'FixedSize'"
+                               ng-change="TrainingSetController.resetFixedSize()">
+                        {{TrainingSetController.localized.FixedSize}}
+                    </label>
+                </div>
+
+                <input type="number" name="qcSetSize" id="qcSetSize"
+                       ng-model="TrainingSetController.qcSetOptions.Size"
+                       ng-if="TrainingSetController.isFixedSizeSelected()"
+                       class="form-control" />
+                <br />
+                <p ng-if="TrainingSetController.qcSetSizeInvalid"
+                   class="text-danger">
+                    {{TrainingSetController.qcSetSizeErrorMessage}}
+                </p>
+
+            </div>
+        </fieldset>
+        <fieldset ng-if="TrainingSetController.isStatisticalOptionsSelected()">
+            <h5 class="content-title alert-info">{{ TrainingSetController.localized.SampleSize }}</h5>
+
+            <p class="col-lg-12">
+                <span>{{TrainingSetController.localized.NumberOfDocumentsInVerificationSet}} : </span>
+                <span ng-if="TrainingSetController.isLoading">{{TrainingSetController.localized.Calculating}}</span>
+                <b class="large"> {{TrainingSetController.sampleSize | number}}</b>
+                <span ng-if="TrainingSetController.sampleSizeError">{{TrainingSetController.localized.NotAvailable}}</span>
+            </p>
+        </fieldset>
+    </div>
+</div>
+

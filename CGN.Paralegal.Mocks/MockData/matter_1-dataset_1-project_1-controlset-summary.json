@@ -1,0 +1,21 @@
+﻿{  
+   "CreatedBy":null,
+   "CreatedDate":null,
+   "DatasetId":1,
+   "MatterId":1,
+   "ModifiedBy":null,
+   "ModifiedDate":null,
+   "Name":null,
+   "NumberOfNotCodedDocuments":10,
+   "NumberOfNotRelevantDocuments":0,
+   "NumberOfRelevantDocuments":0,
+   "ProjectId":1,
+   "TotalDocuments":10,
+   "ConfidenceLevel":95,
+   "CustodianFieldId":0,
+   "EstimatedTotalDocuments":21,
+   "IsStratifyByCustodian":false,
+   "MarginOfError":2.5,
+   "PercentageOfTotalPopulation":70,
+   "SampleSize":1537
+}

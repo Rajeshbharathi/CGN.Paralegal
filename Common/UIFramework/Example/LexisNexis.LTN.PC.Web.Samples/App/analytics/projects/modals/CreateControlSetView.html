@@ -1,0 +1,43 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title">{{ CreateControlSetController.localized.ModalTitle }}</h3>
+</div>
+<div class="modal-body">
+    <div class="alert alert-warning" role="alert">{{ CreateControlSetController.localized.WarningMessage }}</div>
+    <div class="form-horizontal" ng-form="control">
+        <fieldset>
+            <div class="form-group">
+                <label class=" control-label col-sm-3" for="selConfidence">{{ CreateControlSetController.localized.Confidence }}</label>
+                <div class="col-sm-9">
+                    <select id="selConfidence" name="selConfidence" ng-model="CreateControlSetController.confidenceSelected" class="form-control"
+                            ng-options="item.name for item in CreateControlSetController.confidences" required class="form-control"></select>
+                    <p class="help-block text-danger" ng-show="(CreateControlSetController.submitted || control.selConfidence.$dirty) && control.selConfidence.$invalid">
+                        {{ CreateControlSetController.localized.ConfidenceValidationMessage }}
+                    </p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class=" control-label col-sm-3" for="selMarginOfError">{{ CreateControlSetController.localized.MarginError }}</label>
+                <div class="col-sm-9">
+                    <select id="selMarginOfError" name="selMarginOfError" ng-model="CreateControlSetController.errorMarginSelected" class="form-control"
+                            ng-options="item.name for item in CreateControlSetController.errorMargins" required class="form-control"></select>
+                    <p class="help-block text-danger" ng-show="(CreateControlSetController.submitted || control.selMarginOfError.$dirty) && control.selMarginOfError.$invalid">
+                        {{ CreateControlSetController.localized.MarginErrorValidationMessage }}
+                    </p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3">{{ CreateControlSetController.localized.SampleSize }}</label>
+                <div class="col-sm-9">
+                    <span> {{ CreateControlSetController.sampleSize }}</span>
+                    <button ng-click="CreateControlSetController.calculateSampleSize(control)" class="btn btn-default btn-sm">{{ CreateControlSetController.localized.Calculate }}</button>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-default" ng-click="CreateControlSetController.cancel()">{{ CreateControlSetController.localized.Cancel }}</button>
+    <button class="btn btn-primary" ng-click="CreateControlSetController.ok(control)">{{ CreateControlSetController.localized.OK }}</button>
+</div>
+

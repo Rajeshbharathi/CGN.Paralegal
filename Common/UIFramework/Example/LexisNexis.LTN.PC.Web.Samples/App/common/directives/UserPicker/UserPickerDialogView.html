@@ -1,0 +1,19 @@
+﻿<div class="modal-header">
+    <h4 class="modal-title">{{ UserPickerDialogController.title }}</h4>
+</div>
+<div class="modal-body">
+    <div class="container-fluid">
+        <div class="form-group">
+            <input type="text" ng-model="UserPickerDialogController.filterText" />           
+            <a class="btn btn-primary" ng-click="UserPickerDialogController.filternode()">{{ UserPickerDialogController.localized.Filter }}</a> 
+            <a class="btn btn-default" ng-click="UserPickerDialogController.reset()">{{ UserPickerDialogController.localized.Reset }}</a> 
+        </div>
+        <div class="table-bordered">
+            <div kendo-tree-view="treeWidget" k-data-source="UserPickerDialogController.treeData" k-options="UserPickerDialogController.treeOptions"></div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-default" ng-click="UserPickerDialogController.cancel()">{{ UserPickerDialogController.localized.Cancel }}</button>
+    <button class="btn btn-primary" ng-click="UserPickerDialogController.ok()">{{ UserPickerDialogController.localized.Ok }}</button>
+</div>

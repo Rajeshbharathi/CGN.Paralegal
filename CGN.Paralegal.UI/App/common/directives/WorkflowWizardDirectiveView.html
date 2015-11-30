@@ -1,0 +1,198 @@
+﻿<div class='wizard'>
+    <div class="btn-group btn-group-justified">
+        <span class="state btn"
+              ng-class="{'btn-warning':isCurrent(state),
+              'btn-success':isCompleted(state,module),
+              'btn-default':isPending(state,module)}"
+              ng-repeat="state in workflowStates | orderBy : 'Order' : false">
+            {{::state.label}}<span class="chevron"></span>
+        </span>
+    </div>
+    <br />
+    <div class="row clearfix" ng-repeat="state in workflowStates | filter:isStateCurrent">
+        <div class="col-sm-12 col-xs-12">
+            <div class="col-sm-2 col-xs-2"></div>
+            <div class="col-sm-8 col-xs-8">
+                <div class="row clearfix" ng-if="!reviewMode">
+                    <div class="col-sm-6 col-xs-6">
+                        <b>{{::localized.CurrentStatus}}</b><br />
+                        <span>{{::getCurrentActionLabel(state,module)}}</span><br />
+                        <b ng-if="isCurrentActionCompleted(state)">
+                            <em class="text-success">{{::localized.Completed}}</em>
+                        </b>
+                        <b ng-if="isCurrentActionInProgress(state)">
+                            <em class="text-info">{{::localized.InProgress}}</em>
+                        </b>
+                    </div>
+                    <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6">
+                        <b ng-if="!reviewMode">{{::localized.NextStep}}</b><br />
+                        <span ng-if="!showWorkflowChangeDropdown()">
+                            {{::getNextActionLabel(state,module)}}
+                        </span>
+                        <p ng-if="showWorkflowChangeDropdown()">
+                            <select kendo-drop-down-list="lnDropdown"
+                                    k-data-source="nextStateLabels"
+                                    k-data-value-field="'Name'"
+                                    k-data-text-field="'adminActionLabel'"
+                                    k-value-primitive="false"
+                                    k-option-label="dropdownSelectLabel"
+                                    k-on-change="state.select()"
+                                    k-on-select="setSelectedState(kendoEvent)"
+                                    k-rebind="refreshDropdown()"></select>
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="row clearfix" ng-if="reviewMode">
+                    <div class="col-sm-4 col-xs-4">
+                        <b>{{::getCurrentActionLabel(state,module)}}</b><br />
+                        <b ng-if="isCurrentActionCompleted(state)">
+                            <em class="text-success">{{::localized.Completed}}</em>
+                        </b>
+                        <b ng-if="isCurrentActionInProgress(state)">
+                            <em class="text-info">{{::localized.InProgress}}</em>
+                        </b>
+                    </div>
+                    <div class="col-sm-4 col-xs-4"
+                         ng-if="isActionInProgress(workflowStates,'ProjectSetup','ReviewStatus')">
+                        <b>{{::getNextActionLabel(state,module)}}</b>
+                        <br />
+                        <span>
+                            {{::localized.ControlSetNotCreated}}
+                        </span>
+
+                    </div>
+                    <div class="col-sm-4 col-xs-4"
+                         ng-if="!isActionInProgress(workflowStates,state.Name,'ReviewStatus')">
+                        <b>{{::getNextActionLabel(state,module)}}</b>
+                        <br />
+                        <span ng-if="!isActionCompleted(workflowStates,'ControlSet','CreateStatus') && isStateCurrent('ControlSet')">
+                            {{::localized.ControlSetNotCreated}}
+                        </span>
+                        <span ng-if="isActionCompleted(workflowStates,'ControlSet','CreateStatus') && isActionPending(workflowStates,'ControlSet','ReviewStatus') && isStateCurrent('ControlSet')">
+                            {{::localized.ReadyToStart}}
+                        </span>
+                        <span ng-if="isActionCompleted(workflowStates,'ControlSet','ReviewStatus') && isActionPending(workflowStates,'TrainingSet','ReviewStatus') && isStateCurrent('TrainingSet')">
+                            {{::localized.ReadyToStart}}
+                        </span>
+                        <span ng-if="isActionCompleted(workflowStates,'TrainingSet','ReviewStatus') && isStateCurrent('TrainingSet')">
+                            {{::localized.ReadyToStart}}
+                        </span>
+                        <span ng-if="isActionCompleted(workflowStates,'PredictSet','ReviewStatus') && isStateCurrent('PredictSet')">
+                            {{::localized.QCSetNotCreated}}
+                        </span>
+                        <span ng-if="!isActionCompleted(workflowStates,'QcSet','CreateStatus') && isStateCurrent('QcSet')">
+                            {{::localized.QCSetNotCreated}}
+                        </span>
+                        <span ng-if="isActionCompleted(workflowStates,'QcSet','CreateStatus') && isActionPending(workflowStates,'QcSet','ReviewStatus') && isStateCurrent('QcSet')">
+                            {{::localized.ReadyToStart}}
+                        </span>
+                        <span ng-if="isActionCompleted(workflowStates,'QcSet','ReviewStatus') && isActionPending(workflowStates,'Done','CreateStatus') && isStateCurrent('QcSet')">
+                            {{::localized.ReadyToStart}}
+                        </span>
+                    </div>
+                    <div class="col-sm-4 col-xs-4"
+                         ng-if="isActionInProgress(workflowStates,'ControlSet','ReviewStatus') && isStateCurrent('ControlSet')">
+                        {{::docsCompletedPercent}}{{::localized.PercentComplete}}
+                        <br />
+                        {{::docsCodedTotal}} {{::localized.of}} {{::totalDocs}} {{::localized.DocsCoded}}
+                    </div>
+                    <div class="col-sm-4 col-xs-4"
+                         ng-if="isActionInProgress(workflowStates,'TrainingSet','ReviewStatus') && isStateCurrent('TrainingSet')">
+                        {{::localized.Round}} {{currentRoundNumber}}
+                        <br />
+                        <b ng-if="isCurrentActionPending(state)">
+                            <em class="text-success">{{::localized.ReadyToStart}}</em>
+                        </b>
+                        <b ng-if="isCurrentActionInProgress(state)">
+                            <em class="text-info">{{::localized.InProgress}}</em>
+                        </b>
+                    </div>
+                    <div class="col-sm-4 col-xs-4"
+                         ng-if="isActionInProgress(workflowStates,'PredictSet','ReviewStatus') && isStateCurrent('PredictSet')">
+                        <b>{{::localized.BatchJob}}</b>
+                        <br />
+                        {{::localized.ScheduledRunning}}
+                    </div>
+                    <div class="col-sm-4 col-xs-4"
+                         ng-if="isActionInProgress(workflowStates,'QcSet','ReviewStatus') && isStateCurrent('QcSet')">
+                        {{::docsCompletedPercent}}{{::localized.PercentComplete}}
+                        <br />
+                        {{::docsCodedTotal}} {{::localized.of}} {{::totalDocs}} {{::localized.DocsCoded}}
+
+                    </div>
+                    <div class="col-sm-4 col-xs-4">
+                        <b class="text-primary"
+                           ng-if="!isActionCompleted(workflowStates,'ControlSet','CreateStatus')">
+                            <i>{{::localized.AdminNeedsToCreateControlSet}}</i>
+                        </b>
+                        <b class="text-primary"
+                           ng-if="isActionCompleted(workflowStates,'TrainingSet','ReviewStatus') && isActionPending(workflowStates,'PredictSet','ReviewStatus') && isStateCurrent('TrainingSet')">
+                            <i>{{::localized.AdminNeedsToStartJob}}</i>
+                        </b>
+                        <b class="text-primary"
+                           ng-if="isActionInProgress(workflowStates,'PredictSet','ReviewStatus') && isStateCurrent('PredictSet')">
+                            <i>{{::localized.WaitTillJobCompleted}}</i>
+                        </b>
+                        <b class="text-primary"
+                           ng-if="isActionCompleted(workflowStates,'PredictSet','ReviewStatus') && isStateCurrent('PredictSet')">
+                            <i>{{::localized.AdminNeedsToCreateQCSet}}</i>
+                        </b>
+                        <b class="text-primary"
+                            ng-if="!isActionCompleted(workflowStates,'QcSet','CreateStatus') && isStateCurrent('QcSet')">
+                            <i>{{::localized.AdminNeedsToCreateQCSet}}</i>
+                        </b>
+                        <b class="text-primary"
+                           ng-if="isActionCompleted(workflowStates,'QcSet','ReviewStatus') && isStateCurrent('QcSet')">
+                            <i>{{::localized.AdminNeedsToFinalizeProject}}</i>
+                        </b>
+                        <span class="btn btn-primary"
+                              ng-click="state.action()"
+                              ng-if="showStartReviewButton(state)">
+                            {{::localized.StartReview}}
+                        </span>
+                        <span class="btn btn-primary"
+                              ng-click="state.action()"
+                              ng-if="showContinueReviewButton(state)">
+                            {{::localized.ContinueReview}}
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2 col-xs-2 col-md-2 col-lg-2"></div>
+        </div>
+        <div class="row clearfix" ng-if="!reviewMode">
+            <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6"></div>
+            <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6">
+                <button type="button"
+                        ng-disabled="!(enableCreateButton(state))"
+                        class="btn btn-primary"
+                        ng-click="state.action()">
+                    {{::localized.Create}}
+                </button>
+                <button type="button"
+                        ng-disabled="!(enableChangeButton(state))"
+                        class="btn btn-primary"
+                        ng-click="state.change()"
+                        ng-if="!showWorkflowChangeDropdown()">
+                    {{::localized.Change}}
+                </button>
+                <button type="button"
+                        ng-disabled="!(enableChangeButton(state))"
+                        class="btn btn-primary"
+                        ng-click="state.change()"
+                        ng-if="showWorkflowChangeDropdown()">
+                    {{::localized.Cancel}}
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <div class="row clearfix">
+        <div class="col-sm-12 col-xs-12">
+
+        </div>
+    </div>
+</div>

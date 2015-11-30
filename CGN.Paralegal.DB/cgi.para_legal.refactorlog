@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="4ae41a33-0321-4acb-94f2-21cb6c533790" ChangeDateTime="11/27/2015 09:19:43">
+    <Property Name="ElementName" Value="[dbo].[Area_of_Law].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Area_of_Law]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="law_id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="56b345e2-8ca2-437f-9682-f9e6ea718b0b" ChangeDateTime="11/27/2015 09:19:58">
+    <Property Name="ElementName" Value="[dbo].[Area_of_Law].[law_id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Area_of_Law]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Law_id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d3468a6e-76f9-47da-80d7-37c70cc5c4ab" ChangeDateTime="11/27/2015 09:22:04">
+    <Property Name="ElementName" Value="[dbo].[Location].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Location]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Location_id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d7019caa-875a-4f94-8b37-78f6df8f694c" ChangeDateTime="11/27/2015 09:23:32">
+    <Property Name="ElementName" Value="[dbo].[Legal_information].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Legal_information]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Legal_information_id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="cd43f6d9-8232-4440-b84f-b18b2a8bc59c" ChangeDateTime="11/27/2015 09:25:06">
+    <Property Name="ElementName" Value="[dbo].[Question].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Question]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Question_id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d552d324-c3de-4bd5-907b-703fc8c22bef" ChangeDateTime="11/27/2015 09:31:58">
+    <Property Name="ElementName" Value="[dbo].[Answer].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Answer]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Answer_id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="fffec1b5-92cc-4b09-b295-90b300a970b2" ChangeDateTime="11/27/2015 09:35:34">
+    <Property Name="ElementName" Value="[dbo].[Para_legal].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Para_legal]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Para_legal_id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="96998702-60ed-4b0e-a8d2-aa69643fec13" ChangeDateTime="11/27/2015 09:36:46">
+    <Property Name="ElementName" Value="[dbo].[Para_Legal_Contact].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Para_Legal_Contact]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Para_legal_Contact_id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ce309a60-55b8-4dbd-830f-529747f921ee" ChangeDateTime="11/27/2015 09:39:12">
+    <Property Name="ElementName" Value="[dbo].[Para_Legal_Law_Area].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Para_Legal_Law_Area]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Para_Legal_Law_Area_id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="44d5583d-e293-4e78-8af8-36b1ea3fb619" ChangeDateTime="11/27/2015 09:43:08">
+    <Property Name="ElementName" Value="[dbo].[Para_Legal_Location].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Para_Legal_Location]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Para_Legal_Location_id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0d3fbdf4-bd07-4c9e-a987-554b7b4fe069" ChangeDateTime="11/27/2015 09:45:52">
+    <Property Name="ElementName" Value="[dbo].[Cases].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Cases]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Case_id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="738e95da-58eb-41b9-b54b-2eb5abe91fc7" ChangeDateTime="11/27/2015 09:46:28">
+    <Property Name="ElementName" Value="[dbo].[Para_legal_cases].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Para_legal_cases]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Para_legal_case_id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="11b11205-51d9-4b5c-83f2-13516e7a61c5" ChangeDateTime="11/27/2015 09:48:50">
+    <Property Name="ElementName" Value="[dbo].[Case_Area_of_law].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Case_Area_of_law]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Case_area_of_law_id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="527dc3ab-830b-412c-91f7-40c946789973" ChangeDateTime="11/27/2015 09:52:52">
+    <Property Name="ElementName" Value="[dbo].[Case_location].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Case_location]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="case_location_id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d1f693f1-b0f2-4c48-841a-c250cfd6b020" ChangeDateTime="11/27/2015 09:54:53">
+    <Property Name="ElementName" Value="[dbo].[Law_firm].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Law_firm]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Law_firm_id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="dcc7c623-fb4d-4faa-83ec-91efee701a15" ChangeDateTime="11/27/2015 09:55:37">
+    <Property Name="ElementName" Value="[dbo].[Law_firm_para_legal].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Law_firm_para_legal]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Law_firm_para_legal_id" />
+  </Operation>
+</Operations>

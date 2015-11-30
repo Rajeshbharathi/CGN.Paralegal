@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AdminNeedsToCreateControlSet" xml:space="preserve">
+    <value>Admin Needs To Create Control Set</value>
+  </data>
+  <data name="AdminNeedsToCreateQCSet" xml:space="preserve">
+    <value>Admin Needs To Create QC Set</value>
+  </data>
+  <data name="AdminNeedsToStartJob" xml:space="preserve">
+    <value>Admin Needs To Start Job</value>
+  </data>
+  <data name="AdminNeedsToFinalizeProject" xml:space="preserve">
+    <value>Admin Needs To Finalize Project</value>
+  </data>
+  <data name="BatchJob" xml:space="preserve">
+    <value>Batch Job</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="ContinueReview" xml:space="preserve">
+    <value>Continue Review</value>
+  </data>
+  <data name="Control" xml:space="preserve">
+    <value>Control</value>
+  </data>
+  <data name="ControlSetNotCreated" xml:space="preserve">
+    <value>Control Set Not Created</value>
+  </data>
+  <data name="ControlSetReview" xml:space="preserve">
+    <value>Control Set Review</value>
+  </data>
+  <data name="ControlSetDocuments" xml:space="preserve">
+    <value>Control Set Documents</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="CreateControlSet" xml:space="preserve">
+    <value>Create Control Set</value>
+  </data>
+  <data name="CreateQCSet" xml:space="preserve">
+    <value>Create QC Set</value>
+  </data>
+  <data name="CreateTrainingSet" xml:space="preserve">
+    <value>Create Training Set</value>
+  </data>
+  <data name="CurrentStatus" xml:space="preserve">
+    <value>Current Status</value>
+  </data>
+  <data name="DocsCoded" xml:space="preserve">
+    <value>Docs Coded</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="ExportJobMessage" xml:space="preserve">
+    <value>Export table view documents is scheduled. You will be notified once job is completed</value>
+  </data>
+  <data name="FinalizeProject" xml:space="preserve">
+    <value>Finalize Project</value>
+  </data>
+  <data name="InProgress" xml:space="preserve">
+    <value>In Progress</value>
+  </data>
+  <data name="NewProject" xml:space="preserve">
+    <value>New Project</value>
+  </data>
+  <data name="NextStep" xml:space="preserve">
+    <value>Next Step</value>
+  </data>
+  <data name="PercentComplete" xml:space="preserve">
+    <value>% Complete</value>
+  </data>
+  <data name="Predict" xml:space="preserve">
+    <value>Predict</value>
+  </data>
+  <data name="PredictAll" xml:space="preserve">
+    <value>Predict All</value>
+  </data>
+  <data name="PredictionSetDocuments" xml:space="preserve">
+    <value>Prediction Set Documents</value>
+  </data>
+  <data name="ProjectSetup" xml:space="preserve">
+    <value>Project Setup</value>
+  </data>
+  <data name="ProjectDashboard" xml:space="preserve">
+    <value>Project Dashboard</value>
+  </data>
+  <data name="QC" xml:space="preserve">
+    <value>QC</value>
+  </data>
+  <data name="QCSetDocuments" xml:space="preserve">
+    <value>Verification Set Documents</value>
+  </data>
+  <data name="QCSetNotCreated" xml:space="preserve">
+    <value>QC Set Not Created</value>
+  </data>
+  <data name="QCSetReview" xml:space="preserve">
+    <value>Verification Set Review</value>
+  </data>
+  <data name="ReadyToStart" xml:space="preserve">
+    <value>Ready To Start</value>
+  </data>
+  <data name="ReviewControlSet" xml:space="preserve">
+    <value>Review Control Set</value>
+  </data>
+  <data name="ReviewQCSet" xml:space="preserve">
+    <value>Review QC Set</value>
+  </data>
+  <data name="ReviewTrainingSet" xml:space="preserve">
+    <value>Review Training Set</value>
+  </data>
+  <data name="Round" xml:space="preserve">
+    <value>Round</value>
+  </data>
+  <data name="ScheduledRunning" xml:space="preserve">
+    <value>Scheduled / Running</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="Setup" xml:space="preserve">
+    <value>Setup</value>
+  </data>
+  <data name="SetupProject" xml:space="preserve">
+    <value>Setup Project</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="StartReview" xml:space="preserve">
+    <value>Start Review</value>
+  </data>
+  <data name="TotalItems" xml:space="preserve">
+    <value>Total Items</value>
+  </data>
+  <data name="Train" xml:space="preserve">
+    <value>Train</value>
+  </data>
+  <data name="TrainSystem" xml:space="preserve">
+    <value>Train System</value>
+  </data>
+  <data name="Training" xml:space="preserve">
+    <value>Training</value>
+  </data>
+  <data name="TrainingSet" xml:space="preserve">
+    <value>Training Set</value>
+  </data>
+  <data name="TrainingSetDocuments" xml:space="preserve">
+    <value>Training Set Documents</value>
+  </data>
+  <data name="Set" xml:space="preserve">
+    <value>Set</value>
+  </data>
+  <data name="TrainingSetReview" xml:space="preserve">
+    <value>Training Set Review</value>
+  </data>
+  <data name="UnknownError" xml:space="preserve">
+    <value>An unknown error occurred.</value>
+  </data>
+  <data name="ViewDocuments" xml:space="preserve">
+    <value>View Documents</value>
+  </data>
+  <data name="WaitTillJobCompleted" xml:space="preserve">
+    <value>Wait Till Job Is Completed</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>of</value>
+  </data>
+  <data name="MarginofError" xml:space="preserve">
+    <value>Margin of Error +/-</value>
+  </data>
+  <data name="StatisticalConfidence" xml:space="preserve">
+    <value>Statistical Confidence</value>
+  </data>
+  <data name="Documents" xml:space="preserve">
+    <value>Documents</value>
+  </data>
+  <data name="Finish" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="Fixed" xml:space="preserve">
+    <value>Fixed</value>
+  </data>
+  <data name="Percentage" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="AllDocuments" xml:space="preserve">
+    <value>All Documents</value>
+  </data>
+</root>

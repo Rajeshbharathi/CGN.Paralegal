@@ -1,0 +1,104 @@
+﻿<div class="panel-body dashboard-body" ng-init="VerificationSetController.isAdminUser=true">
+    <h3 id="verificationReviewStatus" class="margin-top-0 padding-top-20">{{VerificationSetController.reviewStatus}}</h3>
+    <div>{{VerificationSetController.adminAction}}</div>
+
+    <div class="row">
+        <div class="col-xs-12 pull-left">
+            <button class="btn btn-lg btn-main" id="btnBackToTraining"
+                    ng-hide="!VerificationSetController.isChangeToTrainingAllowed()"
+                    ng-click="VerificationSetController.changeToTraining()">
+                {{VerificationSetController.localized.BackToTraining}}
+            </button>
+            <button class="btn btn-lg btn-main" id="btnFinish"
+                    visible="false"
+                    ng-click="">
+                {{VerificationSetController.localized.Finish}}
+            </button>
+        </div>
+    </div>
+
+    <div class="row equal" ng-if="VerificationSetController.isReviewComplete(true)">
+        <div class="col-xs-12 col-md-6">
+            <div id="pnlStatisticalAnalysis" class="panel card">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h5>{{VerificationSetController.localized.Results}}</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h5 class="text-muted">{{VerificationSetController.localized.VerificationTestResults}}</h5>
+                            <h4>{{VerificationSetController.F1DifferenceMsg}}</h4>
+                        </div>
+                    </div>
+                    <table class="table table-custom">
+                        <thead>
+                            <tr>
+                                <th> </th>
+                                <th>{{VerificationSetController.localized.FinalControlSetTest}}</th>
+                                <th>{{VerificationSetController.localized.FinalVerificationSetTest}}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{VerificationSetController.localized.Recall}}</td>
+                                <td>{{VerificationSetController.currentRecall.value|number:1}}{{VerificationSetController.localized.Percentage}}</td>
+                                <td>{{VerificationSetController.currentQCRecall.value|number:1}}{{VerificationSetController.localized.Percentage}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{VerificationSetController.localized.Precision}}</td>
+                                <td>{{VerificationSetController.currentPrecision.value|number:1}}{{VerificationSetController.localized.Percentage}}</td>
+                                <td>{{VerificationSetController.currentQCPrecision.value|number:1}}{{VerificationSetController.localized.Percentage}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{VerificationSetController.localized.F1}}</td>
+                                <td>{{VerificationSetController.currentF1.value|number:1}}{{VerificationSetController.localized.Percentage}}</td>
+                                <td>{{VerificationSetController.currentQCF1.value|number:1}}{{VerificationSetController.localized.Percentage}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{VerificationSetController.localized.Percentage}} {{VerificationSetController.localized.FalseNegatives}}</td>
+                                <td>{{VerificationSetController.falseNegativesPercent|number:1}}{{VerificationSetController.localized.Percentage}}</td>
+                                <td>{{VerificationSetController.qcFalseNegativesPercent|number:1}}{{VerificationSetController.localized.Percentage}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-md-6 ">
+            <div id="pnlPredictionDiscrepancies" class="panel card">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h5>{{VerificationSetController.localized.PredictionDiscrepancies}}</h5>
+                            <h5 class="text-muted margin-top-20">{{VerificationSetController.localized.DiscrepancyStatistics}}</h5>
+                            <h4>{{VerificationSetController.DiscrepancyStatisticsMsg}}</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div ln-discrepancy-matrix
+                                 ln-discrepancy-matrix-data="VerificationSetController.qcSetDiscrepancies"
+                                 ln-discrepancy-matrix-set="VerificationSetController.selectedQCSet"
+                                 ng-if="VerificationSetController.qcSetDiscrepancies!==null"></div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <ln-coding-summary navigate="VerificationSetController.viewQCDocumentListForAdmin(coding)"
+                               config="VerificationSetController.verificationSummaryConfig"></ln-coding-summary>
+        </div>
+    </div>
+
+    <br />
+
+</div>

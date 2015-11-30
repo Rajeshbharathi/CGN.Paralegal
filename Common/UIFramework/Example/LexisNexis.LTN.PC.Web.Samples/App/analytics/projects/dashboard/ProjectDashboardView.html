@@ -1,0 +1,73 @@
+﻿<div ln-breadcrumbs breadcrumbs="breadcrumbs"></div>
+
+<!-- Page Title -->
+<div class="page-header">
+    <h1>{{ProjectDashboardController.pagetitle}}</h1>
+</div>
+
+<div class="container-fluid">    
+
+    <!-- Toolbar -->
+    <div class="btn-group btn-group-sm m-b">
+        <a class="btn btn-default" ng-click="ProjectDashboardController.showNewControlSetModal()">{{ProjectDashboardController.localized.Control}}</a>
+        <div class="btn-group btn-group-sm">
+            <a class="btn btn-default dropdown-toggle" data-toggle="dropdown">{{ProjectDashboardController.localized.Train}} <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a>{{ProjectDashboardController.localized.NewTrainingSet}}</a></li>
+                <li><a>{{ProjectDashboardController.localized.TuneExamples}}</a></li>
+                <li><a ng-click="showRunAccuracyTestModal()">{{ProjectDashboardController.localized.AccuracyTest}}</a></li>
+            </ul>
+        </div>
+        <a ng-click="showNewPredictionSetModal()" class="btn btn-default">{{ProjectDashboardController.localized.Predict}}</a>
+        <a class="btn btn-default" ng-click="showNewQCSetModal()">{{ProjectDashboardController.localized.QC}}</a>
+        <div class="btn-group btn-group-sm">
+            <a class="btn btn-default dropdown-toggle" data-toggle="dropdown">{{ProjectDashboardController.localized.Reports}} <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a>{{ProjectDashboardController.localized.Accuracy}}</a></li>
+                <li><a>{{ProjectDashboardController.localized.Overturn}}</a></li>
+                <li><a>{{ProjectDashboardController.localized.Summary}}</a></li>
+            </ul>
+        </div>
+        <div class="btn-group btn-group-sm">
+            <a class="btn btn-default dropdown-toggle" ng-disabled="!enablesettings" data-toggle="dropdown">{{ProjectDashboardController.localized.Settings}} <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a>{{ProjectDashboardController.localized.Option1}}</a></li>
+                <li><a>{{ProjectDashboardController.localized.Option2}}</a></li>
+            </ul>
+        </div>
+        <a class="btn btn-default">{{ProjectDashboardController.localized.Documents}}</a>
+    </div>
+    
+    <alert ng-repeat="alert in ProjectDashboardController.alerts" type="{{alert.type}}" close="ProjectDashboardController.closeAlert($index)">{{alert.msg}}</alert>
+
+    <div class="">
+        <div class="row">
+            <div class="col-sm-8">
+                <ln-training-progress></ln-training-progress>
+            </div>
+            <div class="col-sm-4">
+                <tabset>
+                    <tab heading="{{ProjectDashboardController.localized.Details}}">
+                    <div class="tab-pane active" id="details">
+                        <dl>
+                                <dt>{{ProjectDashboardController.localized.SourceDataset}}</dt>
+                                <dd>{{ProjectDashboardController.sourcedataset}}</dd>
+                                <dt>{{ProjectDashboardController.localized.TotalDocuments}}</dt>
+                                <dd>{{ProjectDashboardController.totaldocs}}</dd>
+                                <dt>{{ProjectDashboardController.localized.CrossReferenceField}}</dt>
+                                <dd>{{ProjectDashboardController.crossreffield}}</dd>
+                                <dt>{{ProjectDashboardController.localized.ControlSet}}</dt>
+                            <dd><span ng-bind-html='controlset'></span></dd>
+                                <dt>{{ProjectDashboardController.localized.DatabaseServer}}</dt>
+                                <dd>{{ProjectDashboardController.dbserver}}</dd>
+                                <dt>{{ProjectDashboardController.localized.AnalyticsServer}}</dt>
+                                <dd>{{ProjectDashboardController.analyticsserver}}</dd>
+                        </dl>
+                    </div>
+                    </tab>
+                    <tab heading="{{ProjectDashboardController.localized.Status}}"></tab>
+                </tabset>
+            </div>
+        </div>
+    </div>
+</div>

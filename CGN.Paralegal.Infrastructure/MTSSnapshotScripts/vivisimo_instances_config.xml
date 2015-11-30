@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <errorfilepath>C:\temp</errorfilepath>
+<instances>
+    <instance>
+        <name>localhost</name>
+        <port>8080</port>
+        <admin>lexisnexis</admin>
+        <password>YAue.O2</password>
+    </instance> 
+    <instance>
+        <name>10.215.19.34</name>
+        <port>80</port>
+        <admin>admin</admin>
+        <password>admin</password>
+    </instance>
+</instances>
+</config>

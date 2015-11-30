@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1DDE1A5C-9D6D-4E49-AFE9-13F3A935A3BB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LexisNexis.Evolution.Overdrive</RootNamespace>
+    <AssemblyName>OverdriveCore</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Common\Overdrive\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\..\..\CHEV.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Common\Overdrive\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\..\..\CHEV.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LexisNexis.Evolution.TraceServices, Version=1.1.0.1, Culture=neutral, PublicKeyToken=d18b745a795761b8, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Libraries\TraceServices\LexisNexis.Evolution.TraceServices.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=2.1.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libraries\NLog\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Version\SharedAssemblyFileVersion.cs">
+      <Link>Properties\SharedAssemblyFileVersion.cs</Link>
+    </Compile>
+    <Compile Include="Facade\ConcretePipeFactory.cs" />
+    <Compile Include="Facade\OpenJob.cs" />
+    <Compile Include="Facade\OpenJobs.cs" />
+    <Compile Include="Facade\PipelineTypes.cs" />
+    <Compile Include="Facade\WorkAssignment.cs" />
+    <Compile Include="Facade\WorkerBadge.cs" />
+    <Compile Include="Facade\WorkerMessages\ProblemReport.cs" />
+    <Compile Include="Facade\WorkerMessages\WorkerMessage.cs" />
+    <Compile Include="Facade\WorkerMessages\WorkerStates.cs" />
+    <Compile Include="Facade\PipeMessageEnvelope.cs" />
+    <Compile Include="Facade\IPipe.cs" />
+    <Compile Include="Facade\Pipe.cs" />
+    <Compile Include="Facade\PipeType.cs" />
+    <Compile Include="Facade\RoleTypes.cs" />
+    <Compile Include="Facade\WorkerBase.cs" />
+    <Compile Include="Facade\WorkerMessages\WorkerStatistics.cs" />
+    <Compile Include="Facade\WorkRequest.cs" />
+    <Compile Include="Implementation\AssemblyResolutionCache.cs" />
+    <Compile Include="Implementation\CompressFormatter.cs" />
+    <Compile Include="Implementation\JobSharedData.cs" />
+    <Compile Include="Implementation\NetDataContractFormatAttribute.cs" />
+    <Compile Include="Implementation\OverdriveMessageFormatter.cs" />
+    <Compile Include="Implementation\PipelineSections.cs" />
+    <Compile Include="Implementation\ServiceInstallerEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Implementation\Tree\DTreeBuilder.cs" />
+    <Compile Include="Implementation\Tree\Tree.cs" />
+    <Compile Include="Manager Core Services\IManagerCoreServices.cs" />
+    <Compile Include="Facade\JobInfo.cs" />
+    <Compile Include="Implementation\Transactions.cs" />
+    <Compile Include="Manager Core Services\ManagerCoreServicesClient.cs" />
+    <Compile Include="MSMQ\MessageQueueExtensions.cs" />
+    <Compile Include="MSMQ\MSMQPipeMessage.cs" />
+    <Compile Include="MSMQ\MSMQPipeName.cs" />
+    <Compile Include="MSMQ\MSMQPipe.cs" />
+    <Compile Include="Facade\Pipeline.cs" />
+    <Compile Include="Facade\PipeName.cs" />
+    <Compile Include="Implementation\WorkerBaseImplementation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\LexisNexis.Evolution.BusinessEntities\LexisNexis.Evolution.BusinessEntities.csproj">
+      <Project>{871e0448-3406-4e6c-8a75-461ec243af60}</Project>
+      <Name>LexisNexis.Evolution.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LexisNexis.Evolution.Infrastructure\LexisNexis.Evolution.Infrastructure.csproj">
+      <Project>{cdf65c13-5ad0-4966-ad9e-108d1ad70d23}</Project>
+      <Name>LexisNexis.Evolution.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

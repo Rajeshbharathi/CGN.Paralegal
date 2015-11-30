@@ -1,0 +1,122 @@
+<div class="row no-gutter h-margin-20">
+    <div class="col-sm-5 col-xs-12 col-lg-4 v-margin-10"
+         ng-class="{'pull-right':ReviewerDirectiveController.isLayoutModeLeft(),'pull-left':ReviewerDirectiveController.isLayoutModeRight()}">
+        <h4 class="no-margin"
+            ng-class="{'pull-right':ReviewerDirectiveController.isLayoutModeLeft(),'pull-left':ReviewerDirectiveController.isLayoutModeRight()}">
+            Predicted Set 002 - To Relevant
+        </h4>
+    </div>
+    <div class="col-sm-3 col-xs-6 col-lg-4 v-margin-10"
+         ng-class="{'pull-right':ReviewerDirectiveController.isLayoutModeLeft(),'pull-left':ReviewerDirectiveController.isLayoutModeRight()}">
+        <div class="btn-group">
+            <select kendo-drop-down-list=""
+                    k-data-source="ReviewerDirectiveController.zoomOptions"
+                    k-data-value-field="'key'"
+                    k-data-text-field="'value'"
+                    ng-model="ReviewerDirectiveController.zoomed"
+                    class="btn btn-default btn-select"></select>
+            <span ng-click="ReviewerDirectiveController.resetZoom()"
+                  class="btn btn-default"
+                  ng-disabled="ReviewerDirectiveController.isZoomedDefault()">
+                <i class="glyphicon"
+                   ng-class="{'glyphicon-zoom-out':ReviewerDirectiveController.isZoomedIn(),'glyphicon-zoom-in':!ReviewerDirectiveController.isZoomedIn()}"></i>
+            </span>
+        </div>
+        <div class="btn-group">
+            <span ng-click="ReviewerDirectiveController.swapLayoutMode('MODE_LEFT')"
+                  ng-class="{'btn-primary':ReviewerDirectiveController.isLayoutModeLeft()}"
+                  class="btn btn-default">
+                <i class="glyphicon glyphicon-indent-right"></i>
+            </span>
+            <span ng-click="ReviewerDirectiveController.swapLayoutMode('MODE_RIGHT')"
+                  ng-class="{'btn-primary':ReviewerDirectiveController.isLayoutModeRight()}"
+                  class="btn btn-default">
+                <i class="glyphicon glyphicon-indent-left"></i>
+            </span>
+        </div>
+    </div>
+    <div class="col-sm-4 col-xs-6 col-lg-4 v-margin-10" 
+         ng-class="{'pull-right':ReviewerDirectiveController.isLayoutModeLeft(),'pull-left':ReviewerDirectiveController.isLayoutModeRight()}">
+        <div ln-navigator="ln-navigator" 
+             ln-navigator-update="ReviewerDirectiveController.updateDocument" 
+             ln-navigator-total="ReviewerDirectiveController.totalDocuments"
+             ln-navigator-label="Documents" 
+             ln-navigator-advanced="true" 
+             ln-navigator-reset="ReviewerDirectiveController.resetNavigator" 
+             ng-class="{'pull-left':ReviewerDirectiveController.isLayoutModeLeft(),'pull-right':ReviewerDirectiveController.isLayoutModeRight()}"></div>
+    </div>
+</div>
+<div class="container-fluid skinny">
+    <div ng-if="ReviewerDirectiveController.isLayoutModeRight()" class="document-viewer-wrapper">
+        <div kendo-splitter="lnSplitter" k-options="ReviewerDirectiveController.splitterTabRightOptions">
+            <div class="leftPane viewer">
+                <div class="row v-bordered-top no-gutter no-margin v-padding-10 h-padding-20">
+                    <div class="col-sm-3">
+                        <h4 class="page-title no-margin">{{ReviewerDirectiveController.localized.Document}}</h4>
+                    </div>
+                    <div class="col-sm-5">
+                        <h4 class="page-title no-margin">{{ReviewerDirectiveController.localized.Control}} {{ReviewerDirectiveController.currentDocument.DCN}}</h4>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-lg-4 pull-right">
+                        <div ln-navigator="ln-navigator" 
+                             ln-navigator-update="ReviewerDirectiveController.updateHit" 
+                             ln-navigator-total="ReviewerDirectiveController.totalHits"
+                             ln-navigator-label="Hits" 
+                             ln-navigator-reset="ReviewerDirectiveController.resetHitNavigator" 
+                             class="pull-right"></div>
+                    </div>
+                </div>
+                <div ln-highlighter-data="ReviewerDirectiveController.currentDocument" 
+                     ln-highlighter-index="ReviewerDirectiveController.highlightIndex"
+                     ln-highlighter="" 
+                     ng-class="ReviewerDirectiveController.zoomed" 
+                     class="document-viewer default-zoomed h-padding-20"></div>
+            </div>
+            <div class="rightPane widgets">
+                <div tabset="tabset">
+                    <tab ng-repeat="widget in ReviewerDirectiveController.widgets" heading="{{widget.title}}" active="widget.active">
+                        <div class="vh-padding-5">
+                            <div ng-include="widget.templateUrl"></div>
+                        </div>
+                    </tab>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-if="ReviewerDirectiveController.isLayoutModeLeft()" class="document-viewer-wrapper">
+        <div kendo-splitter="lnSplitter" k-options="ReviewerDirectiveController.splitterTabLeftOptions">
+            <div class="leftContent">
+                <div tabset="tabset">
+                    <tab ng-repeat="widget in ReviewerDirectiveController.widgets" heading="{{widget.title}}" active="widget.active">
+                        <div class="vh-padding-5">
+                            <div ng-include="widget.templateUrl"></div>
+                        </div>
+                    </tab>
+                </div>
+            </div>
+            <div class="rightContent">
+                <div class="row v-bordered-top no-gutter no-margin vh-padding-20">
+                    <div class="col-sm-4">
+                        <h4 class="page-title no-margin">{{ReviewerDirectiveController.localized.Document}}</h4>
+                    </div>
+                    <div class="col-sm-4">
+                        <h4 class="page-title no-margin">{{ReviewerDirectiveController.localized.Control}} {{ReviewerDirectiveController.currentDocument.DCN}}</h4>
+                    </div>
+                    <div class="col-sm-4 col-xs-4 col-lg-4">
+                        <div ln-navigator="ln-navigator" 
+                             ln-navigator-update="ReviewerDirectiveController.updateHit" 
+                             ln-navigator-total="ReviewerDirectiveController.totalHits"
+                             ln-navigator-label="Hits" 
+                             ln-navigator-reset="ReviewerDirectiveController.resetHitNavigator" 
+                             class="pull-right"></div>
+                    </div>
+                </div>
+                <div ln-highlighter-data="ReviewerDirectiveController.currentDocument" 
+                     ln-highlighter-index="ReviewerDirectiveController.highlightIndex"
+                     ln-highlighter="" 
+                     ng-class="ReviewerDirectiveController.zoomed" 
+                     class="document-viewer default-zoomed h-padding-20"></div>
+            </div>
+        </div>
+    </div>
+</div>

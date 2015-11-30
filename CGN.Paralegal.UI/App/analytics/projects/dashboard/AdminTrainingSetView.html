@@ -1,0 +1,178 @@
+﻿<div class="panel-body dashboard-body" ng-init="TrainingSetController.isAdminUser=true">
+    <h3 id="trainingReviewStatus" class="margin-top-0 padding-top-20">{{TrainingSetController.reviewStatus}}</h3>
+    <div>{{TrainingSetController.adminAction}}</div>
+
+    <div class="row">
+        <div class="col-md-8 col-sm-8 col-xs-12 pull-left">
+            <button class="btn btn-lg btn-main" id="finishButton"
+                    ng-hide="!TrainingSetController.isTrainingSetReviewInProgress()"
+                    visible="false"
+                    ng-click="TrainingSetController.changeWorkflow()">
+                {{TrainingSetController.localized.Finish}}
+            </button>
+            <button class="btn btn-lg btn-main" id="runPredictionsBtn"
+                    ng-hide="!TrainingSetController.enableRunPrediction()"
+                    ng-click="TrainingSetController.runPredicton()">
+                {{TrainingSetController.localized.RunPredictions}}
+            </button>
+
+            <button class="btn btn-lg btn-main" id="btnCreateQCSet"
+                    visible="TrainingSetController.enableCreateVerificationSet()"
+                    ng-click="TrainingSetController.showCreateQCSetModal()">
+                {{TrainingSetController.localized.CreateVerificationsSet}}
+            </button>
+        </div>
+    </div>
+
+    <div class="row" id="trainingSummary" ng-init="TrainingSetController.trainingSummaryView='0'">
+        <div class="col-xs-12" ng-if="TrainingSetController.trainingSummaryView=='0'">
+            <ln-coding-summary navigate="TrainingSetController.viewTrainingSetListforAdmin(coding)"
+                                config="TrainingSetController.trainingSetConfig"
+                                toggle-handler="TrainingSetController.toggleListIcon()"
+                                show-toggle="true"></ln-coding-summary>
+
+        </div>
+        <div class="col-xs-12" ng-if="TrainingSetController.trainingSummaryView=='1'">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <h5>{{TrainingSetController.localized.Status}}</h5>
+                        </div>
+                        <div class="col-xs-8">
+                            <i class="fa fa-th-large icon-large icon-toggle pull-right" ng-click="TrainingSetController.toggleListIcon()"></i>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="list-grids list-grids-no-margin"
+                                ng-if="TrainingSetController.showTrainingSummaryGrid()">
+                            <div id="trainingSummaryGrid" kendo-grid="lnTrainingSummaryGrid"
+                                    k-options="TrainingSetController.trainingSetSummaryGridData"
+                                    ng-if="TrainingSetController.showTrainingSummaryGrid()"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin content below this line-->
+    <div class="row clearfix" ng-if="TrainingSetController.hasCompletedTrainingRounds()">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="dashboard-Panel card">
+                <div class="row">
+                    <div>
+                        <div class="col-sm-6 col-xs-6">
+                            <h5> {{TrainingSetController.localized.TrainingTrend}}</h5>
+                        </div>
+                        <div class="col-sm-6 col-xs-6">
+                            <i class="fa fa-th-list icon-large icon-toggle pull-right" id="trainingtrendTableView" ng-click="TrainingSetController.trainingTrendView='1'" ng-if="TrainingSetController.trainingTrendView=='0'"></i>
+                            <i class="fa fa-th-large icon-large icon-toggle pull-right" id="trainingtrendGridView" ng-click="TrainingSetController.trainingTrendView='0'" ng-if="TrainingSetController.trainingTrendView=='1'"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12 center-block"
+                                 ng-if="TrainingSetController.showTrainingTrends()">
+                                <div class="col-sm-12 col-xs-12 center-block"
+                                     ng-if="TrainingSetController.showTrainingTrendsChart()">
+                                    <div class="list-charts"
+                                         ng-if="TrainingSetController.showTrainingTrendsChart()">
+                                        <div kendo-chart="lnTrainingTrendsLineChart"
+                                             id="trainingTrendChart"
+                                             class="chart line-chart"
+                                             k-options="TrainingSetController.trainingTrendsData"
+                                             ng-if="TrainingSetController.showTrainingTrendsChart()"></div>
+                                    </div>
+                                </div>
+                                <div class="list-grids"
+                                     ng-if="TrainingSetController.showTrainingTrendsGrid()">
+                                    <div id="trainingTrendsGrid" kendo-grid="lnTrainingTrendsGrid"
+                                         k-options="TrainingSetController.trainingTrendsGridData"
+                                         ng-if="TrainingSetController.showTrainingTrends()"></div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="dashboard-Panel card">
+                <div class="row">
+                    <div>
+                        <div ng-init="TrainingSetController.predictAheadView = '0'" class="col-sm-6 col-xs-6">
+                            <h5> {{TrainingSetController.localized.PredictAhead}}</h5>
+                        </div>
+                        <div class="col-sm-6 col-xs-6">
+                            <i class="fa fa-th-list icon-large icon-toggle pull-right" id="predictAheadTableView" ng-click="TrainingSetController.predictAheadView='1'" ng-if="TrainingSetController.predictAheadView=='0'"></i>
+                            <i class="fa fa-th-large icon-large icon-toggle pull-right" ng-click="TrainingSetController.predictAheadView='0'" ng-if="TrainingSetController.predictAheadView=='1'"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="panel-body">
+                        <div class="row" ng-if="(TrainingSetController.showTrainingTrends() || TrainingSetController.isTrainingSetReviewNotStarted())">
+                            <div class=" col-md-12 col-sm-12 col-xs-12 center-block"
+                                 ng-if="TrainingSetController.showTrainingDiscrepancies()">
+                                <div class="col-sm-12 col-xs-12 center-block"
+                                     ng-if="TrainingSetController.showRollingAverageChart()">
+                                    <div class="list-charts"
+                                         ng-if="TrainingSetController.showRollingAverageChart()">
+                                        <div kendo-chart="lnRollingAverageChart"
+                                             id="rollingAverageChart"
+                                             class="chart"
+                                             k-options="TrainingSetController.trainingDiscrepanciesData"
+                                             k-rebind="TrainingSetController.trainingDiscrepanciesData"
+                                             ng-if="TrainingSetController.showRollingAverageChart()"></div>
+                                    </div>
+                                </div>
+                                <div class="list-grids"
+                                     ng-if="TrainingSetController.showRollingAverageGrid()">
+                                    <div id="rollingAverageGrid" kendo-grid="lnTrainingTrendsGrid1"
+                                         id="trainingTrendsGrid2"
+                                         k-options="TrainingSetController.trainingDiscrepanciesGridData"
+                                         k-rebind="TrainingSetController.trainingDiscrepanciesGridData"
+                                         ng-if="TrainingSetController.showRollingAverageGrid()"></div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="dashboard-Panel card">
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12">
+                        <h5>{{TrainingSetController.localized.PredictionDiscrepancies}}</h5>
+                    </div>
+                </div>
+                <div>
+                    <div class="panel-body">
+                        <div class="col-sm-12 col-xs-12 center-block"
+                             id="predictDescripanciesTrainingSet"
+                             ng-if="TrainingSetController.showDiscrepancies()">
+                            <div ln-discrepancy-matrix
+                                 ln-discrepancy-matrix-data="TrainingSetController.controlSetdiscrepancies"
+                                 ln-discrepancy-matrix-set="TrainingSetController.controlSetDetails"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div ng-include="'/App/analytics/projects/modals/StartPredictAllView.html'"></div>
+<div ng-include="'/App/analytics/projects/modals/CreateQCSetView.html'"></div>
+<div ng-include="'/App/analytics/projects/modals/ChangeWorkflowStateView.html'"></div>

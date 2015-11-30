@@ -1,0 +1,86 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="LexisNexis.LTN.PC.Web.Samples.SiteMaster" %>
+<!DOCTYPE html>
+<html lang="en">
+    <head runat="server">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title><%: Page.Title %></title>
+        <link href="/Content/css/bootstrap3.2.0/bootstrap.all.min.css" rel="stylesheet" />
+        <link href="/Content/css/site.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <form runat="server" class="mainform">
+            <div class="appDiv">
+                <div class="row no-gutter no-margin module-header">
+                    <div class="col-sm-4 col-xs-4 col-lg-4">
+                        <span class="brand h-padding-20 v-padding-10 pull-left"><span class="brand-highlight">Concordance</span> Evolution</span>
+                    </div>
+                    <div class="col-sm-4 col-xs-5 col-lg-4">
+                        <div class="navbar-collapse borderless skinny">
+                            <ul id="mainNav" class="nav navbar-nav nomargin col-lg-10 col-xs-12 col-sm-12">
+                                <li class="col-sm-4 col-lg-3 col-xs-4 active"><a href="#">Admin</a></li>
+                                <li class="col-xs-4 col-lg-3 col-sm-4 "><a href="/App/review/app.html">Review</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-3 col-lg-4">
+                        <a href="#" class="text-right pull-right h-padding-20 v-padding-15">John Doe</a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="applayout">
+                <div class="sidebar">
+                    <div class="title">System</div>
+                    <div class="sb-content">
+                    <!-- TreeView here -->
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="javascript:loadView('analytics','');">Sample List</a></li>
+                            <li><a href="javascript:loadView('analytics','dashboard');">Sample Dashboard</a></li>
+                            <li><a href="javascript:loadView('analytics','wizard');">Sample Wizard - Add</a></li>
+                            <li><a href="javascript:loadView('analytics','/wizard/1');">Sample Wizard - Edit</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main">
+                    <div class="searchbar middle">
+                        <div class="form-inline">
+                            <div class="input-group input-group-sm col-sm-4 col-xs-4 col-lg-4">
+                                <input type="text" class="form-control input-sm"/>
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" tabindex="-1">
+                                        <span class="glyphicon glyphicon-search"></span>
+                                    </button>
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                        <li><a href="#">Search options...</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Clear</a></li>
+                                    </ul>
+                                </div>
+                            </div>                                                
+                        </div>
+                    </div>
+                    <div class="main-content">
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server"/>                        
+                    </div>
+                </div>
+            </div>
+            <script src="/Content/js/jquery1.10.2/jquery-1.10.2.min.js"></script>
+            <script>
+                function loadView(module, view) {
+                    var iframe = $("[id$='iframe']");
+                    var srcUrl = '/App/' + module + '/app.html';
+                    if (view !== null && view.length > 0) {
+                        srcUrl = srcUrl + "#" + view;
+                    }
+                    iframe.attr('src', srcUrl);
+                    $('#mainNav').find('li').removeClass('active');
+                    $('#mainNav>#' + module + 'Module').addClass('active');
+                }
+        </script>
+        </form>
+    </body>
+</html>

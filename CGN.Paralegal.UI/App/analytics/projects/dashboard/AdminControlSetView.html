@@ -1,0 +1,59 @@
+﻿<div class="panel-body dashboard-body">
+    <h3 id="controlsetStatus" class="margin-top-0 padding-top-20">{{ControlSetController.reviewStatus}}</h3>
+    <div id="actionStatus">{{ControlSetController.adminAction}}</div>
+
+    <div class="row">
+        <div class="col-md-8 col-sm-8 col-xs-12 pull-left">
+            <button ng-disabled="!ControlSetController.enableCreateControlSet"
+                    ng-if="!ControlSetController.isControlSetCreated()"
+                    ng-click="ControlSetController.showCreateControlSetModal()"
+                    class="btn btn-lg btn-main" id="btnCreate1">
+                {{ControlSetController.localized.CreateControlSet }}
+            </button>
+            <button visible="ControlSetController.showCreateTrainingSet()"
+                    ng-click="ControlSetController.createTrainingSet()"
+                    class="btn btn-lg btn-main" id="btnCreateTrainingSet">
+                {{ControlSetController.localized.CreateTrainingSet }}
+            </button>
+        </div>
+    </div>
+    
+    <div class="row" id="pnlControlset">
+        <div class="col-xs-12 col-sm-6" ng-if="ControlSetController.isControlSetReviewComplete()">
+            <div class="panel card">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-8 col-sm-6 col-md-7 col-lg-8">
+                            <h5>{{ControlSetController.localized.Results}}</h5>
+                            <h5 class="text-muted margin-top-20">{{ControlSetController.localized.ControlSetPrevalence}}</h5>
+                            <h4>{{ControlSetController.ControlSetPrevalenceMsg}}</h4>
+                            <h5 class="text-muted margin-top-20">{{ControlSetController.localized.EstimatedRichness}}</h5>
+                            <h4>{{ControlSetController.EstimatedRichnessMsg}}</h4>
+                            <h5 class="no-margin"><small>{{ControlSetController.controlSetDetails.ConfidenceLevel}}{{ControlSetController.localized.Percentage}} {{ControlSetController.localized.ConfidenceLevelLowerCase}}</small></h5>
+                            <h5 class="no-margin"><small>{{ControlSetController.controlSetDetails.MarginOfError}}{{ControlSetController.localized.Percentage}} {{ControlSetController.localized.MarginOfErrorLowerCase}}</small></h5>
+                        </div>
+                        <div class="col-xs-4 col-sm-6 col-md-5 col-lg-4">
+                            <div kendo-chart="lnControlSetRichnessChart"
+                                 id="controlSetRichnessChart"
+                                 k-options="ControlSetController.controlSetRichnessChartData"
+                                 k-rebind="ControlSetController.controlSetRichnessChartData">
+                            </div>
+                            <div class="donut-inner">
+                                <h5>{{ControlSetController.localized.Richness}}</h5>
+                                <h3>{{ControlSetController.controlSetDetails.PercentageOfTotalPopulation|number:1}}{{ControlSetController.localized.Percentage}}</h3>
+                                <h3>{{ControlSetController.controlSetDetails.EstimatedTotalDocuments|number:0}}</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-if="ControlSetController.isControlSetCreated()" ng-class="ControlSetController.isControlSetReviewComplete()? 'col-xs-12 col-sm-6':'col-xs-12'">
+            <ln-coding-summary navigate="ControlSetController.viewDocListForAdmin(coding)" config="ControlSetController.controlsetSummary"></ln-coding-summary>
+        </div>
+    </div>
+
+    <br />
+
+</div>
+<div ng-include="'/App/analytics/projects/modals/CreateControlSetView.html'"></div>

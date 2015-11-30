@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="LexisNexis.Evolution.DocumentExtractionUtilities.EvCorlibManager" Collapsed="true">
+    <Position X="5" Y="4.25" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="LexisNexis.Evolution.DocumentExtractionUtilities.EvCorlibManager.ErrorCodes" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>EvCorlibManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="LexisNexis.Evolution.DocumentExtractionUtilities.EvCorlibManager.Constants" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>EvCorlibManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAIAQCBASChQQAACAAAAAAAgAgCQAAiAAEBQAAAQAA=</HashCode>
+      <FileName>EvCorlibManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LexisNexis.Evolution.DocumentExtractionUtilities.EVCorlibFileProcessorAdapter" Collapsed="true">
+    <Position X="2.5" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAIAAAEARAAAAAAEAAAAAAAAAACAoQAAAAQIAA=</HashCode>
+      <FileName>EVCorlibFileProcessorAdapter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LexisNexis.Evolution.DocumentExtractionUtilities.EvCorlibEntity" Collapsed="true">
+    <Position X="3" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAARAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>EvCorlibEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LexisNexis.Evolution.DocumentExtractionUtilities.LotusNotesAdapater" Collapsed="true">
+    <Position X="9.5" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAIAABAAQAAAAEAMQAAQgAAAAAAQgQAAACAAAQ=</HashCode>
+      <FileName>LotusNotesAdapater.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LexisNexis.Evolution.DocumentExtractionUtilities.OutlookAdapater" Collapsed="true">
+    <Position X="9.5" Y="4.25" Width="2" />
+    <NestedTypes>
+      <Class Name="LexisNexis.Evolution.DocumentExtractionUtilities.OutlookAdapater.ErrorCodes" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>OutlookAdapater.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAQAAAIgABAAQAAAIEAEQAAAgAAAAAAAgQAAACAgAQ=</HashCode>
+      <FileName>OutlookAdapater.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LexisNexis.Evolution.BusinessEntities.DocumentEntity" Collapsed="true">
+    <Position X="1" Y="10.75" Width="3" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="LexisNexis.Evolution.DocumentExtractionUtilities.EmailDocumentEntity" Collapsed="true">
+    <Position X="1" Y="11.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAIAAAAAAIAAAEAAAIAIAAAEAAAAAAAAAAE=</HashCode>
+      <FileName>EmailDocumentEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LexisNexis.Evolution.DocumentExtractionUtilities.OutlookEdrmManager" Collapsed="true">
+    <Position X="0.75" Y="9.5" Width="4.75" />
+    <NestedTypes>
+      <Class Name="LexisNexis.Evolution.DocumentExtractionUtilities.OutlookEdrmManager.OutlookEdrmManagerConstants" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>OutlookEdrmManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="LexisNexis.Evolution.DocumentExtractionUtilities.OutlookEdrmManager.OutlookEdrmManagerErrorCodes" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>OutlookEdrmManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAEAACAAAAAgAAABAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>OutlookEdrmManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LexisNexis.Evolution.DocumentExtractionUtilities.MailProcessorFactory" Collapsed="true">
+    <Position X="7" Y="4.25" Width="2" />
+    <NestedTypes>
+      <Class Name="LexisNexis.Evolution.DocumentExtractionUtilities.MailProcessorFactory.ErrorCodes" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>MailProcessorFactory.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MailProcessorFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LexisNexis.Evolution.DocumentExtractionUtilities.LotusNotesEdrmManager" Collapsed="true">
+    <Position X="6.25" Y="9.5" Width="4.75" />
+    <NestedTypes>
+      <Class Name="LexisNexis.Evolution.DocumentExtractionUtilities.LotusNotesEdrmManager.LotusNotesEdrmManagerConstants" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>LotusNotesEdrmManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="LexisNexis.Evolution.DocumentExtractionUtilities.LotusNotesEdrmManager.LotusNotesEdrmManagerErrorCodes" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>LotusNotesEdrmManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ABAAAgAAAAAAAAAAAAAAAAAQAAgAAAAAAAAAAACAAAI=</HashCode>
+      <FileName>LotusNotesEdrmManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LexisNexis.Evolution.DocumentImportUtilities.EDRMManager" Collapsed="true">
+    <Position X="3.25" Y="5.75" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAFAAAAAAABAAAAEBAAIIEQQQAAACxAhAIAAAY=</HashCode>
+      <FileName>EDRMManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LexisNexis.Evolution.DocumentExtractionUtilities.EmailDocumentManager" Collapsed="true">
+    <Position X="1.75" Y="7.25" Width="7.5" />
+    <NestedTypes>
+      <Class Name="LexisNexis.Evolution.DocumentExtractionUtilities.EmailDocumentManager.Constants" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>EmailDocumentManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="LexisNexis.Evolution.DocumentExtractionUtilities.EmailDocumentManager.EmailDocumentManagerErrorCodes" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>EmailDocumentManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAIAAACABAAAAAIAAAAAAAA=</HashCode>
+      <FileName>EmailDocumentManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LexisNexis.Evolution.DocumentExtractionUtilities.EvDocumentDataEntity" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAKAAAQ=</HashCode>
+      <FileName>EvDocumentDataEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LexisNexis.Evolution.DocumentExtractionUtilities.LotusNotesEMailDocumentEntity" Collapsed="true">
+    <Position X="5.25" Y="14" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAEAAAAAAQAEAQAAAAAAAAAACAA=</HashCode>
+      <FileName>LotusNotesEMailDocumentEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LexisNexis.Evolution.DocumentExtractionUtilities.MailStoresEntity" Collapsed="true">
+    <Position X="8" Y="1.5" Width="2.75" />
+    <AssociationLine Name="EmailType" Type="LexisNexis.Evolution.DocumentExtractionUtilities.EmailType">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.047" Y="0.237" Height="0.182" Width="0.92" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MailStoresEntity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="EmailType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LexisNexis.Evolution.DocumentExtractionUtilities.OutlookEMailDocumentEntity" Collapsed="true">
+    <Position X="0.75" Y="14" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>gAARAAAAAAAABAAAAAEAAAAAAAAAAQAAQAAAAAAAAAA=</HashCode>
+      <FileName>OutlookEMailDocumentEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LexisNexis.Evolution.DocumentExtractionUtilities.ThreadRelationshipEntity" Collapsed="true">
+    <Position X="3" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAgAAAAAAAAAAAAAAAAAQEAAAAAAAAAQ=</HashCode>
+      <FileName>ThreadRelationshipEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LexisNexis.Evolution.DocumentExtractionUtilities.FileProcessorFactory" Collapsed="true">
+    <Position X="0.5" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>FileProcessorFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="LexisNexis.Evolution.DocumentExtractionUtilities.IFileProcessor" Collapsed="true">
+    <Position X="0.5" Y="1.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAEAAAAAAAAAACAAQAAAAAIAA=</HashCode>
+      <FileName>IFileProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LexisNexis.Evolution.DocumentExtractionUtilities.IMailProcessor" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAEAEAAAAgAAAAAAAAQAAAAAAAQ=</HashCode>
+      <FileName>IMailProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="LexisNexis.Evolution.DocumentExtractionUtilities.EmailType" Collapsed="true">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EmailType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

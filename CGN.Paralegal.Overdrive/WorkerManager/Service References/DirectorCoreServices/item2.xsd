@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/LexisNexis.Evolution.Overdrive" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LexisNexis.Evolution.Overdrive" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:2010/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/LexisNexis.Evolution.BusinessEntities" />
+  <xs:import schemaLocation="http://localhost:2010/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="OpenJobs">
+    <xs:sequence>
+      <xs:element name="_x003C_Jobs_x003E_k__BackingField" nillable="true" type="tns:ArrayOfOpenJob" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OpenJobs" nillable="true" type="tns:OpenJobs" />
+  <xs:complexType name="ArrayOfOpenJob">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OpenJob" nillable="true" type="tns:OpenJob" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOpenJob" nillable="true" type="tns:ArrayOfOpenJob" />
+  <xs:complexType name="OpenJob">
+    <xs:sequence>
+      <xs:element name="_x003C_Command_x003E_k__BackingField" type="tns:Command" />
+      <xs:element name="_x003C_PipelineId_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OpenJob" nillable="true" type="tns:OpenJob" />
+  <xs:simpleType name="Command">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Run" />
+      <xs:enumeration value="Pause" />
+      <xs:enumeration value="Cancel" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Command" nillable="true" type="tns:Command" />
+  <xs:complexType name="JobInfo">
+    <xs:sequence>
+      <xs:element name="_x003C_BootParameters_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Command_x003E_k__BackingField" type="tns:Command" />
+      <xs:element name="_x003C_Frequency_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_JobId_x003E_k__BackingField" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/LexisNexis.Evolution.BusinessEntities" name="_x003C_JobParameters_x003E_k__BackingField" nillable="true" type="q1:BaseJobBEO" />
+      <xs:element name="_x003C_JobTypeId_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_NotificationId_x003E_k__BackingField" type="xs:long" />
+      <xs:element name="_x003C_PipelineId_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ScheduleCreatedBy_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ScheduleRunDuration_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_WorkRequests_x003E_k__BackingField" nillable="true" type="tns:ArrayOfWorkRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JobInfo" nillable="true" type="tns:JobInfo" />
+  <xs:complexType name="ArrayOfWorkRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WorkRequest" nillable="true" type="tns:WorkRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWorkRequest" nillable="true" type="tns:ArrayOfWorkRequest" />
+  <xs:complexType name="WorkRequest">
+    <xs:sequence>
+      <xs:element name="_x003C_BootParameters_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_HiringPipeName_x003E_k__BackingField" nillable="true" type="tns:HiringPipeName" />
+      <xs:element name="_x003C_InputDataPipeName_x003E_k__BackingField" nillable="true" type="tns:DataPipeName" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/LexisNexis.Evolution.BusinessEntities" name="_x003C_JobParameters_x003E_k__BackingField" nillable="true" type="q2:BaseJobBEO" />
+      <xs:element name="_x003C_LogDataPipeName_x003E_k__BackingField" nillable="true" type="tns:DataPipeName" />
+      <xs:element name="_x003C_OutputSections_x003E_k__BackingField" nillable="true" type="tns:ArrayOfWorkRequest.OutputSection" />
+      <xs:element name="_x003C_PipelineId_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PipelineType_x003E_k__BackingField" nillable="true" type="tns:PipelineType" />
+      <xs:element name="_x003C_ReportPipeName_x003E_k__BackingField" nillable="true" type="tns:ReportPipeName" />
+      <xs:element name="_x003C_RoleType_x003E_k__BackingField" nillable="true" type="tns:RoleType" />
+      <xs:element name="_x003C_SectionName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_WorkerIsolationLevel_x003E_k__BackingField" type="tns:WorkerIsolationLevel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WorkRequest" nillable="true" type="tns:WorkRequest" />
+  <xs:complexType name="HiringPipeName">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PipeName">
+        <xs:sequence>
+          <xs:element name="_x003C_PipelineId_x003E_k__BackingField" nillable="true" type="xs:string" />
+          <xs:element name="_x003C_SectionName_x003E_k__BackingField" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HiringPipeName" nillable="true" type="tns:HiringPipeName" />
+  <xs:complexType name="PipeName">
+    <xs:sequence>
+      <xs:element name="_x003C_MachineName_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PipeName" nillable="true" type="tns:PipeName" />
+  <xs:complexType name="DataPipeName">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PipeName">
+        <xs:sequence>
+          <xs:element name="_x003C_PipelineId_x003E_k__BackingField" nillable="true" type="xs:string" />
+          <xs:element name="_x003C_PipelineType_x003E_k__BackingField" nillable="true" type="tns:PipelineType" />
+          <xs:element name="_x003C_SectionName_x003E_k__BackingField" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DataPipeName" nillable="true" type="tns:DataPipeName" />
+  <xs:complexType name="PipelineType">
+    <xs:sequence>
+      <xs:element name="_x003C_Moniker_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PipelineType" nillable="true" type="tns:PipelineType" />
+  <xs:complexType name="ArrayOfWorkRequest.OutputSection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WorkRequest.OutputSection" nillable="true" type="tns:WorkRequest.OutputSection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWorkRequest.OutputSection" nillable="true" type="tns:ArrayOfWorkRequest.OutputSection" />
+  <xs:complexType name="WorkRequest.OutputSection">
+    <xs:sequence>
+      <xs:element name="_x003C_DataPipeName_x003E_k__BackingField" nillable="true" type="tns:DataPipeName" />
+      <xs:element name="_x003C_Name_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WorkRequest.OutputSection" nillable="true" type="tns:WorkRequest.OutputSection" />
+  <xs:complexType name="ReportPipeName">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PipeName">
+        <xs:sequence>
+          <xs:element name="_x003C_PipelineId_x003E_k__BackingField" nillable="true" type="xs:string" />
+          <xs:element name="_x003C_PipelineType_x003E_k__BackingField" nillable="true" type="tns:PipelineType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReportPipeName" nillable="true" type="tns:ReportPipeName" />
+  <xs:complexType name="RoleType">
+    <xs:sequence>
+      <xs:element name="_x003C_Moniker_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RoleType" nillable="true" type="tns:RoleType" />
+  <xs:simpleType name="WorkerIsolationLevel">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Default" />
+      <xs:enumeration value="SeparateThread" />
+      <xs:enumeration value="SeparateAppDomain" />
+      <xs:enumeration value="SeparateProcess" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WorkerIsolationLevel" nillable="true" type="tns:WorkerIsolationLevel" />
+  <xs:complexType name="ArrayOfWorkerStatistics">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WorkerStatistics" nillable="true" type="tns:WorkerStatistics" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWorkerStatistics" nillable="true" type="tns:ArrayOfWorkerStatistics" />
+  <xs:complexType name="WorkerStatistics">
+    <xs:sequence>
+      <xs:element name="_compressedInputTraffic" type="xs:long" />
+      <xs:element name="_inputTraffic" type="xs:long" />
+      <xs:element name="_x003C_CurrentHeartBeatSentTime_x003E_k__BackingField" type="xs:dateTime" />
+      <xs:element name="_x003C_HeartBeatInterval_x003E_k__BackingField" type="ser:duration" />
+      <xs:element name="_x003C_PreviousHeartBeatSentTime_x003E_k__BackingField" type="xs:dateTime" />
+      <xs:element name="_x003C_ProcessedDocuments_x003E_k__BackingField" type="xs:unsignedInt" />
+      <xs:element name="_x003C_ProcessedMessages_x003E_k__BackingField" type="xs:unsignedInt" />
+      <xs:element name="_x003C_WorkTimeGross_x003E_k__BackingField" type="ser:duration" />
+      <xs:element name="_x003C_WorkTimeNet_x003E_k__BackingField" type="ser:duration" />
+      <xs:element name="_x003C_WorkerBadge_x003E_k__BackingField" nillable="true" type="tns:WorkerBadge" />
+      <xs:element name="_x003C_WorkerBorn_x003E_k__BackingField" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WorkerStatistics" nillable="true" type="tns:WorkerStatistics" />
+  <xs:complexType name="WorkerBadge">
+    <xs:sequence>
+      <xs:element name="_x003C_MachineName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_RoleSlotToken_x003E_k__BackingField" nillable="true" type="tns:RoleSlotToken" />
+      <xs:element name="_x003C_SectionName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_WorkerId_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WorkerBadge" nillable="true" type="tns:WorkerBadge" />
+  <xs:complexType name="RoleSlotToken">
+    <xs:sequence>
+      <xs:element name="_x003C_SlotId_x003E_k__BackingField" type="xs:unsignedInt" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RoleSlotToken" nillable="true" type="tns:RoleSlotToken" />
+</xs:schema>

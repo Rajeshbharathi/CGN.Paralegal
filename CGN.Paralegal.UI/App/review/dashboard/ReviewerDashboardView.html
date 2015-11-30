@@ -1,0 +1,72 @@
+﻿<div id="dashboard" class="panel-body dashboard-heading">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="project-title">{{DashboardController.dashboardDetails.Name}} </h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <h5 id="totalDocumentCount">
+                {{DashboardController.dashboardDetails.TotalDocumentCount|number:0}} {{DashboardController.localized.TotalDocuments | lowercase}}
+            </h5>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row text-center">
+        <div class="col-xs-4">
+            <a href="javascript:void(0)" id="controlSetTab"
+                ng-click="DashboardController.tabClick('controlset')">
+                <span ng-class="DashboardController.isActiveTab('controlset') ? 'active-tab':
+                    (DashboardController.enableControlSet() ? 'enabled-tab' : 'disabled-tab')">
+                    {{DashboardController.localized.ControlSet}}
+                </span>
+            </a>
+            <div ng-show="DashboardController.activeTab == 'controlset'" class="controlset-navbar"></div>
+        </div>
+        <div class="col-xs-4">
+            <a id="trainingSetTab" href="javascript:void(0)"
+                ng-click="DashboardController.tabClick('trainingset')">
+                <span ng-class="DashboardController.isActiveTab('trainingset') ? 'active-tab':
+                    (DashboardController.enableTrainingSet() ? 'enabled-tab' : 'disabled-tab')">
+                    {{DashboardController.localized.TrainingSet}}
+                </span>
+            </a>
+            <div ng-show="DashboardController.activeTab == 'trainingset'" class="trainingset-navbar"></div>
+        </div>
+        <div class="col-xs-4">
+            <a href="javascript:void(0)" id="verificationSetTab"
+                ng-click="DashboardController.tabClick('verificationset')">
+                <span ng-class="DashboardController.isActiveTab('verificationset') ? 'active-tab':
+                    (DashboardController.enableVerificationSet() ? 'enabled-tab' : 'disabled-tab')">
+                    {{DashboardController.localized.VerificationSet}}
+                </span>
+            </a>
+            <div ng-show="DashboardController.activeTab == 'verificationset'" class="verificationset-navbar"></div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <!--Control set tab goes here-->
+    <div id="tabControlset" ng-show="DashboardController.activeTab == 'controlset'">
+        <div ng-controller="ControlSetController as ControlSetController">
+            <div ng-include="'/App/review/dashboard/ReviewerControlSetView.html'"></div>
+        </div>
+    </div>
+    <!--Training set tab goes here-->
+    <div id="tabTrainingset" ng-show="DashboardController.activeTab == 'trainingset'">
+        <div ng-controller="TrainingSetController as TrainingSetController">
+            <div ng-include="'/App/review/dashboard/ReviewerTrainingSetView.html'"></div>
+        </div>
+    </div>
+    <!--Verification set tab goes here-->
+    <div id="tabVerificationset" ng-show="DashboardController.activeTab == 'verificationset'">
+        <div ng-controller="VerificationSetController as VerificationSetController">
+            <div ng-include="'/App/review/dashboard/ReviewerVerificationSetView.html'"></div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,85 @@
+﻿UI
+Tracer.Create("EVUserInterface") in Global.asax.cs
+Web.config
+
+Services
+Tracer.Create("EVServices") in Global.asax.cs
+Web.config
+
+Overdrive
+	
+	Director
+	Tracer.Create("Director") in DirectorEntryPoint.cs
+	Overdrive.config
+
+	WorkerManager
+	Tracer.Create("WorkerManager") in WorkerManagerEntryPoint.cs
+    Overdrive.config
+
+	WorkerRunnerProcess
+	Tracer.Create("WorkerRunnerProcess") in WorkerRunnerProcess.cs
+    Overdrive.config
+
+	Pipeline
+    private static readonly NamedTracer StatTracer = new NamedTracer("StatTracer");
+    Overdrive.config
+
+
+ClassicSevices (DCB and FYI Licensing)
+Tracer.Create("ClassicServices")
+Web.config
+
+UnitTests
+OverdriveMock.config
+
+
+
+/****** NLog table creation ******/
+SET ANSI_NULLS ON
+GO
+ 
+SET QUOTED_IDENTIFIER ON
+GO
+ 
+SET ANSI_PADDING ON
+GO
+ 
+CREATE TABLE [dbo].[NLog](
+	[Id] [int] NOT NULL IDENTITY(1,1),
+	[CorrelationId] [uniqueidentifier] NULL,
+	[Time] [datetime] NULL,
+	[Level] [varchar](10) NULL,
+	[MachineName] [varchar](256) NULL,
+	[ProcessName] [varchar](256) NULL,
+	[ThreadName] [varchar](256) NULL,
+	[Logger] [varchar](256) NULL,
+	[Message] [varchar](8000) NULL,
+	[WebVariables] [varchar](8000) NULL,
+ CONSTRAINT [PK_NLog] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+ 
+GO
+ 
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[NLog] ADD  CONSTRAINT [DF_NLog_date]  DEFAULT (getdate()) FOR [Time]
+GO
+
+===============================================================================================================================
+Cleanup TODO:
+
+C:\EV_DEV\Infrastructure\EvLog.cs should eventually be refactored away. In the meanwhile its implementation is changed to redirect to Tracer.
+
+ELMAH should be removed from 1. DB; 2. Configuration files; 3. checked in binaries;
+
+Obsolete log tables (everything in EvLogs except NLog table) should be dropped from DB.
+
+Every access to Exception.Message ("ex.Message") property need to be looked at (there are about 150 of them). Typically it should be replaced with
+.ToDebugString(), but variations are possible, depending on how this message is using.
+
+Methods and properties marked with //[Obsolete] or         /// <summary>  /// DEPRECATED! DO NOT USE!  /// </summary>
+supposed to be refactored out. They are temporary patched to redirect to the code they should be replaced with.

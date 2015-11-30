@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{645AE9E3-7EE5-477B-8A02-D998876C8D80}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OverdriveWorkers32</RootNamespace>
+    <AssemblyName>OverdriveWorkers32</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\Common\Overdrive\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\..\..\CHEV.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\Common\Overdrive\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\..\..\CHEV.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClassicServicesLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d18b745a795761b8, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libraries\ClassicServicesLibrary\ClassicServicesLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Independentsoft.Pst, Version=1.0.1420.13795, Culture=neutral, PublicKeyToken=76be97fe952f1ec7">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DocumentImportUtilities\EvCorlibInterOpDLLs\Independentsoft.Pst.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.evcorlib, Version=1.1.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>DocumentImportUtilities\EvCorlibInterOpDLLs\Interop.evcorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="LexisNexis.Evolution.TraceServices">
+      <HintPath>..\..\..\Libraries\TraceServices\LexisNexis.Evolution.TraceServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq, Version=4.1.1309.1617, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libraries\Moq\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Version\SharedAssemblyFileVersion.cs">
+      <Link>Properties\SharedAssemblyFileVersion.cs</Link>
+    </Compile>
+    <Compile Include="Constants.cs" />
+    <Compile Include="DCBOpticonExports\Constants.cs" />
+    <Compile Include="DCBOpticonExports\DCBOpticonExportJob.cs" />
+    <Compile Include="DCBOpticonExports\DcbOpticonUtil.cs" />
+    <Compile Include="DCBOpticonExports\ExportDCBHelper.cs" />
+    <Compile Include="Dcb\DcbParserWorker.cs" />
+    <Compile Include="Dcb\DcbSlicerWorker.cs" />
+    <Compile Include="Dcb\InheritedCode.cs" />
+    <Compile Include="DocumentImportUtilities\Constants.cs" />
+    <Compile Include="DocumentImportUtilities\DocumentExtractionMessageEntity.cs" />
+    <Compile Include="DocumentImportUtilities\DocumentImportHelper.cs" />
+    <Compile Include="DocumentImportUtilities\EDRMManager.cs" />
+    <Compile Include="DocumentImportUtilities\EdrmXmlDeserializer.cs" />
+    <Compile Include="DocumentImportUtilities\EmailDocumentEntity.cs" />
+    <Compile Include="DocumentImportUtilities\EmailDocumentManager.cs" />
+    <Compile Include="DocumentImportUtilities\EmailType.cs" />
+    <Compile Include="DocumentImportUtilities\EvCorlibEntity.cs" />
+    <Compile Include="DocumentImportUtilities\EVCorlibFileProcessorAdapter.cs" />
+    <Compile Include="DocumentImportUtilities\EvCorlibManager.cs" />
+    <Compile Include="DocumentImportUtilities\EvDocumentDataEntity.cs" />
+    <Compile Include="DocumentImportUtilities\ExtensionMethods\ToBusinessEntityExtension.cs" />
+    <Compile Include="DocumentImportUtilities\ExtensionMethods\ToDataAccessEntityExtension.cs" />
+    <Compile Include="DocumentImportUtilities\FileIOHelper.cs" />
+    <Compile Include="DocumentImportUtilities\FileProcessorFactory.cs" />
+    <Compile Include="DocumentImportUtilities\IFileProcessor.cs" />
+    <Compile Include="DocumentImportUtilities\IMailProcessor.cs" />
+    <Compile Include="DocumentImportUtilities\LevelsOfLogging.cs" />
+    <Compile Include="DocumentImportUtilities\LotusNotesAdapater.cs" />
+    <Compile Include="DocumentImportUtilities\LotusNotesEdrmManager.cs" />
+    <Compile Include="DocumentImportUtilities\LotusNotesEMailDocumentEntity.cs" />
+    <Compile Include="DocumentImportUtilities\MailProcessorFactory.cs" />
+    <Compile Include="DocumentImportUtilities\MailStoresEntity.cs" />
+    <Compile Include="DocumentImportUtilities\MiscEDRMActions.cs" />
+    <Compile Include="DocumentImportUtilities\OutlookAdapter.cs" />
+    <Compile Include="DocumentImportUtilities\OutlookEdrmManager.cs" />
+    <Compile Include="DocumentImportUtilities\OutlookEMailDocumentEntity.cs" />
+    <Compile Include="DocumentImportUtilities\OutlookMailStoreEntity.cs" />
+    <Compile Include="DocumentImportUtilities\OutlookMessageExtractor.cs" />
+    <Compile Include="DocumentImportUtilities\StoreListHandler.cs" />
+    <Compile Include="EDocsDocumentCollection.cs" />
+    <Compile Include="Edocs\EDocsExtractionWorker.cs" />
+    <Compile Include="Edocs\EDocsFileParserWorker.cs" />
+    <Compile Include="Edocs\EDocsOutlookEmailGeneratorWorker.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\LexisNexis.Evolution.BusinessEntities\LexisNexis.Evolution.BusinessEntities.csproj">
+      <Project>{871e0448-3406-4e6c-8a75-461ec243af60}</Project>
+      <Name>LexisNexis.Evolution.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LexisNexis.Evolution.Business\LexisNexis.Evolution.Business.csproj">
+      <Project>{001be572-9dea-4927-b1f6-705b7e387bda}</Project>
+      <Name>LexisNexis.Evolution.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LexisNexis.Evolution.Infrastructure\LexisNexis.Evolution.Infrastructure.csproj">
+      <Project>{cdf65c13-5ad0-4966-ad9e-108d1ad70d23}</Project>
+      <Name>LexisNexis.Evolution.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LexisNexis.Evolution.Master\LexisNexis.Evolution.Master.csproj">
+      <Project>{a4c80be8-c267-417c-8aa3-f100db8b545c}</Project>
+      <Name>LexisNexis.Evolution.Master</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LexisNexis.Evolution.ServiceContracts\LexisNexis.Evolution.ServiceContracts.csproj">
+      <Project>{45a47ec2-adab-4e1d-b9e4-62ff8d3deeae}</Project>
+      <Name>LexisNexis.Evolution.ServiceContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LexisNexis.Evolution.Services\LexisNexis.Evolution.Services.csproj">
+      <Project>{863c09d9-e943-4876-a354-bc966c66d035}</Project>
+      <Name>LexisNexis.Evolution.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LexisNexis.Evolution.Vault\LexisNexis.Evolution.Vault.csproj">
+      <Project>{7ef017f7-ede0-4872-b968-f561f3ed405b}</Project>
+      <Name>LexisNexis.Evolution.Vault</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassicJobs\ClassicJobs.csproj">
+      <Project>{114f7547-6600-4c40-8354-67ffc4629e1c}</Project>
+      <Name>ClassicJobs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OverdriveCore\OverdriveCore.csproj">
+      <Project>{1dde1a5c-9d6d-4e49-afe9-13f3a935a3bb}</Project>
+      <Name>OverdriveCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OverdriveWorkers\OverdriveWorkers.csproj">
+      <Project>{2148c4bc-3639-43f5-8b75-7cd00ac44bec}</Project>
+      <Name>OverdriveWorkers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DocumentImportUtilities\DocumentImportHelper.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\..\Libraries\ClassicServicesLibrary\atl100.dll">
+      <Link>UnmanagedResources\atl100.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\Libraries\ClassicServicesLibrary\ClassicServicesLibrary.pdb">
+      <Link>UnmanagedResources\ClassicServicesLibrary.pdb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\Libraries\ClassicServicesLibrary\mfc100.dll">
+      <Link>UnmanagedResources\mfc100.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\Libraries\ClassicServicesLibrary\mfc100d.dll">
+      <Link>UnmanagedResources\mfc100d.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\Libraries\ClassicServicesLibrary\mfc100u.dll">
+      <Link>UnmanagedResources\mfc100u.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\Libraries\ClassicServicesLibrary\mfc100ud.dll">
+      <Link>UnmanagedResources\mfc100ud.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\Libraries\ClassicServicesLibrary\mfcm100.dll">
+      <Link>UnmanagedResources\mfcm100.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\Libraries\ClassicServicesLibrary\mfcm100d.dll">
+      <Link>UnmanagedResources\mfcm100d.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\Libraries\ClassicServicesLibrary\mfcm100u.dll">
+      <Link>UnmanagedResources\mfcm100u.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\Libraries\ClassicServicesLibrary\mfcm100ud.dll">
+      <Link>UnmanagedResources\mfcm100ud.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\Libraries\ClassicServicesLibrary\msvcp100.dll">
+      <Link>UnmanagedResources\msvcp100.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\Libraries\ClassicServicesLibrary\msvcp100d.dll">
+      <Link>UnmanagedResources\msvcp100d.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\Libraries\ClassicServicesLibrary\msvcr100.dll">
+      <Link>UnmanagedResources\msvcr100.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\Libraries\ClassicServicesLibrary\msvcr100d.dll">
+      <Link>UnmanagedResources\msvcr100d.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DocumentImportUtilities\EvCorlibInterOpDLLs\Independentsoft.Pst.dll" />
+    <Content Include="DocumentImportUtilities\EvCorlibInterOpDLLs\Interop.evcorlib.dll" />
+    <Content Include="DocumentImportUtilities\EvCorlibInterOpDLLs\Interop.ProfMan.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ATLLib">
+      <Guid>{44EC0535-400F-11D0-9DCD-00A0C90391D3}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

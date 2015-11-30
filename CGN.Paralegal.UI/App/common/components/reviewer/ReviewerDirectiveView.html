@@ -1,0 +1,93 @@
+<div class="container-fluid reviewer">
+    <div class="row clearfix">
+        <div class="col-sm-4 col-xs-4">
+            <h5>{{ReviewerDirectiveController.currentDocument.ProjectName}}</h5>
+        </div>
+        <div class="col-sm-4 col-xs-4 text-center">
+            <h3>
+                {{ReviewerDirectiveController.analysisSetTitle()}}
+                <em class="text-muted subtitle"
+                    ng-if="isFilteredSet">
+                    ({{ReviewerDirectiveController.localized.Filtered}})
+                </em>
+            </h3>
+        </div>
+        <div class="col-sm-4 col-xs-4 text-center">
+            <h5>
+                <span class="text-muted">{{ReviewerDirectiveController.localized.DocumentControlNumber}}</span>
+                <b>{{ReviewerDirectiveController.currentDocument.DocumentDcn}}</b>
+            </h5>
+        </div>
+    </div>
+    <div class="row clearfix">
+        <div class="col-sm-4 col-xs-4 ">
+            <a class="pull-left" href="javascript:void(0)" 
+               ng-click="ReviewerDirectiveController.goToParentDashboard()">{{ReviewerDirectiveController.localized.ProjectDashboard}}</a>
+            <div class="col-lg-6 col-sm-6 col-xs-6 col-md-6">
+                <a class="ui-link" href="javascript:void(0)"
+                   id="viewSet" ng-click="ReviewerDirectiveController.goToListView()">{{ReviewerDirectiveController.localized.ViewSet}}</a>
+            </div>
+        </div>
+        <div class="col-sm-4 col-xs-4 text-center">
+            <div class="zoom">
+                <i ng-click="ReviewerDirectiveController.zoomOut()"
+                    ng-disabled="ReviewerDirectiveController.isZoomedOutMax()"
+                    title="{{ReviewerDirectiveController.localized.ZoomOut}}"
+                    class="glyphicon glyphicon-zoom-out">
+                </i>
+                <i ng-click="ReviewerDirectiveController.zoomIn()"
+                    ng-disabled="ReviewerDirectiveController.isZoomedInMax()"
+                    title="{{ReviewerDirectiveController.localized.ZoomIn}}"
+                    class="glyphicon glyphicon-zoom-in">
+                </i>
+                
+                <select kendo-drop-down-list=""
+                        k-data-source="ReviewerDirectiveController.zoomOptions"
+                        k-data-value-field="'key'"
+                        k-data-text-field="'value'"
+                        ng-model="ReviewerDirectiveController.zoomed"></select>
+            </div>
+        </div>
+        <div class="col-sm-4 col-xs-4 ">
+            <div ln-navigator="ln-navigator"
+                 ln-navigator-update="getNextDocument"
+                 ln-navigator-document="ReviewerDirectiveController.currentDocument"
+                 ln-navigator-label="{{ReviewerDirectiveController.localized.Documents}}"
+                 ln-navigator-advanced="true"></div>
+        </div>
+    </div>
+    <br />
+    <div class="row document-viewer-wrapper container-fluid">
+        <div id="kendoSplitter" kendo-splitter="lnSplitter" k-options="ReviewerDirectiveController.splitterTabRightOptions">
+            <div class="leftPane viewer">
+                <div class="scroller"
+                     infinite-scroll='ReviewerDirectiveController.loadMore()'
+                     infinite-scroll-parent="true"
+                     infinite-scroll-immediate-check="false">
+                    <div ln-highlighter-data="ReviewerDirectiveController.currentDocument"
+                         ln-highlighter=""
+                         ng-class="ReviewerDirectiveController.zoomed"
+                         class="document-viewer default-zoomed "></div>
+                </div>
+                
+                
+
+            </div>
+            <div class="rightPane widgets">
+                <div tabset="tabset">
+                    <tab ng-repeat="widget in ReviewerDirectiveController.widgets" heading="{{widget.title}}" active="widget.active">
+                        <div ng-include="widget.templateUrl"></div>
+                    </tab>
+                </div>
+            </div>
+        </div>
+        <br />
+        <p>
+            <b>{{ReviewerDirectiveController.localized.DocumentPath}}</b> : 
+            <span>{{ReviewerDirectiveController.currentDocument.DocumentTextPath}}</span>
+        </p>
+    </div>
+
+    <div ng-include="'/App/review/modals/FinishSetReviewView.html'"></div>
+
+</div>

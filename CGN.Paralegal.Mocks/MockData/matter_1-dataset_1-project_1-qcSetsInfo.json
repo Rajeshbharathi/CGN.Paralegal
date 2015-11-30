@@ -1,0 +1,37 @@
+﻿[
+    {
+        "Name": "QCSet01",
+        "BinderId": "908b8ac4-3e47-4915-ba17-364b79580fda",
+        "Type": "QcSet",
+        "ConfidenceLevel": 0,
+        "MarginOfError": 0,
+        "Size": 5,
+        "SamplingMethod": "FixedSize",
+        "SubType": "OnlyRelevant",
+        "Status": "NotStarted",
+        "IsCurrent": false,
+        "FalseNegative": 0.02,
+        "CompletionDate": "2015-04-03T10:37:41.329178-04:00",
+        "NumberOfNotCodedDocuments":5,
+        "NumberOfNotRelevantDocuments":0,
+        "NumberOfRelevantDocuments":0,
+        "TotalDocuments": 5
+    },{
+        "Name": "QCSet02",
+        "BinderId": "2478ce8f-dbae-4c53-806d-5d7aa56efb7b",
+        "Type": "QcSet",
+        "ConfidenceLevel": 95,
+        "MarginOfError": 5,
+        "Size": 5,
+        "SamplingMethod": "Statistical",
+        "SubType": "RelevantNotRelevant",
+        "Status": "NotStarted",
+        "IsCurrent": false,
+        "FalseNegative": 0.02,
+        "CompletionDate": "2015-04-04T10:37:41.329178-04:00",
+        "NumberOfNotCodedDocuments":5,
+        "NumberOfNotRelevantDocuments":0,
+        "NumberOfRelevantDocuments":0,
+        "TotalDocuments": 5
+    }
+]

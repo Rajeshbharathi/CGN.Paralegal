@@ -1,0 +1,541 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{77FEF222-180F-4C5D-8954-4816EB9BDFAC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LexisNexis.LTN.PC.Web.Samples</RootNamespace>
+    <AssemblyName>LexisNexis.LTN.PC.Web.Samples</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>..\..\Common\Rules\FxCop\EDDStandards.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+    <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
+    <PublishDatabases>true</PublishDatabases>
+    <IncludeIisSettings>true</IncludeIisSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls, Version=1.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Microsoft.Data.Edm.5.6.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Microsoft.Data.OData.5.6.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\System.Linq.Dynamic.1.0.2\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Microsoft.AspNet.WebApi.Client.5.1.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Microsoft.AspNet.WebApi.Core.5.1.2\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.OData, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Microsoft.AspNet.WebApi.OData.5.1.2\lib\net45\System.Web.Http.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Microsoft.AspNet.WebApi.WebHost.5.1.2\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\css\angular1.2.21\angular-loading-bar-0.5.0\loading-bar.css">
+      <Link>Content\css\angular1.2.21\angular-loading-bar-0.5.0\loading-bar.css</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\css\angular1.2.21\angular-loading-bar-0.5.0\loading-bar.min.css">
+      <Link>Content\css\angular1.2.21\angular-loading-bar-0.5.0\loading-bar.min.css</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\css\bootstrap3.2.0\bootstrap-theme.css">
+      <Link>Content\css\bootstrap3.2.0\bootstrap-theme.css</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\css\bootstrap3.2.0\bootstrap-theme.min.css">
+      <Link>Content\css\bootstrap3.2.0\bootstrap-theme.min.css</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\css\bootstrap3.2.0\bootstrap.css">
+      <Link>Content\css\bootstrap3.2.0\bootstrap.css</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\css\bootstrap3.2.0\bootstrap.min.css">
+      <Link>Content\css\bootstrap3.2.0\bootstrap.min.css</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\css\bootstrap3.2.0\fonts\glyphicons-halflings-regular.svg">
+      <Link>Content\css\bootstrap3.2.0\fonts\glyphicons-halflings-regular.svg</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\css\bootstrap3.2.0\todc-bootstrap.css">
+      <Link>Content\css\bootstrap3.2.0\todc-bootstrap.css</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\css\bootstrap3.2.0\todc-bootstrap.min.css">
+      <Link>Content\css\bootstrap3.2.0\todc-bootstrap.min.css</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\css\kendo2014.2.716\Bootstrap\editor.png">
+      <Link>Content\css\kendo2014.2.716\bootstrap\editor.png</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\css\kendo2014.2.716\Bootstrap\imagebrowser.png">
+      <Link>Content\css\kendo2014.2.716\bootstrap\imagebrowser.png</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\css\kendo2014.2.716\Bootstrap\indeterminate.gif">
+      <Link>Content\css\kendo2014.2.716\bootstrap\indeterminate.gif</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\css\kendo2014.2.716\Bootstrap\loading-image.gif">
+      <Link>Content\css\kendo2014.2.716\bootstrap\loading-image.gif</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\css\kendo2014.2.716\Bootstrap\loading.gif">
+      <Link>Content\css\kendo2014.2.716\bootstrap\loading.gif</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\css\kendo2014.2.716\Bootstrap\loading_2x.gif">
+      <Link>Content\css\kendo2014.2.716\bootstrap\loading_2x.gif</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\css\kendo2014.2.716\Bootstrap\markers.png">
+      <Link>Content\css\kendo2014.2.716\bootstrap\markers.png</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\css\kendo2014.2.716\Bootstrap\markers_2x.png">
+      <Link>Content\css\kendo2014.2.716\bootstrap\markers_2x.png</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\css\kendo2014.2.716\Bootstrap\slider-h.gif">
+      <Link>Content\css\kendo2014.2.716\bootstrap\slider-h.gif</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\css\kendo2014.2.716\Bootstrap\slider-v.gif">
+      <Link>Content\css\kendo2014.2.716\bootstrap\slider-v.gif</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\css\kendo2014.2.716\Bootstrap\sprite.png">
+      <Link>Content\css\kendo2014.2.716\bootstrap\sprite.png</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\css\kendo2014.2.716\Bootstrap\sprite_2x.png">
+      <Link>Content\css\kendo2014.2.716\bootstrap\sprite_2x.png</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\css\kendo2014.2.716\kendo.bootstrap.min.css">
+      <Link>Content\css\kendo2014.2.716\kendo.bootstrap.min.css</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\css\kendo2014.2.716\kendo.common.min.css">
+      <Link>Content\css\kendo2014.2.716\kendo.common.min.css</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\css\kendo2014.2.716\kendo.dataviz.default.min.css">
+      <Link>Content\css\kendo2014.2.716\kendo.dataviz.default.min.css</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\css\kendo2014.2.716\kendo.dataviz.min.css">
+      <Link>Content\css\kendo2014.2.716\kendo.dataviz.min.css</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\css\kendo2014.2.716\kendo.default.min.css">
+      <Link>Content\css\kendo2014.2.716\kendo.default.min.css</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\js\bootstrap3.2.0\bootstrap.js">
+      <Link>Content\js\bootstrap3.2.0\bootstrap.js</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\js\bootstrap3.2.0\bootstrap.min.js">
+      <Link>Content\js\bootstrap3.2.0\bootstrap.min.js</Link>
+    </Content>
+    <None Include="..\..\..\..\Common\UIFramework\Content\js\jquery1.10.2\jquery-1.10.2.intellisense.js">
+      <Link>Content\js\jquery1.10.2\jquery-1.10.2.intellisense.js</Link>
+    </None>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\js\jquery1.10.2\jquery-1.10.2.js">
+      <Link>Content\js\jquery1.10.2\jquery-1.10.2.js</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\js\jquery1.10.2\jquery-1.10.2.min.js">
+      <Link>Content\js\jquery1.10.2\jquery-1.10.2.min.js</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\js\kendo2014.2.716\kendo.all.min.js">
+      <Link>Content\js\kendo2014.2.716\kendo.all.min.js</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\js\kendo2014.2.716\kendo.angular.min.js">
+      <Link>Content\js\kendo2014.2.716\kendo.angular.min.js</Link>
+    </Content>
+    <Content Include="..\..\Content\css\font-awesome4.3.0\css\font-awesome.css">
+      <Link>Content\css\font-awesome4.3.0\css\font-awesome.css</Link>
+    </Content>
+    <Content Include="..\..\Content\css\font-awesome4.3.0\css\font-awesome.min.css">
+      <Link>Content\css\font-awesome4.3.0\css\font-awesome.min.css</Link>
+    </Content>
+    <Content Include="..\..\Content\css\font-awesome4.3.0\fonts\fontawesome-webfont.svg">
+      <Link>Content\css\font-awesome4.3.0\fonts\fontawesome-webfont.svg</Link>
+    </Content>
+    <Content Include="..\..\Content\js\angular-1.3.3\angular-animate.js">
+      <Link>Content\js\angular1.3.3\angular-animate.js</Link>
+    </Content>
+    <Content Include="..\..\Content\js\angular-1.3.3\angular-loader.js">
+      <Link>Content\js\angular1.3.3\angular-loader.js</Link>
+    </Content>
+    <Content Include="..\..\Content\js\angular-1.3.3\angular-loading-bar-0.6.0\loading-bar.js">
+      <Link>Content\js\angular1.3.3\angular-loading-bar-0.6.0\loading-bar.js</Link>
+    </Content>
+    <Content Include="..\..\Content\js\angular-1.3.3\angular-loading-bar-0.6.0\loading-bar.min.js">
+      <Link>Content\js\angular1.3.3\angular-loading-bar-0.6.0\loading-bar.min.js</Link>
+    </Content>
+    <Content Include="..\..\Content\js\angular-1.3.3\angular-messages.js">
+      <Link>Content\js\angular1.3.3\angular-messages.js</Link>
+    </Content>
+    <Content Include="..\..\Content\js\angular-1.3.3\angular-resource.js">
+      <Link>Content\js\angular1.3.3\angular-resource.js</Link>
+    </Content>
+    <Content Include="..\..\Content\js\angular-1.3.3\angular-route.js">
+      <Link>Content\js\angular1.3.3\angular-route.js</Link>
+    </Content>
+    <Content Include="..\..\Content\js\angular-1.3.3\angular-sanitize.js">
+      <Link>Content\js\angular1.3.3\angular-sanitize.js</Link>
+    </Content>
+    <Content Include="..\..\Content\js\angular-1.3.3\angular.js">
+      <Link>Content\js\angular1.3.3\angular.js</Link>
+    </Content>
+    <Content Include="..\..\Content\js\angular-1.3.3\ui-bootstrap-tpls-0.12.0\ui-bootstrap-tpls-0.12.0.js">
+      <Link>Content\js\angular1.3.3\angular-ui-bootstrap-0.12.0\ui-bootstrap-tpls-0.12.0.js</Link>
+    </Content>
+    <Content Include="..\..\Content\js\angular-1.3.3\ui-bootstrap-tpls-0.12.0\ui-bootstrap-tpls-0.12.0.min.js">
+      <Link>Content\js\angular1.3.3\angular-ui-bootstrap-0.12.0\ui-bootstrap-tpls-0.12.0.min.js</Link>
+    </Content>
+    <Content Include="App\analytics\analytics.all.js">
+      <DependentUpon>analytics.all.js.bundle</DependentUpon>
+    </Content>
+    <Content Include="App\analytics\analytics.all.js.bundle">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App\analytics\analytics.all.min.js">
+      <DependentUpon>analytics.all.js</DependentUpon>
+    </Content>
+    <Content Include="App\analytics\analytics.all.min.js.map">
+      <DependentUpon>analytics.all.min.js</DependentUpon>
+    </Content>
+    <Content Include="App\analytics\app.html" />
+    <Content Include="App\analytics\projects\dashboard\ProjectDashboard.resx.js" />
+    <Content Include="App\analytics\projects\modals\CreateControlSetController.js" />
+    <Content Include="App\analytics\projects\modals\CreateControlSetView.html" />
+    <Content Include="App\analytics\projects\modals\CreatePredictionSetController.js" />
+    <Content Include="App\analytics\projects\modals\CreatePredictionSetView.html" />
+    <Content Include="App\analytics\projects\modals\CreateQCSetController.js" />
+    <Content Include="App\analytics\projects\modals\CreateQCSetView.html" />
+    <Content Include="App\analytics\projects\modals\RunAccuracyTestController.js" />
+    <Content Include="App\analytics\projects\modals\RunAccuracyTestView.html" />
+    <Content Include="App\analytics\projects\models\ControlsetModel.js" />
+    <Content Include="App\analytics\projects\models\QCSetModel.js" />
+    <Content Include="App\analytics\projects\projectWizard\ProjectWizard.resx.js" />
+    <Content Include="App\analytics\projects\services\ControlSetService.js" />
+    <Content Include="App\analytics\projects\services\PredictionSetService.js" />
+    <Content Include="App\analytics\projects\services\QCSetService.js" />
+    <Content Include="App\analytics\projects\services\RunAccuracyTestService.js" />
+    <Content Include="App\analytics\training\documentSets\DocumentSetsList.resx.js" />
+    <Content Include="App\analytics\training\services\AppState.js" />
+    <Content Include="App\analytics\training\services\ProjectsDataService.js" />
+    <Content Include="App\analytics\training\trainingProgress\TrainingProgress.resx.js" />
+    <Content Include="App\common\component\reviewer\DocumentSetModelFactory.js" />
+    <Content Include="App\common\component\reviewer\ReviewerConfiguration.js" />
+    <Content Include="App\common\component\reviewer\ReviewerDataService.js" />
+    <Content Include="App\common\component\reviewer\ReviewerDirective.js" />
+    <Content Include="App\common\component\reviewer\ReviewerDirectiveController.js" />
+    <Content Include="App\common\component\reviewer\ReviewerDirectiveView.html" />
+    <Content Include="App\common\component\reviewer\ReviewerWidgetsDefinition.js" />
+    <Content Include="App\common\component\widgets\AssistedReviewController.js" />
+    <Content Include="App\common\component\widgets\AssistedReviewView.html" />
+    <Content Include="App\common\component\widgets\FieldsView.html" />
+    <Content Include="App\common\directives\ConfirmClickDirective.js" />
+    <Content Include="App\common\directives\ErrorHandlerDirective.js" />
+    <Content Include="App\common\directives\HighlighterDirective.js" />
+    <Content Include="App\common\directives\NavigatorDirective.js" />
+    <Content Include="App\common\directives\NavigatorDirectiveView.html" />
+    <Content Include="App\common\directives\ngTruncate.js" />
+    <Content Include="App\common\directives\InputValidationDirective.js" />
+    <Content Include="App\common\services\WebApiClientService.js" />
+    <Content Include="App\common\decorators\WebApiClientServiceDecorator.js" />
+    <Content Include="App\common\services\ErrorHandlerService.js" />
+    <Content Include="App\review\app.config.js" />
+    <Content Include="App\review\app.html" />
+    <Content Include="App\review\app.init.js" />
+    <Content Include="App\review\app.js" />
+    <Content Include="App\review\app.routes.js" />
+    <Content Include="App\common\directives\CustomValidationDirective.js" />
+    <Content Include="App\common\directives\FileBrowse\FileBrowse.resx.js" />
+    <Content Include="App\common\directives\FileBrowse\FileBrowseController.js" />
+    <Content Include="App\common\directives\FileBrowse\FileBrowseDirective.js" />
+    <Content Include="App\common\directives\FileBrowse\FileBrowseView.html" />
+    <Content Include="App\common\directives\FileBrowse\FiledialogModel.js" />
+    <Content Include="App\common\directives\FileBrowse\FileDialogService.js" />
+    <Content Include="App\common\directives\FileBrowse\FolderFilePathDialogController.js" />
+    <Content Include="App\common\directives\FileBrowse\FolderFilePathDialogView.html" />
+    <Content Include="App\common\directives\UserPicker\ProjectDashboard.resx.js" />
+    <Content Include="App\common\directives\UserPicker\Userpicker.resx.js" />
+    <Content Include="App\common\directives\UserPicker\UserPickerController.js" />
+    <Content Include="App\common\directives\UserPicker\UserPickerDialogController.js" />
+    <Content Include="App\common\directives\UserPicker\UserPickerDialogView.html" />
+    <Content Include="App\common\directives\UserPicker\UserPickerDirective.js" />
+    <Content Include="App\common\directives\UserPicker\UserPickerFilterModel.js" />
+    <Content Include="App\common\directives\UserPicker\UserPickerService.js" />
+    <Content Include="App\common\directives\UserPicker\UserPickerView.html" />
+    <Content Include="App\common\directives\ValidationDirective.js" />
+    <Content Include="App\review\review.all.js">
+      <DependentUpon>review.all.js.bundle</DependentUpon>
+    </Content>
+    <Content Include="App\review\review.all.min.js">
+      <DependentUpon>review.all.js</DependentUpon>
+    </Content>
+    <Content Include="App\review\review.js">
+      <DependentUpon>review.all.js.bundle</DependentUpon>
+    </Content>
+    <Content Include="App\review\review.min.js">
+      <DependentUpon>review.js</DependentUpon>
+    </Content>
+    <Content Include="App\review\review.resx.js" />
+    <Content Include="App\review\reviewer\ReviewController.js" />
+    <Content Include="App\review\reviewer\ReviewView.html" />
+    <Content Include="Content\css\bootstrap3.2.0\bootstrap.all.css">
+      <DependentUpon>bootstrap.all.css.bundle</DependentUpon>
+    </Content>
+    <Content Include="Content\css\bootstrap3.2.0\bootstrap.all.min.css">
+      <DependentUpon>bootstrap.all.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\kendo2014.2.716\kendo.all.css">
+      <DependentUpon>kendo.all.css.bundle</DependentUpon>
+    </Content>
+    <Content Include="Content\css\kendo2014.2.716\kendo.all.min.css">
+      <DependentUpon>kendo.all.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\site.css" />
+    <Content Include="Content\css\site.min.css">
+      <DependentUpon>site.css</DependentUpon>
+    </Content>
+    <Content Include="App\analytics\app.js" />
+    <Content Include="App\common\services\ReviewsDataService.js" />
+    <Content Include="Content\css\site.less" />
+    <Content Include="App\analytics\app.init.js" />
+    <Content Include="App\analytics\app.routes.js" />
+    <Content Include="App\common\directives\BreadcrumbsDirective.js" />
+    <Content Include="App\common\directives\BreadcrumbsDirective.html" />
+    <Content Include="App\analytics\projects\models\ProjectModel.js" />
+    <Content Include="App\analytics\projects\Projects.resx.js" />
+    <Content Include="App\common\services\AlertService.js" />
+    <Content Include="App\common\services\DatasetsDataService.js" />
+    <Content Include="App\analytics\training\services\DocumentSetsDataService.js" />
+    <Content Include="App\common\services\MattersDataService.js" />
+    <Content Include="App\analytics\projects\services\ProjectsDataService.js" />
+    <Content Include="App\analytics\training\services\TrainingDataService.js" />
+    <Content Include="App\tests\angular-mocks.js" />
+    <Content Include="App\tests\jasmine\boot.js" />
+    <Content Include="App\tests\jasmine\console.js" />
+    <Content Include="App\tests\jasmine\jasmine-html.js" />
+    <Content Include="App\tests\jasmine\jasmine.css" />
+    <Content Include="App\tests\jasmine\jasmine.js" />
+    <Content Include="App\tests\jasmine\jasmine_favicon.png" />
+    <Content Include="App\tests\references.js" />
+    <Content Include="App\tests\sampleListController.spec.js" />
+    <Content Include="App\analytics\training\documentSets\DocumentSetsListController.js" />
+    <Content Include="App\analytics\training\documentSets\DocumentSetsListDirective.js" />
+    <Content Include="App\analytics\training\documentSets\DocumentSetsListDirective.html" />
+    <Content Include="App\analytics\projects\dashboard\ProjectDashboardController.js" />
+    <Content Include="App\analytics\projects\dashboard\ProjectDashboardView.html" />
+    <Content Include="App\analytics\training\trainingProgress\TrainingProgressController.js" />
+    <Content Include="App\analytics\training\trainingProgress\TrainingProgressDirective.js" />
+    <Content Include="App\analytics\training\trainingProgress\TrainingProgressDirective.html" />
+    <Content Include="App\analytics\projects\projectList\ProjectListController.js" />
+    <Content Include="App\analytics\projects\projectList\ProjectListView.html" />
+    <Content Include="App\analytics\projects\projectWizard\ProjectWizardController.js" />
+    <Content Include="App\analytics\projects\projectWizard\ProjectWizardView.html" />
+    <Content Include="Content\js\angular1.3.3\angular.common.js" />
+    <Content Include="Content\js\angular1.3.3\angular.common.min.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\css\site.css.map">
+      <DependentUpon>site.css</DependentUpon>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\css\bootstrap3.2.0\fonts\glyphicons-halflings-regular.eot">
+      <Link>Content\css\bootstrap3.2.0\fonts\glyphicons-halflings-regular.eot</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\css\bootstrap3.2.0\fonts\glyphicons-halflings-regular.ttf">
+      <Link>Content\css\bootstrap3.2.0\fonts\glyphicons-halflings-regular.ttf</Link>
+    </Content>
+    <Content Include="..\..\..\..\Common\UIFramework\Content\css\bootstrap3.2.0\fonts\glyphicons-halflings-regular.woff">
+      <Link>Content\css\bootstrap3.2.0\fonts\glyphicons-halflings-regular.woff</Link>
+    </Content>
+    <Content Include="Content\css\kendo2014.2.716\kendo.all.css.bundle">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\css\bootstrap3.2.0\bootstrap.all.css.bundle">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\reviewSet.json" />
+    <Content Include="Content\js\angular1.3.3\angular.common.js.bundle">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\js\angular1.3.3\angular.common.min.js.map" />
+    <Content Include="App\analytics\app.config.js" />
+    <Content Include="App\review\review.all.js.bundle" />
+    <Content Include="App\review\review.min.js.map">
+      <DependentUpon>review.min.js</DependentUpon>
+    </Content>
+    <Content Include="App\review\review.all.min.js.map">
+      <DependentUpon>review.all.min.js</DependentUpon>
+    </Content>
+    <Content Include="..\..\Content\css\font-awesome4.3.0\fonts\fontawesome-webfont.eot">
+      <Link>Content\css\font-awesome4.3.0\fonts\fontawesome-webfont.eot</Link>
+    </Content>
+    <Content Include="..\..\Content\css\font-awesome4.3.0\fonts\fontawesome-webfont.ttf">
+      <Link>Content\css\font-awesome4.3.0\fonts\fontawesome-webfont.ttf</Link>
+    </Content>
+    <Content Include="..\..\Content\css\font-awesome4.3.0\fonts\fontawesome-webfont.woff">
+      <Link>Content\css\font-awesome4.3.0\fonts\fontawesome-webfont.woff</Link>
+    </Content>
+    <Content Include="..\..\Content\css\font-awesome4.3.0\fonts\fontawesome-webfont.woff2">
+      <Link>Content\css\font-awesome4.3.0\fonts\fontawesome-webfont.woff2</Link>
+    </Content>
+    <Content Include="..\..\Content\css\font-awesome4.3.0\fonts\FontAwesome.otf">
+      <Link>Content\css\font-awesome4.3.0\fonts\FontAwesome.otf</Link>
+    </Content>
+    <None Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\documentsets.json" />
+    <Content Include="App_Data\matters.json" />
+    <Content Include="App_Data\projects.json" />
+    <Content Include="App_Data\trainingprogress.json" />
+    <Content Include="Site.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App\analytics\projects\controllers\ControlsetController.cs" />
+    <Compile Include="App\analytics\projects\controllers\PredictionSetController.cs" />
+    <Compile Include="App\analytics\projects\controllers\QCSetController.cs" />
+    <Compile Include="App\analytics\projects\controllers\RunAccuracyTestController.cs" />
+    <Compile Include="App\analytics\projects\models\ControlSet.cs" />
+    <Compile Include="App\analytics\projects\models\Project.cs" />
+    <Compile Include="App\analytics\projects\models\QCSet.cs" />
+    <Compile Include="App\analytics\training\models\DocumentSet.cs" />
+    <Compile Include="App\analytics\training\models\TrainingProgressResult.cs" />
+    <Compile Include="App\common\controllers\DataSetsController.cs" />
+    <Compile Include="App\common\controllers\FileDialogController.cs" />
+    <Compile Include="App\common\controllers\MattersController.cs" />
+    <Compile Include="App\common\controllers\ReviewSetController.cs" />
+    <Compile Include="App\common\controllers\UserPickerController.cs" />
+    <Compile Include="App\common\models\DataSet.cs" />
+    <Compile Include="App\common\models\FileDialog.cs" />
+    <Compile Include="App\common\models\Matter.cs" />
+    <Compile Include="App\common\models\Review.cs" />
+    <Compile Include="App\common\models\User.cs" />
+    <Compile Include="App\common\models\UserGroup.cs" />
+    <Compile Include="App\common\models\UserPickerFilter.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App\analytics\training\controllers\DocumentSetsController.cs" />
+    <Compile Include="App\analytics\projects\controllers\ProjectsController.cs" />
+    <Compile Include="App\analytics\projects\controllers\ProjectsODataController.cs" />
+    <Compile Include="App\analytics\training\controllers\TrainingProgressController.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App\common\filters\" />
+    <Folder Include="Content\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53432</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53434/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="CopyLinkedContentFiles" BeforeTargets="Build">
+    <Copy SourceFiles="%(Content.Identity)" DestinationFiles="%(Content.Link)" SkipUnchangedFiles="true" OverwriteReadOnlyFiles="true" Condition="'%(Content.Link)' != ''" />
+  </Target>
+</Project>

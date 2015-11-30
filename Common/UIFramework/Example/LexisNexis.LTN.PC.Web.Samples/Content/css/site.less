@@ -1,0 +1,748 @@
+﻿/* Variables */
+
+// Grays
+@white: #fff;
+@grayLighter: #ccc;
+@grayLight: #777;
+@gray: #555;
+@grayDark: #333;
+@black: #000;
+
+@main-color: #4ea0e9;
+@bg-light: #f9f9f9;
+@bg-dark: #666;
+@text-color: #666;
+@text-light: #fff;
+@error: #ff0000;
+
+@linkColor: @main-color;
+@linkColorHover: darken(@linkColor, 10);
+
+@debug: lighten(@error, 30);
+@debug-highlight: rgba(0, 255, 0, 1);
+
+/* Mixins */
+.debug() {
+    //border: 1px solid @debug;
+}
+
+.debug-light() {
+    //border: 1px solid lighten(@debug, 20%);
+}
+
+.debug-highlight() {
+    //border: 1px solid lighten(@debug-highlight, 40%);
+}
+
+.debug-highlight-hover() {
+    //border: 1px solid @debug-highlight;
+}
+
+/* Debug Styles */
+
+.view {
+    .debug;
+}
+
+.row {
+    .debug-light;
+}
+
+.row:hover {
+    .debug;
+}
+
+[class*='col-'] {
+    .debug-highlight;
+}
+
+[class*='col-']:hover {
+    .debug-highlight-hover;
+}
+
+/* Styles */
+
+//workaround for angular bootstrap bindings http://angular-ui.github.io/bootstrap/
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+body {
+    color: @text-color;
+}
+
+body, html, form.mainform { height: 100%; }
+.wrapper, .sidebar, .main { height: 100%; }
+
+.text-error {
+    color: @error !important;
+}
+
+/**Page Global Nav block styles start*/
+.appDiv{
+    .module-header{
+        background-color:lighten(@grayLighter,18%);
+        .brand{
+           font-size: @baseFontSize*1.25;
+           color: @text-color;
+           .brand-highlight{
+               color: @main-color;
+           } 
+        }
+        .navbar-nav{
+            li>a{
+                font-size:@baseFontSize*1.15;
+                background-color:none;
+                background-image:none;
+                color:@text-color;
+                text-decoration:none;
+                text-align:center;
+                padding:10px 0;
+                line-height: 28px;
+            }
+            li>a:focus,
+            li>a:active,
+            li>a:hover{
+                background-color:@grayLight;
+                color:@white;
+                text-decoration:none;
+            }
+            li.active>a{
+                background-color:@main-color;
+                color:@white;
+            }
+        }
+    }
+    .searchbar{
+        background-color:@main-color;
+    }
+}
+
+/*Page Global Nav block styles end*/
+
+.applayout {
+    height: 100%;
+    display: table;
+    table-layout: fixed;
+    border-spacing: 0;
+    width: 100%;
+
+    .sidebar {
+        display: table-cell;
+        vertical-align: top;
+        height: 100%;
+        float: none;
+        width: 200px;
+        color: @text-color;
+
+        .sb-content { 
+            padding: 10px; 
+        }
+
+        .title {
+            padding: 8px;
+            background-color: darken(desaturate(@main-color, 20%), 20%);
+            color: @text-light;
+            height: 38px;
+        }
+
+    }
+
+    .main {
+        display: table-cell;
+        vertical-align: top;
+        height: 100%;
+        float: none;
+
+        .searchbar {
+            background-color: @main-color;
+            height: 38px;
+            padding: 6px 0 0 12px;
+        }
+
+        .main-content { 
+            border-left: 4px solid lighten(desaturate(@main-color, 20%), 35%);
+            height: 100%;
+        }
+
+    }
+
+}
+/* Utils */
+.m-b {
+    margin-bottom: 10px;
+}
+
+/* BootStrap Overrides */
+input[type=checkbox]:checked::after, .checkbox input[type=checkbox]:checked::after, .checkbox-inline input[type=checkbox]:checked::after{
+  
+  content:"";
+}
+
+.breadcrumb {
+    margin-bottom: 0;
+    background-color: lighten(@bg-dark, 53%);
+}
+
+.page-header {
+    margin: 0 0 10px 0;
+    background-color: lighten(@bg-dark, 58%);
+    padding: 10px 0 10px 15px;
+
+    h1 {
+        margin: 0;
+        font-size: 20px;
+    }
+}
+
+dt {
+    margin-top: 10px;
+}
+
+.tab-content {
+    padding: 10px;
+}
+
+fieldset > h3 {
+    font-size: 18px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.panel-heading {
+    padding: 10px 10px 0 10px;
+}
+
+.btn-default {
+    .glyphicon {
+        color: lighten(@text-color, 20%);
+    }
+}
+
+select.form-control {
+        -webkit-appearance: menulist !important;
+}
+
+/* Left Tabs for Wizard */
+
+.tabs-left > .nav-tabs {
+  border-bottom: 0;
+}
+
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+  display: none;
+}
+
+.tab-content > .active,
+.pill-content > .active {
+  display: block;
+}
+
+.tabs-left > .nav-tabs > li,
+.tabs-right > .nav-tabs > li {
+  float: none;
+}
+
+.tabs-left > .nav-tabs > li > a,
+.tabs-right > .nav-tabs > li > a {
+  min-width: 74px;
+  margin-right: 0;
+  margin-bottom: 3px;
+}
+
+.tabs-left > .nav-tabs {
+  float: left;
+  margin-right: 19px;
+  border-right: 1px solid #ddd;
+}
+
+.tabs-left > .nav-tabs > li > a {
+  margin-right: -1px;
+  -webkit-border-radius: 4px 0 0 4px;
+     -moz-border-radius: 4px 0 0 4px;
+          border-radius: 4px 0 0 4px;
+}
+
+.tabs-left > .nav-tabs > li > a:hover,
+.tabs-left > .nav-tabs > li > a:focus {
+  border-color: #eeeeee #dddddd #eeeeee #eeeeee;
+}
+
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover,
+.tabs-left > .nav-tabs .active > a:focus {
+  border-color: #ddd transparent #ddd #ddd;
+  *border-right-color: #ffffff;
+}
+
+/* Kendo styles */
+
+//remove the loading indicators since we have our own
+.k-loading {
+    background-image: none;
+}
+.k-loading-image {
+    background-image: none;
+}
+.k-loading-color {
+    opacity: 0;
+}
+.k-loading-mask {
+    opacity: 0;
+}
+
+// Utilities
+
+// Variables
+@white: #fff;
+@grayLighter: #ccc;
+@grayLight: #777;
+@grayMedium:#dcdcdc;
+@gray: #555;
+@grayDark: #333;
+@black: #000;
+
+@main-color: #4ea0e9;
+@bg-light: #f9f9f9;
+@bg-dark: #666;
+@text-color: #666;
+@text-light: #fff;
+@error: #ff0000;
+
+@highlightOff:#FFFF00;
+@highlightOn:#FF9632;
+
+@linkColor: @main-color;
+@linkColorHover: darken(@linkColor, 10);
+
+@debug: lighten(@error, 30);
+@debug-highlight: rgba(0, 255, 0, 1);
+
+@border-radius-base: 4px;
+@baseFontSize:14px;
+
+@btnDefaultBg:#f3f3f3;
+@btnDefaultBgGradientStart:#f5f5f5;
+@btnDefaultBgGradientEnd:#f1f1f1;
+
+/*Generic kendo and bootstrap overrides*/
+.form-control,.container,.container-fluid,.row,.col-xs-1,.col-sm-1,.col-md-1,.col-lg-1,.col-xs-2,.col-sm-2,.col-md-2,.col-lg-2,.col-xs-3,.col-sm-3,.col-md-3,.col-lg-3,.col-xs-4,.col-sm-4,.col-md-4,.col-lg-4,.col-xs-5,.col-sm-5,.col-md-5,.col-lg-5,.col-xs-6,.col-sm-6,.col-md-6,.col-lg-6,.col-xs-7,.col-sm-7,.col-md-7,.col-lg-7,.col-xs-8,.col-sm-8,.col-md-8,.col-lg-8,.col-xs-9,.col-sm-9,.col-md-9,.col-lg-9,.col-xs-10,.col-sm-10,.col-md-10,.col-lg-10,.col-xs-11,.col-sm-11,.col-md-11,.col-lg-11,.col-xs-12,.colsm-12,.col-md-12,.col-lg-12
+{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+//remove the loading indicators since we have our own
+.k-loading {
+    background-image: none;
+}
+.k-loading-image {
+    background-image: none;
+}
+.k-loading-color {
+    opacity: 0;
+}
+.k-loading-mask {
+    opacity: 0;
+}
+
+//workaround for angular bootstrap bindings http://angular-ui.github.io/bootstrap/
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+
+/*Generic kendo overrides end*/
+
+/*Site wide css - Do Not Modify*/
+
+body{
+    overflow-x:hidden;
+    overflow-y:auto;
+    min-width: 600px;
+    padding-bottom:100px;
+    color: @text-color;
+}
+
+body,
+html,
+.wrapper,
+.view,
+.container,
+.container-fluid
+{
+  height: 100%;
+}
+
+.btn-default {
+    .glyphicon {
+        color: lighten(@text-color, 20%);
+    }
+}
+
+.btn-primary {
+    .glyphicon {
+        color: lighten(@white, 20%);
+    }
+}
+
+/*Site wide css - Do Not Modify*/
+
+/**Utility classes begin**/
+.skinny{
+  padding:0;
+}
+.no-margin{
+    margin:0;
+}
+.no-gutter { 
+  [class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+.borderless{
+  border:none
+}
+
+.bordered{
+  border:1px solid @grayMedium;
+}
+
+.v-bordered-top{
+    border-top:1px solid @grayMedium;
+}
+.v-bordered-bottom{
+    border-bottom:1px solid @grayMedium;
+}
+.v-bordered-left{
+    border-left:1px solid @grayMedium;
+}
+.v-bordered-right{
+    border-right:1px solid @grayMedium;
+}
+
+.text-error {
+    color: @error !important;
+}
+
+input.ng-invalid{
+    border-color: @error !important;
+}
+
+
+/*loop to generate vertical and horizontal margin and padding utility classes*/
+
+@iterations: 30;
+
+.loopingClass (@index) when (@index > 0) {
+    .v-margin-top-@{index} {
+        margin-top: @index*1px;
+    }
+    .v-margin-bottom-@{index} {
+        margin-bottom: @index*1px;
+    }
+    .v-margin-@{index} {
+        margin-top: @index*1px;
+        margin-bottom: @index*1px;
+    }
+    .h-margin-left-@{index} {
+        margin-left: @index*1px;
+    }
+    .h-margin-right-@{index} {
+        margin-right: @index*1px;
+    }
+    .h-margin-@{index} {
+        margin-left: @index*1px;
+        margin-right: @index*1px;
+    }
+    .vh-margin-@{index} {
+        margin: @index*1px;
+    }
+    .v-padding-top-@{index} {
+        padding-top: @index*1px;
+    }
+    .v-padding-bottom-@{index} {
+        padding-bottom: @index*1px;
+    }
+    .v-padding-@{index} {
+        padding-top: @index*1px;
+        padding-bottom: @index*1px;
+    }
+    .h-padding-left-@{index} {
+        padding-left: @index*1px;
+    }
+    .h-padding-right-@{index} {
+        padding-right: @index*1px;
+    }
+    .h-padding-@{index} {
+        padding-left: @index*1px;
+        padding-right: @index*1px;
+    }
+    .vh-padding-@{index} {
+        padding: @index*1px;
+    }
+    
+    .loopingClass(@index - 5);
+}
+
+.loopingClass (0) {}
+
+.loopingClass (@iterations);
+
+
+
+/** Utility classes end**/
+/*Reviewer Styles Start*/
+.reviewer{
+    height: 100%;
+
+    .panel-group .panel-heading a:before {
+        content: "";
+    }
+    .accordion .panel-group .panel-heading {
+        border:0;
+        padding:0;
+        a{
+            border:none;
+            padding: 10px 0 9px 10px;
+            margin:1px;
+        }
+    
+    }
+
+    .accordion .panel-group .panel.panel-default{
+
+        border: 1px solid @grayMedium;
+        border-radius:5px;
+    }
+
+    .accordion .panel-group .panel-heading+.panel-collapse>.panel-body{
+        border:none;
+        border-top:1px solid @grayMedium;   
+    }
+
+    .document-viewer-wrapper,
+    .k-splitter,
+    .k-splitter>.k-pane
+    {
+      height: 100%;
+    }
+
+    .widgets .tab-content{
+        padding:20px 20px 20px 15px;
+    }
+    .k-splitter{
+        border:0;
+        border-bottom:1px solid @grayMedium;
+        box-shadow:none;
+        overflow:visible;
+        .k-pane{
+            overflow:visible;
+            .tab-content{
+                padding:10px;
+            }
+        }
+        .leftPane .row .page-title{
+                padding-top:0;
+        }
+
+        .rightPane .nav-tabs>li>a{
+            padding:14px 15px 13px;
+        }
+        .rightPane .excerptBlock {
+            .truncate{
+                width:90%;
+            }
+        }
+        .rightPane .commentBlock {
+            b{
+                width:20%;
+            }
+            .truncate{
+                width:75%;
+            }
+        }
+
+    }
+
+
+    .k-splitter .k-ghost-splitbar-horizontal, .k-splitter .k-splitbar-horizontal {
+      width: 15px;
+      height:100%;
+      background-color: @grayMedium;
+      box-shadow:none;
+      .k-icon.k-resize-handle{
+        width: 15px;
+        background-position: -177px -6px;
+        position:fixed;
+        top:59%;
+      }
+
+      .k-icon.k-collapse-next,.k-icon.k-expand-prev{
+        width: 15px;
+        background-position: 0 -142px;
+        position:fixed;
+        top:60%;
+      }
+
+      .k-icon.k-expand-next,.k-icon.k-collapse-prev{
+        width: 15px;
+        background-position: -2px -174px;
+        position:fixed;
+        top:60%;
+      }
+  
+    }
+
+
+    .k-splitter .nav-tabs>li:first-child {
+        margin-left: -1px;
+    }
+
+    .btn-select.k-dropdown{
+        padding:0;
+        min-width:60px;
+        width:auto;
+        text-shadow: 0 1px rgba(0,0,0,.1);
+        text-shadow: 0 1px 0 @white;
+        background-color: @btnDefaultBg;
+        background-image: -webkit-linear-gradient(top,@btnDefaultBgGradientStart 0,@btnDefaultBgGradientEnd 100%);
+        background-image: -o-linear-gradient(top,@btnDefaultBgGradientStart 0,@btnDefaultBgGradientEnd 100%);
+        background-image: -webkit-gradient(linear,left top,left bottom,from(@btnDefaultBgGradientStart),to(@btnDefaultBgGradientEnd));
+        background-image: linear-gradient(to bottom,@btnDefaultBgGradientStart 0,@btnDefaultBgGradientEnd 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5',endColorstr='#fff1f1f1',GradientType=0);
+        filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+        background-repeat: repeat-x;
+        border: 1px solid @grayMedium;
+        .k-dropdown-wrap{
+            border:0;
+            padding:0;
+    
+            .k-input{
+                height: 15px;
+                padding: 4px 0 4px 6px;
+                line-height: 16px;
+                font-size: @baseFontSize;
+                color: @gray;
+                text-align: justify;
+            }
+            .k-select{
+                margin-top:5px;
+            }
+        }
+    }
+
+    .default-zoomed{
+        font-size:@baseFontSize;
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        transition: all 1s ease;
+    }
+
+    @iterate: 200;
+    .zoomLoopingClass (@index) when (@index > 0) {
+        .font-@{index} {
+            font-size: @baseFontSize*(@index/100);
+        }
+    
+        .zoomLoopingClass(@index - 25);
+    }
+    .zoomLoopingClass (0) {}
+
+    .zoomLoopingClass (@iterate);
+
+    .navigator{
+        width:166px;
+        .input-group-addon{
+            background-color:@white;
+            border-left: 0;
+            border-right: 0;
+        }
+        .input-group input{
+          box-shadow:none;
+          border-right:0;
+          height:25px;
+          min-width:25px;
+          line-height:@baseFontSize;
+        }
+    }
+
+    .hits{
+        background-color:@highlightOff;
+        color:@text-color
+    }
+
+    .hits.active{
+        background-color:@highlightOn;
+    }
+
+    /*Responsive Button Stack */
+    @media only screen and (max-width: 1000px) {
+
+        .btn-group-sm.btn-group-responsive {
+          > .btn,
+          > .btn-group,
+          > .btn-group > .btn {
+            display: block;
+            float: none;
+            width: 100%;
+            max-width: 100%;
+          }
+
+          // Clear floats so dropdown menus can be properly placed
+          > .btn-group {
+            &:extend(.clearfix all);
+            > .btn {
+              float: none;
+            }
+          }
+
+          > .btn + .btn,
+          > .btn + .btn-group,
+          > .btn-group + .btn,
+          > .btn-group + .btn-group {
+            margin-top: -1px;
+            margin-left: 0;
+          }
+        }
+
+        .btn-group-sm.btn-group-responsive > .btn {
+          &:not(:first-child):not(:last-child) {
+            border-radius: 0;
+          }
+          &:first-child:not(:last-child) {
+            border-top-right-radius: @border-radius-base;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+          &:last-child:not(:first-child) {
+            border-bottom-left-radius: @border-radius-base;
+            border-top-right-radius: 0;
+            border-top-left-radius: 0;
+          }
+        }
+        .btn-group-sm.btn-group-responsive > .btn-group:not(:first-child):not(:last-child) > .btn {
+          border-radius: 0;
+        }
+        .btn-group-sm.btn-group-responsive > .btn-group:first-child:not(:last-child) {
+          > .btn:last-child,
+          > .dropdown-toggle {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+        }
+        .btn-group-sm.btn-group-responsive > .btn-group:last-child:not(:first-child) > .btn:first-child {
+          border-top-right-radius: 0;
+            border-top-left-radius: 0;
+        }
+
+    }
+
+}
+
+/**Reviewer Styles End**/
+

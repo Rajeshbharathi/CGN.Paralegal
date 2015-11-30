@@ -1,0 +1,90 @@
+
+<div ng-controller="AssistedReviewController as AssistedReviewController">
+    <div class="v-padding-5">
+        <div>Relevance :  </div>
+        <div class="btn-group btn-group-sm btn-group-responsive v-padding-top-10">
+            <label ng-class="{&quot;btn-primary&quot;:AssistedReviewController.isNone()}"
+                   ng-model="AssistedReviewController.selectedRelevance"
+                   ng-click="AssistedReviewController.makeDocumentNotExample()"
+                   btn-radio="&quot;NONE&quot;" uncheckable=""
+                   class="btn btn-default">None</label>
+            <label ng-class="{&quot;btn-primary&quot;:AssistedReviewController.isRelevant()}"
+                   ng-model="AssistedReviewController.selectedRelevance"
+                   btn-radio="&quot;RELEVANT&quot;" uncheckable=""
+                   ng-click="AssistedReviewController.makeDocumentExample()"
+                   class="btn btn-default">Relevant</label>
+            <label ng-class="{&quot;btn-primary&quot;:AssistedReviewController.isNonRelevant()}"
+                   ng-model="AssistedReviewController.selectedRelevance"
+                   btn-radio="&quot;NONRELEVANT&quot;" uncheckable=""
+                   class="btn btn-default">Not Relevant</label>
+        </div>
+    </div>
+    <hr class="v-margin-5" />
+    <div class="v-padding-5">
+        <div class="v-margin-bottom-10">Example Document : </div>
+        <div class="clearfix">
+            <div class="pull-left">
+                <div class="btn-group btn-group-sm v-margin-bottom-10 h-margin-right-10">
+                    <label ng-class="{&quot;btn-primary&quot;:AssistedReviewController.isExampleDocument}"
+                           ng-model="AssistedReviewController.isExampleDocument"
+                           btn-radio="true" uncheckable=""
+                           class="btn btn-default">Yes</label>
+                    <label ng-class="{&quot;btn-primary&quot;:!AssistedReviewController.isExampleDocument}"
+                           ng-model="AssistedReviewController.isExampleDocument"
+                           btn-radio="false" uncheckable=""
+                           class="btn btn-default">No</label>
+                </div>
+            </div>
+            <div class="pull-left v-margin-bottom-10">
+                <button ng-click="AssistedReviewController.addExcerpts()"
+                        ng-disabled="AssistedReviewController.isNone()"
+                        class="btn btn-sm btn-default ">
+                    {{AssistedReviewController.localized.Excerpt}}
+                </button>
+            </div>
+        </div>
+    </div>
+    <div accordion="" class="accordion excerptBlock">
+        <div accordion-group="" is-open="AssistedReviewController.excerptStatus.open" class="accordion-group">
+            <div accordion-heading="accordion-heading" class="accordion-header">
+                {{AssistedReviewController.localized.Excerpts}}
+                <i ng-class="{'glyphicon-minus-sign':AssistedReviewController.excerptStatus.open,
+                   'glyphicon-plus-sign':!AssistedReviewController.excerptStatus.open}"
+                   class="glyphicon pull-left"></i>
+            </div>
+            <div class="panel-body-content">
+                <p ng-repeat="excerpt in AssistedReviewController.excerpts" class="clearfix">
+                    <span ng-text-truncate="excerpt.text" class="truncate pull-left"
+                          ng-tt-chars-threshold="{{AssistedReviewController.localized.shorttext}}"></span>
+                    <button type="button" ng-click="AssistedReviewController.removeExcerpts($index)" class="close pull-right"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div accordion="" class="accordion v-margin-top-10 commentBlock">
+        <div accordion-group="" is-open="AssistedReviewController.commentStatus.open" class="accordion-group">
+            <div accordion-heading="accordion-heading" class="accordion-header">
+                {{AssistedReviewController.localized.Comments}}
+                <i ng-class="{'glyphicon-minus-sign':AssistedReviewController.commentStatus.open,'glyphicon-plus-sign':!AssistedReviewController.commentStatus.open}"
+                   class="glyphicon pull-left"></i>
+            </div>
+            <div class="v-margin-bottom-10">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" ng-model="AssistedReviewController.commentItem.text" class="form-control" />
+                        <div ng-click="AssistedReviewController.addComments(AssistedReviewController.commentItem)" class="input-group-addon">Add</div>
+                    </div>
+                </div>
+                <div class="panel-body-content">
+                    <p class="clearfix" ng-repeat="comment in AssistedReviewController.comments">
+                        <b class="pull-left"> {{comment.userId}} : </b>
+                        <span ng-text-truncate="comment.text" class="truncate pull-left"
+                              ng-tt-chars-threshold="{{AssistedReviewController.localized.shorttext}}"></span>
+                        <button type="button" ng-click="AssistedReviewController.removeComments($index)" class="close pull-right"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

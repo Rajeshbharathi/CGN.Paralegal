@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://vswebessentials.com/schemas/v1/bundle.xsd">
+  <settings>
+    <!--Determines if the bundle file should be automatically optimized after creation/update.-->
+    <minify>false</minify>
+    <!--Determin whether to generate/re-generate this bundle on building the solution.-->
+    <runOnBuild>true</runOnBuild>
+    <!--Specifies a custom subfolder to save files to. By default, compiled output will be placed in the same folder and nested under the original file.-->
+    <outputDirectory />
+  </settings>
+  <!--The order of the <file> elements determines the order of the files in the bundle.-->
+  <files>
+    <file>/App/analytics/app.js</file>
+    <file>/App/analytics/app.config.js</file>
+    <file>/App/analytics/app.routes.js</file>
+    <file>/App/analytics/app.init.js</file>
+    
+    <file>/App/common/services/WebApiClientService.js</file>
+    <file>/App/common/decorators/WebApiClientServiceDecorator.js</file>
+    <file>/App/common/directives/ErrorHandlerDirective.js</file>
+    <file>/App/common/services/ErrorHandlerService.js</file>
+    <file>/App/common/directives/InputValidationDirective.js</file>
+
+    
+
+    <file>/App/analytics/projects/Projects.resx.js</file>
+    <file>/App/analytics/projects/projectWizard/ProjectWizard.resx.js</file>
+    <file>/App/analytics/training/documentSets/DocumentSetsList.resx.js</file>
+    <file>/App/analytics/projects/dashboard/ProjectDashboard.resx.js</file>
+    <file>/App/analytics/training/trainingProgress/TrainingProgress.resx.js</file>
+    <file>/App/analytics/projects/models/ProjectModel.js</file>
+    <file>/App/analytics/training/services/AppState.js</file>
+    <file>/App/common/services/AlertService.js</file>
+    <file>/App/common/services/MattersDataService.js</file>
+    <file>/App/analytics/training/services/DocumentSetsDataService.js</file>
+    <file>/App/common/services/DatasetsDataService.js</file>
+    <file>/App/analytics/projects/services/ProjectsDataService.js</file>
+    <file>/App/analytics/training/services/TrainingDataService.js</file>
+    <file>/App/common/directives/BreadcrumbsDirective.js</file>
+    <file>/App/common/directives/ConfirmClickDirective.js</file>
+      <file>/App/common/directives/ValidationDirective.js</file>
+      <file>/App/common/directives/CustomValidationDirective.js</file>
+    <file>/App/analytics/training/trainingProgress/TrainingProgressDirective.js</file>
+    <file>/App/analytics/training/documentSets/DocumentSetsListDirective.js</file>
+    <file>/App/analytics/training/documentSets/DocumentSetsListController.js</file>
+    <file>/App/analytics/projects/projectWizard/ProjectWizardController.js</file>
+      <file>/App/analytics/projects/projectList/ProjectListController.js</file>
+      <file>/App/analytics/projects/dashboard/ProjectDashboardController.js</file>
+      <file>/App/analytics/training/trainingProgress/TrainingProgressController.js</file>
+
+      <file>/App/analytics/projects/modals/CreateControlSetController.js</file>
+	<file>/App/analytics/projects/modals/CreatePredictionSetController.js</file>
+	<file>/App/analytics/projects/modals/CreateQCSetController.js</file>
+	<file>/App/analytics/projects/modals/RunAccuracyTestController.js</file>
+	<file>/App/analytics/projects/models/ControlsetModel.js</file>
+	<file>/App/analytics/projects/models/QCSetModel.js</file>
+	<file>/App/analytics/projects/services/ControlSetService.js</file>
+	<file>/App/analytics/projects/services/PredictionSetService.js</file>
+	<file>/App/analytics/projects/services/QCSetService.js</file>
+	<file>/App/analytics/projects/services/RunAccuracyTestService.js</file>
+    
+	<file>/App/common/directives/FileBrowse/FileBrowse.resx.js</file>
+	<file>/App/common/directives/FileBrowse/FileBrowseController.js</file>
+	<file>/App/common/directives/FileBrowse/FileBrowseDirective.js</file>
+	<file>/App/common/directives/FileBrowse/FiledialogModel.js</file>
+	<file>/App/common/directives/FileBrowse/FileDialogService.js</file>
+	<file>/App/common/directives/FileBrowse/FolderFilePathDialogController.js</file>
+
+	<file>/App/common/directives/UserPicker/Userpicker.resx.js</file>
+	<file>/App/common/directives/UserPicker/UserPickerController.js</file>
+	<file>/App/common/directives/UserPicker/UserPickerDialogController.js</file>
+	<file>/App/common/directives/UserPicker/UserPickerDirective.js</file>
+	<file>/App/common/directives/UserPicker/UserPickerFilterModel.js</file>
+	<file>/App/common/directives/UserPicker/UserPickerService.js</file>
+    
+
+  </files>
+</bundle>

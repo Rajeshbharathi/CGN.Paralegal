@@ -1,0 +1,47 @@
+﻿{  
+   "CurrentRoundProgress":{  
+      "$id":"2",
+      "Name":"Training Set 002",
+      "BinderId":"3ce28658-31f3-e411-b5c1-005056850057",
+      "Type":"TrainingSet",
+      "TotalDocuments":41,
+      "NumberOfRelevantDocuments":28,
+      "NumberOfNotRelevantDocuments":13,
+      "NumberOfNotCodedDocuments":0,
+      "NumberOfSkippedDocuments":0
+   },
+   "CompletedRoundsSummary":{  
+      "Name":null,
+      "BinderId":null,
+      "Type":"TrainingSet",
+      "TotalDocuments":91,
+      "NumberOfRelevantDocuments":61,
+      "NumberOfNotRelevantDocuments":30,
+      "NumberOfNotCodedDocuments":0,
+      "NumberOfSkippedDocuments":0
+   },
+   "CompletedRoundDetails":[  
+      {  
+         "Name":"Training Set 002",
+         "BinderId":"3ce28658-31f3-e411-b5c1-005056850057",
+         "Type":"TrainingSet",
+         "TotalDocuments":41,
+         "NumberOfRelevantDocuments":28,
+         "NumberOfNotRelevantDocuments":13,
+         "NumberOfNotCodedDocuments":0,
+         "NumberOfSkippedDocuments":0
+      },
+      {  
+         "Name":"Training Set 001",
+         "BinderId":"401dec85-30f3-e411-b5c1-005056850057",
+         "Type":"TrainingSet",
+         "TotalDocuments":50,
+         "NumberOfRelevantDocuments":33,
+         "NumberOfNotRelevantDocuments":17,
+         "NumberOfNotCodedDocuments":0,
+         "NumberOfSkippedDocuments":0
+      }
+   ],
+   "CurrentRound":2,
+   "RoundsCompleted":2
+}

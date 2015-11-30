@@ -1,0 +1,1476 @@
+﻿{
+  "$id": "1",
+  "Documents": [
+    {
+      "$id": "2",
+      "Id": 1,
+      "ReferenceId": "3AEA87DA086747C7AB327E01551E4CD2CFB4D64AB5A54510B4FA1432ED38655A",
+      "Fields": [
+        {
+          "$id": "3",
+          "Id": 115,
+          "Name": "ControlSet",
+          "DisplayName": "Is Control Document",
+          "Value": "1"
+        },
+        {
+          "$id": "4",
+          "Id": 120,
+          "Name": "Is Training Document",
+          "DisplayName": "Is Training Document",
+          "Value": null
+        },
+        {
+          "$id": "5",
+          "Id": 122,
+          "Name": "Is QC Document",
+          "DisplayName": "Is Verification Document",
+          "Value": null
+        },
+        {
+          "$id": "6",
+          "Id": 116,
+          "Name": "DevTest DS1-Predictive Coding Project-ReviewerCategory",
+          "DisplayName": "Reviewer Category",
+          "Value": "Not_Coded"
+        },
+        {
+          "$id": "7",
+          "Id": 117,
+          "Name": "Predicted Category",
+          "DisplayName": "Predicted Category",
+          "Value": null
+        },
+        {
+          "$id": "8",
+          "Id": 60,
+          "Name": "DCN",
+          "DisplayName": "DCN",
+          "Value": "devtest00000054"
+        }
+      ]
+    },
+    {
+      "$id": "9",
+      "Id": 2,
+      "ReferenceId": "3AEA87DA086747C7AB327E01551E4CD2892182DB85A846EAB79201CF32F76ECE",
+      "Fields": [
+        {
+          "$id": "10",
+          "Id": 115,
+          "Name": "ControlSet",
+          "DisplayName": "Is Control Document",
+          "Value": "1"
+        },
+        {
+          "$id": "11",
+          "Id": 120,
+          "Name": "Is Training Document",
+          "DisplayName": "Is Training Document",
+          "Value": null
+        },
+        {
+          "$id": "12",
+          "Id": 122,
+          "Name": "Is QC Document",
+          "DisplayName": "Is Verification Document",
+          "Value": null
+        },
+        {
+          "$id": "13",
+          "Id": 116,
+          "Name": "DevTest DS1-Predictive Coding Project-ReviewerCategory",
+          "DisplayName": "Reviewer Category",
+          "Value": "Not_Coded"
+        },
+        {
+          "$id": "14",
+          "Id": 117,
+          "Name": "Predicted Category",
+          "DisplayName": "Predicted Category",
+          "Value": null
+        },
+        {
+          "$id": "15",
+          "Id": 60,
+          "Name": "DCN",
+          "DisplayName": "DCN",
+          "Value": "devtest00000032"
+        }
+      ]
+    },
+    {
+      "$id": "16",
+      "Id": 3,
+      "ReferenceId": "3AEA87DA086747C7AB327E01551E4CD2A9060E2A667747BC880BB5BFDCA1C123",
+      "Fields": [
+        {
+          "$id": "17",
+          "Id": 115,
+          "Name": "ControlSet",
+          "DisplayName": "Is Control Document",
+          "Value": "1"
+        },
+        {
+          "$id": "18",
+          "Id": 120,
+          "Name": "Is Training Document",
+          "DisplayName": "Is Training Document",
+          "Value": null
+        },
+        {
+          "$id": "19",
+          "Id": 122,
+          "Name": "Is QC Document",
+          "DisplayName": "Is Verification Document",
+          "Value": null
+        },
+        {
+          "$id": "20",
+          "Id": 116,
+          "Name": "DevTest DS1-Predictive Coding Project-ReviewerCategory",
+          "DisplayName": "Reviewer Category",
+          "Value": "Not_Coded"
+        },
+        {
+          "$id": "21",
+          "Id": 117,
+          "Name": "Predicted Category",
+          "DisplayName": "Predicted Category",
+          "Value": null
+        },
+        {
+          "$id": "22",
+          "Id": 60,
+          "Name": "DCN",
+          "DisplayName": "DCN",
+          "Value": "devtest00000011"
+        }
+      ]
+    },
+    {
+      "$id": "23",
+      "Id": 4,
+      "ReferenceId": "3AEA87DA086747C7AB327E01551E4CD259FC8D80EBFC4972858444D45EF473D3",
+      "Fields": [
+        {
+          "$id": "24",
+          "Id": 115,
+          "Name": "ControlSet",
+          "DisplayName": "Is Control Document",
+          "Value": "1"
+        },
+        {
+          "$id": "25",
+          "Id": 120,
+          "Name": "Is Training Document",
+          "DisplayName": "Is Training Document",
+          "Value": null
+        },
+        {
+          "$id": "26",
+          "Id": 122,
+          "Name": "Is QC Document",
+          "DisplayName": "Is Verification Document",
+          "Value": null
+        },
+        {
+          "$id": "27",
+          "Id": 116,
+          "Name": "DevTest DS1-Predictive Coding Project-ReviewerCategory",
+          "DisplayName": "Reviewer Category",
+          "Value": "Not_Coded"
+        },
+        {
+          "$id": "28",
+          "Id": 117,
+          "Name": "Predicted Category",
+          "DisplayName": "Predicted Category",
+          "Value": null
+        },
+        {
+          "$id": "29",
+          "Id": 60,
+          "Name": "DCN",
+          "DisplayName": "DCN",
+          "Value": "devtest00000034"
+        }
+      ]
+    },
+    {
+      "$id": "30",
+      "Id": 5,
+      "ReferenceId": "3AEA87DA086747C7AB327E01551E4CD2774A333B455243909B569ED51331D244",
+      "Fields": [
+        {
+          "$id": "31",
+          "Id": 115,
+          "Name": "ControlSet",
+          "DisplayName": "Is Control Document",
+          "Value": "1"
+        },
+        {
+          "$id": "32",
+          "Id": 120,
+          "Name": "Is Training Document",
+          "DisplayName": "Is Training Document",
+          "Value": null
+        },
+        {
+          "$id": "33",
+          "Id": 122,
+          "Name": "Is QC Document",
+          "DisplayName": "Is Verification Document",
+          "Value": null
+        },
+        {
+          "$id": "34",
+          "Id": 116,
+          "Name": "DevTest DS1-Predictive Coding Project-ReviewerCategory",
+          "DisplayName": "Reviewer Category",
+          "Value": "Not_Coded"
+        },
+        {
+          "$id": "35",
+          "Id": 117,
+          "Name": "Predicted Category",
+          "DisplayName": "Predicted Category",
+          "Value": null
+        },
+        {
+          "$id": "36",
+          "Id": 60,
+          "Name": "DCN",
+          "DisplayName": "DCN",
+          "Value": "devtest00000035"
+        }
+      ]
+    },
+    {
+      "$id": "37",
+      "Id": 6,
+      "ReferenceId": "3AEA87DA086747C7AB327E01551E4CD27289247F8E534FA88FFB7067162BA7FF",
+      "Fields": [
+        {
+          "$id": "38",
+          "Id": 115,
+          "Name": "ControlSet",
+          "DisplayName": "Is Control Document",
+          "Value": "1"
+        },
+        {
+          "$id": "39",
+          "Id": 120,
+          "Name": "Is Training Document",
+          "DisplayName": "Is Training Document",
+          "Value": null
+        },
+        {
+          "$id": "40",
+          "Id": 122,
+          "Name": "Is QC Document",
+          "DisplayName": "Is Verification Document",
+          "Value": null
+        },
+        {
+          "$id": "41",
+          "Id": 116,
+          "Name": "DevTest DS1-Predictive Coding Project-ReviewerCategory",
+          "DisplayName": "Reviewer Category",
+          "Value": "Not_Coded"
+        },
+        {
+          "$id": "42",
+          "Id": 117,
+          "Name": "Predicted Category",
+          "DisplayName": "Predicted Category",
+          "Value": null
+        },
+        {
+          "$id": "43",
+          "Id": 60,
+          "Name": "DCN",
+          "DisplayName": "DCN",
+          "Value": "devtest00000049"
+        }
+      ]
+    },
+    {
+      "$id": "44",
+      "Id": 7,
+      "ReferenceId": "3AEA87DA086747C7AB327E01551E4CD2E680505A0A1A400B9E304349E1101BC6",
+      "Fields": [
+        {
+          "$id": "45",
+          "Id": 115,
+          "Name": "ControlSet",
+          "DisplayName": "Is Control Document",
+          "Value": "1"
+        },
+        {
+          "$id": "46",
+          "Id": 120,
+          "Name": "Is Training Document",
+          "DisplayName": "Is Training Document",
+          "Value": null
+        },
+        {
+          "$id": "47",
+          "Id": 122,
+          "Name": "Is QC Document",
+          "DisplayName": "Is Verification Document",
+          "Value": null
+        },
+        {
+          "$id": "48",
+          "Id": 116,
+          "Name": "DevTest DS1-Predictive Coding Project-ReviewerCategory",
+          "DisplayName": "Reviewer Category",
+          "Value": "Not_Coded"
+        },
+        {
+          "$id": "49",
+          "Id": 117,
+          "Name": "Predicted Category",
+          "DisplayName": "Predicted Category",
+          "Value": null
+        },
+        {
+          "$id": "50",
+          "Id": 60,
+          "Name": "DCN",
+          "DisplayName": "DCN",
+          "Value": "devtest00000059"
+        }
+      ]
+    },
+    {
+      "$id": "51",
+      "Id": 8,
+      "ReferenceId": "3AEA87DA086747C7AB327E01551E4CD2E53A9FEFC7564484B4A8D3EB02CC4F72",
+      "Fields": [
+        {
+          "$id": "52",
+          "Id": 115,
+          "Name": "ControlSet",
+          "DisplayName": "Is Control Document",
+          "Value": "1"
+        },
+        {
+          "$id": "53",
+          "Id": 120,
+          "Name": "Is Training Document",
+          "DisplayName": "Is Training Document",
+          "Value": null
+        },
+        {
+          "$id": "54",
+          "Id": 122,
+          "Name": "Is QC Document",
+          "DisplayName": "Is Verification Document",
+          "Value": null
+        },
+        {
+          "$id": "55",
+          "Id": 116,
+          "Name": "DevTest DS1-Predictive Coding Project-ReviewerCategory",
+          "DisplayName": "Reviewer Category",
+          "Value": "Not_Coded"
+        },
+        {
+          "$id": "56",
+          "Id": 117,
+          "Name": "Predicted Category",
+          "DisplayName": "Predicted Category",
+          "Value": null
+        },
+        {
+          "$id": "57",
+          "Id": 60,
+          "Name": "DCN",
+          "DisplayName": "DCN",
+          "Value": "devtest00000067"
+        }
+      ]
+    },
+    {
+      "$id": "58",
+      "Id": 9,
+      "ReferenceId": "3AEA87DA086747C7AB327E01551E4CD25D7B1665C8574D70966CB85D796E3019",
+      "Fields": [
+        {
+          "$id": "59",
+          "Id": 115,
+          "Name": "ControlSet",
+          "DisplayName": "Is Control Document",
+          "Value": "1"
+        },
+        {
+          "$id": "60",
+          "Id": 120,
+          "Name": "Is Training Document",
+          "DisplayName": "Is Training Document",
+          "Value": null
+        },
+        {
+          "$id": "61",
+          "Id": 122,
+          "Name": "Is QC Document",
+          "DisplayName": "Is Verification Document",
+          "Value": null
+        },
+        {
+          "$id": "62",
+          "Id": 116,
+          "Name": "DevTest DS1-Predictive Coding Project-ReviewerCategory",
+          "DisplayName": "Reviewer Category",
+          "Value": "Not_Coded"
+        },
+        {
+          "$id": "63",
+          "Id": 117,
+          "Name": "Predicted Category",
+          "DisplayName": "Predicted Category",
+          "Value": null
+        },
+        {
+          "$id": "64",
+          "Id": 60,
+          "Name": "DCN",
+          "DisplayName": "DCN",
+          "Value": "devtest00000022"
+        }
+      ]
+    },
+    {
+      "$id": "65",
+      "Id": 10,
+      "ReferenceId": "3AEA87DA086747C7AB327E01551E4CD2E03C01362994495099015B3E42D7426F",
+      "Fields": [
+        {
+          "$id": "66",
+          "Id": 115,
+          "Name": "ControlSet",
+          "DisplayName": "Is Control Document",
+          "Value": "1"
+        },
+        {
+          "$id": "67",
+          "Id": 120,
+          "Name": "Is Training Document",
+          "DisplayName": "Is Training Document",
+          "Value": null
+        },
+        {
+          "$id": "68",
+          "Id": 122,
+          "Name": "Is QC Document",
+          "DisplayName": "Is Verification Document",
+          "Value": null
+        },
+        {
+          "$id": "69",
+          "Id": 116,
+          "Name": "DevTest DS1-Predictive Coding Project-ReviewerCategory",
+          "DisplayName": "Reviewer Category",
+          "Value": "Not_Coded"
+        },
+        {
+          "$id": "70",
+          "Id": 117,
+          "Name": "Predicted Category",
+          "DisplayName": "Predicted Category",
+          "Value": null
+        },
+        {
+          "$id": "71",
+          "Id": 60,
+          "Name": "DCN",
+          "DisplayName": "DCN",
+          "Value": "devtest00000075"
+        }
+      ]
+    },
+    {
+      "$id": "72",
+      "Id": 11,
+      "ReferenceId": "2751B85FD9C24ED7A3C56CC6849139B5312C9F4E4F8A454C93E34E2A508ED1FA",
+      "Fields": [
+        {
+          "$id": "73",
+          "Id": 88,
+          "Name": "Is Control Document",
+          "DisplayName": "Is Control Document",
+          "Value": null
+        },
+        {
+          "$id": "74",
+          "Id": 93,
+          "Name": "Training Set 001",
+          "DisplayName": "Is Training Document",
+          "Value": "1"
+        },
+        {
+          "$id": "75",
+          "Id": 95,
+          "Name": "Is QC Document",
+          "DisplayName": "Is Verification Document",
+          "Value": null
+        },
+        {
+          "$id": "76",
+          "Id": 89,
+          "Name": "TestDS3-Predictive Coding Project-ReviewerCategory",
+          "DisplayName": "Reviewer Category",
+          "Value": "Not_Coded"
+        },
+        {
+          "$id": "77",
+          "Id": 90,
+          "Name": "Predicted Category",
+          "DisplayName": "Predicted Category",
+          "Value": null
+        },
+        {
+          "$id": "78",
+          "Id": 79,
+          "Name": "DCN",
+          "DisplayName": "DCN",
+          "Value": "test00000406"
+        }
+      ]
+    },
+    {
+      "$id": "79",
+      "Id": 12,
+      "ReferenceId": "2751B85FD9C24ED7A3C56CC6849139B58798A047D3BD45AAA38249867FA5549B",
+      "Fields": [
+        {
+          "$id": "80",
+          "Id": 88,
+          "Name": "Is Control Document",
+          "DisplayName": "Is Control Document",
+          "Value": null
+        },
+        {
+          "$id": "81",
+          "Id": 93,
+          "Name": "Training Set 001",
+          "DisplayName": "Is Training Document",
+          "Value": "1"
+        },
+        {
+          "$id": "82",
+          "Id": 95,
+          "Name": "Is QC Document",
+          "DisplayName": "Is Verification Document",
+          "Value": null
+        },
+        {
+          "$id": "83",
+          "Id": 89,
+          "Name": "TestDS3-Predictive Coding Project-ReviewerCategory",
+          "DisplayName": "Reviewer Category",
+          "Value": "Not_Coded"
+        },
+        {
+          "$id": "84",
+          "Id": 90,
+          "Name": "Predicted Category",
+          "DisplayName": "Predicted Category",
+          "Value": null
+        },
+        {
+          "$id": "85",
+          "Id": 79,
+          "Name": "DCN",
+          "DisplayName": "DCN",
+          "Value": "test00000478"
+        }
+      ]
+    },
+    {
+      "$id": "86",
+      "Id": 13,
+      "ReferenceId": "2751B85FD9C24ED7A3C56CC6849139B5F82EAAC1135E40EE83EC55924EF68015",
+      "Fields": [
+        {
+          "$id": "87",
+          "Id": 88,
+          "Name": "Is Control Document",
+          "DisplayName": "Is Control Document",
+          "Value": null
+        },
+        {
+          "$id": "88",
+          "Id": 93,
+          "Name": "Training Set 001",
+          "DisplayName": "Is Training Document",
+          "Value": "1"
+        },
+        {
+          "$id": "89",
+          "Id": 95,
+          "Name": "Is QC Document",
+          "DisplayName": "Is Verification Document",
+          "Value": null
+        },
+        {
+          "$id": "90",
+          "Id": 89,
+          "Name": "TestDS3-Predictive Coding Project-ReviewerCategory",
+          "DisplayName": "Reviewer Category",
+          "Value": "Not_Coded"
+        },
+        {
+          "$id": "91",
+          "Id": 90,
+          "Name": "Predicted Category",
+          "DisplayName": "Predicted Category",
+          "Value": null
+        },
+        {
+          "$id": "92",
+          "Id": 79,
+          "Name": "DCN",
+          "DisplayName": "DCN",
+          "Value": "test00000503"
+        }
+      ]
+    },
+    {
+      "$id": "93",
+      "Id": 14,
+      "ReferenceId": "2751B85FD9C24ED7A3C56CC6849139B5B320F5D9B0424F0FB21F837F565AEA9D",
+      "Fields": [
+        {
+          "$id": "94",
+          "Id": 88,
+          "Name": "Is Control Document",
+          "DisplayName": "Is Control Document",
+          "Value": null
+        },
+        {
+          "$id": "95",
+          "Id": 93,
+          "Name": "Training Set 001",
+          "DisplayName": "Is Training Document",
+          "Value": "1"
+        },
+        {
+          "$id": "96",
+          "Id": 95,
+          "Name": "Is QC Document",
+          "DisplayName": "Is Verification Document",
+          "Value": null
+        },
+        {
+          "$id": "97",
+          "Id": 89,
+          "Name": "TestDS3-Predictive Coding Project-ReviewerCategory",
+          "DisplayName": "Reviewer Category",
+          "Value": "Not_Coded"
+        },
+        {
+          "$id": "98",
+          "Id": 90,
+          "Name": "Predicted Category",
+          "DisplayName": "Predicted Category",
+          "Value": null
+        },
+        {
+          "$id": "99",
+          "Id": 79,
+          "Name": "DCN",
+          "DisplayName": "DCN",
+          "Value": "test00000509"
+        }
+      ]
+    },
+    {
+      "$id": "100",
+      "Id": 15,
+      "ReferenceId": "2751B85FD9C24ED7A3C56CC6849139B518492DC7A56C451EB9AE7D90187E24DA",
+      "Fields": [
+        {
+          "$id": "101",
+          "Id": 88,
+          "Name": "Is Control Document",
+          "DisplayName": "Is Control Document",
+          "Value": null
+        },
+        {
+          "$id": "102",
+          "Id": 93,
+          "Name": "Training Set 001",
+          "DisplayName": "Is Training Document",
+          "Value": "1"
+        },
+        {
+          "$id": "103",
+          "Id": 95,
+          "Name": "Is QC Document",
+          "DisplayName": "Is Verification Document",
+          "Value": null
+        },
+        {
+          "$id": "104",
+          "Id": 89,
+          "Name": "TestDS3-Predictive Coding Project-ReviewerCategory",
+          "DisplayName": "Reviewer Category",
+          "Value": "Not_Coded"
+        },
+        {
+          "$id": "105",
+          "Id": 90,
+          "Name": "Predicted Category",
+          "DisplayName": "Predicted Category",
+          "Value": null
+        },
+        {
+          "$id": "106",
+          "Id": 79,
+          "Name": "DCN",
+          "DisplayName": "DCN",
+          "Value": "test00000681"
+        }
+      ]
+    },
+    {
+      "$id": "107",
+      "Id": 16,
+      "ReferenceId": "2751B85FD9C24ED7A3C56CC6849139B5C4CC20047F214F859CA218958A74CBFC",
+      "Fields": [
+        {
+          "$id": "108",
+          "Id": 88,
+          "Name": "Is Control Document",
+          "DisplayName": "Is Control Document",
+          "Value": null
+        },
+        {
+          "$id": "109",
+          "Id": 93,
+          "Name": "Training Set 002",
+          "DisplayName": "Is Training Document",
+          "Value": "1"
+        },
+        {
+          "$id": "110",
+          "Id": 95,
+          "Name": "Is QC Document",
+          "DisplayName": "Is Verification Document",
+          "Value": null
+        },
+        {
+          "$id": "111",
+          "Id": 89,
+          "Name": "TestDS3-Predictive Coding Project-ReviewerCategory",
+          "DisplayName": "Reviewer Category",
+          "Value": "Not_Coded"
+        },
+        {
+          "$id": "112",
+          "Id": 90,
+          "Name": "Predicted Category",
+          "DisplayName": "Predicted Category",
+          "Value": null
+        },
+        {
+          "$id": "113",
+          "Id": 79,
+          "Name": "DCN",
+          "DisplayName": "DCN",
+          "Value": "test00000640"
+        }
+      ]
+    },
+    {
+      "$id": "114",
+      "Id": 17,
+      "ReferenceId": "2751B85FD9C24ED7A3C56CC6849139B503FB1F0803C845ABBC787AE938BD728B",
+      "Fields": [
+        {
+          "$id": "115",
+          "Id": 88,
+          "Name": "Is Control Document",
+          "DisplayName": "Is Control Document",
+          "Value": null
+        },
+        {
+          "$id": "116",
+          "Id": 93,
+          "Name": "Training Set 002",
+          "DisplayName": "Is Training Document",
+          "Value": "1"
+        },
+        {
+          "$id": "117",
+          "Id": 95,
+          "Name": "Is QC Document",
+          "DisplayName": "Is Verification Document",
+          "Value": null
+        },
+        {
+          "$id": "118",
+          "Id": 89,
+          "Name": "TestDS3-Predictive Coding Project-ReviewerCategory",
+          "DisplayName": "Reviewer Category",
+          "Value": "Not_Coded"
+        },
+        {
+          "$id": "119",
+          "Id": 90,
+          "Name": "Predicted Category",
+          "DisplayName": "Predicted Category",
+          "Value": null
+        },
+        {
+          "$id": "120",
+          "Id": 79,
+          "Name": "DCN",
+          "DisplayName": "DCN",
+          "Value": "test00000661"
+        }
+      ]
+    },
+    {
+      "$id": "121",
+      "Id": 18,
+      "ReferenceId": "2751B85FD9C24ED7A3C56CC6849139B592AEC4586B514CFEBD6166C22411B89F",
+      "Fields": [
+        {
+          "$id": "122",
+          "Id": 88,
+          "Name": "Is Control Document",
+          "DisplayName": "Is Control Document",
+          "Value": null
+        },
+        {
+          "$id": "123",
+          "Id": 93,
+          "Name": "Training Set 002",
+          "DisplayName": "Is Training Document",
+          "Value": "1"
+        },
+        {
+          "$id": "124",
+          "Id": 95,
+          "Name": "Is QC Document",
+          "DisplayName": "Is Verification Document",
+          "Value": null
+        },
+        {
+          "$id": "125",
+          "Id": 89,
+          "Name": "TestDS3-Predictive Coding Project-ReviewerCategory",
+          "DisplayName": "Reviewer Category",
+          "Value": "Not_Coded"
+        },
+        {
+          "$id": "126",
+          "Id": 90,
+          "Name": "Predicted Category",
+          "DisplayName": "Predicted Category",
+          "Value": null
+        },
+        {
+          "$id": "127",
+          "Id": 79,
+          "Name": "DCN",
+          "DisplayName": "DCN",
+          "Value": "test00000670"
+        }
+      ]
+    },
+    {
+      "$id": "128",
+      "Id": 19,
+      "ReferenceId": "2751B85FD9C24ED7A3C56CC6849139B51C4512A739444BE58CA3AA98B15CA5DFQ",
+      "Fields": [
+        {
+          "$id": "129",
+          "Id": 88,
+          "Name": "Is Control Document",
+          "DisplayName": "Is Control Document",
+          "Value": null
+        },
+        {
+          "$id": "130",
+          "Id": 93,
+          "Name": "Training Set 002",
+          "DisplayName": "Is Training Document",
+          "Value": "1"
+        },
+        {
+          "$id": "131",
+          "Id": 95,
+          "Name": "Is QC Document",
+          "DisplayName": "Is Verification Document",
+          "Value": null
+        },
+        {
+          "$id": "132",
+          "Id": 89,
+          "Name": "TestDS3-Predictive Coding Project-ReviewerCategory",
+          "DisplayName": "Reviewer Category",
+          "Value": "Not_Coded"
+        },
+        {
+          "$id": "133",
+          "Id": 90,
+          "Name": "Predicted Category",
+          "DisplayName": "Predicted Category",
+          "Value": null
+        },
+        {
+          "$id": "134",
+          "Id": 79,
+          "Name": "DCN",
+          "DisplayName": "DCN",
+          "Value": "test00000773"
+        }
+      ]
+    },
+    {
+      "$id": "135",
+      "Id": 20,
+      "ReferenceId": "2751B85FD9C24ED7A3C56CC6849139B52BABE22C79A544789E04337291B6AEC7",
+      "Fields": [
+        {
+          "$id": "136",
+          "Id": 88,
+          "Name": "Is Control Document",
+          "DisplayName": "Is Control Document",
+          "Value": null
+        },
+        {
+          "$id": "137",
+          "Id": 93,
+          "Name": "Training Set 002",
+          "DisplayName": "Is Training Document",
+          "Value": "1"
+        },
+        {
+          "$id": "138",
+          "Id": 95,
+          "Name": "Is QC Document",
+          "DisplayName": "Is Verification Document",
+          "Value": null
+        },
+        {
+          "$id": "139",
+          "Id": 89,
+          "Name": "TestDS3-Predictive Coding Project-ReviewerCategory",
+          "DisplayName": "Reviewer Category",
+          "Value": "Not_Coded"
+        },
+        {
+          "$id": "140",
+          "Id": 90,
+          "Name": "Predicted Category",
+          "DisplayName": "Predicted Category",
+          "Value": null
+        },
+        {
+          "$id": "141",
+          "Id": 79,
+          "Name": "DCN",
+          "DisplayName": "DCN",
+          "Value": "test00000876"
+        }
+      ]
+    },
+    {
+      "$id": "142",
+      "Id": 21,
+      "ReferenceId": "3AEA87DA086747C7AB327E01551E4CD2CFB4D64AB5A54510B4FA1432ED38655AER",
+      "Fields": [
+        {
+          "$id": "143",
+          "Id": 115,
+          "Name": "Is Control Document",
+          "DisplayName": "Is Control Document",
+          "Value": null
+        },
+        {
+          "$id": "144",
+          "Id": 120,
+          "Name": "Is Training Document",
+          "DisplayName": "Is Training Document",
+          "Value": null
+        },
+        {
+          "$id": "145",
+          "Id": 122,
+          "Name": "QCSet01",
+          "DisplayName": "Is Verification Document",
+          "Value": 1
+        },
+        {
+          "$id": "146",
+          "Id": 116,
+          "Name": "DevTest DS1-Predictive Coding Project-ReviewerCategory",
+          "DisplayName": "Reviewer Category",
+          "Value": "Not_Coded"
+        },
+        {
+          "$id": "147",
+          "Id": 117,
+          "Name": "Predicted Category",
+          "DisplayName": "Predicted Category",
+          "Value": null
+        },
+        {
+          "$id": "148",
+          "Id": 60,
+          "Name": "DCN",
+          "DisplayName": "DCN",
+          "Value": "devtest000000787"
+        }
+      ]
+    },
+    {
+      "$id": "149",
+      "Id": 22,
+      "ReferenceId": "3AEA87DA086747C7AB327E01551E4CD2892182DB85A846EAB79201CF32F76ECEFS",
+      "Fields": [
+        {
+          "$id": "150",
+          "Id": 115,
+          "Name": "Is Control Document",
+          "DisplayName": "Is Control Document",
+          "Value": null
+        },
+        {
+          "$id": "151",
+          "Id": 120,
+          "Name": "Is Training Document",
+          "DisplayName": "Is Training Document",
+          "Value": null
+        },
+        {
+          "$id": "152",
+          "Id": 122,
+          "Name": "QCSet01",
+          "DisplayName": "Is Verification Document",
+          "Value": "1"
+        },
+        {
+          "$id": "153",
+          "Id": 116,
+          "Name": "DevTest DS1-Predictive Coding Project-ReviewerCategory",
+          "DisplayName": "Reviewer Category",
+          "Value": "Not_Coded"
+        },
+        {
+          "$id": "154",
+          "Id": 117,
+          "Name": "Predicted Category",
+          "DisplayName": "Predicted Category",
+          "Value": null
+        },
+        {
+          "$id": "155",
+          "Id": 60,
+          "Name": "DCN",
+          "DisplayName": "DCN",
+          "Value": "devtest00000032"
+        }
+      ]
+    },
+    {
+      "$id": "156",
+      "Id": 23,
+      "ReferenceId": "3AEA87DA086747C7AB327E01551E4CD2A9060E2A667747BC880BB5BFDCA1CSDSFE",
+      "Fields": [
+        {
+          "$id": "157",
+          "Id": 115,
+          "Name": "Is Control Document",
+          "DisplayName": "Is Control Document",
+          "Value": null
+        },
+        {
+          "$id": "158",
+          "Id": 120,
+          "Name": "Is Training Document",
+          "DisplayName": "Is Training Document",
+          "Value": null
+        },
+        {
+          "$id": "159",
+          "Id": 122,
+          "Name": "QCSet01",
+          "DisplayName": "Is Verification Document",
+          "Value": "1"
+        },
+        {
+          "$id": "160",
+          "Id": 116,
+          "Name": "DevTest DS1-Predictive Coding Project-ReviewerCategory",
+          "DisplayName": "Reviewer Category",
+          "Value": "Not_Coded"
+        },
+        {
+          "$id": "161",
+          "Id": 117,
+          "Name": "Predicted Category",
+          "DisplayName": "Predicted Category",
+          "Value": null
+        },
+        {
+          "$id": "162",
+          "Id": 60,
+          "Name": "DCN",
+          "DisplayName": "DCN",
+          "Value": "devtest00000011"
+        }
+      ]
+    },
+    {
+      "$id": "163",
+      "Id": 24,
+      "ReferenceId": "3AEA87DA086747C7AB327E01551E4CD259FC8D80EBFC4972858444D45EF473UDG3",
+      "Fields": [
+        {
+          "$id": "164",
+          "Id": 115,
+          "Name": "Is Control Document",
+          "DisplayName": "Is Control Document",
+          "Value": null
+        },
+        {
+          "$id": "165",
+          "Id": 120,
+          "Name": "Is Training Document",
+          "DisplayName": "Is Training Document",
+          "Value": null
+        },
+        {
+          "$id": "166",
+          "Id": 122,
+          "Name": "QCSet01",
+          "DisplayName": "Is Verification Document",
+          "Value": "1"
+        },
+        {
+          "$id": "167",
+          "Id": 116,
+          "Name": "DevTest DS1-Predictive Coding Project-ReviewerCategory",
+          "DisplayName": "Reviewer Category",
+          "Value": "Not_Coded"
+        },
+        {
+          "$id": "168",
+          "Id": 117,
+          "Name": "Predicted Category",
+          "DisplayName": "Predicted Category",
+          "Value": null
+        },
+        {
+          "$id": "169",
+          "Id": 60,
+          "Name": "DCN",
+          "DisplayName": "DCN",
+          "Value": "devtest00000034"
+        }
+      ]
+    },
+    {
+      "$id": "170",
+      "Id": 25,
+      "ReferenceId": "3AEA87DA086747C7AB327E01551E4CD2774A333B455243909B569ED51331D87V4",
+      "Fields": [
+        {
+          "$id": "171",
+          "Id": 115,
+          "Name": "Is Control Document",
+          "DisplayName": "Is Control Document",
+          "Value": null
+        },
+        {
+          "$id": "172",
+          "Id": 120,
+          "Name": "Is Training Document",
+          "DisplayName": "Is Training Document",
+          "Value": null
+        },
+        {
+          "$id": "173",
+          "Id": 122,
+          "Name": "QCSet01",
+          "DisplayName": "Is Verification Document",
+          "Value": "1"
+        },
+        {
+          "$id": "174",
+          "Id": 116,
+          "Name": "DevTest DS1-Predictive Coding Project-ReviewerCategory",
+          "DisplayName": "Reviewer Category",
+          "Value": "Not_Coded"
+        },
+        {
+          "$id": "175",
+          "Id": 117,
+          "Name": "Predicted Category",
+          "DisplayName": "Predicted Category",
+          "Value": null
+        },
+        {
+          "$id": "176",
+          "Id": 60,
+          "Name": "DCN",
+          "DisplayName": "DCN",
+          "Value": "devtest00000035474"
+        }
+      ]
+    },
+    {
+      "$id": "177",
+      "Id": 26,
+      "ReferenceId": "3AEA87DA086747C7AB327E01551E4CD27289247F8E534FA88FFB7067162BA7UT",
+      "Fields": [
+        {
+          "$id": "178",
+          "Id": 115,
+          "Name": "Is Control Document",
+          "DisplayName": "Is Control Document",
+          "Value": null
+        },
+        {
+          "$id": "179",
+          "Id": 120,
+          "Name": "Is Training Document",
+          "DisplayName": "Is Training Document",
+          "Value": null
+        },
+        {
+          "$id": "180",
+          "Id": 122,
+          "Name": "QCSet02",
+          "DisplayName": "Is Verification Document",
+          "Value": "1"
+        },
+        {
+          "$id": "181",
+          "Id": 116,
+          "Name": "DevTest DS1-Predictive Coding Project-ReviewerCategory",
+          "DisplayName": "Reviewer Category",
+          "Value": "Not_Coded"
+        },
+        {
+          "$id": "182",
+          "Id": 117,
+          "Name": "Predicted Category",
+          "DisplayName": "Predicted Category",
+          "Value": null
+        },
+        {
+          "$id": "183",
+          "Id": 60,
+          "Name": "DCN",
+          "DisplayName": "DCN",
+          "Value": "devtest0000004974"
+        }
+      ]
+    },
+    {
+      "$id": "184",
+      "Id": 27,
+      "ReferenceId": "3AEA87DA086747C7AB327E01551E4CD2E680505A0A1A400B9E304349E1101BYT",
+      "Fields": [
+        {
+          "$id": "185",
+          "Id": 115,
+          "Name": "Is Control Document",
+          "DisplayName": "Is Control Document",
+          "Value": null
+        },
+        {
+          "$id": "186",
+          "Id": 120,
+          "Name": "Is Training Document",
+          "DisplayName": "Is Training Document",
+          "Value": null
+        },
+        {
+          "$id": "187",
+          "Id": 122,
+          "Name": "QCSet02",
+          "DisplayName": "Is Verification Document",
+          "Value": "1"
+        },
+        {
+          "$id": "188",
+          "Id": 116,
+          "Name": "DevTest DS1-Predictive Coding Project-ReviewerCategory",
+          "DisplayName": "Reviewer Category",
+          "Value": "Not_Coded"
+        },
+        {
+          "$id": "189",
+          "Id": 117,
+          "Name": "Predicted Category",
+          "DisplayName": "Predicted Category",
+          "Value": null
+        },
+        {
+          "$id": "190",
+          "Id": 60,
+          "Name": "DCN",
+          "DisplayName": "DCN",
+          "Value": "devtest0000005944"
+        }
+      ]
+    },
+    {
+      "$id": "191",
+      "Id": 28,
+      "ReferenceId": "3AEA87DA086747C7AB327E01551E4CD2E53A9FEFC7564484B4A8D3EB02CC4F7SX",
+      "Fields": [
+        {
+          "$id": "192",
+          "Id": 115,
+          "Name": "Is Control Document",
+          "DisplayName": "Is Control Document",
+          "Value": null
+        },
+        {
+          "$id": "193",
+          "Id": 120,
+          "Name": "Is Training Document",
+          "DisplayName": "Is Training Document",
+          "Value": null
+        },
+        {
+          "$id": "194",
+          "Id": 122,
+          "Name": "QCSet02",
+          "DisplayName": "Is Verification Document",
+          "Value": "1"
+        },
+        {
+          "$id": "195",
+          "Id": 116,
+          "Name": "DevTest DS1-Predictive Coding Project-ReviewerCategory",
+          "DisplayName": "Reviewer Category",
+          "Value": "Not_Coded"
+        },
+        {
+          "$id": "196",
+          "Id": 117,
+          "Name": "Predicted Category",
+          "DisplayName": "Predicted Category",
+          "Value": null
+        },
+        {
+          "$id": "197",
+          "Id": 60,
+          "Name": "DCN",
+          "DisplayName": "DCN",
+          "Value": "devtest0000006744"
+        }
+      ]
+    },
+    {
+      "$id": "198",
+      "Id": 29,
+      "ReferenceId": "3AEA87DA086747C7AB327E01551E4CD25D7B1665C8574D70966CB85D796E386Y",
+      "Fields": [
+        {
+          "$id": "199",
+          "Id": 115,
+          "Name": "Is Control Document",
+          "DisplayName": "Is Control Document",
+          "Value": null
+        },
+        {
+          "$id": "200",
+          "Id": 120,
+          "Name": "Is Training Document",
+          "DisplayName": "Is Training Document",
+          "Value": null
+        },
+        {
+          "$id": "201",
+          "Id": 122,
+          "Name": "QCSet02",
+          "DisplayName": "Is Verification Document",
+          "Value": "1"
+        },
+        {
+          "$id": "202",
+          "Id": 116,
+          "Name": "DevTest DS1-Predictive Coding Project-ReviewerCategory",
+          "DisplayName": "Reviewer Category",
+          "Value": "Not_Coded"
+        },
+        {
+          "$id": "203",
+          "Id": 117,
+          "Name": "Predicted Category",
+          "DisplayName": "Predicted Category",
+          "Value": null
+        },
+        {
+          "$id": "204",
+          "Id": 60,
+          "Name": "DCN",
+          "DisplayName": "DCN",
+          "Value": "devtest7700002232"
+        }
+      ]
+    },
+    {
+      "$id": "205",
+      "Id": 30,
+      "ReferenceId": "3AEA87DA086747C7AB327E01551E4CD2E03C01362994495099015B3E42D74277S",
+      "Fields": [
+        {
+          "$id": "206",
+          "Id": 115,
+          "Name": "Is Control Document",
+          "DisplayName": "Is Control Document",
+          "Value": null
+        },
+        {
+          "$id": "207",
+          "Id": 120,
+          "Name": "Is Training Document",
+          "DisplayName": "Is Training Document",
+          "Value": null
+        },
+        {
+          "$id": "208",
+          "Id": 122,
+          "Name": "QCSet02",
+          "DisplayName": "Is Verification Document",
+          "Value": "1"
+        },
+        {
+          "$id": "209",
+          "Id": 116,
+          "Name": "DevTest DS1-Predictive Coding Project-ReviewerCategory",
+          "DisplayName": "Reviewer Category",
+          "Value": "Not_Coded"
+        },
+        {
+          "$id": "210",
+          "Id": 117,
+          "Name": "Predicted Category",
+          "DisplayName": "Predicted Category",
+          "Value": null
+        },
+        {
+          "$id": "211",
+          "Id": 60,
+          "Name": "DCN",
+          "DisplayName": "DCN",
+          "Value": "devtest5500007512"
+        }
+      ]
+    }
+  ],
+  "Total": 30
+}

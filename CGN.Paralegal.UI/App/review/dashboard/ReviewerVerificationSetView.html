@@ -1,0 +1,24 @@
+﻿<div class="panel-body dashboard-body">
+    <h3 id="verificationReviewStatus" class="margin-top-0 padding-top-20">{{VerificationSetController.reviewStatus}}</h3>
+    <div>{{VerificationSetController.reviewerAction}}</div>
+
+    <div class="row">
+        <div class="col-xs-12 pull-left">
+            <button class="btn btn-lg btn-main" id="btnVerificationSetReview"
+                    visible="VerificationSetController.enableReviewButton()"
+                    ng-click="VerificationSetController.startReview()">
+                {{VerificationSetController.reviewButtonText()}}
+            </button>
+        </div>
+    </div>
+
+    <div id="QcSetSummary" class="row">
+        <div class="col-xs-12">
+            <ln-coding-summary navigate="VerificationSetController.viewQCDocumentListForReview(coding)"
+                               config="VerificationSetController.verificationSummaryConfig"></ln-coding-summary>
+        </div>
+    </div>
+
+    <br />
+
+</div>

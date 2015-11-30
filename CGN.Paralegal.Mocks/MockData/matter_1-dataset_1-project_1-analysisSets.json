@@ -1,0 +1,62 @@
+﻿[
+    {
+        "Name": "All Documents",
+        "BinderId": "",
+        "Type": "AllDocuments",
+        "TotalDocuments": 30,
+        "NumberOfRelevantDocuments": 0,
+        "NumberOfNotRelevantDocuments": 0,
+        "NumberOfNotCodedDocuments": 30,
+        "NumberOfSkippedDocuments": 0
+    },
+    {
+        "Name": "ControlSet",
+        "BinderId": "e51eb282-e8c5-e411-86fa-00155d77f20a",
+        "Type": "ControlSet",
+        "TotalDocuments": 10,
+        "NumberOfRelevantDocuments": 0,
+        "NumberOfNotRelevantDocuments": 0,
+        "NumberOfNotCodedDocuments": 10,
+        "NumberOfSkippedDocuments": 0
+    },
+    {
+        "Name": "Training Set 001",
+        "BinderId": "e61eb282-e8c5-e411-86fa-00155d77f20a",
+        "Type": "TrainingSet",
+        "TotalDocuments": 5,
+        "NumberOfRelevantDocuments": 0,
+        "NumberOfNotRelevantDocuments": 0,
+        "NumberOfNotCodedDocuments": 5,
+        "NumberOfSkippedDocuments": 0
+    },
+    {
+        "Name": "Training Set 002",
+        "BinderId": "e61eb282-e8c5-e411-86fa-00155d77f21a",
+        "Type": "TrainingSet",
+        "TotalDocuments": 5,
+        "NumberOfRelevantDocuments": 0,
+        "NumberOfNotRelevantDocuments": 0,
+        "NumberOfNotCodedDocuments": 5,
+        "NumberOfSkippedDocuments": 0
+    },
+    {
+        "Name": "QCSet01",
+        "BinderId": "908b8ac4-3e47-4915-ba17-364b79580fda",
+        "Type": "QcSet",
+        "TotalDocuments": 5,
+        "NumberOfRelevantDocuments": 0,
+        "NumberOfNotRelevantDocuments": 0,
+        "NumberOfNotCodedDocuments": 5,
+        "NumberOfSkippedDocuments": 0
+    },
+    {
+        "Name": "QCSet02",
+        "BinderId": "2478ce8f-dbae-4c53-806d-5d7aa56efb7b",
+        "Type": "QcSet",
+        "TotalDocuments": 5,
+        "NumberOfRelevantDocuments": 0,
+        "NumberOfNotRelevantDocuments": 0,
+        "NumberOfNotCodedDocuments": 5,
+        "NumberOfSkippedDocuments": 0
+    }
+]

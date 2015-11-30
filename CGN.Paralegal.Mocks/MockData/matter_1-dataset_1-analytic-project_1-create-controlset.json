@@ -1,0 +1,21 @@
+﻿{ 
+  "ConfidenceLevel" : 95,
+  "CreatedBy" : "6811cc96-b36f-4ab6-8d3d-72985691ff31",
+  "CreatedDate" : null,
+  "CustodianFieldId" : 0,
+  "DatasetId" : 1,
+  "EstimatedTotalDocuments" : 0,
+  "IsStratifyByCustodian" : false,
+  "MarginOfError" : 2.5,
+  "MatterId" : 1,
+  "ModifiedBy" : null,
+  "ModifiedDate" : null,
+  "Name" : null,
+  "NumberOfNotCodedDocuments" : 0,
+  "NumberOfNotRelevantDocuments" : 0,
+  "NumberOfRelevantDocuments" : 0,
+  "PercentageOfTotalPopulation" : 10.0,
+  "ProjectId" : 1,
+  "SampleSize" : 1537,
+  "TotalDocuments" : 10
+}

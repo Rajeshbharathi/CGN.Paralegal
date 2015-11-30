@@ -1,0 +1,11 @@
+﻿<div class="container-fluid">
+    <div class="form-group col-sm-12">
+        <select id="userSelectionbox" class="col-sm-2" multiple name="userSelectionbox"
+                ng-model="UserPickerController.currentSelectedNodes"
+                 ng-options="item.UserName for item in UserPickerController.userList"></select>
+    </div>
+    <div class="form-group col-sm-12">
+            <a class="btn btn-default" ng-click="UserPickerController.assign()">{{ UserPickerController.localized.Assign }}</a>
+            <a class="btn btn-default" ng-click="UserPickerController.unassign()">{{ UserPickerController.localized.UnAssign }}</a>
+    </div>
+</div>

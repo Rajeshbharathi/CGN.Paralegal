@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{081CFC5A-F67F-47CF-87EA-5453F54342A7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CGN.Paralegal.Mocks</RootNamespace>
+    <AssemblyName>CGN.Paralegal.Mocks</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>..\Common\Rules\FxCop\EDDStandards.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Common\Lib\Newtonsoft.Json.7.0.1\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MockObjects\MockAnalyticsRestClient.cs" />
+    <Compile Include="MockObjects\MockAppStateRestClient.cs" />
+    <Compile Include="MockObjects\MockWorkflowState.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MockData\matter_1-dataset_1-analytic-project-samplesize.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MockData\matter_1-dataset_1-analytic-project-tags.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MockData\matter_1-dataset_1-analytic-project_1-create-controlset.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MockData\matter_1-dataset_1-create-analytic-project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MockData\matter_1-dataset_1-get-analytic-project_1.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MockData\matter_1-dataset_1-project_1-analysisSets.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MockData\matter_1-dataset_1-project_1-controlset-summary.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MockData\matter_1-dataset_1-project_1-documents.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MockData\matter_1-dataset_1-project_1-trainingSummary.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MockData\matter_1-dataset_1-saved-searches.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CGN.Paralegal.ClientContracts\CGN.Paralegal.ClientContracts.csproj">
+      <Project>{27825077-2a1b-45a6-bcb9-53e576709181}</Project>
+      <Name>CGN.Paralegal.ClientContracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MockData\matter_1-dataset_1-project_1-predictionScores.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MockData\matter_1-dataset_1-project_1-discrepancies.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MockData\matter_1-dataset_1-project_1-qcSetsInfo.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MockData\matter_1-dataset_1-project_1-predictAllSummaryInfo.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MockData\matter_1-dataset_1-project_1-trainingset-predictionDiscrepanciesInfo.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MockData\matter_1-dataset_1-project_1-additionaldocuments.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MockData\matter_1-dataset_1-project_1-additionaltrainingsetdocuments.json" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

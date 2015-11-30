@@ -1,0 +1,49 @@
+﻿<div class="panel-body dashboard-body">
+    <h3 id="trainingReviewStatus" class="margin-top-0 padding-top-20">{{TrainingSetController.reviewerStatus}}</h3>
+    <div>{{TrainingSetController.reviewerAction}}</div>
+
+    <div class="row">
+        <div class="col-sm-4 col-md-4 pull-left">
+            <button class="btn btn-lg btn-main" id="btnTrainingReview"
+                    ng-click="TrainingSetController.startReview()"
+                    visible="TrainingSetController.enableReviewButton()">
+                {{TrainingSetController.reviewButtonText()}}
+            </button>
+        </div>
+    </div>
+
+    <div class="row" id="trainingSummary" ng-init="TrainingSetController.trainingSummaryView='0'">
+        <div class="col-xs-12" ng-if="TrainingSetController.trainingSummaryView=='0'">
+            <ln-coding-summary navigate="TrainingSetController.viewTrainingSetListforReview(coding)" config="TrainingSetController.trainingSetConfig"
+                               toggle-handler="TrainingSetController.toggleListIcon()" show-toggle="true"></ln-coding-summary>
+        </div>
+
+        <div class="col-xs-12" ng-if="TrainingSetController.trainingSummaryView=='1'">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <h5>{{TrainingSetController.localized.Status}}</h5>
+                        </div>
+                        <div class="col-xs-8">
+                            <i class="fa fa-th-large icon-large icon-toggle pull-right" ng-click="TrainingSetController.toggleListIcon()"></i>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="list-grids list-grids-no-margin"
+                             ng-if="TrainingSetController.showTrainingSummaryGrid()">
+                            <div id="trainingSummaryGrid" kendo-grid="lnTrainingSummaryGrid"
+                                 k-options="TrainingSetController.trainingSetSummaryGridData"
+                                 ng-if="TrainingSetController.showTrainingSummaryGrid()"></div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>

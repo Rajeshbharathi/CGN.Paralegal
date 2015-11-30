@@ -1,0 +1,993 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="HashDocs" xml:space="preserve">
+    <value># Docs</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="Action1" xml:space="preserve">
+    <value>Action 1</value>
+  </data>
+  <data name="Action2" xml:space="preserve">
+    <value>Action 2</value>
+  </data>
+  <data name="Actual" xml:space="preserve">
+    <value>Actual</value>
+  </data>
+  <data name="AllDatasetDocuments" xml:space="preserve">
+    <value>All Dataset Documents</value>
+  </data>
+  <data name="AllDocuments" xml:space="preserve">
+    <value>All Documents</value>
+  </data>
+  <data name="BasedOnCurrentRoundTraining" xml:space="preserve">
+    <value>Based On Current Round Training</value>
+  </data>
+  <data name="BothRelevantAndNotRelevant" xml:space="preserve">
+    <value>Both Relevant And Not Relevant</value>
+  </data>
+  <data name="BySavedSearch" xml:space="preserve">
+    <value>By Saved Search</value>
+  </data>
+  <data name="ByTag" xml:space="preserve">
+    <value>By Tag</value>
+  </data>
+  <data name="Calculate" xml:space="preserve">
+    <value>Calculate</value>
+  </data>
+  <data name="Calculating" xml:space="preserve">
+    <value>Calculating</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="ChangeWorkflowState" xml:space="preserve">
+    <value>Change Workflow State</value>
+  </data>
+  <data name="CodingValues" xml:space="preserve">
+    <value>Coding Values</value>
+  </data>
+  <data name="CodingSummary" xml:space="preserve">
+    <value>Coding Summary</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="Confidence" xml:space="preserve">
+    <value>Confidence</value>
+  </data>
+  <data name="ConfidenceLevel" xml:space="preserve">
+    <value>Confidence Level</value>
+  </data>
+  <data name="ConfidenceValidationMessage" xml:space="preserve">
+    <value>Select Confidence</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="ConfirmWorkflowChangeText" xml:space="preserve">
+    <value>Selecting Predict All will end training and move to next step. Are you sure you want to continue?</value>
+  </data>
+  <data name="ContinueReview" xml:space="preserve">
+    <value>Continue Review</value>
+  </data>
+  <data name="Control" xml:space="preserve">
+    <value>Control</value>
+  </data>
+  <data name="ControlSet" xml:space="preserve">
+    <value>Control Set</value>
+  </data>
+  <data name="ControlSetNotCreated" xml:space="preserve">
+    <value>Control Set Not Created</value>
+  </data>
+  <data name="ControlSetNotStarted" xml:space="preserve">
+    <value>Control Set Not Started</value>
+  </data>
+  <data name="ControlSetOptions" xml:space="preserve">
+    <value>Control Set Options</value>
+  </data>
+  <data name="ControlSetOptionsText" xml:space="preserve">
+    <value>Select the confidence level and margin of error for your Control Set. The number of documents in the Control  Set varies dramatically based on which statistical options you select. </value>
+  </data>
+  <data name="ControlSetResults" xml:space="preserve">
+    <value>Control Set Results</value>
+  </data>
+  <data name="ControlSetReview" xml:space="preserve">
+    <value>Control Set Review</value>
+  </data>
+  <data name="ControlSetReviewNotStarted" xml:space="preserve">
+    <value>Control Set review has not started</value>
+  </data>
+  <data name="ControlSetSummary" xml:space="preserve">
+    <value>Control Set Summary</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="CreateControlSet" xml:space="preserve">
+    <value>Create Control Set</value>
+  </data>
+  <data name="CreateQCSet" xml:space="preserve">
+    <value>Create QC Set</value>
+  </data>
+  <data name="CreateTrainingSet" xml:space="preserve">
+    <value>Create Training Set</value>
+  </data>
+  <data name="CreatedDate" xml:space="preserve">
+    <value>Created Date</value>
+  </data>
+  <data name="CurrentQues" xml:space="preserve">
+    <value>Current?</value>
+  </data>
+  <data name="CurrentRound" xml:space="preserve">
+    <value>Current Round</value>
+  </data>
+  <data name="CurrentActivity" xml:space="preserve">
+    <value>Current Activity</value>
+  </data>
+  <data name="CurrentStatus" xml:space="preserve">
+    <value>Current Status</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DeleteProject" xml:space="preserve">
+    <value>Delete Project</value>
+  </data>
+  <data name="DeleteProjectText1" xml:space="preserve">
+    <value>Deleting the project will remove all predictive coding fields related to the project.</value>
+  </data>
+  <data name="DeleteProjectText2" xml:space="preserve">
+    <value>Please type the project the name below to verify you want to delete the project and then click Delete.</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description </value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="DocumentEstimates" xml:space="preserve">
+    <value>Document Estimates </value>
+  </data>
+  <data name="DocumentsCoded" xml:space="preserve">
+    <value>Documents Coded</value>
+  </data>
+  <data name="DocumentsCoding" xml:space="preserve">
+    <value>Documents Coding</value>
+  </data>
+  <data name="DocumentsFoundFor" xml:space="preserve">
+    <value> document(s) found for</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="EnterTextToQuery" xml:space="preserve">
+    <value>Enter text to query</value>
+  </data>
+  <data name="ErrorOnAddControlSet" xml:space="preserve">
+    <value>Error on add ControlSet:</value>
+  </data>
+  <data name="ErrorOnSampleSize" xml:space="preserve">
+    <value>Error on retrieving Sample Size:</value>
+  </data>
+  <data name="ErrorNameInvalid" xml:space="preserve">
+    <value>Project Name cannot contain special characters. Please update  Name.</value>
+  </data>
+  <data name="ErrorNameMaxChars" xml:space="preserve">
+    <value>Project Name cannot be longer than 40 characters. Please update Name.</value>
+  </data>
+  <data name="ErrorNameRequired" xml:space="preserve">
+    <value>Project Name cannot be left blank. Please populate.</value>
+  </data>
+  <data name="ErrorNameUnique" xml:space="preserve">
+    <value>Project Name cannot be duplicate within a dataset. Please update Name.</value>
+  </data>
+  <data name="ErrorPrefixInvalid" xml:space="preserve">
+    <value>Project  Prefix cannot contain special characters. Please update Prefix.</value>
+  </data>
+  <data name="ErrorPrefixMaxChars" xml:space="preserve">
+    <value>Project Field Prefix cannot be longer than 6 characters. Please update Name.</value>
+  </data>
+  <data name="ErrorPrefixRequired" xml:space="preserve">
+    <value>Project Prefix cannot be left blank. Please populate.</value>
+  </data>
+  <data name="ErrorPrefixUnique" xml:space="preserve">
+    <value>Project Prefix cannot be duplicate within a dataset. Please update Prefix</value>
+  </data>
+  <data name="EstimatedRelevance" xml:space="preserve">
+    <value>Estimated Relevance</value>
+  </data>
+  <data name="F1" xml:space="preserve">
+    <value>F1</value>
+  </data>
+  <data name="FalseNegatives" xml:space="preserve">
+    <value>False Negatives</value>
+  </data>
+  <data name="FinalizeProject" xml:space="preserve">
+    <value>Finalize Project</value>
+  </data>
+  <data name="FixedSize" xml:space="preserve">
+    <value>Fixed Size</value>
+  </data>
+  <data name="InProgress" xml:space="preserve">
+    <value>In Progress</value>
+  </data>
+  <data name="InvalidDateTime" xml:space="preserve">
+    <value>Please select date and time greater than current date and time.</value>
+  </data>
+  <data name="InvalidProjectName" xml:space="preserve">
+    <value>The name you entered does not match the current Predictive Coding Project name. Please enter the correct project name.</value>
+  </data>
+  <data name="Issue" xml:space="preserve">
+    <value>Issue </value>
+  </data>
+  <data name="JobOptions" xml:space="preserve">
+    <value>Job Options</value>
+  </data>
+  <data name="LastModifiedDate" xml:space="preserve">
+    <value>Last Modified Date</value>
+  </data>
+  <data name="Later" xml:space="preserve">
+    <value>Later</value>
+  </data>
+  <data name="MarginErrorValidationMessage" xml:space="preserve">
+    <value>Select Margin of Error</value>
+  </data>
+  <data name="MarginOfError" xml:space="preserve">
+    <value>Margin of Error</value>
+  </data>
+  <data name="MarginOfErrorEstimated" xml:space="preserve">
+    <value>Margin of error [Estimated]</value>
+  </data>
+  <data name="Matter" xml:space="preserve">
+    <value>Matter</value>
+  </data>
+  <data name="Metric" xml:space="preserve">
+    <value>Metric</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>More...</value>
+  </data>
+  <data name="NA" xml:space="preserve">
+    <value>NA</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="NewProject" xml:space="preserve">
+    <value>New Project</value>
+  </data>
+  <data name="NewSearch" xml:space="preserve">
+    <value>New Search</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="NextStep" xml:space="preserve">
+    <value>Next Step</value>
+  </data>
+  <data name="NoActivity" xml:space="preserve">
+    <value>No Activity</value>
+  </data>
+  <data name="NoControlSet" xml:space="preserve">
+    <value>No Control Set</value>
+  </data>
+  <data name="NotAvailable" xml:space="preserve">
+    <value>Not Available</value>
+  </data>
+  <data name="NotCoded" xml:space="preserve">
+    <value>Not Coded</value>
+  </data>
+  <data name="NotRelevant" xml:space="preserve">
+    <value>Not Relevant</value>
+  </data>
+  <data name="NotStarted" xml:space="preserve">
+    <value>Not Started</value>
+  </data>
+  <data name="Now" xml:space="preserve">
+    <value>Now</value>
+  </data>
+  <data name="NumberOfDocuments" xml:space="preserve">
+    <value>Number of documents in Control Set</value>
+  </data>
+  <data name="NumberOfDocumentsInVerificationSet" xml:space="preserve">
+    <value>Number of documents in Verification Set</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="OnlyNotRelevant" xml:space="preserve">
+    <value>Only Not Relevant</value>
+  </data>
+  <data name="OnlyRelevant" xml:space="preserve">
+    <value>Only Relevant</value>
+  </data>
+  <data name="Organization" xml:space="preserve">
+    <value>Organization</value>
+  </data>
+  <data name="Overview" xml:space="preserve">
+    <value>Overview</value>
+  </data>
+  <data name="PercentTotalPopulation" xml:space="preserve">
+    <value>% of total population</value>
+  </data>
+  <data name="PercentFalseNegatives" xml:space="preserve">
+    <value>% False Negatives</value>
+  </data>
+  <data name="Percentage" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="Precision" xml:space="preserve">
+    <value>Precision</value>
+  </data>
+  <data name="Prefix" xml:space="preserve">
+    <value>Prefix</value>
+  </data>
+  <data name="Predict" xml:space="preserve">
+    <value>Predict</value>
+  </data>
+  <data name="Predicted" xml:space="preserve">
+    <value>Predicted</value>
+  </data>
+  <data name="PredictAhead" xml:space="preserve">
+    <value>Predict Ahead</value>
+  </data>
+  <data name="PredictAll" xml:space="preserve">
+    <value>Predict All</value>
+  </data>
+  <data name="PredictAllDocuments" xml:space="preserve">
+    <value>Predict All Documents</value>
+  </data>
+  <data name="PredictAllModalText" xml:space="preserve">
+    <value>When do you want to start the Predict All job?</value>
+  </data>
+  <data name="PredictAllSummary" xml:space="preserve">
+    <value>Predict All Summary</value>
+  </data>
+  <data name="PredictAllNotCompleted" xml:space="preserve">
+    <value>will display after Predict All is completed.</value>
+  </data>
+  <data name="PredictionDiscrepancies" xml:space="preserve">
+    <value>Prediction Discrepancies</value>
+  </data>
+  <data name="PredictionType" xml:space="preserve">
+    <value>Prediction Type</value>
+  </data>
+  <data name="ProjectDetails" xml:space="preserve">
+    <value>Project Details</value>
+  </data>
+  <data name="ProjectDescription" xml:space="preserve">
+    <value>Project Description</value>
+  </data>
+  <data name="ProjectDocuments" xml:space="preserve">
+    <value>Project Documents</value>
+  </data>
+  <data name="ProjectFields" xml:space="preserve">
+    <value>Project Fields</value>
+  </data>
+  <data name="ProjectFieldsText" xml:space="preserve">
+    <value>Project fields are automatically added to the dataset when a predictive coding project is created. A prefix makes it easy to identify the fields for this project.</value>
+  </data>
+  <data name="ProjectInfo" xml:space="preserve">
+    <value>Project Info</value>
+  </data>
+  <data name="ProjectName" xml:space="preserve">
+    <value>Project Name</value>
+  </data>
+  <data name="ProjectSetup" xml:space="preserve">
+    <value>Project Setup</value>
+  </data>
+  <data name="ProjectSetupText" xml:space="preserve">
+    <value>Project Name and Project Fields Prefix are required. They must be unique within a dataset.</value>
+  </data>
+  <data name="QC" xml:space="preserve">
+    <value>QC</value>
+  </data>
+  <data name="QCSet" xml:space="preserve">
+    <value>QC Set</value>
+  </data>
+  <data name="QCSetsAttributes" xml:space="preserve">
+    <value>QC Sets Attributes</value>
+  </data>
+  <data name="VerificationSetName" xml:space="preserve">
+    <value>Verification Set Name</value>
+  </data>
+  <data name="QCSetNameInvalid" xml:space="preserve">
+    <value>Name must begin with an alphanumeric character[0-9,a-z,A-Z] and can contain space, underscore(_), period(.), comma (,), and dash(-), upto 20 characters maximum and minimum 2 characters.</value>
+  </data>
+  <data name="VerificationSetOptions" xml:space="preserve">
+    <value>Verification Set Options</value>
+  </data>
+  <data name="VerificationSetOptionsText" xml:space="preserve">
+    <value>Select the options for your Verification Set.</value>
+  </data>
+  <data name="QCSetReview" xml:space="preserve">
+    <value>Verification Set Review</value>
+  </data>
+  <data name="QCSetSizeInvalidNumber" xml:space="preserve">
+    <value>Please enter a valid number.</value>
+  </data>
+  <data name="QCSetSizeOutOfRange" xml:space="preserve">
+    <value>Please enter a valid number between 1 and </value>
+  </data>
+  <data name="VerificationSetTypeText" xml:space="preserve">
+    <value>What type of system predictions do you want to include in this Verification Set?</value>
+  </data>
+  <data name="QCSetNotCreated" xml:space="preserve">
+    <value> will display after QC Set Review has created</value>
+  </data>
+  <data name="QCSetHasBeenNotCreated" xml:space="preserve">
+    <value> will display after QC set has been created</value>
+  </data>
+  <data name="QCSetReviewNotStarted" xml:space="preserve">
+    <value>Verification Set review has not started</value>
+  </data>
+  <data name="QCSetReviewInProgress" xml:space="preserve">
+    <value>Verification Set review is in progress</value>
+  </data>
+  <data name="QualityControl" xml:space="preserve">
+    <value>Quality Control</value>
+  </data>
+  <data name="QCSetAttributes" xml:space="preserve">
+    <value>QC Set attributes</value>
+  </data>
+  <data name="Query" xml:space="preserve">
+    <value>Query</value>
+  </data>
+  <data name="Recall" xml:space="preserve">
+    <value>Recall</value>
+  </data>
+  <data name="Relevant" xml:space="preserve">
+    <value>Relevant</value>
+  </data>
+  <data name="RelevantNotRelevant" xml:space="preserve">
+    <value>Relevant And Not Relevant</value>
+  </data>
+  <data name="Results" xml:space="preserve">
+    <value>Results</value>
+  </data>
+  <data name="ResultSetEstimated" xml:space="preserve">
+    <value>Result Set (estimated)</value>
+  </data>
+  <data name="ResultsWithinTolerance" xml:space="preserve">
+    <value>QC Set results are within Control Set tolerance.</value>
+  </data>
+  <data name="ResultsOutsideTolerance" xml:space="preserve">
+    <value>QC Set results are outside Control Set tolerance.</value>
+  </data>
+  <data name="ResultsInconclusive" xml:space="preserve">
+    <value>QC Set results are inconclusive.</value>
+  </data>
+  <data name="ReviewControlSet" xml:space="preserve">
+    <value>Review Control Set</value>
+  </data>
+  <data name="ReviewQCSet" xml:space="preserve">
+    <value>Review QC Set</value>
+  </data>
+  <data name="ReviewStatus" xml:space="preserve">
+    <value>Review Status</value>
+  </data>
+  <data name="ReviewTrainingSet" xml:space="preserve">
+    <value>Review Training Set</value>
+  </data>
+  <data name="Richness" xml:space="preserve">
+    <value>Richness</value>
+  </data>
+  <data name="RoundsCompleted" xml:space="preserve">
+    <value>Rounds Completed</value>
+  </data>
+  <data name="SampleSize" xml:space="preserve">
+    <value>Sample Size</value>
+  </data>
+  <data name="SampleSizeError" xml:space="preserve">
+    <value>An error occurred while calculating sample size.</value>
+  </data>
+  <data name="SamplingOptions" xml:space="preserve">
+    <value>Sampling Options</value>
+  </data>
+  <data name="SamplingMethod" xml:space="preserve">
+    <value>Sampling Method</value>
+  </data>
+  <data name="SavedQuery" xml:space="preserve">
+    <value>Saved Query</value>
+  </data>
+  <data name="SavedSearches" xml:space="preserve">
+    <value>Saved Searches</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="SelectDefaultOption" xml:space="preserve">
+    <value>-- Select One --</value>
+  </data>
+  <data name="SelectDocuments" xml:space="preserve">
+    <value>Select Documents</value>
+  </data>
+  <data name="SelectDocumentsText" xml:space="preserve">
+    <value>Select which documents from dataset to include in the project.</value>
+  </data>
+  <data name="SelectSavedSearch" xml:space="preserve">
+    <value>Select Saved Search</value>
+  </data>
+  <data name="SelectTag" xml:space="preserve">
+    <value>Select Tag</value>
+  </data>
+  <data name="SetName" xml:space="preserve">
+    <value>Set Name</value>
+  </data>
+  <data name="Setup" xml:space="preserve">
+    <value>Setup</value>
+  </data>
+  <data name="SetupProject" xml:space="preserve">
+    <value>Setup Project</value>
+  </data>
+  <data name="Skipped" xml:space="preserve">
+    <value>Skipped</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="Statistical" xml:space="preserve">
+    <value>Statistical</value>
+  </data>
+  <data name="StatisticalSample" xml:space="preserve">
+    <value>Statistical Sample</value>
+  </data>
+  <data name="StatisticalOptions" xml:space="preserve">
+    <value>Statistical Options</value>
+  </data>
+  <data name="StatisticalAnalysis" xml:space="preserve">
+    <value>Statistical Analysis</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Summary" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="Tag" xml:space="preserve">
+    <value>Tag</value>
+  </data>
+  <data name="TotalCurrentRound" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="TotalDocumentEstimates" xml:space="preserve">
+    <value>Total Document Estimates </value>
+  </data>
+  <data name="TotalProjectDocuments" xml:space="preserve">
+    <value>Total Project Documents</value>
+  </data>
+  <data name="TotalRelevant" xml:space="preserve">
+    <value>Total Relevant Documents</value>
+  </data>
+  <data name="TotalNotRelevant" xml:space="preserve">
+    <value>Total Not Relevant Documents</value>
+  </data>
+  <data name="TotalSkipped" xml:space="preserve">
+    <value>Total Skipped Documents</value>
+  </data>
+  <data name="TotalDocuments" xml:space="preserve">
+    <value>Total Documents</value>
+  </data>
+  <data name="TotalRoundsCompleted" xml:space="preserve">
+    <value>Total Rounds Completed</value>
+  </data>
+  <data name="Train" xml:space="preserve">
+    <value>Train</value>
+  </data>
+  <data name="TrainSystem" xml:space="preserve">
+    <value>Train System</value>
+  </data>
+  <data name="Training" xml:space="preserve">
+    <value>Training</value>
+  </data>
+  <data name="TrainingNotStarted" xml:space="preserve">
+    <value>Training Not Started</value>
+  </data>
+  <data name="TrainingResults" xml:space="preserve">
+    <value>Training Results</value>
+  </data>
+  <data name="TrainingRound" xml:space="preserve">
+    <value>Training Round</value>
+  </data>
+  <data name="TrainingSummary" xml:space="preserve">
+    <value>Training Summary</value>
+  </data>
+  <data name="TrainingSet" xml:space="preserve">
+    <value>Training Set</value>
+  </data>
+  <data name="TrainingSetProgress" xml:space="preserve">
+    <value>Training Set Progress</value>
+  </data>
+  <data name="TrainingSetReviewNotStarted" xml:space="preserve">
+    <value>Training Set review has not started</value>
+  </data>
+  <data name="TrainingSetReviewInProgress" xml:space="preserve">
+    <value>Training Set review is in progress</value>
+  </data>
+  <data name="TrainingSetReviewComplete" xml:space="preserve">
+    <value>Training Set review is Complete</value>
+  </data>
+  <data name="FirstRoundInProgress" xml:space="preserve">
+    <value>will display after first Training Round review has completed.</value>
+  </data>
+  <data name="TrainingTrend" xml:space="preserve">
+    <value>Training Trend</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="UncategorizedSetEstimated" xml:space="preserve">
+    <value>Uncategorized Set [Estimated]</value>
+  </data>
+  <data name="UnknownError" xml:space="preserve">
+    <value>An unknown error occurred.</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="PredictControlset" xml:space="preserve">
+    <value>Predict Control Set</value>
+  </data>
+  <data name="VerificationSet" xml:space="preserve">
+    <value>Verification Set</value>
+  </data>
+  <data name="ReviewComplete" xml:space="preserve">
+    <value>Review Complete</value>
+  </data>
+  <data name="AdminMessageAfterPredictionComplete" xml:space="preserve">
+    <value>Prediction Job Complete. Create Verification Set and notify the Reviewer.</value>
+  </data>
+  <data name="AdminMessageAfterTraining" xml:space="preserve">
+    <value>Ready to run predictions</value>
+  </data>
+  <data name="ReviewInProgress" xml:space="preserve">
+    <value>Review In Progress</value>
+  </data>
+  <data name="ReviewNotStarted" xml:space="preserve">
+    <value>Review Not Started</value>
+  </data>
+  <data name="AdminMessageAfterControlsetReview" xml:space="preserve">
+    <value>Training Set section will be available after Reviewer has completed one training round.</value>
+  </data>
+  <data name="AdminMessageAfterCreateControlset" xml:space="preserve">
+    <value>Notify Reviewer to start document review.</value>
+  </data>
+  <data name="AdminMessageBeforeCreateControlset" xml:space="preserve">
+    <value>Create Control Set to begin the process.</value>
+  </data>
+  <data name="AdminMessageAfterVerificationsetReview" xml:space="preserve">
+    <value>Choose to send documents back to training or finish project.</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AddDocumentstoProject" xml:space="preserve">
+    <value>Add Documents to Project</value>
+  </data>
+  <data name="StatisticalConfidence" xml:space="preserve">
+    <value>Statistical Confidence</value>
+  </data>
+  <data name="DataNotAvailableUntilReview" xml:space="preserve">
+    <value>Data not available until review is complete</value>
+  </data>
+  <data name="Documents" xml:space="preserve">
+    <value>Documents</value>
+  </data>
+  <data name="EstimatedRichness" xml:space="preserve">
+    <value>Estimated Richness</value>
+  </data>
+  <data name="ProjectPercentage" xml:space="preserve">
+    <value>Project Percentage</value>
+  </data>
+  <data name="ResultsSetEstimate" xml:space="preserve">
+    <value>Results Set Estimate</value>
+  </data>
+  <data name="ReviewerMessaheBeforeCreateControlset" xml:space="preserve">
+    <value>No documents to review. An administrator must create a control set</value>
+  </data>
+  <data name="StartReview" xml:space="preserve">
+    <value>Start Review</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DocumentsInSet" xml:space="preserve">
+    <value>Documents in Set</value>
+  </data>
+  <data name="CreateVerificationsSet" xml:space="preserve">
+    <value>Create Verification Set</value>
+  </data>
+  <data name="Round" xml:space="preserve">
+    <value>Round</value>
+  </data>
+  <data name="RunPredictions" xml:space="preserve">
+    <value>Run Predictions</value>
+  </data>
+  <data name="TrainingTotals" xml:space="preserve">
+    <value>Training Totals</value>
+  </data>
+  <data name="BackToTraining" xml:space="preserve">
+    <value>Back to Training</value>
+  </data>
+  <data name="Finish" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="ViewVerificationDetails" xml:space="preserve">
+    <value>View Verification Set Details</value>
+  </data>
+  <data name="ReviewerMessageAfterCreateControlset" xml:space="preserve">
+    <value>Ready to begin Training Set.</value>
+  </data>
+  <data name="AdminVerificationStatusReviewNotStarted" xml:space="preserve">
+    <value>{0} has {1} documents to review in the verification set</value>
+  </data>
+  <data name="AdminVerificationStatusReviewCompleted" xml:space="preserve">
+    <value>{0} reviewed all {1} documents in the verification set</value>
+  </data>
+  <data name="AdminVerificationStatusReviewInProgress" xml:space="preserve">
+    <value>{0} reviewed {1} of {2} documents in the verification set</value>
+  </data>
+  <data name="ReviewerVerificationStatusReviewCompleted" xml:space="preserve">
+    <value>The Administrator has finalized verification, training is complete</value>
+  </data>
+  <data name="ReviewerVerificationStatusReviewInProgress" xml:space="preserve">
+    <value>You've reviewed {0} of {1} documents in the verification set, click Continue to keep going</value>
+  </data>
+  <data name="ReviewerVerificationStatusReviewNotStarted" xml:space="preserve">
+    <value>You have {0} documents to review in the verification set, click Start to begin reviewing</value>
+  </data>
+  <data name="ControlSetNotStartedActionMessage" xml:space="preserve">
+    <value>There is  no Control Set for this project yet</value>
+  </data>
+  <data name="ControlSetReviewCompletedActionMessage" xml:space="preserve">
+    <value>{0} reviewed all {1} documents in the control set</value>
+  </data>
+  <data name="ControlSetReviewCompletedNoTrainingActionMessage" xml:space="preserve">
+    <value>{0} reviewed all {1} documents in the control set. Click Create Training Set to begin training</value>
+  </data>
+  <data name="ControlSetReviewInProgressActionMessage" xml:space="preserve">
+    <value>{0} reviewed {1} of {2} documents in the control set</value>
+  </data>
+  <data name="ControlSetReviewNotStartedActionMessage" xml:space="preserve">
+    <value>{0} has {1} documents to review in the control set</value>
+  </data>
+  <data name="ClickCreateControlSet" xml:space="preserve">
+    <value>click Create to get started</value>
+  </data>
+  <data name="ControlSetnotReadyReviewer" xml:space="preserve">
+    <value>Control Set not Ready to Review</value>
+  </data>
+  <data name="ControlSetReviewCompleted" xml:space="preserve">
+    <value>Control Set review is complete</value>
+  </data>
+  <data name="ControlSetReviewerCompletedActionMessage" xml:space="preserve">
+    <value>You have completed review of all {0} Control Set documents</value>
+  </data>
+  <data name="ControlSetReviewerCompletedNoTrainingActionMessage" xml:space="preserve">
+    <value>You have completed review of all {0} Control Set documents. Please wait for the admin to create a Training Set to continue</value>
+  </data>
+  <data name="ControlSetReviewerInProgressActionMessage" xml:space="preserve">
+    <value>You have reviewed {0} of {1} documents in the Control Set, click Continue to keep going</value>
+  </data>
+  <data name="ControlSetReviewerNotStartedActionMessage" xml:space="preserve">
+    <value>You have {0}  documents to review in the Control Set, click Start to begin reviewing</value>
+  </data>
+  <data name="ControlSetReviewInProgress" xml:space="preserve">
+    <value>Control Set review is in progress</value>
+  </data>
+  <data name="TrainingCompleteReviewer" xml:space="preserve">
+    <value>Training Complete</value>
+  </data>
+  <data name="TrainingCompleteRunPredictionsMessage" xml:space="preserve">
+    <value>{0} reviewed all {1} documents in training set {2}, and system learning has stabilized. Click Run Predictions to continue</value>
+  </data>
+  <data name="TrainingCompleteMessage" xml:space="preserve">
+    <value>{0} reviewed all {1} documents in training set {2}, and system learning has stabilized</value>
+  </data>
+  <data name="TrainingComplete" xml:space="preserve">
+    <value>Training Set {0} Complete, Learning has Stabilized</value>
+  </data>
+  <data name="TrainingCompleteReviewerActionMessage" xml:space="preserve">
+    <value>The system has finalized the training phase after training set {0}</value>
+  </data>
+  <data name="TrainingSetReviewerInProgressActionMessage" xml:space="preserve">
+    <value>You have reviewed {0} out of {1} documents in training set {2}, click Continue to keep going</value>
+  </data>
+  <data name="TrainingSetReviewerNotStartedActionMessage" xml:space="preserve">
+    <value>You have {0} documents to review in training set {1}, click Start to begin reviewing</value>
+  </data>
+  <data name="TrainingSetReviewInProgressActionMessage" xml:space="preserve">
+    <value>{0} reviewed {1} of {2} documents in training set {3}</value>
+  </data>
+  <data name="TrainingSetReviewInProgressWithName" xml:space="preserve">
+    <value>Training Set {0}  Review in Progress</value>
+  </data>
+  <data name="TrainingSetReviewNotStartedActionMessage" xml:space="preserve">
+    <value>{0} has {1} documents to review in training set {2}</value>
+  </data>
+  <data name="TrainingSetReviewNotStartedWithName" xml:space="preserve">
+    <value>Training Set {0} Review not Started</value>
+  </data>
+  <data name="QCSetReviewComplete" xml:space="preserve">
+    <value>Verification Set review is complete</value>
+  </data>
+  <data name="ErrorPredictionNotCategorized" xml:space="preserve">
+    <value>Not all documents are categorized. Please run Predict All before being able to create a verification set.</value>
+  </data>
+  <data name="ViewAllDocuments" xml:space="preserve">
+    <value>View all documents</value>
+  </data>
+  <data name="AllDocumentsReviewed" xml:space="preserve">
+    <value>All {0} documents were reviewed</value>
+  </data>
+  <data name="DocumentsNeedReview" xml:space="preserve">
+    <value>{0} documents need to be reviewed</value>
+  </data>
+  <data name="ConfidenceLevelLowerCase" xml:space="preserve">
+    <value>confidence level</value>
+  </data>
+  <data name="ControlSetPrevalence" xml:space="preserve">
+    <value>Control Set Prevalence</value>
+  </data>
+  <data name="MarginOfErrorLowerCase" xml:space="preserve">
+    <value>margin of error</value>
+  </data>
+  <data name="ControlSetPrevalenceMsg" xml:space="preserve">
+    <value>You coded {0}% of control set documents as relevant</value>
+  </data>
+  <data name="EstimatedRichnessMsg" xml:space="preserve">
+    <value>Evolution estimates that {0} of the total documents are relevant</value>
+  </data>
+  <data name="PredictionCompleteMessage" xml:space="preserve">
+    <value>{0} reviewed all {1} documents in training set {2}.  Click Create Verification Set to begin verification.</value>
+  </data>
+  <data name="PredictionInprogressMessage" xml:space="preserve">
+    <value>{0} reviewed all {1} documents in training set {2}.  Predict all is currently running.</value>
+  </data>
+  <data name="DiscrepancyStatistics" xml:space="preserve">
+    <value>Discrepancies Statistics</value>
+  </data>
+  <data name="DiscrepancyStatisticsMsg" xml:space="preserve">
+    <value>Precision is {0}% and Recall is {1}%</value>
+  </data>
+  <data name="FinalControlSetTest" xml:space="preserve">
+    <value>Final Control Set Test</value>
+  </data>
+  <data name="FinalVerificationSetTest" xml:space="preserve">
+    <value>Final Verification Set Test</value>
+  </data>
+  <data name="VerificationF1Decrease" xml:space="preserve">
+    <value>Verification testing showed a {0}% decrease in F1 value to {1}%, with false negatives at {2}%</value>
+  </data>
+  <data name="VerificationF1Increase" xml:space="preserve">
+    <value>Verification testing showed a {0}% increase in F1 value to {1}%, with false negatives at {2}%</value>
+  </data>
+  <data name="VerificationF1Stable" xml:space="preserve">
+    <value>Verification testing showed F1 stable at {0}%, with false negatives at {1}%</value>
+  </data>
+  <data name="VerificationTestResults" xml:space="preserve">
+    <value>Verification Test Results</value>
+  </data>
+</root>

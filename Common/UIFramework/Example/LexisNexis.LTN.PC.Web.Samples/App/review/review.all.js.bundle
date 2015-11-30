@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://vswebessentials.com/schemas/v1/bundle.xsd">
+  <settings>
+    <!--Determines if the bundle file should be automatically optimized after creation/update.-->
+    <minify>true</minify>
+    <!--Determine whether to generate/re-generate this bundle on building the solution.-->
+    <runOnBuild>false</runOnBuild>
+    <!--Specifies a custom subfolder to save files to. By default, compiled output will be placed in the same folder and nested under the original file.-->
+    <outputDirectory />
+  </settings>
+  <!--The order of the <file> elements determines the order of the files in the bundle.-->
+  <files>
+      <file>/App/review/app.js</file>
+      <file>/App/review/review.resx.js</file>
+      <file>/App/review/app.config.js</file>
+      <file>/App/common/services/WebApiClientService.js</file>
+      <file>/App/common/decorators/WebApiClientServiceDecorator.js</file>
+      <file>/App/common/directives/ErrorHandlerDirective.js</file>
+      <file>/App/common/services/ErrorHandlerService.js</file>
+      <file>/App/common/directives/InputValidationDirective.js</file>
+      <file>/App/review/app.routes.js</file>
+      <file>/App/review/app.init.js</file>
+      <file>/App/review/reviewer/ReviewController.js</file>
+      <file>/App/common/directives/HighlighterDirective.js</file>
+      <file>/App/common/directives/NavigatorDirective.js</file>
+      <file>/App/common/component/reviewer/DocumentSetModelFactory.js</file>
+      <file>/App/common/component/reviewer/ReviewerConfiguration.js</file>
+      <file>/App/common/component/reviewer/ReviewerWidgetsDefinition.js</file>
+      <file>/App/common/component/reviewer/ReviewerDataService.js</file>
+      <file>/App/common/component/reviewer/ReviewerDirectiveController.js</file>
+      <file>/App/common/component/reviewer/ReviewerDirective.js</file>
+      <file>/App/common/component/widgets/AssistedReviewController.js</file>
+      <file>/App/common/directives/ngTruncate.js</file>
+  </files>
+</bundle>

@@ -1,0 +1,56 @@
+
+<div ng-controller="AssistedReviewController as AssistedReviewController">
+    <div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 col-lg-offset-2 col-md-offset-2">
+        <div class="text-right">
+            <div class="checkbox"
+                 ng-if="AssistedReviewController.showAutoAdvance()">
+                <label>
+                    <input type="checkbox"
+                           id="autoAdvance"
+                           ng-model="autoadvance.checked" />{{AssistedReviewController.localized.AutoAdvance}}
+                </label>
+            </div>
+        </div>
+    </div>
+    <br /><br />
+    <div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 col-lg-offset-2 col-md-offset-2 col-xs-offset-2 col-sm-offset-2 coding-section">
+        <span class="btn btn-lg btn-reviewer btn-block coding"
+              id="relevant"
+              btn-radio="'{{AssistedReviewController.relevance.RELEVANT}}'"
+              ng-change="AssistedReviewController.saveCoding()"
+              ng-model="AssistedReviewController.selectedRelevance"
+              ng-class="{'btn-success':AssistedReviewController.isRelevant()}">
+            <i class="fa fa-check-circle fa-icon"> </i>
+            {{AssistedReviewController.localized.Relevant}}
+        </span>
+        <span class="btn btn-lg btn-reviewer btn-block coding"
+              id="notrelevant"
+              btn-radio="'{{AssistedReviewController.relevance.NOTRELEVANT}}'"
+              ng-change="AssistedReviewController.saveCoding()"
+              ng-model="AssistedReviewController.selectedRelevance"
+              ng-class="{'btn-danger':AssistedReviewController.isNotRelevant()}">
+            <i class="fa fa-times-circle fa-icon"> </i>
+            {{AssistedReviewController.localized.NotRelevant}}
+        </span>
+        <span class="btn btn-lg btn-reviewer btn-block coding"
+              id="skip"
+              btn-radio="'{{AssistedReviewController.relevance.SKIPPED}}'"
+              ng-change="AssistedReviewController.saveCoding()"
+              ng-model="AssistedReviewController.selectedRelevance"
+              ng-class="{'btn-warning':AssistedReviewController.isSkipped()}"
+              ng-if="ReviewerDirectiveController.isTrainingSet()">
+            <i class="fa fa-arrow-circle-right fa-icon"></i>
+            {{AssistedReviewController.localized.SkipDocument}}
+        </span>
+        <br />
+        <br />
+        <span ng-click="getNextDocument(ReviewerDirectiveController.currentDocument.DocumentIndexId,'uncoded')"
+              class="btn btn-primary btn-block"
+              ng-disabled="AssistedReviewController.isNextDisabled()"
+              ng-if="AssistedReviewController.showNext()">
+            {{AssistedReviewController.nextButtonText()}}
+        </span>
+
+    </div>
+
+</div>

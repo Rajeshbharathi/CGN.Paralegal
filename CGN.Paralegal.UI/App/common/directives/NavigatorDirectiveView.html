@@ -1,0 +1,34 @@
+
+<div class="navigator text-center" ng-form="navigatorForm">
+    <span ng-click="first()" ng-if="isAdvanced"  
+          ng-disabled="disablePrev()" 
+          title="{{localized.First}}"
+          class="glyphicon glyphicon-fast-backward"></span>
+    <span ng-click="prev()"
+          ng-disabled="disablePrev()"
+          title="{{localized.Previous}}"
+          class="glyphicon glyphicon-chevron-left"></span>
+      
+    <input type="number" name="currentRecordNumber"
+           ng-model="currentRecordNumber"
+           ng-model-update="{updateOn:'keypress'}"
+           id="currentRecordNumber"
+           ng-keypress="submitForm($event)"
+           class="navigator-input text-center"
+           ng-class="{'invalid': isRequired() || isRangeError}"/>/ <span><span id="totalDocuments">{{totalItems}}</span> {{label}}</span>
+       
+    <span ng-click="next()" ng-disabled="disableNext()"
+          title="{{localized.Next}}"
+          class="glyphicon glyphicon-chevron-right"></span>
+    <span ng-click="last()" ng-if="isAdvanced"
+          title="{{localized.Last}}"
+          ng-disabled="disableNext()" 
+          class="glyphicon glyphicon-fast-forward"></span>
+    <br />
+    <span ng-if="isRequired()" class="alert-danger">
+        <p>{{localized.InvalidNumber}}</p>
+    </span>
+    <span ng-if="isRangeError" class="alert-danger">
+        <p>{{localized.OutOfRange}} {{totalItems}}</p>
+    </span>
+</div>

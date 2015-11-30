@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/LexisNexis.Evolution.BusinessEntities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LexisNexis.Evolution.BusinessEntities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:2010/?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:import schemaLocation="http://localhost:2010/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="BaseJobBEO">
+    <xs:sequence>
+      <xs:element name="_bootParameters" nillable="true" type="xs:string" />
+      <xs:element name="_commitIntervalBrokerType" type="tns:BrokerType" />
+      <xs:element name="_commitIntervalSettingType" type="tns:JobSettingType" />
+      <xs:element name="_currentStatus" nillable="true" type="xs:string" />
+      <xs:element name="_currentStatusId" type="xs:int" />
+      <xs:element name="_issuedCommandId" type="xs:int" />
+      <xs:element name="_jobDescription" nillable="true" type="xs:string" />
+      <xs:element name="_jobFrequency" nillable="true" type="xs:string" />
+      <xs:element name="_jobId" type="xs:int" />
+      <xs:element name="_jobName" nillable="true" type="xs:string" />
+      <xs:element name="_jobNotificationId" type="xs:long" />
+      <xs:element name="_jobRunId" type="xs:int" />
+      <xs:element name="_jobSchedule" nillable="true" type="xs:string" />
+      <xs:element name="_jobScheduleActualOccurenceCount" type="xs:int" />
+      <xs:element name="_jobScheduleCreatedBy" nillable="true" type="xs:string" />
+      <xs:element name="_jobScheduleCreatedDate" type="xs:dateTime" />
+      <xs:element name="_jobScheduleDayOfMonth" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System" name="_jobScheduleDayOfWeek" type="q1:DayOfWeek" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System" name="_jobScheduleDayOfWeekInAMonth" type="q2:DayOfWeek" />
+      <xs:element name="_jobScheduleEndDate" type="xs:dateTime" />
+      <xs:element name="_jobScheduleLastRunDate" type="xs:dateTime" />
+      <xs:element name="_jobScheduleNextRunDate" type="xs:dateTime" />
+      <xs:element name="_jobScheduleRequestedRecurrenceCount" type="xs:int" />
+      <xs:element name="_jobScheduleRunDuration" type="xs:double" />
+      <xs:element name="_jobScheduleStartDate" type="xs:dateTime" />
+      <xs:element name="_jobScheduleType" type="tns:BaseJobBEO.ScheduleType" />
+      <xs:element name="_jobServerId" nillable="true" type="xs:string" />
+      <xs:element name="_jobServerName" nillable="true" type="xs:string" />
+      <xs:element name="_jobTypeId" type="xs:int" />
+      <xs:element name="_jobTypeName" nillable="true" type="xs:string" />
+      <xs:element name="_lastExecutedCommand" type="xs:int" />
+      <xs:element name="_lastProcessedTaskNumber" type="xs:int" />
+      <xs:element name="_loadTime" type="xs:dateTime" />
+      <xs:element name="_progressPercent" type="xs:double" />
+      <xs:element name="_repeatInterval" type="xs:int" />
+      <xs:element name="_statusBrokerType" type="tns:BrokerType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseJobBEO" nillable="true" type="tns:BaseJobBEO" />
+  <xs:simpleType name="BrokerType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Database">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ConfigFile">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Queue">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Default">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="BrokerType" nillable="true" type="tns:BrokerType" />
+  <xs:simpleType name="JobSettingType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="JobSpecificSetting">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CommonSetting">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Default">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="JobSettingType" nillable="true" type="tns:JobSettingType" />
+  <xs:simpleType name="BaseJobBEO.ScheduleType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Hourly">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Daily">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Weekly">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Monthly">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Now">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="OneTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="None">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="BaseJobBEO.ScheduleType" nillable="true" type="tns:BaseJobBEO.ScheduleType" />
+</xs:schema>

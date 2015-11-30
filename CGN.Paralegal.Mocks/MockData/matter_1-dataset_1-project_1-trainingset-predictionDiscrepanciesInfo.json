@@ -1,0 +1,33 @@
+﻿[{
+    "$id": "1",
+    "SetName": "Training Set 001",
+    "BinderId": "e61eb282-e8c5-e411-86fa-00155d77f20a",
+    "TotalDocuments": 50,
+    "TotalDifference": 7,
+    "DifferenceRate": 0.14,
+    "TruePostive": 10,
+    "TrueNegative": 33,
+    "FalsePostive": 5,
+    "FalseNegative": 2
+}, {
+    "$id": "2",
+    "SetName": "Training Set 002",
+    "BinderId": "e61eb282-e8c5-e411-86fa-00155d77f21a",
+    "TotalDocuments": 50,
+    "TotalDifference": 4,
+    "DifferenceRate": 0.08,
+    "TruePostive": 9,
+    "TrueNegative": 37,
+    "FalsePostive": 0,
+    "FalseNegative": 4
+}, {
+    "$id": "3",
+    "SetName": "Fake TR-23",
+    "TotalDocuments": 50,
+    "TotalDifference": 5,
+    "DifferenceRate": 0.1,
+    "TruePostive": 5,
+    "TrueNegative": 40,
+    "FalsePostive": 2,
+    "FalseNegative": 3
+}]

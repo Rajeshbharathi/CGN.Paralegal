@@ -1,0 +1,22 @@
+﻿{
+    "ProjectCollectionId":"87c97666-a2bf-4596-b845-85d69fc0717b",
+    "Id":1,
+    "Name":"Predictive Coding Project",
+    "Description":"Create Predictive Coding Project and Include documents into Project",
+    "Confidence":95,
+    "MarginOfError":2.5,
+    "MatterName":"TestMatter",
+    "OrganizationName":"TestOrg",
+    "MatterId":1,
+    "DatasetId":1,
+    "TargetF1":3.0,
+    "TargetPrecision":4.0,
+    "TargetRecall":5.0,
+    "OverturnErrorThreshold":2.0,
+    "DocumentSource":{ "SelectedMode": "All", "CollectionId": null, "TagId": null, "SavedSearchId": null, "SearchText": null },
+    "TotalDocumentCount": 30,
+    "PredictedCategoryFieldName":"PC_PredictedCategory",
+    "ReviewerCategoryFieldName":"PC_ReviewerCategory",
+    "CreatedBy":"6811cc96-b36f-4ab6-8d3d-72985691ff31",
+    "CreatedDate":"02/27/2015 12:43:10"
+}

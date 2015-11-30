@@ -1,0 +1,50 @@
+﻿<div class="modal fade in"
+     ng-if="ReviewSetController.showAutoCodeModal">
+    <div class="modal-backdrop fade in"></div>
+    <div class="modal-dialog" id="modalDialog">
+        <div class="modal-content" id="modalContent">
+            <div class="modal-header">
+                <h3 class="modal-title">
+                    Auto Coding - Truth Set
+                    <span id="closeAutoCodePopup" class="pull-right"
+                          ng-click="ReviewSetController.hideAutoCodeModal()">
+                        <i class="glyphicon glyphicon-remove-circle"></i>
+                    </span>
+                </h3>
+            </div>
+            <div class="modal-body clearfix">
+                <div class="form" ng-form="autocode">
+                    <fieldset>
+                        <div class="form-group form-inline">
+                            <div class="form-group col-lg-12">
+                                <label class="col-sm-5" for="fieldName">Source Data Truth Set Field Name</label>
+                                <div class="col-sm-7">
+                                    <input type="text" name="fieldName" id="fieldName"
+                                           ng-model="ReviewSetController.TruthSetFieldName"
+                                           class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-group form-inline">
+                            <div class="form-group col-lg-12">
+                                <label class="col-sm-5" for="fieldValue">Relevant Field Value</label>
+                                <div class="col-sm-7">
+                                    <input type="text" name="fieldValue" id="fieldValue"
+                                           ng-model="ReviewSetController.RelevantFieldValue"
+                                           class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                </div>
+            </div>
+            <div class='modal-footer'>
+                <button class='btn btn-primary' id='startBtn' ng-click='ReviewSetController.AutoCode()'> Start </button>
+                <button class='btn btn-default' id='cancelBtn' ng-click='ReviewSetController.hideAutoCodeModal()'> Cancel </button>
+            </div>
+        </div>
+    </div>
+</div>

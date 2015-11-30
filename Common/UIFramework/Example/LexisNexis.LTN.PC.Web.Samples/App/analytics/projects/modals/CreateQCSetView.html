@@ -1,0 +1,79 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title">{{ CreateQCSetController.localized.ModalTitle }}</h3>
+</div>
+<div class="modal-body">
+    <div class="form-horizontal" ng-form="qcset">
+        <div class="form-group">
+            <div class=" col-sm-12">
+                <p class="help-block text-danger" ng-show="CreateQCSetController.errorOnRelvanceType">
+                    {{ CreateQCSetController.localized.RelevantTypeValidationMessage }}
+                </p>
+                <div class="btn-group">
+                    <label class="btn btn-default" ng-model="CreateQCSetController.relevance" btn-radio="'notrelevant'" ng-class="{'btn-primary':CreateQCSetController.relevance=='notrelevant'}">{{ CreateQCSetController.localized.NotRelevant }}</label>
+                    <label class="btn btn-default" ng-model="CreateQCSetController.relevance" btn-radio="'relevant'" ng-class="{'btn-primary':CreateQCSetController.relevance=='relevant'}">{{ CreateQCSetController.localized.Relevant }}</label>
+                    <label class="btn btn-default" ng-model="CreateQCSetController.relevance" btn-radio="'both'" ng-class="{'btn-primary':CreateQCSetController.relevance=='both'}">{{ CreateQCSetController.localized.Both }}</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <span class="col-sm-2">
+                <h4>{{ CreateQCSetController.localized.Sampling }}</h4>
+            </span>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-12">
+                <p class="help-block text-danger" ng-show="CreateQCSetController.errorOnSamplingType">
+                    {{ CreateQCSetController.localized.SamplingTypeValidationMessage }}
+                </p>
+                <div class="btn-group">
+                    <label class="btn btn-default" ng-model="CreateQCSetController.sampling" btn-radio="'statistical'" ng-class="{'btn-primary':CreateQCSetController.sampling=='statistical' }">{{ CreateQCSetController.localized.Statistical }}</label>
+                    <label class="btn btn-default" ng-model="CreateQCSetController.sampling" btn-radio="'percentage'" ng-class="{ 'btn-primary':CreateQCSetController.sampling=='percentage'}">{{ CreateQCSetController.localized.Percentage }}</label>
+                </div>
+            </div>
+        </div>
+        <div ng-show="CreateQCSetController.sampling=='percentage'" class="form-group">
+            <div class="col-sm-10">
+                <div kendo-slider ng-model="CreateQCSetController.sliderPercentage" k-min="1" k-max="100" k-smallstep="5" k-largestep="25" style="width:500px"></div>
+            </div>
+            <div class="col-sm-2">
+                &nbsp;&nbsp;
+                <label class="text-box">{{ CreateQCSetController.sliderPercentage }} % </label>
+            </div>
+        </div>
+        <div ng-show="CreateQCSetController.sampling=='statistical'">
+            <div class="form-group">
+                <label class="col-sm-3" for="selConfidence"> {{ CreateQCSetController.localized.Confidence }}</label>
+                <div class="col-sm-9">
+                    <select id="selConfidence" name="selConfidence" ng-model="CreateQCSetController.confidenceSelected" required ng-options="item.name for item in CreateQCSetController.confidences"></select>
+
+                    <p class="help-block text-danger" ng-show="(CreateQCSetController.submitted || qcset.selConfidence.$dirty) && qcset.selConfidence.$invalid">
+                        {{ CreateQCSetController.localized.ConfidenceValidationMessage }}
+                    </p>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3" for="selMarginOfError">{{ CreateQCSetController.localized.MarginError }}</label>
+                <div class="col-sm-9">
+                    <select id="selMarginOfError" name="selMarginOfError" ng-model="CreateQCSetController.errorMarginSelected" required ng-options="item.name for item in CreateQCSetController.errorMargins"></select>
+
+                    <p class="help-block text-danger" ng-show="(CreateQCSetController.submitted || qcset.selMarginOfError.$dirty) && qcset.selMarginOfError.$invalid">
+                        {{ CreateQCSetController.localized.MarginErrorValidationMessage }}
+                </div>
+            </div>
+        </div>
+        <div>&nbsp;</div>
+
+        <div class="form-group">
+            <label class="col-sm-5">{{ CreateQCSetController.localized.SampleSize }}</label>
+            <span class="col-sm-1"> {{ CreateQCSetController.sampleSize }} </span>
+            <span class="col-sm-6"><button ng-click="CreateQCSetController.calculateSampleSize(qcset)" class="btn btn-default btn-sm">{{ CreateQCSetController.localized.Calculate }}</button></span>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-default" ng-click="CreateQCSetController.cancel()">{{ CreateQCSetController.localized.Cancel }}</button>
+    <button class="btn btn-primary" ng-click="CreateQCSetController.ok(qcset)">{{ CreateQCSetController.localized.OK }}</button>
+</div>
+
+

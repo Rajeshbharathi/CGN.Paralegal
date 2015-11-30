@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://vswebessentials.com/schemas/v1/bundle.xsd">
+  <settings>
+    <!--Determines if the bundle file should be automatically optimized after creation/update.-->
+    <minify>false</minify>
+    <!--Determin whether to generate/re-generate this bundle on building the solution.-->
+    <runOnBuild>true</runOnBuild>
+    <!--Specifies a custom subfolder to save files to. By default, compiled output will be placed in the same folder and nested under the original file.-->
+    <outputDirectory />
+  </settings>
+  <!--The order of the <file> elements determines the order of the files in the bundle.-->
+  <files>
+	  <file>/Content/js/jquery1.10.2/jquery-1.10.2.min.js</file>
+    <file>/Content/js/angular1.3.3/angular.js</file>
+    <file>/Content/js/angular1.3.3/angular-animate.js</file>
+    <file>/Content/js/angular1.3.3/angular-resource.js</file>
+    <file>/Content/js/angular1.3.3/angular-route.js</file>
+    <file>/Content/js/angular1.3.3/angular-messages.js</file>
+    <file>/Content/js/angular1.3.3/angular-sanitize.js</file>
+    <file>/Content/js/angular1.3.3/angular-ui-bootstrap-0.12.0/ui-bootstrap-tpls-0.12.0.min.js</file>
+    <file>/Content/js/angular1.3.3/angular-loading-bar-0.6.0/loading-bar.js</file>
+    <file>/Content/js/kendo2014.2.716/kendo.all.min.js</file>
+    <file>/Content/js/bootstrap3.2.0/bootstrap.min.js</file>
+  </files>
+</bundle>

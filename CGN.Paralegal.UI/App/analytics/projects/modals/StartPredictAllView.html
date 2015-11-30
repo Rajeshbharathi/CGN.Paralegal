@@ -1,0 +1,61 @@
+﻿<div ln-modal="TrainingSetController.modals.predictset"
+     ln-modal-title="{{ TrainingSetController.localized.PredictAllDocuments }}"
+     ln-modal-on-confirm="TrainingSetController.startPredictAll()"
+     ln-modal-on-cancel="TrainingSetController.resetScheduledOption()"
+     ln-modal-validate-confirm="TrainingSetController.isInvalidDateTime()">
+    <div class="form-horizontal row">
+
+        <div class="col-lg-11 col-lg-offset-1">
+            <h4>{{TrainingSetController.localized.PredictAllDocuments}}</h4>
+            <p>
+                {{TrainingSetController.localized.PredictAllModalText}}
+            </p>
+        </div>
+        <div class="form-inline col-lg-11 col-lg-offset-1">
+            <div class="radio">
+                <label>
+                    <input type="radio"
+                           ng-model="TrainingSetController.isScheduled"
+                           name="scheduledTime"
+                           id="scheduledTime"
+                           ng-value="false"
+                           ng-change="TrainingSetController.setScheduledTime()">
+                    {{TrainingSetController.localized.Now}}
+                </label>
+            </div>
+        </div>
+        <div class="form-inline col-lg-11 col-lg-offset-1">
+            <div class="radio">
+                <label>
+                    <input type="radio"
+                           ng-model="TrainingSetController.isScheduled"
+                           name="scheduledTime"
+                           id="scheduledTime"
+                           ng-value="true"
+                           ng-change="TrainingSetController.setScheduledTime()">
+                    {{TrainingSetController.localized.Later}}
+
+                </label>
+            </div>
+            <input kendo-date-picker
+                   ng-model="TrainingSetController.dateString"
+                   k-ng-model="TrainingSetController.scheduledTime"
+                   ng-show="TrainingSetController.isScheduled" />
+            <input kendo-time-picker
+                   ng-model="TrainingSetController.timeString"
+                   k-ng-model="TrainingSetController.scheduledTime"
+                   ng-show="TrainingSetController.isScheduled" />
+
+
+        </div>
+        <div class="form-inline col-lg-11 col-lg-offset-1">
+            <br />
+            <p class="text-danger"
+               ng-if="TrainingSetController.isInvalidDateTime()">
+                {{TrainingSetController.localized.InvalidDateTime}}
+            </p>
+        </div>
+    </div>
+
+</div>
+

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DirectorCoreServices" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IDirectorCoreServices_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <wsam:Addressing>
+          <wsp:Policy>
+            <wsam:AnonymousResponses />
+          </wsp:Policy>
+        </wsam:Addressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:2010/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:2010/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:2010/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LexisNexis.Evolution.Overdrive" />
+      <xsd:import schemaLocation="http://localhost:2010/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/LexisNexis.Evolution.BusinessEntities" />
+      <xsd:import schemaLocation="http://localhost:2010/?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDirectorCoreServices_GetOpenJobs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpenJobs" />
+  </wsdl:message>
+  <wsdl:message name="IDirectorCoreServices_GetOpenJobs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpenJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDirectorCoreServices_GetJobInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobInfo" />
+  </wsdl:message>
+  <wsdl:message name="IDirectorCoreServices_GetJobInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDirectorCoreServices_GetWorkerStatistics_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkerStatistics" />
+  </wsdl:message>
+  <wsdl:message name="IDirectorCoreServices_GetWorkerStatistics_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkerStatisticsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDirectorCoreServices">
+    <wsdl:operation name="GetOpenJobs">
+      <wsdl:input wsam:Action="http://tempuri.org/IDirectorCoreServices/GetOpenJobs" message="tns:IDirectorCoreServices_GetOpenJobs_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IDirectorCoreServices/GetOpenJobsResponse" message="tns:IDirectorCoreServices_GetOpenJobs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobInfo">
+      <wsdl:input wsam:Action="http://tempuri.org/IDirectorCoreServices/GetJobInfo" message="tns:IDirectorCoreServices_GetJobInfo_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IDirectorCoreServices/GetJobInfoResponse" message="tns:IDirectorCoreServices_GetJobInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkerStatistics">
+      <wsdl:input wsam:Action="http://tempuri.org/IDirectorCoreServices/GetWorkerStatistics" message="tns:IDirectorCoreServices_GetWorkerStatistics_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IDirectorCoreServices/GetWorkerStatisticsResponse" message="tns:IDirectorCoreServices_GetWorkerStatistics_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IDirectorCoreServices" type="tns:IDirectorCoreServices">
+    <wsp:PolicyReference URI="#NetTcpBinding_IDirectorCoreServices_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetOpenJobs">
+      <soap12:operation soapAction="http://tempuri.org/IDirectorCoreServices/GetOpenJobs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobInfo">
+      <soap12:operation soapAction="http://tempuri.org/IDirectorCoreServices/GetJobInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkerStatistics">
+      <soap12:operation soapAction="http://tempuri.org/IDirectorCoreServices/GetWorkerStatistics" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IDirectorCoreServices" type="tns:IDirectorCoreServices">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetOpenJobs">
+      <soap:operation soapAction="http://tempuri.org/IDirectorCoreServices/GetOpenJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobInfo">
+      <soap:operation soapAction="http://tempuri.org/IDirectorCoreServices/GetJobInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkerStatistics">
+      <soap:operation soapAction="http://tempuri.org/IDirectorCoreServices/GetWorkerStatistics" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DirectorCoreServices">
+    <wsdl:port name="NetTcpBinding_IDirectorCoreServices" binding="tns:NetTcpBinding_IDirectorCoreServices">
+      <soap12:address location="net.tcp://localhost:2011/" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:2011/</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IDirectorCoreServices" binding="tns:BasicHttpBinding_IDirectorCoreServices">
+      <soap:address location="http://localhost:2010/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

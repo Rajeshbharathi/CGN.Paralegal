@@ -1,0 +1,4127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="1001" xml:space="preserve">
+    <value>Access denied, not an authorized user to access this feature.</value>
+  </data>
+  <data name="1002" xml:space="preserve">
+    <value>Problem occurred while accessing the service.</value>
+  </data>
+  <data name="1101" xml:space="preserve">
+    <value>Error while accessing the service to create the folder.</value>
+  </data>
+  <data name="1102" xml:space="preserve">
+    <value>Error while accessing the service to update the folder properties.</value>
+  </data>
+  <data name="1103" xml:space="preserve">
+    <value>Error while accessing the service to delete the folder.</value>
+  </data>
+  <data name="1104" xml:space="preserve">
+    <value>Error while accessing the service to fetch the folder types.</value>
+  </data>
+  <data name="1105" xml:space="preserve">
+    <value>Error while accessing the service to fetch the authorized folders granted access to the user.</value>
+  </data>
+  <data name="1106" xml:space="preserve">
+    <value>Error while fetching the service to fetch the system folder.</value>
+  </data>
+  <data name="1107" xml:space="preserve">
+    <value>Error while accessing the service to fetch the properties of the folder.</value>
+  </data>
+  <data name="1108" xml:space="preserve">
+    <value>Error while accessing the service to fetch the parent to the folder.</value>
+  </data>
+  <data name="1109" xml:space="preserve">
+    <value>Error while accessing the service to fetch the child to the folder.</value>
+  </data>
+  <data name="1110" xml:space="preserve">
+    <value>Error while accessing the service to fetch the siblings to the folder.</value>
+  </data>
+  <data name="1111" xml:space="preserve">
+    <value>Error while accessing the service to fetch the possible child folder types.</value>
+  </data>
+  <data name="1130" xml:space="preserve">
+    <value>Folder name should be unique within the parent folder.</value>
+  </data>
+  <data name="1131" xml:space="preserve">
+    <value>Error while creating the folder.</value>
+  </data>
+  <data name="1201" xml:space="preserve">
+    <value>Error while creating user in user management.</value>
+  </data>
+  <data name="1202" xml:space="preserve">
+    <value>The User Name already exists, please try with some other name.</value>
+  </data>
+  <data name="1203" xml:space="preserve">
+    <value>New user created successfully.</value>
+  </data>
+  <data name="1204" xml:space="preserve">
+    <value>Error while updating the user details.</value>
+  </data>
+  <data name="1205" xml:space="preserve">
+    <value>User does not exists, while updating the user details.</value>
+  </data>
+  <data name="1206" xml:space="preserve">
+    <value>User updated successfully.</value>
+  </data>
+  <data name="1207" xml:space="preserve">
+    <value>Error while deleting user.</value>
+  </data>
+  <data name="1208" xml:space="preserve">
+    <value>User does not exists, while deleting user.</value>
+  </data>
+  <data name="1209" xml:space="preserve">
+    <value>User deleted successfully.</value>
+  </data>
+  <data name="1210" xml:space="preserve">
+    <value>Error retrieving all Local users.</value>
+  </data>
+  <data name="1211" xml:space="preserve">
+    <value>Invalid User ID</value>
+  </data>
+  <data name="1212" xml:space="preserve">
+    <value>Error occurred while adding membership.</value>
+  </data>
+  <data name="1213" xml:space="preserve">
+    <value>Error retrieving all users for manage membership.</value>
+  </data>
+  <data name="1214" xml:space="preserve">
+    <value>Error retrieving all shift values.</value>
+  </data>
+  <data name="1300" xml:space="preserve">
+    <value>Error retrieving the System role.</value>
+  </data>
+  <data name="1302" xml:space="preserve">
+    <value>A role with this name already exists. Enter another role name.</value>
+  </data>
+  <data name="1303" xml:space="preserve">
+    <value>Role id is not valid.</value>
+  </data>
+  <data name="1304" xml:space="preserve">
+    <value>Folder id is not valid.</value>
+  </data>
+  <data name="1305" xml:space="preserve">
+    <value>User group id is not valid.</value>
+  </data>
+  <data name="1306" xml:space="preserve">
+    <value>Error retrieving policy groups from service.</value>
+  </data>
+  <data name="1307" xml:space="preserve">
+    <value>Error updating role policies in service.</value>
+  </data>
+  <data name="1308" xml:space="preserve">
+    <value>Error retrieving the user groups for the folder.</value>
+  </data>
+  <data name="1309" xml:space="preserve">
+    <value>Error updating roles to user groups.</value>
+  </data>
+  <data name="1310" xml:space="preserve">
+    <value>Error adding user group to folder.</value>
+  </data>
+  <data name="1311" xml:space="preserve">
+    <value>Error creating role.</value>
+  </data>
+  <data name="1312" xml:space="preserve">
+    <value>Error retrieving roles.</value>
+  </data>
+  <data name="1313" xml:space="preserve">
+    <value>Error binding roles.</value>
+  </data>
+  <data name="1314" xml:space="preserve">
+    <value>Error updating policies to user group and folder.</value>
+  </data>
+  <data name="1315" xml:space="preserve">
+    <value>Error retrieving role from service.</value>
+  </data>
+  <data name="1316" xml:space="preserve">
+    <value>Error creating role in service.</value>
+  </data>
+  <data name="1317" xml:space="preserve">
+    <value>Error updating role in service.</value>
+  </data>
+  <data name="1318" xml:space="preserve">
+    <value>Error deleting role in service.</value>
+  </data>
+  <data name="1319" xml:space="preserve">
+    <value>Error retrieving role policies from service.</value>
+  </data>
+  <data name="1320" xml:space="preserve">
+    <value>Error retrieving roles for user group.</value>
+  </data>
+  <data name="1321" xml:space="preserve">
+    <value>Error retrieving policies of user groups and folder.</value>
+  </data>
+  <data name="1322" xml:space="preserve">
+    <value>Error creating user groups for folder.</value>
+  </data>
+  <data name="1323" xml:space="preserve">
+    <value>Error creating roles for user group and folder.</value>
+  </data>
+  <data name="1324" xml:space="preserve">
+    <value>Error retrieving roles and policies for folder and user group.</value>
+  </data>
+  <data name="1325" xml:space="preserve">
+    <value>Error retrieving unlisted user groups.</value>
+  </data>
+  <data name="1326" xml:space="preserve">
+    <value>Error retrieving unlisted roles.</value>
+  </data>
+  <data name="1327" xml:space="preserve">
+    <value>Error retrieving policies for user group.</value>
+  </data>
+  <data name="1401" xml:space="preserve">
+    <value>Error retrieving system preferences group names.</value>
+  </data>
+  <data name="1402" xml:space="preserve">
+    <value>Error retrieving system preferences based on selected preference group.</value>
+  </data>
+  <data name="1403" xml:space="preserve">
+    <value>Error retrieving system preferences for user in selected group.</value>
+  </data>
+  <data name="1404" xml:space="preserve">
+    <value>Error retrieving system preferences for user group in selected preference group.</value>
+  </data>
+  <data name="1405" xml:space="preserve">
+    <value>Error while updating system preference value.</value>
+  </data>
+  <data name="1406" xml:space="preserve">
+    <value>Error while updating system preference value for a user group.</value>
+  </data>
+  <data name="1407" xml:space="preserve">
+    <value>Error while updating system preference value for a user.</value>
+  </data>
+  <data name="1408" xml:space="preserve">
+    <value>Error while accessing the service to fetch the authenticate user.</value>
+  </data>
+  <data name="1409" xml:space="preserve">
+    <value>Error accessing preference list values.</value>
+  </data>
+  <data name="1410" xml:space="preserve">
+    <value>Error retrieving preferences.</value>
+  </data>
+  <data name="1501" xml:space="preserve">
+    <value>Error deleting server.</value>
+  </data>
+  <data name="1502" xml:space="preserve">
+    <value>Error deleting domain.</value>
+  </data>
+  <data name="1503" xml:space="preserve">
+    <value>Error retrieving all server details.</value>
+  </data>
+  <data name="1504" xml:space="preserve">
+    <value>Error retrieving server details.</value>
+  </data>
+  <data name="1505" xml:space="preserve">
+    <value>Error retrieving all domain details.</value>
+  </data>
+  <data name="1506" xml:space="preserve">
+    <value>Error retrieving domain details.</value>
+  </data>
+  <data name="1507" xml:space="preserve">
+    <value>Error inserting server details.</value>
+  </data>
+  <data name="1508" xml:space="preserve">
+    <value>Error inserting domain details.</value>
+  </data>
+  <data name="1509" xml:space="preserve">
+    <value>Error updating server details.</value>
+  </data>
+  <data name="1510" xml:space="preserve">
+    <value>Error updating domain details.</value>
+  </data>
+  <data name="1511" xml:space="preserve">
+    <value>Error retrieving all active directory users.</value>
+  </data>
+  <data name="1512" xml:space="preserve">
+    <value>Error retrieving AD users for membership management.</value>
+  </data>
+  <data name="1513" xml:space="preserve">
+    <value>Error retrieving AD groups for membership management.</value>
+  </data>
+  <data name="1514" xml:space="preserve">
+    <value>Error retrieving AD group details.</value>
+  </data>
+  <data name="1515" xml:space="preserve">
+    <value>Error retrieving AD user details.</value>
+  </data>
+  <data name="1516" xml:space="preserve">
+    <value>The specified AD domain does not exist.</value>
+  </data>
+  <data name="1517" xml:space="preserve">
+    <value>The specified AD server does not exist.</value>
+  </data>
+  <data name="2001" xml:space="preserve">
+    <value>The user group already exists. Enter a new group name.</value>
+  </data>
+  <data name="2002" xml:space="preserve">
+    <value>Error creating user group.</value>
+  </data>
+  <data name="2003" xml:space="preserve">
+    <value>Error deleting user group(s).</value>
+  </data>
+  <data name="2004" xml:space="preserve">
+    <value>Error retrieving users by group id.</value>
+  </data>
+  <data name="2005" xml:space="preserve">
+    <value>Error retrieving user group details by group id.</value>
+  </data>
+  <data name="2006" xml:space="preserve">
+    <value>Error retrieving all user groups.</value>
+  </data>
+  <data name="2007" xml:space="preserve">
+    <value>Error managing membership.</value>
+  </data>
+  <data name="2008" xml:space="preserve">
+    <value>Error retrieving user groups for user.</value>
+  </data>
+  <data name="2009" xml:space="preserve">
+    <value>Error updating user group.</value>
+  </data>
+  <data name="2010" xml:space="preserve">
+    <value>User does not have access to create user group.</value>
+  </data>
+  <data name="2011" xml:space="preserve">
+    <value>A user group with this name already exists. Enter a different user group name.</value>
+  </data>
+  <data name="3001" xml:space="preserve">
+    <value>Error creating a matter.</value>
+  </data>
+  <data name="3002" xml:space="preserve">
+    <value>Error while updating the matter details.</value>
+  </data>
+  <data name="3003" xml:space="preserve">
+    <value>Error retrieving the matter details.</value>
+  </data>
+  <data name="3004" xml:space="preserve">
+    <value>Error retrieving the organization details.</value>
+  </data>
+  <data name="3005" xml:space="preserve">
+    <value>Access denied for matter management.</value>
+  </data>
+  <data name="3006" xml:space="preserve">
+    <value>Access denied for matter management.</value>
+  </data>
+  <data name="3007" xml:space="preserve">
+    <value>Matter with specified name already exists.</value>
+  </data>
+  <data name="4100" xml:space="preserve">
+    <value>Error adding server.</value>
+  </data>
+  <data name="4101" xml:space="preserve">
+    <value>Error updating server details.</value>
+  </data>
+  <data name="4102" xml:space="preserve">
+    <value>Error deleting server.</value>
+  </data>
+  <data name="4103" xml:space="preserve">
+    <value>Error retrieving server details.</value>
+  </data>
+  <data name="4004" xml:space="preserve">
+    <value>This dataset name has already been used in the parent folder. Enter a different dataset name.</value>
+  </data>
+  <data name="4005" xml:space="preserve">
+    <value>This dataset template name has already been used. Enter a different dataset template name.</value>
+  </data>
+  <data name="4006" xml:space="preserve">
+    <value>Error in service retrieving the dataset templates for the selected dataset type.</value>
+  </data>
+  <data name="4007" xml:space="preserve">
+    <value>Error in service retrieving the dataset template types.</value>
+  </data>
+  <data name="4008" xml:space="preserve">
+    <value>Error in service creating the dataset.</value>
+  </data>
+  <data name="4009" xml:space="preserve">
+    <value>Error in service updating the dataset.</value>
+  </data>
+  <data name="4010" xml:space="preserve">
+    <value>Error in service creating the dataset template.</value>
+  </data>
+  <data name="4011" xml:space="preserve">
+    <value>Error in service updating the dataset template.</value>
+  </data>
+  <data name="4012" xml:space="preserve">
+    <value>Error in service retrieving the dataset(s) under the folder.</value>
+  </data>
+  <data name="4013" xml:space="preserve">
+    <value>Error in service retrieving the dataset information for the selected dataset.</value>
+  </data>
+  <data name="4014" xml:space="preserve">
+    <value>Error in service retrieving the dataset template information for the selected dataset template.</value>
+  </data>
+  <data name="4015" xml:space="preserve">
+    <value>Error in service retrieving the data types or data format for a field.</value>
+  </data>
+  <data name="4016" xml:space="preserve">
+    <value>Error creating dataset.</value>
+  </data>
+  <data name="4017" xml:space="preserve">
+    <value>Error creating fields.</value>
+  </data>
+  <data name="4018" xml:space="preserve">
+    <value>Error updating fields.</value>
+  </data>
+  <data name="4019" xml:space="preserve">
+    <value>Error deleting fields.</value>
+  </data>
+  <data name="4020" xml:space="preserve">
+    <value>Cannot save as current dataset template.</value>
+  </data>
+  <data name="501" xml:space="preserve">
+    <value>Unauthorized request.</value>
+  </data>
+  <data name="600" xml:space="preserve">
+    <value>Application error. Please contact the administrator.</value>
+  </data>
+  <data name="601" xml:space="preserve">
+    <value>Split this error message accordingly.</value>
+  </data>
+  <data name="4104" xml:space="preserve">
+    <value>Error retrieving server details.</value>
+  </data>
+  <data name="4105" xml:space="preserve">
+    <value>Server insert failed.</value>
+  </data>
+  <data name="4106" xml:space="preserve">
+    <value>Server update failed.</value>
+  </data>
+  <data name="4224" xml:space="preserve">
+    <value>Unable to retrieve recipients.</value>
+  </data>
+  <data name="4225" xml:space="preserve">
+    <value>Notification already exists.</value>
+  </data>
+  <data name="4226" xml:space="preserve">
+    <value>Notification record does not exist.</value>
+  </data>
+  <data name="4227" xml:space="preserve">
+    <value>Error deleting notification.</value>
+  </data>
+  <data name="4228" xml:space="preserve">
+    <value>Error updating notification.</value>
+  </data>
+  <data name="4201" xml:space="preserve">
+    <value>Error creating notification.</value>
+  </data>
+  <data name="4202" xml:space="preserve">
+    <value>Error updating notification.</value>
+  </data>
+  <data name="4203" xml:space="preserve">
+    <value>Error deleting notification.</value>
+  </data>
+  <data name="4204" xml:space="preserve">
+    <value>Error retrieving notification.</value>
+  </data>
+  <data name="4205" xml:space="preserve">
+    <value>Error retrieving notification for User.</value>
+  </data>
+  <data name="4206" xml:space="preserve">
+    <value>Error associating user to notification.</value>
+  </data>
+  <data name="4207" xml:space="preserve">
+    <value>Error associating user group to notification.</value>
+  </data>
+  <data name="4208" xml:space="preserve">
+    <value>Error associating email to notification.</value>
+  </data>
+  <data name="4209" xml:space="preserve">
+    <value>Subscription mandatory for notification register.</value>
+  </data>
+  <data name="4210" xml:space="preserve">
+    <value>Error creating notification message.</value>
+  </data>
+  <data name="4211" xml:space="preserve">
+    <value>Error retrieving notification message.</value>
+  </data>
+  <data name="4212" xml:space="preserve">
+    <value>Error retrieving notification message for user.</value>
+  </data>
+  <data name="1701" xml:space="preserve">
+    <value>Error occurred while fetching list of category.</value>
+  </data>
+  <data name="1702" xml:space="preserve">
+    <value>Unable to perform search. Please contact the administrator(s).</value>
+  </data>
+  <data name="1703" xml:space="preserve">
+    <value>Error occurred while fetching attributes.</value>
+  </data>
+  <data name="3008" xml:space="preserve">
+    <value>The specified database server is unavailable. Select a different server.</value>
+  </data>
+  <data name="2501" xml:space="preserve">
+    <value>Data not found.</value>
+  </data>
+  <data name="2502" xml:space="preserve">
+    <value>Import XML file is not in the correct format.</value>
+  </data>
+  <data name="2503" xml:space="preserve">
+    <value>File not found.</value>
+  </data>
+  <data name="2504" xml:space="preserve">
+    <value>Access denied.</value>
+  </data>
+  <data name="2505" xml:space="preserve">
+    <value>Not a valid XML.</value>
+  </data>
+  <data name="2506" xml:space="preserve">
+    <value>Unable to schedule job.</value>
+  </data>
+  <data name="2507" xml:space="preserve">
+    <value>Data already exist.</value>
+  </data>
+  <data name="9001" xml:space="preserve">
+    <value>Cannot read the binary data of the file being imported.</value>
+  </data>
+  <data name="1704" xml:space="preserve">
+    <value>Error Occurred While Populating Categories.</value>
+  </data>
+  <data name="1705" xml:space="preserve">
+    <value>Error Occurred While Populating Search Results.</value>
+  </data>
+  <data name="4107" xml:space="preserve">
+    <value>Access denied for server management</value>
+  </data>
+  <data name="4108" xml:space="preserve">
+    <value>User does not have access to edit server.</value>
+  </data>
+  <data name="4109" xml:space="preserve">
+    <value>User does not have access to remove server.</value>
+  </data>
+  <data name="3009" xml:space="preserve">
+    <value>Error retrieving the matter list.</value>
+  </data>
+  <data name="4218" xml:space="preserve">
+    <value>Unable retrieve domain name.</value>
+  </data>
+  <data name="4219" xml:space="preserve">
+    <value>Unable to navigate to notification management page.</value>
+  </data>
+  <data name="4220" xml:space="preserve">
+    <value>Unable to send custom message.</value>
+  </data>
+  <data name="4221" xml:space="preserve">
+    <value>Unable to send message through email.</value>
+  </data>
+  <data name="4222" xml:space="preserve">
+    <value>Unable to navigate to send notification.</value>
+  </data>
+  <data name="4223" xml:space="preserve">
+    <value>Unable to retrieve user names.</value>
+  </data>
+  <data name="4229" xml:space="preserve">
+    <value>Error creating notification.</value>
+  </data>
+  <data name="5000" xml:space="preserve">
+    <value>Matter logs deleted successfully.</value>
+  </data>
+  <data name="5001" xml:space="preserve">
+    <value>There are no logs for this matter.</value>
+  </data>
+  <data name="5002" xml:space="preserve">
+    <value>Logs deleted successfully.</value>
+  </data>
+  <data name="5003" xml:space="preserve">
+    <value>There are no logs for this matter within this date range.</value>
+  </data>
+  <data name="5004" xml:space="preserve">
+    <value>Error on Getting Event Types.</value>
+  </data>
+  <data name="4110" xml:space="preserve">
+    <value>The specified domain does not exist.</value>
+  </data>
+  <data name="4021" xml:space="preserve">
+    <value>Access denied for dataset management.</value>
+  </data>
+  <data name="4022" xml:space="preserve">
+    <value>Access denied for dataset management.</value>
+  </data>
+  <data name="1605" xml:space="preserve">
+    <value>Unauthorized to perform the operation.</value>
+  </data>
+  <data name="4023" xml:space="preserve">
+    <value>Access denied for viewing folder or matter or dataset</value>
+  </data>
+  <data name="4024" xml:space="preserve">
+    <value>Error in updating the dataset.</value>
+  </data>
+  <data name="4025" xml:space="preserve">
+    <value>Error retrieving dataset details.</value>
+  </data>
+  <data name="4026" xml:space="preserve">
+    <value>Error retrieving dataset types.</value>
+  </data>
+  <data name="4027" xml:space="preserve">
+    <value>Error retrieving dataset template list.</value>
+  </data>
+  <data name="4028" xml:space="preserve">
+    <value>Error retrieving dataset template details.</value>
+  </data>
+  <data name="4029" xml:space="preserve">
+    <value>Error retrieving dataset(s) under the selected folder.</value>
+  </data>
+  <data name="4030" xml:space="preserve">
+    <value>Error retrieving field data types and formats.</value>
+  </data>
+  <data name="4031" xml:space="preserve">
+    <value>Error retrieving fields list.</value>
+  </data>
+  <data name="4035" xml:space="preserve">
+    <value>This field name already exists in this dataset. Enter a different field name.</value>
+  </data>
+  <data name="4111" xml:space="preserve">
+    <value>Cannot delete the server if its associated with matter.</value>
+  </data>
+  <data name="4112" xml:space="preserve">
+    <value>Error retrieving server details.</value>
+  </data>
+  <data name="4113" xml:space="preserve">
+    <value>Error retrieving server details.</value>
+  </data>
+  <data name="4114" xml:space="preserve">
+    <value>User does not have access to view a server.</value>
+  </data>
+  <data name="4115" xml:space="preserve">
+    <value>User does not have access to test server connectivity.</value>
+  </data>
+  <data name="4213" xml:space="preserve">
+    <value>Error retrieving un-notified message(s) for user.</value>
+  </data>
+  <data name="4214" xml:space="preserve">
+    <value>Error retrieving send message(s) for user.</value>
+  </data>
+  <data name="4215" xml:space="preserve">
+    <value>Error updating  notification status for user.</value>
+  </data>
+  <data name="4216" xml:space="preserve">
+    <value>Error deleting notification message(s).</value>
+  </data>
+  <data name="4217" xml:space="preserve">
+    <value>Error deleting send message(s) for user.</value>
+  </data>
+  <data name="4230" xml:space="preserve">
+    <value>Access denied for notification management</value>
+  </data>
+  <data name="4231" xml:space="preserve">
+    <value>View notification access denied.</value>
+  </data>
+  <data name="4232" xml:space="preserve">
+    <value>Delete notification access denied.</value>
+  </data>
+  <data name="1801" xml:space="preserve">
+    <value>Error while fetching Tags.</value>
+  </data>
+  <data name="1802" xml:space="preserve">
+    <value>Error while fetching Fields.</value>
+  </data>
+  <data name="1803" xml:space="preserve">
+    <value>Error while fetching file types.</value>
+  </data>
+  <data name="1804" xml:space="preserve">
+    <value>Error retrieving document preview data.</value>
+  </data>
+  <data name="701" xml:space="preserve">
+    <value>Access denied for document level commenting.</value>
+  </data>
+  <data name="702" xml:space="preserve">
+    <value>Error while adding document level comments.</value>
+  </data>
+  <data name="703" xml:space="preserve">
+    <value>Access denied for text level commenting.</value>
+  </data>
+  <data name="704" xml:space="preserve">
+    <value>Error while adding text level comments.</value>
+  </data>
+  <data name="705" xml:space="preserve">
+    <value>Access denied for markup level commenting.</value>
+  </data>
+  <data name="706" xml:space="preserve">
+    <value>Error while adding markup level comments.</value>
+  </data>
+  <data name="707" xml:space="preserve">
+    <value>Access denied for deleting comments.</value>
+  </data>
+  <data name="708" xml:space="preserve">
+    <value>Error while deleting comments.</value>
+  </data>
+  <data name="709" xml:space="preserve">
+    <value>Access denied for searching comments.</value>
+  </data>
+  <data name="710" xml:space="preserve">
+    <value>Error while searching comments.</value>
+  </data>
+  <data name="711" xml:space="preserve">
+    <value>Access denied for setting preferences for comments.</value>
+  </data>
+  <data name="712" xml:space="preserve">
+    <value>Error while setting preference for comments.</value>
+  </data>
+  <data name="713" xml:space="preserve">
+    <value>Access denied for sorting comments.</value>
+  </data>
+  <data name="714" xml:space="preserve">
+    <value>Error while sorting comments.</value>
+  </data>
+  <data name="715" xml:space="preserve">
+    <value>Error while updating document level comments.</value>
+  </data>
+  <data name="716" xml:space="preserve">
+    <value>Error while updating text level comments.</value>
+  </data>
+  <data name="717" xml:space="preserve">
+    <value>Error while updating markup level comments.</value>
+  </data>
+  <data name="801" xml:space="preserve">
+    <value>Error retrieving the document meta data.</value>
+  </data>
+  <data name="802" xml:space="preserve">
+    <value>Error retrieving the document text.</value>
+  </data>
+  <data name="803" xml:space="preserve">
+    <value>Error occurred  while loading document data viewer.</value>
+  </data>
+  <data name="804" xml:space="preserve">
+    <value>Error occurred while loading text viewer.</value>
+  </data>
+  <data name="805" xml:space="preserve">
+    <value>Error occurred while navigating document.</value>
+  </data>
+  <data name="718" xml:space="preserve">
+    <value>Error retrieving  documents comments for selected  documents.</value>
+  </data>
+  <data name="719" xml:space="preserve">
+    <value>Error retrieving text comments for selected  documents.</value>
+  </data>
+  <data name="720" xml:space="preserve">
+    <value>Error retrieving comments for search list documents.</value>
+  </data>
+  <data name="721" xml:space="preserve">
+    <value>Error retrieving all text comments for selected  documents.</value>
+  </data>
+  <data name="722" xml:space="preserve">
+    <value>Error in comments.</value>
+  </data>
+  <data name="1805" xml:space="preserve">
+    <value>Error while navigating to next page.</value>
+  </data>
+  <data name="1806" xml:space="preserve">
+    <value>Error while navigating to previous page.</value>
+  </data>
+  <data name="1807" xml:space="preserve">
+    <value>Error while opening the document.</value>
+  </data>
+  <data name="1808" xml:space="preserve">
+    <value>Error while paginating.</value>
+  </data>
+  <data name="1809" xml:space="preserve">
+    <value>Error while displaying search results.</value>
+  </data>
+  <data name="1810" xml:space="preserve">
+    <value>Error retrieving the selected document.</value>
+  </data>
+  <data name="1811" xml:space="preserve">
+    <value>Error while sorting the documents.</value>
+  </data>
+  <data name="4032" xml:space="preserve">
+    <value>This bates number already exists. Enter a different bates number.</value>
+  </data>
+  <data name="4233" xml:space="preserve">
+    <value>Error creating subscription.</value>
+  </data>
+  <data name="4234" xml:space="preserve">
+    <value>Error deleting subscription.</value>
+  </data>
+  <data name="4235" xml:space="preserve">
+    <value>Error updating subscription.</value>
+  </data>
+  <data name="4236" xml:space="preserve">
+    <value>Error fetching subscription.</value>
+  </data>
+  <data name="1812" xml:space="preserve">
+    <value>Access denied for performing reviewer search</value>
+  </data>
+  <data name="1813" xml:space="preserve">
+    <value>Access denied to search in All documents.</value>
+  </data>
+  <data name="1814" xml:space="preserve">
+    <value>Access denied to search in Assigned documents.</value>
+  </data>
+  <data name="1815" xml:space="preserve">
+    <value>Access denied to search in current dataset.</value>
+  </data>
+  <data name="1816" xml:space="preserve">
+    <value>Access denied to search in current reviewset.</value>
+  </data>
+  <data name="1817" xml:space="preserve">
+    <value>Access denied to search in search results.</value>
+  </data>
+  <data name="1818" xml:space="preserve">
+    <value>Access denied to perform advanced search.</value>
+  </data>
+  <data name="1819" xml:space="preserve">
+    <value>Access denied to perform concept search.</value>
+  </data>
+  <data name="1820" xml:space="preserve">
+    <value>Access denied to perform search within emails.</value>
+  </data>
+  <data name="1821" xml:space="preserve">
+    <value>Access denied to perform search using comments.</value>
+  </data>
+  <data name="5060" xml:space="preserve">
+    <value>Error importing document to the vault database.</value>
+  </data>
+  <data name="5061" xml:space="preserve">
+    <value>Error inserting document relationship to the vault database.</value>
+  </data>
+  <data name="5062" xml:space="preserve">
+    <value>Error importing document to the search engine.</value>
+  </data>
+  <data name="5501" xml:space="preserve">
+    <value>Error loading tags.</value>
+  </data>
+  <data name="2508" xml:space="preserve">
+    <value>Unable to load EDRM XML file. Verify that the file exists.</value>
+  </data>
+  <data name="2509" xml:space="preserve">
+    <value>Unable to parse the EDRM XML file. Verify that the file is well formed.</value>
+  </data>
+  <data name="2510" xml:space="preserve">
+    <value>Error retrieving import profiles.</value>
+  </data>
+  <data name="2511" xml:space="preserve">
+    <value>Error retrieving import properties.</value>
+  </data>
+  <data name="2512" xml:space="preserve">
+    <value>Error saving profile.</value>
+  </data>
+  <data name="2513" xml:space="preserve">
+    <value>Error updating profile.</value>
+  </data>
+  <data name="2514" xml:space="preserve">
+    <value>Error retrieving job details.</value>
+  </data>
+  <data name="2515" xml:space="preserve">
+    <value>Error retrieving job lists.</value>
+  </data>
+  <data name="2516" xml:space="preserve">
+    <value>Error deleting jobs.</value>
+  </data>
+  <data name="4237" xml:space="preserve">
+    <value>Unable to navigate to view notification.</value>
+  </data>
+  <data name="4238" xml:space="preserve">
+    <value>Unable to navigate to manage subscription.</value>
+  </data>
+  <data name="4239" xml:space="preserve">
+    <value>Unable to navigate to manage notification.</value>
+  </data>
+  <data name="4240" xml:space="preserve">
+    <value>Unable to navigate to notification Info.</value>
+  </data>
+  <data name="4241" xml:space="preserve">
+    <value>Error retrieving subscription details.</value>
+  </data>
+  <data name="4242" xml:space="preserve">
+    <value>Unable to navigate to add subscription.</value>
+  </data>
+  <data name="4243" xml:space="preserve">
+    <value>Error occurred while updating subscription.</value>
+  </data>
+  <data name="1901" xml:space="preserve">
+    <value>Error while adding dataset rules.</value>
+  </data>
+  <data name="1902" xml:space="preserve">
+    <value>Error while adding documents reviewset.</value>
+  </data>
+  <data name="1903" xml:space="preserve">
+    <value>Error retrieving documents.</value>
+  </data>
+  <data name="1904" xml:space="preserve">
+    <value>Error while adding reviewset.</value>
+  </data>
+  <data name="1905" xml:space="preserve">
+    <value>Error while deleting reviewset.</value>
+  </data>
+  <data name="1906" xml:space="preserve">
+    <value>Error while deleting documents to reviewset.</value>
+  </data>
+  <data name="1907" xml:space="preserve">
+    <value>Error while Merge the reviewsets.</value>
+  </data>
+  <data name="1908" xml:space="preserve">
+    <value>Error while splitting reviewsets.</value>
+  </data>
+  <data name="1909" xml:space="preserve">
+    <value>Error while update reviewsets.</value>
+  </data>
+  <data name="1910" xml:space="preserve">
+    <value>Error while remove documents from reviewsets.</value>
+  </data>
+  <data name="1911" xml:space="preserve">
+    <value>Error retrieving review set details.</value>
+  </data>
+  <data name="1912" xml:space="preserve">
+    <value>Error retrieving dataset rules.</value>
+  </data>
+  <data name="1913" xml:space="preserve">
+    <value>Error retrieving all the review sets in dataset.</value>
+  </data>
+  <data name="1914" xml:space="preserve">
+    <value>Error retrieving all the review sets with dataset.</value>
+  </data>
+  <data name="2517" xml:space="preserve">
+    <value>Error retrieving source filed.</value>
+  </data>
+  <data name="2518" xml:space="preserve">
+    <value>Error retrieving import details.</value>
+  </data>
+  <data name="2519" xml:space="preserve">
+    <value>Error inserting test run log.</value>
+  </data>
+  <data name="2520" xml:space="preserve">
+    <value>Import access denied.</value>
+  </data>
+  <data name="2521" xml:space="preserve">
+    <value>File access to the DCB is denied.</value>
+  </data>
+  <data name="2522" xml:space="preserve">
+    <value>File access to the EDRM XML file is denied.</value>
+  </data>
+  <data name="2523" xml:space="preserve">
+    <value>File access to the load file is denied.</value>
+  </data>
+  <data name="5510" xml:space="preserve">
+    <value>Error tagging a document.</value>
+  </data>
+  <data name="5511" xml:space="preserve">
+    <value>Error retrieving tag families.</value>
+  </data>
+  <data name="5512" xml:space="preserve">
+    <value>Error retrieving tag behaviors.</value>
+  </data>
+  <data name="2524" xml:space="preserve">
+    <value>Error retrieving the number of documents from the dataset.</value>
+  </data>
+  <data name="5502" xml:space="preserve">
+    <value>Error creating tag.</value>
+  </data>
+  <data name="5503" xml:space="preserve">
+    <value>Error updating tag.</value>
+  </data>
+  <data name="5504" xml:space="preserve">
+    <value>Error retrieving tag.</value>
+  </data>
+  <data name="5505" xml:space="preserve">
+    <value>Error deleting tag.</value>
+  </data>
+  <data name="5506" xml:space="preserve">
+    <value>Error creating tag template.</value>
+  </data>
+  <data name="5507" xml:space="preserve">
+    <value>Error retrieving tag template.</value>
+  </data>
+  <data name="5508" xml:space="preserve">
+    <value>Invalid tag template id.</value>
+  </data>
+  <data name="5509" xml:space="preserve">
+    <value>Error updating tag template.</value>
+  </data>
+  <data name="1606" xml:space="preserve">
+    <value>Error occurred while creating the job.</value>
+  </data>
+  <data name="1607" xml:space="preserve">
+    <value>Error occurred while fetching the job status.</value>
+  </data>
+  <data name="1608" xml:space="preserve">
+    <value>Error occurred while fetching the job priority.</value>
+  </data>
+  <data name="1609" xml:space="preserve">
+    <value>Error occurred while fetching the job progress percent.</value>
+  </data>
+  <data name="1610" xml:space="preserve">
+    <value>Create job Failed.</value>
+  </data>
+  <data name="1611" xml:space="preserve">
+    <value>Update job Failed.</value>
+  </data>
+  <data name="1612" xml:space="preserve">
+    <value>Delete job Failed.</value>
+  </data>
+  <data name="1613" xml:space="preserve">
+    <value>Get job failed.</value>
+  </data>
+  <data name="18001" xml:space="preserve">
+    <value>Error returned by search server: The dataset not available for search.</value>
+  </data>
+  <data name="2525" xml:space="preserve">
+    <value>Unable to find the DCB file.</value>
+  </data>
+  <data name="2526" xml:space="preserve">
+    <value>Unable to parse the DCB/Opticon file.</value>
+  </data>
+  <data name="3200" xml:space="preserve">
+    <value>Error retrieving folder preference.</value>
+  </data>
+  <data name="3201" xml:space="preserve">
+    <value>Error retrieving user preference.</value>
+  </data>
+  <data name="3202" xml:space="preserve">
+    <value>Error retrieving user group preference.</value>
+  </data>
+  <data name="3203" xml:space="preserve">
+    <value>Error assigning folder preference.</value>
+  </data>
+  <data name="3204" xml:space="preserve">
+    <value>Error assigning user preference.</value>
+  </data>
+  <data name="3205" xml:space="preserve">
+    <value>Error assigning user group preference.</value>
+  </data>
+  <data name="3206" xml:space="preserve">
+    <value>Error retrieving preferences.</value>
+  </data>
+  <data name="101" xml:space="preserve">
+    <value>Error reading document data.</value>
+  </data>
+  <data name="807" xml:space="preserve">
+    <value>Native document does not exist .</value>
+  </data>
+  <data name="808" xml:space="preserve">
+    <value>File type not recognized.</value>
+  </data>
+  <data name="102" xml:space="preserve">
+    <value>Error adding a document.</value>
+  </data>
+  <data name="1215" xml:space="preserve">
+    <value>Unable to navigate to the Edit Page.</value>
+  </data>
+  <data name="1216" xml:space="preserve">
+    <value>Error occurred while exporting Users.</value>
+  </data>
+  <data name="1217" xml:space="preserve">
+    <value>Error occurred while importing Users.</value>
+  </data>
+  <data name="4116" xml:space="preserve">
+    <value>A server with this name already exists. Enter a different name.</value>
+  </data>
+  <data name="4244" xml:space="preserve">
+    <value>SMTP servers unavailable.</value>
+  </data>
+  <data name="4245" xml:space="preserve">
+    <value>Subscription not found.</value>
+  </data>
+  <data name="4246" xml:space="preserve">
+    <value>Invalid folder Id.</value>
+  </data>
+  <data name="4247" xml:space="preserve">
+    <value>Must select at least one of: user, user group, e-mail address, or send to logged in users.</value>
+  </data>
+  <data name="4248" xml:space="preserve">
+    <value>Notification message must be entered.</value>
+  </data>
+  <data name="4249" xml:space="preserve">
+    <value>Invalid user.</value>
+  </data>
+  <data name="4117" xml:space="preserve">
+    <value>Server is in use and cannot be deleted.</value>
+  </data>
+  <data name="1112" xml:space="preserve">
+    <value>Error while creating user session data.</value>
+  </data>
+  <data name="1113" xml:space="preserve">
+    <value>Error retrieving user session data.</value>
+  </data>
+  <data name="1114" xml:space="preserve">
+    <value>Error while deleting user session data.</value>
+  </data>
+  <data name="4033" xml:space="preserve">
+    <value>Error retrieving dataset details.</value>
+  </data>
+  <data name="4118" xml:space="preserve">
+    <value>Test connection successful.</value>
+  </data>
+  <data name="4119" xml:space="preserve">
+    <value>Test connection failed.</value>
+  </data>
+  <data name="4120" xml:space="preserve">
+    <value>Invalid email address. Enter a valid email address.</value>
+  </data>
+  <data name="4121" xml:space="preserve">
+    <value>Enter the email address to test the SMTP connection.</value>
+  </data>
+  <data name="4122" xml:space="preserve">
+    <value>Enter an IP or host name to test the connection.</value>
+  </data>
+  <data name="4123" xml:space="preserve">
+    <value>Server is in use and cannot be deleted.</value>
+  </data>
+  <data name="4124" xml:space="preserve">
+    <value>The default server cannot be deleted.</value>
+  </data>
+  <data name="809" xml:space="preserve">
+    <value>Error while reading native file.</value>
+  </data>
+  <data name="104" xml:space="preserve">
+    <value>Global find and replace task failed.</value>
+  </data>
+  <data name="6000" xml:space="preserve">
+    <value>Choose a different color for the custom redaction reason.</value>
+  </data>
+  <data name="105" xml:space="preserve">
+    <value>Error while fetching document and its field information.</value>
+  </data>
+  <data name="106" xml:space="preserve">
+    <value>Error retrieving the document for the given &lt;DCN label&gt;.</value>
+  </data>
+  <data name="1851" xml:space="preserve">
+    <value>Search history cannot be deleted.</value>
+  </data>
+  <data name="1852" xml:space="preserve">
+    <value>Please choose another name, this name already exists.</value>
+  </data>
+  <data name="1853" xml:space="preserve">
+    <value>Search alert name already exists.</value>
+  </data>
+  <data name="1854" xml:space="preserve">
+    <value>Error occurred while creating search history.</value>
+  </data>
+  <data name="1855" xml:space="preserve">
+    <value>Error occurred while updating search history.</value>
+  </data>
+  <data name="1856" xml:space="preserve">
+    <value>Error occurred while  deleting search history.</value>
+  </data>
+  <data name="1857" xml:space="preserve">
+    <value>Error occurred while creating saved search.</value>
+  </data>
+  <data name="1858" xml:space="preserve">
+    <value>Error occurred while updating  saved search.</value>
+  </data>
+  <data name="1859" xml:space="preserve">
+    <value>Error occurred while deleting saved search.</value>
+  </data>
+  <data name="1860" xml:space="preserve">
+    <value>Error occurred while creating search alert.</value>
+  </data>
+  <data name="1861" xml:space="preserve">
+    <value>Error occurred while updating  search alert.</value>
+  </data>
+  <data name="1862" xml:space="preserve">
+    <value>Error occurred while deleting search alert.</value>
+  </data>
+  <data name="1863" xml:space="preserve">
+    <value>Error occurred while retrieving search history.</value>
+  </data>
+  <data name="1864" xml:space="preserve">
+    <value>Error occurred while retrieving saved searches.</value>
+  </data>
+  <data name="1865" xml:space="preserve">
+    <value>Access denied for general admin activities.</value>
+  </data>
+  <data name="1866" xml:space="preserve">
+    <value>Error occurred while retrieving previous run search alerts.</value>
+  </data>
+  <data name="2100" xml:space="preserve">
+    <value>Error adding the reason for redaction.</value>
+  </data>
+  <data name="2101" xml:space="preserve">
+    <value>Error updating the reason for redaction.</value>
+  </data>
+  <data name="2102" xml:space="preserve">
+    <value>Error deleting the reason for redaction.</value>
+  </data>
+  <data name="2103" xml:space="preserve">
+    <value>Error retrieving the reason for redaction.</value>
+  </data>
+  <data name="2104" xml:space="preserve">
+    <value>Error adding reviewer search settings.</value>
+  </data>
+  <data name="2105" xml:space="preserve">
+    <value>Error updating reviewer search settings.</value>
+  </data>
+  <data name="2106" xml:space="preserve">
+    <value>Error retrieving reviewer search settings.</value>
+  </data>
+  <data name="2107" xml:space="preserve">
+    <value>Error adding a thesaurus word.</value>
+  </data>
+  <data name="2108" xml:space="preserve">
+    <value>Error updating thesaurus word.</value>
+  </data>
+  <data name="2109" xml:space="preserve">
+    <value>Error deleting thesaurus word.</value>
+  </data>
+  <data name="2110" xml:space="preserve">
+    <value>Error retrieving thesaurus word.</value>
+  </data>
+  <data name="2111" xml:space="preserve">
+    <value>Error adding spelling variations.</value>
+  </data>
+  <data name="2112" xml:space="preserve">
+    <value>Error updating spelling variations.</value>
+  </data>
+  <data name="2113" xml:space="preserve">
+    <value>Error deleting spelling variations.</value>
+  </data>
+  <data name="2114" xml:space="preserve">
+    <value>Error retrieving spelling variations.</value>
+  </data>
+  <data name="2115" xml:space="preserve">
+    <value>Error adding stop word/noise word.</value>
+  </data>
+  <data name="2116" xml:space="preserve">
+    <value>Error updating stop word/noise word.</value>
+  </data>
+  <data name="2117" xml:space="preserve">
+    <value>Error deleting stop word/noise word.</value>
+  </data>
+  <data name="2118" xml:space="preserve">
+    <value>Error retrieving stop word/noise words.</value>
+  </data>
+  <data name="2119" xml:space="preserve">
+    <value>Access to customizing the redaction reason is denied.</value>
+  </data>
+  <data name="2120" xml:space="preserve">
+    <value>Access to customizing the thesaurus word is denied.</value>
+  </data>
+  <data name="2121" xml:space="preserve">
+    <value>Access to customizing spelling variation is denied.</value>
+  </data>
+  <data name="2122" xml:space="preserve">
+    <value>Access to customizing stop word/noise word is denied.</value>
+  </data>
+  <data name="2123" xml:space="preserve">
+    <value>Access denied for updating concept search.</value>
+  </data>
+  <data name="2124" xml:space="preserve">
+    <value>Access denied for updating preview size.</value>
+  </data>
+  <data name="2125" xml:space="preserve">
+    <value>Access denied for knowledge management.</value>
+  </data>
+  <data name="2126" xml:space="preserve">
+    <value>Access to turning on/off reasons for redaction is denied.</value>
+  </data>
+  <data name="2127" xml:space="preserve">
+    <value>Access to turning on/off thesaurus is denied.</value>
+  </data>
+  <data name="2128" xml:space="preserve">
+    <value>Access to turning on/off name iterations/spelling variations is denied.</value>
+  </data>
+  <data name="2129" xml:space="preserve">
+    <value>Access to turning on/off stop word is denied.</value>
+  </data>
+  <data name="810" xml:space="preserve">
+    <value>File access denied.  Please check your access for the file.</value>
+  </data>
+  <data name="1916" xml:space="preserve">
+    <value>A reviewset with this name already exists. Please enter a different name.</value>
+  </data>
+  <data name="2527" xml:space="preserve">
+    <value>Error updating job priority.</value>
+  </data>
+  <data name="1867" xml:space="preserve">
+    <value>Error while deleting documents.</value>
+  </data>
+  <data name="9002" xml:space="preserve">
+    <value>Unable to retrieve templates.</value>
+  </data>
+  <data name="9003" xml:space="preserve">
+    <value>Unable to schedule export job.</value>
+  </data>
+  <data name="9004" xml:space="preserve">
+    <value>Unable to retrieve export jobs.</value>
+  </data>
+  <data name="9005" xml:space="preserve">
+    <value>Unable to update export job.</value>
+  </data>
+  <data name="9006" xml:space="preserve">
+    <value>Unable to perform test run.</value>
+  </data>
+  <data name="9007" xml:space="preserve">
+    <value>Error while saving profile.</value>
+  </data>
+  <data name="4125" xml:space="preserve">
+    <value>Server id does not exist.</value>
+  </data>
+  <data name="4126" xml:space="preserve">
+    <value>The server does not exist for the given type.</value>
+  </data>
+  <data name="8000" xml:space="preserve">
+    <value>This field name already exists in the dataset.</value>
+  </data>
+  <data name="8001" xml:space="preserve">
+    <value>Dataset can only be created under a matter.</value>
+  </data>
+  <data name="8002" xml:space="preserve">
+    <value>Folder type code of dataset should be 6.</value>
+  </data>
+  <data name="8003" xml:space="preserve">
+    <value>Dataset creation requires a dataset name.</value>
+  </data>
+  <data name="8004" xml:space="preserve">
+    <value>Dataset name cannot be empty when updating.</value>
+  </data>
+  <data name="8005" xml:space="preserve">
+    <value>The dataset's parent cannot be changed while updating.</value>
+  </data>
+  <data name="8006" xml:space="preserve">
+    <value>Dataset can only be created under a matter.</value>
+  </data>
+  <data name="8007" xml:space="preserve">
+    <value>Dataset template cannot be updated without name or field name.</value>
+  </data>
+  <data name="8101" xml:space="preserve">
+    <value>Matter id cannot be empty.</value>
+  </data>
+  <data name="8008" xml:space="preserve">
+    <value>Dataset template cannot be created without name or field name.</value>
+  </data>
+  <data name="5005" xml:space="preserve">
+    <value>Invalid input, no records found.</value>
+  </data>
+  <data name="4034" xml:space="preserve">
+    <value>The dataset does not exist.</value>
+  </data>
+  <data name="7101" xml:space="preserve">
+    <value>Share path where documents to be placed is missing.</value>
+  </data>
+  <data name="7102" xml:space="preserve">
+    <value>XML string in boot parameters is not well formed. Unable to recreate object.</value>
+  </data>
+  <data name="7103" xml:space="preserve">
+    <value>XDL file is missing from vault.</value>
+  </data>
+  <data name="7104" xml:space="preserve">
+    <value>Redact-It server responded with error.</value>
+  </data>
+  <data name="1868" xml:space="preserve">
+    <value>Policy denied to create search history.</value>
+  </data>
+  <data name="1869" xml:space="preserve">
+    <value>Policy denied to view search history.</value>
+  </data>
+  <data name="1870" xml:space="preserve">
+    <value>Policy denied to create saved search.</value>
+  </data>
+  <data name="1871" xml:space="preserve">
+    <value>Policy denied to edit saved search.</value>
+  </data>
+  <data name="1872" xml:space="preserve">
+    <value>Policy denied to view saved search.</value>
+  </data>
+  <data name="1873" xml:space="preserve">
+    <value>Policy denied to execute saved search.</value>
+  </data>
+  <data name="1220" xml:space="preserve">
+    <value>Your account is locked, please contact administrator.</value>
+  </data>
+  <data name="1221" xml:space="preserve">
+    <value>Access denied for user management</value>
+  </data>
+  <data name="1222" xml:space="preserve">
+    <value>Access denied for updating a user.</value>
+  </data>
+  <data name="1223" xml:space="preserve">
+    <value>Access denied for deleting a user.</value>
+  </data>
+  <data name="1224" xml:space="preserve">
+    <value>Access denied to view users.</value>
+  </data>
+  <data name="6001" xml:space="preserve">
+    <value>Error saving markup.</value>
+  </data>
+  <data name="1706" xml:space="preserve">
+    <value>Invalid parameter.</value>
+  </data>
+  <data name="5515" xml:space="preserve">
+    <value>The tag's scope must be the same as its parent tag's scope.</value>
+  </data>
+  <data name="5516" xml:space="preserve">
+    <value>Tag folder cannot have a tag group or a tag for its parent.</value>
+  </data>
+  <data name="5517" xml:space="preserve">
+    <value>Tag group cannot have a tag for its parent.</value>
+  </data>
+  <data name="5518" xml:space="preserve">
+    <value>Tag cannot have a tag for its parent.</value>
+  </data>
+  <data name="5519" xml:space="preserve">
+    <value>Additional child tags cannot be added to this parent.</value>
+  </data>
+  <data name="5520" xml:space="preserve">
+    <value>Additional child tags cannot be added to this parent because the parent is locked.</value>
+  </data>
+  <data name="5521" xml:space="preserve">
+    <value>Tag group is set to unique. Only one tag of this type can exist in the dataset..</value>
+  </data>
+  <data name="7200" xml:space="preserve">
+    <value>Folder name is required when creating a folder.</value>
+  </data>
+  <data name="7201" xml:space="preserve">
+    <value>Folder name is required when updating a folder.</value>
+  </data>
+  <data name="7202" xml:space="preserve">
+    <value>Folders cannot be created under a dataset.</value>
+  </data>
+  <data name="7203" xml:space="preserve">
+    <value>Access denied for folder management.</value>
+  </data>
+  <data name="7204" xml:space="preserve">
+    <value>Datasets cannot be created directly under the system folder.</value>
+  </data>
+  <data name="7205" xml:space="preserve">
+    <value>The dataset id is invalid.</value>
+  </data>
+  <data name="7206" xml:space="preserve">
+    <value>Matters cannot be created directly under the system folder.</value>
+  </data>
+  <data name="7207" xml:space="preserve">
+    <value>A system folder cannot be created under the system folder.</value>
+  </data>
+  <data name="7208" xml:space="preserve">
+    <value>This matter cannot be deleted.</value>
+  </data>
+  <data name="7209" xml:space="preserve">
+    <value>A folder that has children may not be deleted.</value>
+  </data>
+  <data name="5522" xml:space="preserve">
+    <value>Tag behavior is set to "Cannot be deleted".</value>
+  </data>
+  <data name="4127" xml:space="preserve">
+    <value>Business entity value type mismatch.</value>
+  </data>
+  <data name="4128" xml:space="preserve">
+    <value>Business entity value is empty or exceeded the length.</value>
+  </data>
+  <data name="4140" xml:space="preserve">
+    <value>Error starting the server.</value>
+  </data>
+  <data name="4141" xml:space="preserve">
+    <value>Error stopping the server.</value>
+  </data>
+  <data name="8102" xml:space="preserve">
+    <value>Matter must be assigned to a SQL server and a search server.</value>
+  </data>
+  <data name="8009" xml:space="preserve">
+    <value>XML schema is not in a correct format.</value>
+  </data>
+  <data name="9201" xml:space="preserve">
+    <value>Access denied for reviewset management</value>
+  </data>
+  <data name="9206" xml:space="preserve">
+    <value>Access to view the review set is denied.</value>
+  </data>
+  <data name="1225" xml:space="preserve">
+    <value>You are not authorized to access the system. &lt;br/&gt; Please contact system administrator.</value>
+  </data>
+  <data name="50101" xml:space="preserve">
+    <value>Invalid input, no records found.</value>
+  </data>
+  <data name="5011" xml:space="preserve">
+    <value>Invalid event type id.</value>
+  </data>
+  <data name="5012" xml:space="preserve">
+    <value>Invalid start date.</value>
+  </data>
+  <data name="5013" xml:space="preserve">
+    <value>Invalid end date.</value>
+  </data>
+  <data name="5014" xml:space="preserve">
+    <value>Start date cannot be later than end date.</value>
+  </data>
+  <data name="5015" xml:space="preserve">
+    <value>Invalid page number.</value>
+  </data>
+  <data name="5016" xml:space="preserve">
+    <value>Invalid record size.</value>
+  </data>
+  <data name="5017" xml:space="preserve">
+    <value>Event type required.</value>
+  </data>
+  <data name="5018" xml:space="preserve">
+    <value>Start date required.</value>
+  </data>
+  <data name="5019" xml:space="preserve">
+    <value>End date required.</value>
+  </data>
+  <data name="7210" xml:space="preserve">
+    <value>Folder id is invalid.</value>
+  </data>
+  <data name="8103" xml:space="preserve">
+    <value>Matter id is invalid.</value>
+  </data>
+  <data name="5523" xml:space="preserve">
+    <value>Shortcut keys already in use: The shortcut key you selected has already been assigned to another tag. Please choose another shortcut key and try again.</value>
+  </data>
+  <data name="5524" xml:space="preserve">
+    <value>Tag folders cannot have shortcut keys assigned.</value>
+  </data>
+  <data name="5525" xml:space="preserve">
+    <value />
+  </data>
+  <data name="5526" xml:space="preserve">
+    <value>This &lt;tag/tag group&gt; cannot be deleted as this is an exclusive &lt;tag/ tag group&gt; and must have at least two &lt;tags/tag groups&gt; or one tag &amp; tag group.</value>
+  </data>
+  <data name="8010" xml:space="preserve">
+    <value>A dataset cannot be created without a folder type code.</value>
+  </data>
+  <data name="7211" xml:space="preserve">
+    <value>A matter cannot be created under a matter.</value>
+  </data>
+  <data name="7212" xml:space="preserve">
+    <value>A matter cannot be created under a dataset.</value>
+  </data>
+  <data name="7213" xml:space="preserve">
+    <value>A matter cannot be created under a matter.</value>
+  </data>
+  <data name="2528" xml:space="preserve">
+    <value>Error retrieving profile configuration for the job.</value>
+  </data>
+  <data name="8104" xml:space="preserve">
+    <value>Created by parameter is invalid.</value>
+  </data>
+  <data name="8011" xml:space="preserve">
+    <value>Field is already deleted.</value>
+  </data>
+  <data name="7214" xml:space="preserve">
+    <value>Cannot update system folder details.</value>
+  </data>
+  <data name="7215" xml:space="preserve">
+    <value>Folder id is invalid.</value>
+  </data>
+  <data name="1226" xml:space="preserve">
+    <value>Session ended. Another session started with the same logon credentials. Please contact the administrator.</value>
+  </data>
+  <data name="6002" xml:space="preserve">
+    <value>Error retrieving document for conversion.</value>
+  </data>
+  <data name="6003" xml:space="preserve">
+    <value>Error writing document in temporary location for conversion.</value>
+  </data>
+  <data name="6004" xml:space="preserve">
+    <value>Error in file conversion in queue server.</value>
+  </data>
+  <data name="6005" xml:space="preserve">
+    <value>Error writing near native binary.</value>
+  </data>
+  <data name="107" xml:space="preserve">
+    <value>Error while deleting document(s).</value>
+  </data>
+  <data name="2529" xml:space="preserve">
+    <value>Error while reading document from file path.</value>
+  </data>
+  <data name="7110" xml:space="preserve">
+    <value>Error updating status.</value>
+  </data>
+  <data name="7111" xml:space="preserve">
+    <value>Error retrieving job details.</value>
+  </data>
+  <data name="7112" xml:space="preserve">
+    <value>Error retrieving production job.</value>
+  </data>
+  <data name="7113" xml:space="preserve">
+    <value>Error retrieving preference.</value>
+  </data>
+  <data name="7114" xml:space="preserve">
+    <value>Error Creating DocumentSet.</value>
+  </data>
+  <data name="7115" xml:space="preserve">
+    <value>Error Updating DocumentSet.</value>
+  </data>
+  <data name="7116" xml:space="preserve">
+    <value>Error retrieving completed job.</value>
+  </data>
+  <data name="7117" xml:space="preserve">
+    <value>Error getting production profile.</value>
+  </data>
+  <data name="7118" xml:space="preserve">
+    <value>Error saving profile.</value>
+  </data>
+  <data name="7119" xml:space="preserve">
+    <value>Error retrieving profile property.</value>
+  </data>
+  <data name="7120" xml:space="preserve">
+    <value>Error converting production set.</value>
+  </data>
+  <data name="7105" xml:space="preserve">
+    <value>Error retrieving privilege log metadata.</value>
+  </data>
+  <data name="7106" xml:space="preserve">
+    <value>Error deleting production set.</value>
+  </data>
+  <data name="7107" xml:space="preserve">
+    <value>Error populate jobs.</value>
+  </data>
+  <data name="7108" xml:space="preserve">
+    <value>Error canceling job.</value>
+  </data>
+  <data name="7109" xml:space="preserve">
+    <value>Error retrieving production log.</value>
+  </data>
+  <data name="2130" xml:space="preserve">
+    <value>This reason for redaction already exists in this dataset. Enter a different reason for redaction.</value>
+  </data>
+  <data name="2131" xml:space="preserve">
+    <value>This thesaurus word already exists in this dataset. Enter a different word.</value>
+  </data>
+  <data name="2132" xml:space="preserve">
+    <value>This spelling variation word already exists in this dataset. Enter a different word.</value>
+  </data>
+  <data name="2133" xml:space="preserve">
+    <value>This stop word already exists in this dataset. Enter a different word.</value>
+  </data>
+  <data name="2134" xml:space="preserve">
+    <value>This synonym already exists for this word. Enter a different synonym.</value>
+  </data>
+  <data name="2135" xml:space="preserve">
+    <value>This spelling variation already exists for this word. Enter a different spelling variation.</value>
+  </data>
+  <data name="2137" xml:space="preserve">
+    <value>Redaction reason name is empty.</value>
+  </data>
+  <data name="2138" xml:space="preserve">
+    <value>Redaction reason does not exist for a given reason id.</value>
+  </data>
+  <data name="2139" xml:space="preserve">
+    <value>Cannot move the redaction reason beyond the limits.</value>
+  </data>
+  <data name="2140" xml:space="preserve">
+    <value>Thesaurus word is empty.</value>
+  </data>
+  <data name="2141" xml:space="preserve">
+    <value>There must be at least one synonym for a thesaurus word.</value>
+  </data>
+  <data name="2142" xml:space="preserve">
+    <value>Thesaurus word does not exists for a given word id.</value>
+  </data>
+  <data name="2143" xml:space="preserve">
+    <value>Spelling variations do not exist for a given original word id.</value>
+  </data>
+  <data name="2144" xml:space="preserve">
+    <value>Spelling variations original word is empty.</value>
+  </data>
+  <data name="2145" xml:space="preserve">
+    <value>There should be at least one spelling variation for an original word.</value>
+  </data>
+  <data name="2146" xml:space="preserve">
+    <value>Stop word is empty.</value>
+  </data>
+  <data name="2147" xml:space="preserve">
+    <value>Stop words do not exist for a given original word id.</value>
+  </data>
+  <data name="2148" xml:space="preserve">
+    <value>Collection Id is not in correct format.</value>
+  </data>
+  <data name="2149" xml:space="preserve">
+    <value>Dataset id does not exist.</value>
+  </data>
+  <data name="2150" xml:space="preserve">
+    <value>Matter id does not exist.</value>
+  </data>
+  <data name="2151" xml:space="preserve">
+    <value>Language id does not exist.</value>
+  </data>
+  <data name="5527" xml:space="preserve">
+    <value>Error retrieving tags for document.</value>
+  </data>
+  <data name="1530" xml:space="preserve">
+    <value>Error occurred retrieving  server details.</value>
+  </data>
+  <data name="1531" xml:space="preserve">
+    <value>The specified AD server does not exist.</value>
+  </data>
+  <data name="1604" xml:space="preserve">
+    <value>No job(s) Found.</value>
+  </data>
+  <data name="1532" xml:space="preserve">
+    <value>Null values cannot be entered.</value>
+  </data>
+  <data name="1533" xml:space="preserve">
+    <value>Mandatory fields cannot be left blank.</value>
+  </data>
+  <data name="1526" xml:space="preserve">
+    <value>A domain already exists by the given name.</value>
+  </data>
+  <data name="1518" xml:space="preserve">
+    <value>Access denied to add AD server.</value>
+  </data>
+  <data name="1519" xml:space="preserve">
+    <value>Access denied for AD domain management.</value>
+  </data>
+  <data name="1520" xml:space="preserve">
+    <value>Access denied to edit AD server.</value>
+  </data>
+  <data name="1521" xml:space="preserve">
+    <value>Access denied for AD domain management.</value>
+  </data>
+  <data name="1522" xml:space="preserve">
+    <value>Access denied for AD domain management.</value>
+  </data>
+  <data name="1523" xml:space="preserve">
+    <value>Access denied to delete AD server.</value>
+  </data>
+  <data name="1524" xml:space="preserve">
+    <value>Access denied for AD domain management.</value>
+  </data>
+  <data name="1601" xml:space="preserve">
+    <value>Error Occurred while Edit the job Properties.</value>
+  </data>
+  <data name="1602" xml:space="preserve">
+    <value>Error Occurred while Deleting the job.</value>
+  </data>
+  <data name="1603" xml:space="preserve">
+    <value>Error Occurred while Fetching Jobs .</value>
+  </data>
+  <data name="2051" xml:space="preserve">
+    <value>Error when retrieving all super admin.</value>
+  </data>
+  <data name="2052" xml:space="preserve">
+    <value>Error when retrieving all secret questions.</value>
+  </data>
+  <data name="2053" xml:space="preserve">
+    <value>Error when validating answers.</value>
+  </data>
+  <data name="2054" xml:space="preserve">
+    <value>Error trying to reset the password.</value>
+  </data>
+  <data name="2012" xml:space="preserve">
+    <value>Access denied for updating a user group.</value>
+  </data>
+  <data name="2013" xml:space="preserve">
+    <value>Access denied for deleting a user group.</value>
+  </data>
+  <data name="2014" xml:space="preserve">
+    <value>Access denied for user group management.</value>
+  </data>
+  <data name="1614" xml:space="preserve">
+    <value>Job name should not be empty .</value>
+  </data>
+  <data name="1615" xml:space="preserve">
+    <value>Job type should not be empty.</value>
+  </data>
+  <data name="1616" xml:space="preserve">
+    <value>Notification type should not be empty.</value>
+  </data>
+  <data name="1617" xml:space="preserve">
+    <value>Folder  should not be empty.</value>
+  </data>
+  <data name="1618" xml:space="preserve">
+    <value>Schedule type should not be empty.</value>
+  </data>
+  <data name="1619" xml:space="preserve">
+    <value>Start date should not be empty.</value>
+  </data>
+  <data name="1620" xml:space="preserve">
+    <value>Users List is Empty.</value>
+  </data>
+  <data name="1621" xml:space="preserve">
+    <value>Invalid input, Requested recurrence count should be one for Now or One time job .</value>
+  </data>
+  <data name="1622" xml:space="preserve">
+    <value>Schedule Date/Time should be greater than current date/time.</value>
+  </data>
+  <data name="1623" xml:space="preserve">
+    <value>Job name already exists.</value>
+  </data>
+  <data name="9008" xml:space="preserve">
+    <value>Template does not exist.</value>
+  </data>
+  <data name="1874" xml:space="preserve">
+    <value>Access denied to create search alert.</value>
+  </data>
+  <data name="7216" xml:space="preserve">
+    <value>A matter cannot be created under a deleted folder.</value>
+  </data>
+  <data name="2530" xml:space="preserve">
+    <value>The specified location is invalid.</value>
+  </data>
+  <data name="9301" xml:space="preserve">
+    <value>Error while retrieving report list.</value>
+  </data>
+  <data name="9302" xml:space="preserve">
+    <value>Error while retrieving default report server information.</value>
+  </data>
+  <data name="9303" xml:space="preserve">
+    <value>Error while logging report.</value>
+  </data>
+  <data name="3010" xml:space="preserve">
+    <value>Parent id is invalid.</value>
+  </data>
+  <data name="2531" xml:space="preserve">
+    <value>Error parsing DCB file. Verify that the file is valid.</value>
+  </data>
+  <data name="1624" xml:space="preserve">
+    <value>Job Completed.</value>
+  </data>
+  <data name="1625" xml:space="preserve">
+    <value>Invalid job type.</value>
+  </data>
+  <data name="1227" xml:space="preserve">
+    <value>Old and new password cannot be the same.</value>
+  </data>
+  <data name="1252" xml:space="preserve">
+    <value>Have no permission to change this password.</value>
+  </data>
+  <data name="9400" xml:space="preserve">
+    <value>Error creating a print request.</value>
+  </data>
+  <data name="9401" xml:space="preserve">
+    <value>Error creating an email request.</value>
+  </data>
+  <data name="9402" xml:space="preserve">
+    <value>Error creating a download request.</value>
+  </data>
+  <data name="9403" xml:space="preserve">
+    <value>Error retrieving delivery details.</value>
+  </data>
+  <data name="9404" xml:space="preserve">
+    <value>Error retrieving delivery request details.</value>
+  </data>
+  <data name="9405" xml:space="preserve">
+    <value>Error while compressing folder.</value>
+  </data>
+  <data name="9406" xml:space="preserve">
+    <value>Error sending email.</value>
+  </data>
+  <data name="2532" xml:space="preserve">
+    <value>Error occurred while retrieving source fields for given DCB.</value>
+  </data>
+  <data name="1349" xml:space="preserve">
+    <value>Role id must not be null.</value>
+  </data>
+  <data name="1350" xml:space="preserve">
+    <value>Role name must not be null.</value>
+  </data>
+  <data name="5528" xml:space="preserve">
+    <value>The tag name already exists.</value>
+  </data>
+  <data name="2533" xml:space="preserve">
+    <value>No job log information found for the job.</value>
+  </data>
+  <data name="1003" xml:space="preserve">
+    <value>Message does not comply with the schema.</value>
+  </data>
+  <data name="5529" xml:space="preserve">
+    <value>Access to create or edit tag folder is denied.</value>
+  </data>
+  <data name="5530" xml:space="preserve">
+    <value>Access to create or edit tag group is denied.</value>
+  </data>
+  <data name="5531" xml:space="preserve">
+    <value>Access denied for tag management</value>
+  </data>
+  <data name="5532" xml:space="preserve">
+    <value>Access to delete tag is denied.</value>
+  </data>
+  <data name="5533" xml:space="preserve">
+    <value>Access to view tag is denied.</value>
+  </data>
+  <data name="5534" xml:space="preserve">
+    <value>Access to edit tag behaviors is denied.</value>
+  </data>
+  <data name="1228" xml:space="preserve">
+    <value>Invalid old Password.</value>
+  </data>
+  <data name="8105" xml:space="preserve">
+    <value>Matter id is invalid.</value>
+  </data>
+  <data name="8106" xml:space="preserve">
+    <value>Dataset id is invalid.</value>
+  </data>
+  <data name="8107" xml:space="preserve">
+    <value>The SQL server id is Invalid.</value>
+  </data>
+  <data name="7217" xml:space="preserve">
+    <value>Folder type is invalid.</value>
+  </data>
+  <data name="1626" xml:space="preserve">
+    <value>Invalid Data Set for Import.</value>
+  </data>
+  <data name="1627" xml:space="preserve">
+    <value>Invalid data Set or Matter for Export .</value>
+  </data>
+  <data name="2153" xml:space="preserve">
+    <value>Reviewset id is not in properly formatted.</value>
+  </data>
+  <data name="2154" xml:space="preserve">
+    <value>Given reviewset id is archived.</value>
+  </data>
+  <data name="2155" xml:space="preserve">
+    <value>Given reviewset id is not valid.</value>
+  </data>
+  <data name="8108" xml:space="preserve">
+    <value>The search server id is invalid.</value>
+  </data>
+  <data name="8109" xml:space="preserve">
+    <value>The SQL server id is invalid.</value>
+  </data>
+  <data name="8110" xml:space="preserve">
+    <value>The search server id is invalid.</value>
+  </data>
+  <data name="2156" xml:space="preserve">
+    <value>One or more documents are mapped to another review set.</value>
+  </data>
+  <data name="2157" xml:space="preserve">
+    <value>Only archived review sets may be deleted.</value>
+  </data>
+  <data name="7218" xml:space="preserve">
+    <value>Folder type code is invalid.</value>
+  </data>
+  <data name="2158" xml:space="preserve">
+    <value>Search engine does not support additional language.</value>
+  </data>
+  <data name="2159" xml:space="preserve">
+    <value>Cannot remove the languages supported by the search engine.</value>
+  </data>
+  <data name="2160" xml:space="preserve">
+    <value>Preview size must be greater than zero.</value>
+  </data>
+  <data name="2161" xml:space="preserve">
+    <value>Cannot change language id or name for languages supported by the search engine.</value>
+  </data>
+  <data name="2162" xml:space="preserve">
+    <value>Collection id is invalid for a given dataset id.</value>
+  </data>
+  <data name="2163" xml:space="preserve">
+    <value>Invalid language id format.</value>
+  </data>
+  <data name="7121" xml:space="preserve">
+    <value>Redaction notification failed.</value>
+  </data>
+  <data name="7122" xml:space="preserve">
+    <value>Access to edit production profile is denied.</value>
+  </data>
+  <data name="7123" xml:space="preserve">
+    <value>Access to create production profile is denied.</value>
+  </data>
+  <data name="7124" xml:space="preserve">
+    <value>Failed to save profile.</value>
+  </data>
+  <data name="7125" xml:space="preserve">
+    <value>Failed to retrieve profile.</value>
+  </data>
+  <data name="7126" xml:space="preserve">
+    <value>Access to create production set is denied.</value>
+  </data>
+  <data name="7127" xml:space="preserve">
+    <value>Failed to create production set.</value>
+  </data>
+  <data name="7128" xml:space="preserve">
+    <value>Access to edit production set is denied.</value>
+  </data>
+  <data name="7129" xml:space="preserve">
+    <value>Failed to delete production set details.</value>
+  </data>
+  <data name="7130" xml:space="preserve">
+    <value>Access denied for production management</value>
+  </data>
+  <data name="7131" xml:space="preserve">
+    <value>Failed to get production set details.</value>
+  </data>
+  <data name="7132" xml:space="preserve">
+    <value>Failed to get job completed details.</value>
+  </data>
+  <data name="7133" xml:space="preserve">
+    <value>Access to view privilege log is denied.</value>
+  </data>
+  <data name="7134" xml:space="preserve">
+    <value>Failed to get production set document count.</value>
+  </data>
+  <data name="7135" xml:space="preserve">
+    <value>Access to delete production set is denied.</value>
+  </data>
+  <data name="2164" xml:space="preserve">
+    <value>Reviewset name cannot be empty..</value>
+  </data>
+  <data name="2165" xml:space="preserve">
+    <value>Collection id is not valid.</value>
+  </data>
+  <data name="2166" xml:space="preserve">
+    <value>Document id is not valid.</value>
+  </data>
+  <data name="9209" xml:space="preserve">
+    <value>Enable check in is false therefore lock must be false.</value>
+  </data>
+  <data name="9210" xml:space="preserve">
+    <value>Allow view is false therefore read only must also be false.</value>
+  </data>
+  <data name="9211" xml:space="preserve">
+    <value>This review set's rules or start date cannot be modified.</value>
+  </data>
+  <data name="9212" xml:space="preserve">
+    <value>One or more reviewsets are required to merge review sets.</value>
+  </data>
+  <data name="9213" xml:space="preserve">
+    <value>Archived reviewset cannot be merged.</value>
+  </data>
+  <data name="9214" xml:space="preserve">
+    <value>The reviewset id is invalid.</value>
+  </data>
+  <data name="1628" xml:space="preserve">
+    <value>Access denied for job management</value>
+  </data>
+  <data name="9215" xml:space="preserve">
+    <value>The input date is invalid.</value>
+  </data>
+  <data name="9216" xml:space="preserve">
+    <value>The start date must be before the due date.</value>
+  </data>
+  <data name="9217" xml:space="preserve">
+    <value>Due Date must be greater than Current Date.</value>
+  </data>
+  <data name="811" xml:space="preserve">
+    <value>Document Does not exist or it is under conversion process.</value>
+  </data>
+  <data name="9218" xml:space="preserve">
+    <value>Error deleting review set.</value>
+  </data>
+  <data name="602" xml:space="preserve">
+    <value>Database Server error. Please contact the administrator.</value>
+  </data>
+  <data name="9219" xml:space="preserve">
+    <value>Reviewsets must contain documents.</value>
+  </data>
+  <data name="1351" xml:space="preserve">
+    <value>Cannot create system roles.</value>
+  </data>
+  <data name="1629" xml:space="preserve">
+    <value>Invalid Parameters</value>
+  </data>
+  <data name="1711" xml:space="preserve">
+    <value>LicensingService: failed to retrieve user info from current session.</value>
+  </data>
+  <data name="4036" xml:space="preserve">
+    <value>Error in dataset delete job.</value>
+  </data>
+  <data name="7219" xml:space="preserve">
+    <value>Cannot update parent folder id.</value>
+  </data>
+  <data name="7220" xml:space="preserve">
+    <value>Folder type code is invalid.</value>
+  </data>
+  <data name="7221" xml:space="preserve">
+    <value>The folder id in the URL does not match the schema.</value>
+  </data>
+  <data name="7222" xml:space="preserve">
+    <value>Folder id is invalid.</value>
+  </data>
+  <data name="7223" xml:space="preserve">
+    <value>Parent id given while creating folder is invalid.</value>
+  </data>
+  <data name="8012" xml:space="preserve">
+    <value>Error deleting dataset.</value>
+  </data>
+  <data name="110" xml:space="preserve">
+    <value>Error retrieving family documents.</value>
+  </data>
+  <data name="8111" xml:space="preserve">
+    <value>Matter name cannot be empty.</value>
+  </data>
+  <data name="7136" xml:space="preserve">
+    <value>Failed to delete production set documents.</value>
+  </data>
+  <data name="7137" xml:space="preserve">
+    <value>Failed to check production set name.</value>
+  </data>
+  <data name="7138" xml:space="preserve">
+    <value>Failed to update production set.</value>
+  </data>
+  <data name="7139" xml:space="preserve">
+    <value>Failed to retrieve field details for dataset.</value>
+  </data>
+  <data name="7140" xml:space="preserve">
+    <value>Failed to retrieve the dataset for folder.</value>
+  </data>
+  <data name="7141" xml:space="preserve">
+    <value>Failed to retrieve completed job details.</value>
+  </data>
+  <data name="1230" xml:space="preserve">
+    <value>Invalid User ID or Password.</value>
+  </data>
+  <data name="7224" xml:space="preserve">
+    <value>Parent folder does not exist for this folder id.</value>
+  </data>
+  <data name="9407" xml:space="preserve">
+    <value>Specified search syntax not supported by near native viewer.</value>
+  </data>
+  <data name="1707" xml:space="preserve">
+    <value>Unable to accomplish document result. Please verify your query and try again.</value>
+  </data>
+  <data name="113" xml:space="preserve">
+    <value>Bulk tagging task failed.</value>
+  </data>
+  <data name="1231" xml:space="preserve">
+    <value>Password needs to be changed.</value>
+  </data>
+  <data name="1630" xml:space="preserve">
+    <value>Access Denied, User restricted to  view job Summery.</value>
+  </data>
+  <data name="1631" xml:space="preserve">
+    <value>Access Denied, User restricted to set the JobPriority.</value>
+  </data>
+  <data name="1632" xml:space="preserve">
+    <value>Access Denied, User restricted to  view Log Information.</value>
+  </data>
+  <data name="5535" xml:space="preserve">
+    <value>Policy denied for Bulk Tagging.</value>
+  </data>
+  <data name="5536" xml:space="preserve">
+    <value>Policy denied for tagging a document.</value>
+  </data>
+  <data name="5537" xml:space="preserve">
+    <value>Policy denied for tagging documents in family and group.</value>
+  </data>
+  <data name="1232" xml:space="preserve">
+    <value>Your password cannot be changed now.</value>
+  </data>
+  <data name="1233" xml:space="preserve">
+    <value>Error occurred while trying to logout.</value>
+  </data>
+  <data name="1708" xml:space="preserve">
+    <value>Unable to establish connection to the search engine. Please contact administrator.</value>
+  </data>
+  <data name="5063" xml:space="preserve">
+    <value>Unable to establish connection to the search engine.</value>
+  </data>
+  <data name="5064" xml:space="preserve">
+    <value>Search engine communication error. Please verify search engine URL, credentials and if the server is up and running.</value>
+  </data>
+  <data name="5066" xml:space="preserve">
+    <value>Could not connect to Matter specific database (vault). Please verify if the database is up and running, and credentials are correct.</value>
+  </data>
+  <data name="5067" xml:space="preserve">
+    <value>Document is imported but with errors - verify IGC conversion status and for consistency of data between vault and search engine. If the file attempted to be imported is a Zip, Rar, PST or NSF, Near Native View will not be available. Refer to application event log for more technical details on the error.</value>
+  </data>
+  <data name="AtomicWorkError" xml:space="preserve">
+    <value>Import Task Error</value>
+  </data>
+  <data name="AtomicWorkHelperMessage" xml:space="preserve">
+    <value>Could not import the document - Could have been caused by corrupt or inaccessible file. Refer to Application Event log on the server, for technical details on the reason for failure.</value>
+  </data>
+  <data name="bootParameterSerializeException" xml:space="preserve">
+    <value>Incorrect boot parameter; This might have been caused due to values provided while creating the job. Please contact administrator.</value>
+  </data>
+  <data name="CollectionIDIsEmpty" xml:space="preserve">
+    <value>No Collection ID obtained.</value>
+  </data>
+  <data name="EDLoaderEDRMImportFailure" xml:space="preserve">
+    <value>EDRM extracted by EDLoader failed to be imported. This might have been caused due to evcorlib problems on the job Server. Please contact administrator.</value>
+  </data>
+  <data name="EDLoaderListMailStoreFailure" xml:space="preserve">
+    <value>List Mail Store failed. Possible evcorlib problem. Please verify if MAPI profile is corrupt.</value>
+  </data>
+  <data name="EDLoaderProcessFileFailure" xml:space="preserve">
+    <value>EVCorlib error - EDLoader is unable to process file. Technical error details are available in the event log on the job server.</value>
+  </data>
+  <data name="EDLoaderProcessMailStoreFailure" xml:space="preserve">
+    <value>EVCorlib error - EDLoader is unable to process the mail store. Technical error details are available in the event log on the job server.</value>
+  </data>
+  <data name="EDLoaderSessionInitializeError" xml:space="preserve">
+    <value>Could not initialize ED loader session, It might be an EDLoader job installation problem. Verify ED Loader dependency EVCorlib installation and registration with the server operating system.</value>
+  </data>
+  <data name="EDLoaderSourceLocationNotAccessible" xml:space="preserve">
+    <value>Files to be imported not accessible. Please verify access permissions and if specified folders or files are available at the source location.</value>
+  </data>
+  <data name="EDRMConstructorError" xml:space="preserve">
+    <value>Failed to instantiate EDRM. This could be caused due to inaccessible EDRM file location (to the import job), access issues or a corrupt XML file (not well formed, not confining to EDRM schema).</value>
+  </data>
+  <data name="ErrorGettingDocumentsFromEDRM" xml:space="preserve">
+    <value>EDRM XML deserialization error. This could be caused due to inaccessible EDRM file location (to the import job), access issues or a corrupt XML file (not well formed, not confining to EDRM schema).</value>
+  </data>
+  <data name="GenerateTaskHelperMessage" xml:space="preserve">
+    <value>Task creation for a job could fail due to corrupt or inaccessible EDRM XML or job configuration problems.</value>
+  </data>
+  <data name="GenerateTasksError" xml:space="preserve">
+    <value>Failed to generate tasks for running the job.</value>
+  </data>
+  <data name="ImportDocumentGenericError" xml:space="preserve">
+    <value>Generic error attempting to import - This might have been caused due to Service, vault and search engine communication failures.</value>
+  </data>
+  <data name="InitializeError" xml:space="preserve">
+    <value>Failed to Initialize the job. </value>
+  </data>
+  <data name="InitializeHelperMessage" xml:space="preserve">
+    <value>This might have been caused due to incorrect job configuration. Please contact administrator.</value>
+  </data>
+  <data name="MatterObjectIsEmpty" xml:space="preserve">
+    <value>Matter information unavailable.</value>
+  </data>
+  <data name="MultipleErrorsGeneratingTasks" xml:space="preserve">
+    <value>Multiple errors generating tasks. This might have been caused due to corrupt file (not well formed, not confining to EDRM Schema).</value>
+  </data>
+  <data name="RelationshipImportError" xml:space="preserve">
+    <value>Relationship import failed. Verify that the documents specified in EDRM/ED Loader extracted XML are available.</value>
+  </data>
+  <data name="ResourceManagerObjectCreateFailure" xml:space="preserve">
+    <value>Resource files for the import job unavailable. job installation issue - correct the job configuration.</value>
+  </data>
+  <data name="ResourceUnavailableMessage" xml:space="preserve">
+    <value>Unavailable.</value>
+  </data>
+  <data name="UpdateDocumentTextContentError" xml:space="preserve">
+    <value>Error updating document content. This could be caused due to inaccessible text file.</value>
+  </data>
+  <data name="ErrorInJob" xml:space="preserve">
+    <value>Job terminated, please contact administrator to trouble shoot the problem.</value>
+  </data>
+  <data name="1527" xml:space="preserve">
+    <value>Ldap root with the given domain already exists.</value>
+  </data>
+  <data name="8112" xml:space="preserve">
+    <value>Input parent Id is not valid.</value>
+  </data>
+  <data name="1234" xml:space="preserve">
+    <value>Password does not meet the complexity.</value>
+  </data>
+  <data name="1235" xml:space="preserve">
+    <value>User name cannot be edited.</value>
+  </data>
+  <data name="1633" xml:space="preserve">
+    <value>No jobs available to perform the operation.</value>
+  </data>
+  <data name="5538" xml:space="preserve">
+    <value>Tag template already exists.</value>
+  </data>
+  <data name="5539" xml:space="preserve">
+    <value>Tag name cannot be empty.</value>
+  </data>
+  <data name="5540" xml:space="preserve">
+    <value>Tag name already exists on this level of the tag tree in the given scope. Please choose a different name or scope and try again.</value>
+  </data>
+  <data name="2167" xml:space="preserve">
+    <value>Cannot update master reviewset name.</value>
+  </data>
+  <data name="2168" xml:space="preserve">
+    <value>Number of documents in reviewset should not be less than number of document per set or number of reviewsets.</value>
+  </data>
+  <data name="9220" xml:space="preserve">
+    <value>Cannot merge reviewset from one dataset to another dataset.</value>
+  </data>
+  <data name="9221" xml:space="preserve">
+    <value>Cannot merge reviewset of same reviewset id.</value>
+  </data>
+  <data name="1634" xml:space="preserve">
+    <value>Operation does not match.</value>
+  </data>
+  <data name="1845" xml:space="preserve">
+    <value>Error while fetching saved search results.</value>
+  </data>
+  <data name="9408" xml:space="preserve">
+    <value>Error deleting the print document.</value>
+  </data>
+  <data name="9409" xml:space="preserve">
+    <value>Error getting the print document path.</value>
+  </data>
+  <data name="9410" xml:space="preserve">
+    <value>Error getting the print document properties.</value>
+  </data>
+  <data name="9411" xml:space="preserve">
+    <value>Error getting the print documents list properties.</value>
+  </data>
+  <data name="5541" xml:space="preserve">
+    <value>Invalid shortcut key. Supported shortcut keys are Shift+F1 through Shift+F12.</value>
+  </data>
+  <data name="5542" xml:space="preserve">
+    <value>Tag short cuts only apply to tags; no short cuts for Tag groups and Tag folders.</value>
+  </data>
+  <data name="5543" xml:space="preserve">
+    <value>Shortcut key is only at document level not at text level.</value>
+  </data>
+  <data name="114" xml:space="preserve">
+    <value>Error while getting document lock status.</value>
+  </data>
+  <data name="2534" xml:space="preserve">
+    <value>Error occurred while preview data.</value>
+  </data>
+  <data name="9501" xml:space="preserve">
+    <value>Error occurred while getting all privilege log profiles.</value>
+  </data>
+  <data name="9502" xml:space="preserve">
+    <value>Error occurred while getting privilege log profile details.</value>
+  </data>
+  <data name="9503" xml:space="preserve">
+    <value>Error occurred while creating privilege log profile.</value>
+  </data>
+  <data name="9504" xml:space="preserve">
+    <value>Error occurred while updating privilege log profile.</value>
+  </data>
+  <data name="9505" xml:space="preserve">
+    <value>Error occurred while validating path.</value>
+  </data>
+  <data name="9506" xml:space="preserve">
+    <value>Error occurred while creating privilege log job.</value>
+  </data>
+  <data name="9507" xml:space="preserve">
+    <value>Error occurred while getting privilege log job.</value>
+  </data>
+  <data name="9508" xml:space="preserve">
+    <value>Error occurred while getting privilege log details.</value>
+  </data>
+  <data name="9509" xml:space="preserve">
+    <value>Error occurred while getting all privilege log jobs.</value>
+  </data>
+  <data name="1921" xml:space="preserve">
+    <value>A create reviewset job already exists for this dataset either scheduled or running state.</value>
+  </data>
+  <data name="1922" xml:space="preserve">
+    <value>A add documents to reviewset job already exists for this dataset either scheduled or running state.</value>
+  </data>
+  <data name="1923" xml:space="preserve">
+    <value>A remove documents from reviewset job already exists for this dataset in either scheduled or running state.</value>
+  </data>
+  <data name="1924" xml:space="preserve">
+    <value>A merge review sets job already exists for this dataset in either scheduled or running state.</value>
+  </data>
+  <data name="1925" xml:space="preserve">
+    <value>A split reviewset job already exists for this dataset in either scheduled or running state.</value>
+  </data>
+  <data name="7142" xml:space="preserve">
+    <value>Failed to update production set. The job is in-progress and cannot be updated.</value>
+  </data>
+  <data name="2535" xml:space="preserve">
+    <value>Error occurred while getting file Delimiter.</value>
+  </data>
+  <data name="2536" xml:space="preserve">
+    <value>Error occurred while getting import types.</value>
+  </data>
+  <data name="2537" xml:space="preserve">
+    <value>Error occurred while validate helper file.</value>
+  </data>
+  <data name="2538" xml:space="preserve">
+    <value>Error occurred while checking file path.</value>
+  </data>
+  <data name="2539" xml:space="preserve">
+    <value>Error occurred while getting path substitution field.</value>
+  </data>
+  <data name="7000" xml:space="preserve">
+    <value>Unable to insert Save search Exported binary content.</value>
+  </data>
+  <data name="9510" xml:space="preserve">
+    <value>Access denied for roles and policy management.</value>
+  </data>
+  <data name="9511" xml:space="preserve">
+    <value>Access denied for privilege log.</value>
+  </data>
+  <data name="9512" xml:space="preserve">
+    <value>Profile with the same name already exist, please give another name.</value>
+  </data>
+  <data name="9513" xml:space="preserve">
+    <value>Profile you are trying to update no longer exist.</value>
+  </data>
+  <data name="4037" xml:space="preserve">
+    <value>Error while getting all policy definitions of the field.</value>
+  </data>
+  <data name="4038" xml:space="preserve">
+    <value>Error while getting all default field policies.</value>
+  </data>
+  <data name="4039" xml:space="preserve">
+    <value>Error while getting all field policies.</value>
+  </data>
+  <data name="4040" xml:space="preserve">
+    <value>Error while getting effective permissions.</value>
+  </data>
+  <data name="4041" xml:space="preserve">
+    <value>Error while getting effective permissions.</value>
+  </data>
+  <data name="4042" xml:space="preserve">
+    <value>Error while modifying effective  policies.</value>
+  </data>
+  <data name="4043" xml:space="preserve">
+    <value>Error while removing effective  policies.</value>
+  </data>
+  <data name="7001" xml:space="preserve">
+    <value>No saved search results found for dataset.</value>
+  </data>
+  <data name="7002" xml:space="preserve">
+    <value>Unable to insert saved search result.</value>
+  </data>
+  <data name="7003" xml:space="preserve">
+    <value>Unable to get saved search information.</value>
+  </data>
+  <data name="7004" xml:space="preserve">
+    <value>Unable to delete the saved search result Information.</value>
+  </data>
+  <data name="7005" xml:space="preserve">
+    <value>Search result identifier is null.</value>
+  </data>
+  <data name="7006" xml:space="preserve">
+    <value>No report found for Search result.</value>
+  </data>
+  <data name="CreateEvCorlibFileProcessAdapaterFailure" xml:space="preserve">
+    <value>File extraction failure. Metadata for the given file couldn't be retrieved.</value>
+  </data>
+  <data name="CreateRelationshipRecordFailure" xml:space="preserve">
+    <value>Failed to calculate and store e-mail threading relationships. Possible database connectivity failure.</value>
+  </data>
+  <data name="EmailDocumentEntititesCreateObjectFailure" xml:space="preserve">
+    <value>Failed to parse e-mail document entity. This error could have been caused due to improper e-mail document and metadata.</value>
+  </data>
+  <data name="EVCorlibManagerInstantiateError" xml:space="preserve">
+    <value>Failed to instantiate ED Loader Manager. File extraction can't continue.</value>
+  </data>
+  <data name="EVCorlibManagerIOError" xml:space="preserve">
+    <value>Failed to read the extracted metadata. Please verify if the temporary working directory has been cleaned accidentally before processing is complete.</value>
+  </data>
+  <data name="EvCorlibProcessDocumentError" xml:space="preserve">
+    <value>Failed to process the given document and extract metadata.</value>
+  </data>
+  <data name="GetTemporaryRecordsFailure" xml:space="preserve">
+    <value>Failed to calculate and retrieve e-mail threading relationships. Possible database connectivity failure.</value>
+  </data>
+  <data name="NoThreadingRelationshipsAvailable" xml:space="preserve">
+    <value>No e-mail threads identified with the given file.</value>
+  </data>
+  <data name="ThreadEntityConversionError" xml:space="preserve">
+    <value>Failed to calculate and store e-mail threading relationships. Possibly caused due to improper information in the extracted content for the given file.</value>
+  </data>
+  <data name="CreateIFileProcessorFailure" xml:space="preserve">
+    <value>Failed to instantiate file processor, meta data extraction might fail.</value>
+  </data>
+  <data name="CreateLotusNotesAdapaterFailure" xml:space="preserve">
+    <value>Failed to process Lotus Notes mail store, metadata extraction for individual e-mail messages might fail.</value>
+  </data>
+  <data name="CreateLotusNotesEdrmManagerFailure" xml:space="preserve">
+    <value>Failed to process Lotus Notes mail store, metadata extraction for individual e-mail messages might fail.</value>
+  </data>
+  <data name="CreateOutlookAdapterInstanceFailure" xml:space="preserve">
+    <value>Failed to process Outlook mail store, metadata extraction for individual e-mail messages might fail.</value>
+  </data>
+  <data name="CreateOutlookEdrmManagerFailure" xml:space="preserve">
+    <value>Failed to process Outlook mail store, metadata extraction for individual e-mail messages might fail.</value>
+  </data>
+  <data name="DocumentImportUnknownError" xml:space="preserve">
+    <value>Failed to import document. Please verify if the document is corrupt.</value>
+  </data>
+  <data name="EDLoaderPasswordFileCreateError" xml:space="preserve">
+    <value>Failed to create password temporary file. Metadata extraction for password protected archive file might fail.</value>
+  </data>
+  <data name="EDLoaderUnknownImportEvDocumentDataEntity" xml:space="preserve">
+    <value>Failed to import document. Please verify if the document is corrupt.</value>
+  </data>
+  <data name="EmailMessageExtractionError" xml:space="preserve">
+    <value>Mail store couldn't be processed. Metadata for all individual e-mail messages may not be extracted.</value>
+  </data>
+  <data name="EntryIDeMailMessageExtractionError" xml:space="preserve">
+    <value>Mail store couldn't be processed. Metadata for all individual e-mail messages may not be extracted.</value>
+  </data>
+  <data name="FileProcessError" xml:space="preserve">
+    <value>Error extraction metadata, file might be corrupt.</value>
+  </data>
+  <data name="IllegalConversationIndex" xml:space="preserve">
+    <value>Failed to calculate e-mail threads for Outlook e-mail messages.</value>
+  </data>
+  <data name="IllegalOutlookThreadingConstraint" xml:space="preserve">
+    <value>Failed to calculate e-mail threads for Outlook e-mail messages.</value>
+  </data>
+  <data name="IllegalThreadingConstraint" xml:space="preserve">
+    <value>Failed to calculate e-mail threads for Lotus Notes e-mail messages.</value>
+  </data>
+  <data name="LotusNotesEDRMToDocumentTransformFailure" xml:space="preserve">
+    <value>Failed to process Lotus Notes mail store, corrupt Lotus Notes e-mail metadata.</value>
+  </data>
+  <data name="LotusNotesMailStoreProcessFailure" xml:space="preserve">
+    <value>Failed to process Lotus Notes mail store, metadata extraction for individual e-mail messages might fail.</value>
+  </data>
+  <data name="MailProcessorCreateFailure" xml:space="preserve">
+    <value>Failed to process mail store, metadata extraction for individual e-mail messages might fail.</value>
+  </data>
+  <data name="MailProcessorInitializeFailure" xml:space="preserve">
+    <value>Mail store couldn't be processed. Metadata for all individual e-mail messages may not be extracted.</value>
+  </data>
+  <data name="MailStoreConverstionError" xml:space="preserve">
+    <value>Mail store couldn't be processed. Metadata for all individual e-mail messages may not be extracted.</value>
+  </data>
+  <data name="NoMailStoresError" xml:space="preserve">
+    <value>Mail store unavailable. It might be caused due to corrupt temporary working directory on the server import job is being run.</value>
+  </data>
+  <data name="OutlookEDRMToDocumentTransformFailure" xml:space="preserve">
+    <value>Failed to process Outlook mail store, corrupt Lotus Notes e-mail metadata.</value>
+  </data>
+  <data name="OutlookMailStoreProcessFailure" xml:space="preserve">
+    <value>Failed to process Outlook mail store, metadata extraction for individual e-mail messages might fail.</value>
+  </data>
+  <data name="OutlookThreadCalculationFailure" xml:space="preserve">
+    <value>Failed to calculate e-mail threads for Outlook e-mail messages.</value>
+  </data>
+  <data name="ProcessEmailError" xml:space="preserve">
+    <value>Mail store couldn't be processed. Metadata for all individual e-mail messages may not be extracted.</value>
+  </data>
+  <data name="ProcessMailStoreError" xml:space="preserve">
+    <value>Mail store couldn't be processed. Metadata for all individual e-mail messages may not be extracted.</value>
+  </data>
+  <data name="ThreadCalculationFailure" xml:space="preserve">
+    <value>Failed to calculate e-mail threads for Lotus Notes e-mail messages.</value>
+  </data>
+  <data name="UnsupportedMailStore" xml:space="preserve">
+    <value>Unsupported mail store - extraction of metadata for this mail store is not currently supported.</value>
+  </data>
+  <data name="EvCorlibCleanupFailure" xml:space="preserve">
+    <value>Failed to cleanup temporary files created during file extraction process.</value>
+  </data>
+  <data name="5544" xml:space="preserve">
+    <value>Error while getting tag policy.</value>
+  </data>
+  <data name="5545" xml:space="preserve">
+    <value>Error while adding tag policy.</value>
+  </data>
+  <data name="5546" xml:space="preserve">
+    <value>Error while updating the tag policy.</value>
+  </data>
+  <data name="5547" xml:space="preserve">
+    <value>Error while deleting the tag policy.</value>
+  </data>
+  <data name="2540" xml:space="preserve">
+    <value>Selected profile is not related to Load File Import. Please choose another profile..</value>
+  </data>
+  <data name="2541" xml:space="preserve">
+    <value>Load File path does not exists..</value>
+  </data>
+  <data name="2542" xml:space="preserve">
+    <value>No record(s) found. Please check with different delimiter and encoding type..</value>
+  </data>
+  <data name="2543" xml:space="preserve">
+    <value>LOG/OPT file could not be found..</value>
+  </data>
+  <data name="2544" xml:space="preserve">
+    <value>Invalid LOG/OPT file: This file is not properly formatted LOG/OPT file. You cannot proceed with this file for import..</value>
+  </data>
+  <data name="2545" xml:space="preserve">
+    <value>Schedule date should be greater than current Date and Time.</value>
+  </data>
+  <data name="2546" xml:space="preserve">
+    <value>No Profile exists.</value>
+  </data>
+  <data name="2547" xml:space="preserve">
+    <value>Load File folder not exists.</value>
+  </data>
+  <data name="7007" xml:space="preserve">
+    <value>Permission Denied to Save Search Result.</value>
+  </data>
+  <data name="7008" xml:space="preserve">
+    <value>Permission Denied to Export Saved Search Result.</value>
+  </data>
+  <data name="7009" xml:space="preserve">
+    <value>Permission Denied to Delete Saved Search Result.</value>
+  </data>
+  <data name="7010" xml:space="preserve">
+    <value>Permission Denied to Export Other User Saved Search Results.</value>
+  </data>
+  <data name="7011" xml:space="preserve">
+    <value>Permission Denied to Delete Other User Saved Search Results.</value>
+  </data>
+  <data name="7012" xml:space="preserve">
+    <value>Permission Denied to View Other User Saved Search Results.</value>
+  </data>
+  <data name="5548" xml:space="preserve">
+    <value>Tag does not exist or you do not have access.</value>
+  </data>
+  <data name="7225" xml:space="preserve">
+    <value>Field does not exist or you do not have access.</value>
+  </data>
+  <data name="1236" xml:space="preserve">
+    <value>Session ended by the administrator. Please contact the administrator.</value>
+  </data>
+  <data name="1237" xml:space="preserve">
+    <value>Session expired. Please log on again..</value>
+  </data>
+  <data name="2015" xml:space="preserve">
+    <value>Error occurred while fetching user groups for folder.</value>
+  </data>
+  <data name="1640" xml:space="preserve">
+    <value>Problem in DoAtomic Work.</value>
+  </data>
+  <data name="1641" xml:space="preserve">
+    <value>Problem in GenerateTask.</value>
+  </data>
+  <data name="1642" xml:space="preserve">
+    <value>Problem in job Initialization.</value>
+  </data>
+  <data name="1643" xml:space="preserve">
+    <value>Problem in job execution.</value>
+  </data>
+  <data name="1644" xml:space="preserve">
+    <value>Taskkey is null or empty.</value>
+  </data>
+  <data name="2548" xml:space="preserve">
+    <value>Image Set name already exists.</value>
+  </data>
+  <data name="2549" xml:space="preserve">
+    <value>Selected image set option is none. Please choose other value.</value>
+  </data>
+  <data name="2550" xml:space="preserve">
+    <value>Selected dataset option is none. Please choose other Dataset.</value>
+  </data>
+  <data name="1875" xml:space="preserve">
+    <value>Tag/Field does not exist or you do not have access.</value>
+  </data>
+  <data name="1115" xml:space="preserve">
+    <value>No session data found.</value>
+  </data>
+  <data name="726" xml:space="preserve">
+    <value>Access denied to edit comments.</value>
+  </data>
+  <data name="4044" xml:space="preserve">
+    <value>Only one  title field is allowed.</value>
+  </data>
+  <data name="4045" xml:space="preserve">
+    <value>Only one  content field is allowed.</value>
+  </data>
+  <data name="4046" xml:space="preserve">
+    <value>Only one  document description field  is allowed.</value>
+  </data>
+  <data name="4047" xml:space="preserve">
+    <value>Only one Reason Code  field is allowed.</value>
+  </data>
+  <data name="4048" xml:space="preserve">
+    <value>Field name is reserved name used by the system. Please enter another name .</value>
+  </data>
+  <data name="4049" xml:space="preserve">
+    <value>Only one DCN Field is Allowed.</value>
+  </data>
+  <data name="4050" xml:space="preserve">
+    <value>Template name should contain only alpha numeric .</value>
+  </data>
+  <data name="20001" xml:space="preserve">
+    <value>Printer location does not exist</value>
+  </data>
+  <data name="20002" xml:space="preserve">
+    <value>Error in getting mapped printer.</value>
+  </data>
+  <data name="20003" xml:space="preserve">
+    <value>Error in adding available printer.</value>
+  </data>
+  <data name="20004" xml:space="preserve">
+    <value>Error in removing mapped printer.</value>
+  </data>
+  <data name="20005" xml:space="preserve">
+    <value>Error in editing mapped printer.</value>
+  </data>
+  <data name="20006" xml:space="preserve">
+    <value>Error in getting all mapped printers to the system.</value>
+  </data>
+  <data name="20100" xml:space="preserve">
+    <value>Attempt to initiate bulk print job failed.</value>
+  </data>
+  <data name="20101" xml:space="preserve">
+    <value>Attempt to generate task bulk print job failed.</value>
+  </data>
+  <data name="20102" xml:space="preserve">
+    <value>Attempt to queue the document to printer failed.</value>
+  </data>
+  <data name="2551" xml:space="preserve">
+    <value>Profile name already exists.</value>
+  </data>
+  <data name="20007" xml:space="preserve">
+    <value>Printer friendly name has to be unique.</value>
+  </data>
+  <data name="20008" xml:space="preserve">
+    <value>Printer not exists.</value>
+  </data>
+  <data name="5549" xml:space="preserve">
+    <value>Access denied for tagging</value>
+  </data>
+  <data name="812" xml:space="preserve">
+    <value>Error occurred while fetching document history.</value>
+  </data>
+  <data name="ExtractionErrorForPasswordProtectedFile" xml:space="preserve">
+    <value>Unable to extract file due to encryption.</value>
+  </data>
+  <data name="ImportDCBUserNameCannotBeEmpty" xml:space="preserve">
+    <value>Username cannot be empty in secured DCB imports.</value>
+  </data>
+  <data name="20103" xml:space="preserve">
+    <value>Error in  scheduling a bulk print job.</value>
+  </data>
+  <data name="20104" xml:space="preserve">
+    <value>Service error in create the bulk print job.</value>
+  </data>
+  <data name="20105" xml:space="preserve">
+    <value>Service error in cancelling bulk print job.</value>
+  </data>
+  <data name="20106" xml:space="preserve">
+    <value>Service error in getting bulk print job properties.</value>
+  </data>
+  <data name="20107" xml:space="preserve">
+    <value>Service error in getting list of bulk print jobs.</value>
+  </data>
+  <data name="118" xml:space="preserve">
+    <value>Original file ( native or image) not available.</value>
+  </data>
+  <data name="20009" xml:space="preserve">
+    <value>Permission to map printer is denied.</value>
+  </data>
+  <data name="20108" xml:space="preserve">
+    <value>Access denied for bulk print job.</value>
+  </data>
+  <data name="5550" xml:space="preserve">
+    <value>Policy denied to create tag from template.</value>
+  </data>
+  <data name="5551" xml:space="preserve">
+    <value>Policy denied to view tag history.</value>
+  </data>
+  <data name="5552" xml:space="preserve">
+    <value>Policy denied to view tag statistics.</value>
+  </data>
+  <data name="1635" xml:space="preserve">
+    <value>Access denied for import management</value>
+  </data>
+  <data name="1636" xml:space="preserve">
+    <value>Access denied for deleting job.</value>
+  </data>
+  <data name="9966" xml:space="preserve">
+    <value>The given search query is syntactically incorrect.</value>
+  </data>
+  <data name="9967" xml:space="preserve">
+    <value>Field name or tag name does not exist or you do not have access.</value>
+  </data>
+  <data name="2016" xml:space="preserve">
+    <value>User group does not exist.</value>
+  </data>
+  <data name="4131" xml:space="preserve">
+    <value>Invalid Input or cannot add domain without mandatory properties.</value>
+  </data>
+  <data name="4132" xml:space="preserve">
+    <value>Invalid Input or cannot edit domain without mandatory properties.</value>
+  </data>
+  <data name="4133" xml:space="preserve">
+    <value>Invalid Input or cannot add server without mandatory properties.</value>
+  </data>
+  <data name="4134" xml:space="preserve">
+    <value>Invalid input or cannot edit  server without mandatory properties.</value>
+  </data>
+  <data name="2171" xml:space="preserve">
+    <value>Access denied for performing markup in near native viewer</value>
+  </data>
+  <data name="1876" xml:space="preserve">
+    <value>Empty Value supplied.</value>
+  </data>
+  <data name="1877" xml:space="preserve">
+    <value>Error while updating Redact-it content (XDL and Text).</value>
+  </data>
+  <data name="1878" xml:space="preserve">
+    <value>Error while fetching the Reference-Id.</value>
+  </data>
+  <data name="1879" xml:space="preserve">
+    <value>Values Cannot be Empty.</value>
+  </data>
+  <data name="100000" xml:space="preserve">
+    <value>The unique identifier (uid) sent as input is invalid.</value>
+    <comment>Used in External API.</comment>
+  </data>
+  <data name="401" xml:space="preserve">
+    <value>Unauthorized Request.</value>
+  </data>
+  <data name="4052" xml:space="preserve">
+    <value>Given dataset doesn't exists.</value>
+  </data>
+  <data name="4053" xml:space="preserve">
+    <value>Given dataset already deleted.</value>
+  </data>
+  <data name="8113" xml:space="preserve">
+    <value>Given matter doesn't exists.</value>
+  </data>
+  <data name="8114" xml:space="preserve">
+    <value>Given matter already deleted.</value>
+  </data>
+  <data name="8115" xml:space="preserve">
+    <value>Input parameter value is invalid.</value>
+  </data>
+  <data name="8116" xml:space="preserve">
+    <value>Updated matter information is empty.</value>
+  </data>
+  <data name="2552" xml:space="preserve">
+    <value>Error occurred while retrieving source fields for given Load File.</value>
+  </data>
+  <data name="1525" xml:space="preserve">
+    <value>A Server already exists by the given name.</value>
+  </data>
+  <data name="4129" xml:space="preserve">
+    <value>User name contain invalid character.</value>
+  </data>
+  <data name="2172" xml:space="preserve">
+    <value>Reviewset with the same name already exists for the dataset.</value>
+  </data>
+  <data name="5553" xml:space="preserve">
+    <value>Invalid tag type.</value>
+  </data>
+  <data name="4055" xml:space="preserve">
+    <value>The tag name you entered contains an invalid character please try again.</value>
+  </data>
+  <data name="4056" xml:space="preserve">
+    <value>Error retrieving keywords.</value>
+  </data>
+  <data name="4057" xml:space="preserve">
+    <value>Field name should not contain search engine realted keywords.</value>
+  </data>
+  <data name="1238" xml:space="preserve">
+    <value>Access denied to create a super admin.</value>
+  </data>
+  <data name="1239" xml:space="preserve">
+    <value>Access denied to update a super admin.</value>
+  </data>
+  <data name="1240" xml:space="preserve">
+    <value>Access denied to delete a super admin.</value>
+  </data>
+  <data name="2553" xml:space="preserve">
+    <value>Please choose overlay field.</value>
+  </data>
+  <data name="1645" xml:space="preserve">
+    <value>Problem in shutdown.</value>
+  </data>
+  <data name="4058" xml:space="preserve">
+    <value>Access denied for dataset management.</value>
+  </data>
+  <data name="9968" xml:space="preserve">
+    <value>\"{0}\" is a stop word. It cannot be removed without compromising search fidelity. Please re-phrase the search.</value>
+  </data>
+  <data name="9412" xml:space="preserve">
+    <value>Unable to queue the selected documents to print.</value>
+  </data>
+  <data name="9413" xml:space="preserve">
+    <value>Source directory not exists..</value>
+  </data>
+  <data name="9414" xml:space="preserve">
+    <value>Unable to create source files..</value>
+  </data>
+  <data name="9415" xml:space="preserve">
+    <value>Error while merging print documents.</value>
+  </data>
+  <data name="9416" xml:space="preserve">
+    <value>Unable to create separator sheet.</value>
+  </data>
+  <data name="9417" xml:space="preserve">
+    <value>Unable to queue documents to Redact-It server.</value>
+  </data>
+  <data name="9418" xml:space="preserve">
+    <value>Write access to shared path is denied.</value>
+  </data>
+  <data name="119" xml:space="preserve">
+    <value>System fields cannot be edited.</value>
+  </data>
+  <data name="2554" xml:space="preserve">
+    <value>Unable to schedule import. Mapped fields do not belong to the dataset.</value>
+  </data>
+  <data name="2555" xml:space="preserve">
+    <value>Unable to schedule import due to 'Import Now' and 'Is Schedule' properties set as false.</value>
+  </data>
+  <data name="2556" xml:space="preserve">
+    <value>Unable to schedule import due to invalid job type.</value>
+  </data>
+  <data name="2557" xml:space="preserve">
+    <value>Unable to schedule import. Mandatory properties are missing.</value>
+  </data>
+  <data name="2558" xml:space="preserve">
+    <value>Folder level policy need to be set to the folder which is undergoing import.</value>
+  </data>
+  <data name="2559" xml:space="preserve">
+    <value>Select import type.</value>
+  </data>
+  <data name="2560" xml:space="preserve">
+    <value>No profiles available.</value>
+  </data>
+  <data name="8014" xml:space="preserve">
+    <value>Invalid dataset id.</value>
+  </data>
+  <data name="4059" xml:space="preserve">
+    <value>Dataset field of text data type should have its length greater than Zero.</value>
+  </data>
+  <data name="2173" xml:space="preserve">
+    <value>Thesaurus cannot contain search engine related keywords.</value>
+  </data>
+  <data name="2174" xml:space="preserve">
+    <value>Stop word cannot contain search engine related keywords.</value>
+  </data>
+  <data name="2175" xml:space="preserve">
+    <value>Spelling variation cannot contain search engine related keywords.</value>
+  </data>
+  <data name="1880" xml:space="preserve">
+    <value>Matter id  should be specified.</value>
+  </data>
+  <data name="8015" xml:space="preserve">
+    <value>Re-numbering the document control number is not allowed.</value>
+  </data>
+  <data name="4060" xml:space="preserve">
+    <value>Cannot update system field.</value>
+  </data>
+  <data name="4061" xml:space="preserve">
+    <value>Access denied to update field.</value>
+  </data>
+  <data name="4130" xml:space="preserve">
+    <value>Invalid email Id.</value>
+  </data>
+  <data name="7227" xml:space="preserve">
+    <value>Access denied for folder management.</value>
+  </data>
+  <data name="2176" xml:space="preserve">
+    <value>System could not add stopword successfully to the search engine server.</value>
+  </data>
+  <data name="2177" xml:space="preserve">
+    <value>System could not update stopword successfully in the search engine server.</value>
+  </data>
+  <data name="2178" xml:space="preserve">
+    <value>System could not add thesaurus successfully to the search engine server.</value>
+  </data>
+  <data name="2179" xml:space="preserve">
+    <value>System could not update thesaurus successfully in the search engine server.</value>
+  </data>
+  <data name="2180" xml:space="preserve">
+    <value>System could not add spelling variations successfully to the search engine server.</value>
+  </data>
+  <data name="2181" xml:space="preserve">
+    <value>System could not update spelling variations successfully in the search engine server.</value>
+  </data>
+  <data name="2182" xml:space="preserve">
+    <value>System could not delete thesaurus successfully from the search engine server.</value>
+  </data>
+  <data name="2183" xml:space="preserve">
+    <value>System could not delete stopword successfully from the search engine server.</value>
+  </data>
+  <data name="2184" xml:space="preserve">
+    <value>System could not delete spelling variations successfully from the search engine server.</value>
+  </data>
+  <data name="125" xml:space="preserve">
+    <value>Error occurred on get document text count.</value>
+  </data>
+  <data name="9222" xml:space="preserve">
+    <value>Unauthorized search for documents.</value>
+  </data>
+  <data name="1881" xml:space="preserve">
+    <value>This individual special character cannot be a valid search query.</value>
+  </data>
+  <data name="9419" xml:space="preserve">
+    <value>Error in queuing documents to email.</value>
+  </data>
+  <data name="8016" xml:space="preserve">
+    <value>Invalid field id</value>
+  </data>
+  <data name="4062" xml:space="preserve">
+    <value>Could not add multiple reason code under this dataset.</value>
+  </data>
+  <data name="4063" xml:space="preserve">
+    <value>Access denied for field management</value>
+  </data>
+  <data name="4064" xml:space="preserve">
+    <value>Default length of the description field is exceeded</value>
+  </data>
+  <data name="4065" xml:space="preserve">
+    <value>Select either single entry or allow duplicates</value>
+  </data>
+  <data name="4066" xml:space="preserve">
+    <value>Field name cannot be empty</value>
+  </data>
+  <data name="8017" xml:space="preserve">
+    <value>System field cannot be deleted.</value>
+  </data>
+  <data name="8018" xml:space="preserve">
+    <value>DCN field cannot be deleted.</value>
+  </data>
+  <data name="1116" xml:space="preserve">
+    <value>The folder is deleted.</value>
+  </data>
+  <data name="1117" xml:space="preserve">
+    <value>The folder is not found.</value>
+  </data>
+  <data name="4067" xml:space="preserve">
+    <value>Please provide DCN field name.</value>
+  </data>
+  <data name="4068" xml:space="preserve">
+    <value>DCN Field Name cannot be system field name.</value>
+  </data>
+  <data name="4069" xml:space="preserve">
+    <value>DCN starting number cannot be empty.</value>
+  </data>
+  <data name="4070" xml:space="preserve">
+    <value>Compressed file extraction location cannot be empty.</value>
+  </data>
+  <data name="4071" xml:space="preserve">
+    <value>Bates number start width must be numeric.</value>
+  </data>
+  <data name="4072" xml:space="preserve">
+    <value>Bates number prefix value must be alpha numeric.</value>
+  </data>
+  <data name="4073" xml:space="preserve">
+    <value>DCN field cannot be created.</value>
+  </data>
+  <data name="4074" xml:space="preserve">
+    <value>DCN prefix cannot be empty.</value>
+  </data>
+  <data name="1646" xml:space="preserve">
+    <value>Invalid job Id.</value>
+  </data>
+  <data name="MailArchiveUsedByOtherProcess" xml:space="preserve">
+    <value>File is in use. Failed to extract documents and import.</value>
+  </data>
+  <data name="5554" xml:space="preserve">
+    <value>Invalid or empty tag id given as input.</value>
+  </data>
+  <data name="5555" xml:space="preserve">
+    <value>Invalid or empty collection id given as input.</value>
+  </data>
+  <data name="5556" xml:space="preserve">
+    <value>Invalid or empty matter id given as input.</value>
+  </data>
+  <data name="5557" xml:space="preserve">
+    <value>No tag available with the given inputs.</value>
+  </data>
+  <data name="1882" xml:space="preserve">
+    <value>The Dataset identifier must be specified.</value>
+  </data>
+  <data name="1647" xml:space="preserve">
+    <value>Job already cancelled.</value>
+  </data>
+  <data name="1648" xml:space="preserve">
+    <value>Job is in running state. Cannot perform resume operation.</value>
+  </data>
+  <data name="1649" xml:space="preserve">
+    <value>Job  already  paused.</value>
+  </data>
+  <data name="126" xml:space="preserve">
+    <value>Error creating document master record. Document not added to the system.</value>
+  </data>
+  <data name="1241" xml:space="preserve">
+    <value>Password should contain a minimum of 6 characters.</value>
+  </data>
+  <data name="1242" xml:space="preserve">
+    <value>Password should not be empty.</value>
+  </data>
+  <data name="127" xml:space="preserve">
+    <value>Generic error occurred trying add document metadata. Basic document details are available, there could be missing information in it's metadata (fields, text, native view, near native view)</value>
+  </data>
+  <data name="911" xml:space="preserve">
+    <value>Unable to determine error code and error details.</value>
+  </data>
+  <data name="ProcessFileError" xml:space="preserve">
+    <value>Failed to extract metadata for file [filename]. Please verify it exists at specified location. Contact administrator for a possible ED loader environment issue.</value>
+  </data>
+  <data name="9420" xml:space="preserve">
+    <value>At least one document has to be selected for printing documents.</value>
+  </data>
+  <data name="9421" xml:space="preserve">
+    <value>Error occurred while scheduling print to file job.</value>
+  </data>
+  <data name="9422" xml:space="preserve">
+    <value>Error occurred while getting print to file job details.</value>
+  </data>
+  <data name="9423" xml:space="preserve">
+    <value>Error occurred while cancelling print to file job.</value>
+  </data>
+  <data name="9424" xml:space="preserve">
+    <value>Error occurred while getting list of print to file jobs.</value>
+  </data>
+  <data name="9425" xml:space="preserve">
+    <value>Access denied for printing documents.</value>
+  </data>
+  <data name="9969" xml:space="preserve">
+    <value>Could not load thesaurus from the file specified. This could be because the file is missing or the data is corrupted.</value>
+  </data>
+  <data name="7228" xml:space="preserve">
+    <value>Access denied for matter management.</value>
+  </data>
+  <data name="9223" xml:space="preserve">
+    <value>Reviewset cannot be deleted. There are documents into it.</value>
+  </data>
+  <data name="8019" xml:space="preserve">
+    <value>DCN name cannot be updated.</value>
+  </data>
+  <data name="8020" xml:space="preserve">
+    <value>Dataset names cannot contain any of the following characters: / \ [ ] ; : | = + * ? &lt; &gt; “ ,.</value>
+  </data>
+  <data name="9426" xml:space="preserve">
+    <value>Access denied for sending documents through e-mail</value>
+  </data>
+  <data name="9427" xml:space="preserve">
+    <value>At least one document has to be selected to schedule the email job.</value>
+  </data>
+  <data name="9428" xml:space="preserve">
+    <value>Error occurred while getting list of email job properties.</value>
+  </data>
+  <data name="9429" xml:space="preserve">
+    <value>Error occurred while getting list of document details to re-query the email job. </value>
+  </data>
+  <data name="9430" xml:space="preserve">
+    <value>Error occurred while cancelling email job.</value>
+  </data>
+  <data name="9431" xml:space="preserve">
+    <value>Error occurred while getting email job properties.</value>
+  </data>
+  <data name="9432" xml:space="preserve">
+    <value>Error occurred while scheduling email job.</value>
+  </data>
+  <data name="9433" xml:space="preserve">
+    <value>Error occurred while getting list of compressed file properties.</value>
+  </data>
+  <data name="9434" xml:space="preserve">
+    <value>Error occurred while deleting compressed file.</value>
+  </data>
+  <data name="9435" xml:space="preserve">
+    <value>Error occurred while getting compressed file properties.</value>
+  </data>
+  <data name="2018" xml:space="preserve">
+    <value>User group name should not be empty.</value>
+  </data>
+  <data name="5006" xml:space="preserve">
+    <value>Access denied for auditing management.</value>
+  </data>
+  <data name="8021" xml:space="preserve">
+    <value>DCN prefix cannot contain invalid characters.</value>
+  </data>
+  <data name="9224" xml:space="preserve">
+    <value>This id does not map to any attribute in the system</value>
+  </data>
+  <data name="4075" xml:space="preserve">
+    <value>Single entry field and allow duplicate entries cannot be true at the same time</value>
+  </data>
+  <data name="1650" xml:space="preserve">
+    <value>Job is in schedule state. Cancel, pause and resume operations cannot be performed.</value>
+  </data>
+  <data name="2017" xml:space="preserve">
+    <value>User group has been deleted.</value>
+  </data>
+  <data name="7229" xml:space="preserve">
+    <value>Folder / MatterFolder is deleted.</value>
+  </data>
+  <data name="9702" xml:space="preserve">
+    <value>Unable to locate folder .</value>
+  </data>
+  <data name="1243" xml:space="preserve">
+    <value>Access denied to update the user System Admin.</value>
+  </data>
+  <data name="1244" xml:space="preserve">
+    <value>Access denied to delete the user admin.</value>
+  </data>
+  <data name="1245" xml:space="preserve">
+    <value>Access denied to delete your own account.</value>
+  </data>
+  <data name="4076" xml:space="preserve">
+    <value>Could not add multiple document description for this dataset.</value>
+  </data>
+  <data name="7013" xml:space="preserve">
+    <value>Permission denied to view saved search results.</value>
+  </data>
+  <data name="1528" xml:space="preserve">
+    <value>AD domain does not exist..</value>
+  </data>
+  <data name="1529" xml:space="preserve">
+    <value>AD server does not exist.</value>
+  </data>
+  <data name="1246" xml:space="preserve">
+    <value>Password cannot be same as user name or first name..</value>
+  </data>
+  <data name="7230" xml:space="preserve">
+    <value>Given MatterFolder id is invalid.</value>
+  </data>
+  <data name="1247" xml:space="preserve">
+    <value>User has been deleted.</value>
+  </data>
+  <data name="2562" xml:space="preserve">
+    <value>Error occurred while retrieving source fields for given credentials, enter valid username and password.</value>
+  </data>
+  <data name="7226" xml:space="preserve">
+    <value>Access denied for folder management.</value>
+  </data>
+  <data name="128" xml:space="preserve">
+    <value>Failed to delete document relationship details from vault.</value>
+  </data>
+  <data name="129" xml:space="preserve">
+    <value>Failed to delete document relationship details from search engine.</value>
+  </data>
+  <data name="2561" xml:space="preserve">
+    <value>Enter  job  name.</value>
+  </data>
+  <data name="1248" xml:space="preserve">
+    <value>Error occurred while trying to change the password.</value>
+  </data>
+  <data name="2019" xml:space="preserve">
+    <value>Please enter a valid user group name.</value>
+  </data>
+  <data name="9436" xml:space="preserve">
+    <value>No native file(s) found</value>
+  </data>
+  <data name="1883" xml:space="preserve">
+    <value>The match count should not be less than zero.</value>
+  </data>
+  <data name="723" xml:space="preserve">
+    <value>Error during add comment operation.</value>
+  </data>
+  <data name="724" xml:space="preserve">
+    <value>Error during update comment operation.</value>
+  </data>
+  <data name="725" xml:space="preserve">
+    <value>Error during getting comments for the document.</value>
+  </data>
+  <data name="727" xml:space="preserve">
+    <value>Access denied to add comments.</value>
+  </data>
+  <data name="728" xml:space="preserve">
+    <value>Access denied to get comments for the document.</value>
+  </data>
+  <data name="10001" xml:space="preserve">
+    <value>Access denied for general admin activities.</value>
+  </data>
+  <data name="130" xml:space="preserve">
+    <value>Error attempting to add documents to vault. Refer to system log for detailed technical information.</value>
+  </data>
+  <data name="131" xml:space="preserve">
+    <value>Null or no documents sent to bulk add to vault.</value>
+  </data>
+  <data name="132" xml:space="preserve">
+    <value>Document control number couldn't be calculated while adding documents to vault in bulk.</value>
+  </data>
+  <data name="133" xml:space="preserve">
+    <value>No text file available for the document attempted to be added to vault in bulk.</value>
+  </data>
+  <data name="134" xml:space="preserve">
+    <value>Error while adding document text to vault. Refer to system log for detailed technical information.</value>
+  </data>
+  <data name="135" xml:space="preserve">
+    <value>Error adding document master record information to vault. Refer to system log for detailed technical information.</value>
+  </data>
+  <data name="136" xml:space="preserve">
+    <value>Error adding document fields to vault. Refer to system log for detailed technical information.</value>
+  </data>
+  <data name="137" xml:space="preserve">
+    <value>Unknown file attempted associated with a document record.</value>
+  </data>
+  <data name="7300" xml:space="preserve">
+    <value>Access denied to perform group by field functionality.</value>
+  </data>
+  <data name="8023" xml:space="preserve">
+    <value>Clusters are out of date.</value>
+  </data>
+  <data name="138" xml:space="preserve">
+    <value>Failed to push files associated with document for Redact-It conversion. HTTP response code is not OK.</value>
+  </data>
+  <data name="139" xml:space="preserve">
+    <value>Failed to push files associated with document for Redact-It conversion. See system log for technical information on the failure.</value>
+  </data>
+  <data name="140" xml:space="preserve">
+    <value>No files associated with the document provided for conversion.</value>
+  </data>
+  <data name="141" xml:space="preserve">
+    <value>Failed to push files associated with document for Redact-It conversion. See system log for technical information on the failure.</value>
+  </data>
+  <data name="143" xml:space="preserve">
+    <value>Failed to push files associated with document for Redact-It conversion. See system log for technical information on the failure.</value>
+  </data>
+  <data name="1651" xml:space="preserve">
+    <value>Access denied to create cluster job.</value>
+  </data>
+  <data name="1652" xml:space="preserve">
+    <value>Access denied to delete cluster job.</value>
+  </data>
+  <data name="1653" xml:space="preserve">
+    <value>Access denied to view cluster jobs.</value>
+  </data>
+  <data name="1654" xml:space="preserve">
+    <value>Access denied to cancel cluster job.</value>
+  </data>
+  <data name="4077" xml:space="preserve">
+    <value>Error while retrieving cluster status.</value>
+  </data>
+  <data name="4078" xml:space="preserve">
+    <value>Error while updating cluster status.</value>
+  </data>
+  <data name="1655" xml:space="preserve">
+    <value>Import or cluster jobs are in running or scheduled state for this dataset.</value>
+  </data>
+  <data name="7301" xml:space="preserve">
+    <value>Error while retrieving Group by states.</value>
+  </data>
+  <data name="9970" xml:space="preserve">
+    <value>Group by field does not exist or you do not have access.</value>
+  </data>
+  <data name="8026" xml:space="preserve">
+    <value>Invalid cluster status.</value>
+  </data>
+  <data name="8024" xml:space="preserve">
+    <value>Clusters are in progress</value>
+  </data>
+  <data name="1656" xml:space="preserve">
+    <value>Unable to cancel the job because job already completed or failed.</value>
+  </data>
+  <data name="813" xml:space="preserve">
+    <value>Access denied for family and  thread viewer.</value>
+  </data>
+  <data name="814" xml:space="preserve">
+    <value>Cannot read content. Access denied. Please contact administrator.</value>
+  </data>
+  <data name="815" xml:space="preserve">
+    <value>Error in reading the content. Please contact administrator.</value>
+  </data>
+  <data name="10002" xml:space="preserve">
+    <value>Access denied to view reviewer dashboard.</value>
+  </data>
+  <data name="10003" xml:space="preserve">
+    <value>Access denied for general admin activities.</value>
+  </data>
+  <data name="10004" xml:space="preserve">
+    <value>Access denied to view admin, reviewer and reports dashboard.</value>
+  </data>
+  <data name="10005" xml:space="preserve">
+    <value>Access denied to view reports dashboard.</value>
+  </data>
+  <data name="816" xml:space="preserve">
+    <value>Document content (.txt) file not found or no permission to access</value>
+  </data>
+  <data name="1884" xml:space="preserve">
+    <value>Matter identifier should be specified.</value>
+  </data>
+  <data name="1885" xml:space="preserve">
+    <value>Reviewset identifier should be specified.</value>
+  </data>
+  <data name="1886" xml:space="preserve">
+    <value>Family identifier should be specified.</value>
+  </data>
+  <data name="1887" xml:space="preserve">
+    <value>Family identifier is invalid.</value>
+  </data>
+  <data name="4081" xml:space="preserve">
+    <value>Dataset compressed file extraction location character length should be less than 75 .</value>
+  </data>
+  <data name="1888" xml:space="preserve">
+    <value>Search query entity can not be empty.</value>
+  </data>
+  <data name="1889" xml:space="preserve">
+    <value>Query list can not be empty</value>
+  </data>
+  <data name="1249" xml:space="preserve">
+    <value>Please Enter a valid password.</value>
+  </data>
+  <data name="1926" xml:space="preserve">
+    <value>Error in getting checked out ReviewSets.</value>
+  </data>
+  <data name="1927" xml:space="preserve">
+    <value>Invalid  dataset id.</value>
+  </data>
+  <data name="1928" xml:space="preserve">
+    <value>Invalid user id.</value>
+  </data>
+  <data name="4082" xml:space="preserve">
+    <value>Given dataset ID doesnt exist in the system.</value>
+  </data>
+  <data name="4083" xml:space="preserve">
+    <value>File extraction location path is invalid.</value>
+  </data>
+  <data name="1657" xml:space="preserve">
+    <value>Please enter valid JobName,FolderId,JobTypeId.</value>
+  </data>
+  <data name="2020" xml:space="preserve">
+    <value>Access denied to delete the Administrator Group.</value>
+  </data>
+  <data name="4084" xml:space="preserve">
+    <value>Share name already exists.</value>
+  </data>
+  <data name="4085" xml:space="preserve">
+    <value>Error while mapping the share with the dataset.</value>
+  </data>
+  <data name="4086" xml:space="preserve">
+    <value>Error while deleting the share details.</value>
+  </data>
+  <data name="4087" xml:space="preserve">
+    <value>Error while updating the share details.</value>
+  </data>
+  <data name="4088" xml:space="preserve">
+    <value>Error while fetching the share details.</value>
+  </data>
+  <data name="2563" xml:space="preserve">
+    <value>Error while deleting the documents in redaction conversion queue.</value>
+  </data>
+  <data name="1250" xml:space="preserve">
+    <value>Invalid operation. There is no provision to lock a user.</value>
+  </data>
+  <data name="9721" xml:space="preserve">
+    <value>Specified export path is invalid.</value>
+  </data>
+  <data name="5558" xml:space="preserve">
+    <value>There is a back ground task running. You should be able to perform the task associated with the tag once the background task is over.</value>
+  </data>
+  <data name="20109" xml:space="preserve">
+    <value>Original file ( native or image or production) not available or not convertable by Redact-It server</value>
+  </data>
+  <data name="2564" xml:space="preserve">
+    <value>Disk is full , unable to import the documents.</value>
+  </data>
+  <data name="1004" xml:space="preserve">
+    <value>HTTP Exception.</value>
+  </data>
+  <data name="3011" xml:space="preserve">
+    <value>Error occurred in search server while creating matter</value>
+  </data>
+  <data name="9437" xml:space="preserve">
+    <value>One or more files are not supported by the conversion server</value>
+  </data>
+  <data name="4089" xml:space="preserve">
+    <value>You have chosen a field name which is  already in use as a System Field. Please rename and try again.</value>
+  </data>
+  <data name="9999" xml:space="preserve">
+    <value>Vault pool is not ready to assign a database for the matter.</value>
+    <comment>Used while matter creation</comment>
+  </data>
+  <data name="120" xml:space="preserve">
+    <value>Access denied for delete documents</value>
+  </data>
+  <data name="1637" xml:space="preserve">
+    <value>Access denied for export management</value>
+  </data>
+  <data name="3207" xml:space="preserve">
+    <value>Access denied for send to casemap</value>
+  </data>
+  <data name="3208" xml:space="preserve">
+    <value>Access denied for applying preference</value>
+  </data>
+  <data name="9052" xml:space="preserve">
+    <value>Access denied for de-duplication</value>
+  </data>
+  <data name="9600" xml:space="preserve">
+    <value>You don't have valid user license assigned.</value>
+  </data>
+  <data name="9601" xml:space="preserve">
+    <value>Your user license has expired.</value>
+  </data>
+  <data name="9602" xml:space="preserve">
+    <value>Your user license is invalid.</value>
+  </data>
+  <data name="1120" xml:space="preserve">
+    <value>Error while fetching organizations.</value>
+  </data>
+  <data name="1121" xml:space="preserve">
+    <value>Access Denied to view organization.</value>
+  </data>
+  <data name="1122" xml:space="preserve">
+    <value>Error while adding user group to organization.</value>
+  </data>
+  <data name="EDLoaderExtractionWorker_NoFilesToProcess" xml:space="preserve">
+    <value>No files are available for extraction process.</value>
+  </data>
+  <data name="EDLoaderFileParserWorker_DatasetOrMatterDetailsUnavailable" xml:space="preserve">
+    <value>Dataset or Matter details are not available.</value>
+  </data>
+  <data name="EmailGenaratorWorkerMsgFileGenerationFailed" xml:space="preserve">
+    <value>File generation failed</value>
+  </data>
+  <data name="UnableToGenerateEmptyMsgFile" xml:space="preserve">
+    <value>Unable to generate empty message file</value>
+  </data>
+  <data name="8200" xml:space="preserve">
+    <value>Unknown Stored Procedure Error</value>
+  </data>
+  <data name="8201" xml:space="preserve">
+    <value>No Alerts to run</value>
+  </data>
+  <data name="8202" xml:space="preserve">
+    <value>Alert record not updated post notification</value>
+  </data>
+  <data name="8203" xml:space="preserve">
+    <value>Stored Procedure crashed updating alert record</value>
+  </data>
+  <data name="8204" xml:space="preserve">
+    <value>Stored Procedure crashed inserting alert history record</value>
+  </data>
+  <data name="8205" xml:space="preserve">
+    <value>Alert record not udpated to history</value>
+  </data>
+  <data name="8206" xml:space="preserve">
+    <value>Alert Job ID not available in configuration file</value>
+  </data>
+  <data name="8207" xml:space="preserve">
+    <value>No Alerts to Run</value>
+  </data>
+  <data name="1330" xml:space="preserve">
+    <value>Error while removing the user group from folder</value>
+  </data>
+  <data name="9603" xml:space="preserve">
+    <value>Unable to verify your user license.</value>
+  </data>
+  <data name="9604" xml:space="preserve">
+    <value>Unable to create new user license.</value>
+  </data>
+  <data name="9605" xml:space="preserve">
+    <value>Unable to delete the license.</value>
+  </data>
+  <data name="9606" xml:space="preserve">
+    <value>Unable to assign users to the license.</value>
+  </data>
+  <data name="9607" xml:space="preserve">
+    <value>Unable to mark the license as expired.</value>
+  </data>
+  <data name="9608" xml:space="preserve">
+    <value>Unable to create the user license. Please contact administrator.</value>
+  </data>
+  <data name="9609" xml:space="preserve">
+    <value>Error while deleting the license.</value>
+  </data>
+  <data name="9610" xml:space="preserve">
+    <value>Error while retrieving the license details.</value>
+  </data>
+  <data name="9611" xml:space="preserve">
+    <value>Error while assigning the user for the license.</value>
+  </data>
+  <data name="9612" xml:space="preserve">
+    <value>Error while retrieving the users for the license.</value>
+  </data>
+  <data name="4090" xml:space="preserve">
+    <value>Error while reordering the fields.</value>
+  </data>
+  <data name="4091" xml:space="preserve">
+    <value>You have chosen a field name already in use as a System Field.</value>
+  </data>
+  <data name="9613" xml:space="preserve">
+    <value>License with the given key already exists.</value>
+  </data>
+  <data name="1929" xml:space="preserve">
+    <value>Problem in getting recent reviewsets</value>
+  </data>
+  <data name="1930" xml:space="preserve">
+    <value>Problem in updating recent reviewset visit </value>
+  </data>
+  <data name="4301" xml:space="preserve">
+    <value>Error while fetching services running on server.</value>
+  </data>
+  <data name="4302" xml:space="preserve">
+    <value>Error while fetching configuration(s).</value>
+  </data>
+  <data name="4303" xml:space="preserve">
+    <value>Error in updating instance configuration(s).</value>
+  </data>
+  <data name="4304" xml:space="preserve">
+    <value>Error in adding instance configuration(s).</value>
+  </data>
+  <data name="4305" xml:space="preserve">
+    <value>Error while deleting instance configuration(s).</value>
+  </data>
+  <data name="4306" xml:space="preserve">
+    <value>Error while fetching server(s).</value>
+  </data>
+  <data name="4307" xml:space="preserve">
+    <value>Error in fetching service configuration(s).</value>
+  </data>
+  <data name="4308" xml:space="preserve">
+    <value>Error in updating service configuration(s).</value>
+  </data>
+  <data name="4309" xml:space="preserve">
+    <value>Error while adding service configuration(s).</value>
+  </data>
+  <data name="4310" xml:space="preserve">
+    <value>Error while starting or stopping services.</value>
+  </data>
+  <data name="4311" xml:space="preserve">
+    <value>Error while fetching services status.</value>
+  </data>
+  <data name="4312" xml:space="preserve">
+    <value>Error while adding service instance(s).</value>
+  </data>
+  <data name="4313" xml:space="preserve">
+    <value>Error while deleting service instance(s).</value>
+  </data>
+  <data name="4314" xml:space="preserve">
+    <value>Error while fetching service configuration(s).</value>
+  </data>
+  <data name="4315" xml:space="preserve">
+    <value>Invalid Service Id</value>
+  </data>
+  <data name="4400" xml:space="preserve">
+    <value>Error while retrieving NLog data past one hour.</value>
+  </data>
+  <data name="4401" xml:space="preserve">
+    <value>Error while retrieving NLog data</value>
+  </data>
+  <data name="1251" xml:space="preserve">
+    <value>User should be assigned to at least one user group</value>
+  </data>
+  <data name="9614" xml:space="preserve">
+    <value>Your Concordance Evolution license has expired. Please contact your system administrator to renew your license.</value>
+  </data>
+  <data name="9615" xml:space="preserve">
+    <value>Validity of your license assigned is yet to begin. Please contact administrator.</value>
+  </data>
+  <data name="9722" xml:space="preserve">
+    <value>Error occurred while saving the profile.</value>
+  </data>
+  <data name="2565" xml:space="preserve">
+    <value>Error reading file, please ensure the file is properly formatted</value>
+  </data>
+  <data name="1658" xml:space="preserve">
+    <value>Reviewset Creation job currently in progress. No other Reviewset Creation jobs will be allowed on this dataset during this time</value>
+  </data>
+  <data name="1890" xml:space="preserve">
+    <value>Error while reconverting document</value>
+  </data>
+  <data name="1891" xml:space="preserve">
+    <value>Error while generating the document binaries</value>
+  </data>
+  <data name="147" xml:space="preserve">
+    <value>Access denied to submit reconversion request</value>
+  </data>
+  <data name="148" xml:space="preserve">
+    <value>Native File Not Found</value>
+  </data>
+  <data name="7144" xml:space="preserve">
+    <value>Error retrieving all document set for the given dataset id.</value>
+  </data>
+  <data name="1980" xml:space="preserve">
+    <value>LAW PreDiscovery Case already exists</value>
+  </data>
+  <data name="1981" xml:space="preserve">
+    <value>Please select valid SQL LAW PreDiscovery case</value>
+  </data>
+  <data name="9616" xml:space="preserve">
+    <value>You don't have valid user license assigned. Unable to auto assign license. Please contact administrator.</value>
+  </data>
+  <data name="9617" xml:space="preserve">
+    <value>Your Concordance Evolution license has expired. Unable to renew your license by auto assigning. Please contact administrator.</value>
+  </data>
+  <data name="1123" xml:space="preserve">
+    <value>Organization names cannot contain any of the following characters: / \ [ ] ; : | = + * ? &lt; &gt; “ ,.</value>
+  </data>
+  <data name="1124" xml:space="preserve">
+    <value>Folder name cannot contain any of the following characters: / \ [ ] ; : | = + * ? &lt; &gt; “ ,.</value>
+  </data>
+  <data name="2021" xml:space="preserve">
+    <value>UserGroup names cannot contain any of the following characters: / \ [ ] ; : | = + * ? &lt; &gt; “ ,.</value>
+  </data>
+  <data name="1253" xml:space="preserve">
+    <value>Inactive user account. Please contact your system administrator to activate your account.</value>
+  </data>
+  <data name="200110" xml:space="preserve">
+    <value>Problem in creating reprocess job </value>
+  </data>
+  <data name="200111" xml:space="preserve">
+    <value>Access denied to schedule reprocessing job</value>
+  </data>
+  <data name="200112" xml:space="preserve">
+    <value>Problem in getting convesion logs</value>
+  </data>
+  <data name="200113" xml:space="preserve">
+    <value>Problem in getting RedactIt error reasons </value>
+  </data>
+  <data name="200114" xml:space="preserve">
+    <value>IGC returns an error while converting the document</value>
+  </data>
+  <data name="9618" xml:space="preserve">
+    <value>Access denied for License Management</value>
+  </data>
+  <data name="5087" xml:space="preserve">
+    <value>Vault bulk document fields insertion failure</value>
+  </data>
+  <data name="5088" xml:space="preserve">
+    <value>Vault bulk document text insertion failure</value>
+  </data>
+  <data name="30001" xml:space="preserve">
+    <value>Access to binary externalization path is denied</value>
+  </data>
+  <data name="21000" xml:space="preserve">
+    <value>Error while adding the binder.</value>
+  </data>
+  <data name="21001" xml:space="preserve">
+    <value>Error while updating the binder.</value>
+  </data>
+  <data name="21002" xml:space="preserve">
+    <value>Error while deleting the binder.</value>
+  </data>
+  <data name="21003" xml:space="preserve">
+    <value>Binder name should be unique within the same datasets.</value>
+  </data>
+  <data name="21004" xml:space="preserve">
+    <value>Error while fetching the binder details.</value>
+  </data>
+  <data name="21005" xml:space="preserve">
+    <value>Error while getting review sets for the binder </value>
+  </data>
+  <data name="21006" xml:space="preserve">
+    <value>Invalid binder id or binder does not exist</value>
+  </data>
+  <data name="21007" xml:space="preserve">
+    <value>Binder deleted</value>
+  </data>
+  <data name="21008" xml:space="preserve">
+    <value>Error while getting authorized folders</value>
+  </data>
+  <data name="21009" xml:space="preserve">
+    <value>Error while update binder review set actions</value>
+  </data>
+  <data name="21010" xml:space="preserve">
+    <value>Invalid review set action, Possible actions are Checkout, Complete and Release</value>
+  </data>
+  <data name="21011" xml:space="preserve">
+    <value>Access denied to create binder.</value>
+  </data>
+  <data name="21012" xml:space="preserve">
+    <value>Access denied to edit binder.</value>
+  </data>
+  <data name="21013" xml:space="preserve">
+    <value>Access denied to delete binder.</value>
+  </data>
+  <data name="1659" xml:space="preserve">
+    <value>Select a date schedule date should be greater than the current date and time</value>
+  </data>
+  <data name="21014" xml:space="preserve">
+    <value>Only one user can check out the review set at a time </value>
+  </data>
+  <data name="200115" xml:space="preserve">
+    <value>Problem in generating conversion results export job</value>
+  </data>
+  <data name="200116" xml:space="preserve">
+    <value>Problem in getting conversion results job details</value>
+  </data>
+  <data name="200117" xml:space="preserve">
+    <value>Problem in scheduling conversion results export job</value>
+  </data>
+  <data name="21015" xml:space="preserve">
+    <value>Problem in auditing the bulk tag job for the tag  {0}</value>
+  </data>
+  <data name="21016" xml:space="preserve">
+    <value>Access denied to manage predictive coding project.</value>
+  </data>
+  <data name="21017" xml:space="preserve">
+    <value>Access denied to review predictive coding project.</value>
+  </data>
+  <data name="1892" xml:space="preserve">
+    <value>Xdl file is missing </value>
+  </data>
+  <data name="1893" xml:space="preserve">
+    <value>Error in converting the document</value>
+  </data>
+  <data name="1894" xml:space="preserve">
+    <value>Unable to insert or process the xdl </value>
+  </data>
+  <data name="2170" xml:space="preserve">
+    <value>IGC target file is missing</value>
+  </data>
+  <data name="1660" xml:space="preserve">
+    <value>A Near-duplication job is already in progress.  Please try running this job later.</value>
+  </data>
+  <data name="146" xml:space="preserve">
+    <value>Failed in re-conversion request process.</value>
+  </data>
+  <data name="1982" xml:space="preserve">
+    <value>LAW Case mut be associated with a dataset</value>
+  </data>
+  <data name="9801" xml:space="preserve">
+    <value>Failed to update job template.</value>
+  </data>
+  <data name="22001" xml:space="preserve">
+    <value>Problem in getting billing information for the matterIds {0} </value>
+  </data>
+  <data name="22002" xml:space="preserve">
+    <value>Problem in setting default report profile for the matter id {0} and  profile id {1}</value>
+  </data>
+  <data name="22003" xml:space="preserve">
+    <value>Problem in deleting the report  profile for the matter id  {0} and profile id {1} </value>
+  </data>
+  <data name="22004" xml:space="preserve">
+    <value>Invalid matter id : {0}</value>
+  </data>
+  <data name="22005" xml:space="preserve">
+    <value>Invalid  profile id : {0}</value>
+  </data>
+  <data name="22006" xml:space="preserve">
+    <value>Problem in getting report data for the matter id {0}  and profile id  {1}</value>
+  </data>
+  <data name="22007" xml:space="preserve">
+    <value>Invalid date range</value>
+  </data>
+  <data name="22008" xml:space="preserve">
+    <value>Access denied for accessing system audit log </value>
+  </data>
+  <data name="22009" xml:space="preserve">
+    <value>Access denied for accessing matter audit log </value>
+  </data>
+  <data name="22010" xml:space="preserve">
+    <value>Access denied for accessing billing report </value>
+  </data>
+  <data name="22011" xml:space="preserve">
+    <value>Problem in getting matter audit log </value>
+  </data>
+  <data name="22012" xml:space="preserve">
+    <value>Problem in getting system audit log </value>
+  </data>
+  <data name="1895" xml:space="preserve">
+    <value>Failed to get selected document count.</value>
+  </data>
+  <data name="22013" xml:space="preserve">
+    <value>Problem in saving  profile for the matter id  {0} and profile id {1} </value>
+  </data>
+  <data name="22014" xml:space="preserve">
+    <value>Problem in getting  profile for the matter id  {0} and profile id {1} </value>
+  </data>
+  <data name="22022" xml:space="preserve">
+    <value>Problem in saving  profile for the matter id  {0} and profile id {1}: cannot have both relative date and custom date </value>
+  </data>
+  <data name="22015" xml:space="preserve">
+    <value>Problem in getting report data</value>
+  </data>
+  <data name="22017" xml:space="preserve">
+    <value>Error in getting report data - Invalid date range</value>
+  </data>
+  <data name="22018" xml:space="preserve">
+    <value>Error in getting report data - Invalid group by id</value>
+  </data>
+  <data name="22019" xml:space="preserve">
+    <value>Error in getting report data - Invalid profile configuration</value>
+  </data>
+  <data name="22020" xml:space="preserve">
+    <value>Access denied  to view reports</value>
+  </data>
+  <data name="22021" xml:space="preserve">
+    <value>Problem in getting all profiles</value>
+  </data>
+  <data name="22024" xml:space="preserve">
+    <value>Error in getting report data - Invalid deafult date range</value>
+  </data>
+  <data name="22025" xml:space="preserve">
+    <value>Problem saving profile due to name already exists for the matter id  {0} and profile id {1} </value>
+  </data>
+  <data name="12008" xml:space="preserve">
+    <value>Invalid matter identifier</value>
+  </data>
+  <data name="12009" xml:space="preserve">
+    <value>Invalid dataset identifier</value>
+  </data>
+  <data name="12010" xml:space="preserve">
+    <value>Invalid term identifier</value>
+  </data>
+  <data name="12011" xml:space="preserve">
+    <value>The Persistent Highlight term contains characters that are not supported.  Please enter a valid term.</value>
+  </data>
+  <data name="12012" xml:space="preserve">
+    <value>The Persistent Highlighting term entered is a Concordance Evolution stop word. Please enter a valid term.</value>
+  </data>
+  <data name="12013" xml:space="preserve">
+    <value>The Persistent Highlighting terms cannot contain Boolean operators.  Please enter a valid term.</value>
+  </data>
+  <data name="12014" xml:space="preserve">
+    <value>The Persistent Highlight term is already exists.  Please try again.</value>
+  </data>
+  <data name="12015" xml:space="preserve">
+    <value>The Persistent Highlighting term is entered  with spaces. Please enter a valid term.</value>
+  </data>
+  <data name="12016" xml:space="preserve">
+    <value>The Persistent Highlighting term cannot exceed the max length 150. Please enter a valid term.</value>
+  </data>
+  <data name="12017" xml:space="preserve">
+    <value>The Persistent Highlight term contains characters that are not supported.  Please enter a valid term to change state.</value>
+  </data>
+  <data name="12018" xml:space="preserve">
+    <value>The Persistent Highlight term entered is a Concordance Evolution stop word. Please enter a valid term to change state.</value>
+  </data>
+  <data name="12019" xml:space="preserve">
+    <value>Persistent Highlight terms cannot contain Boolean operators.  Please enter a valid term to change state.</value>
+  </data>
+  <data name="12020" xml:space="preserve">
+    <value>The Persistent Highlighting term is entered  with spaces. Please enter a valid term to change state.</value>
+  </data>
+  <data name="22026" xml:space="preserve">
+    <value>Error retrieving the Search History. </value>
+  </data>
+  <data name="22027" xml:space="preserve">
+    <value>Error deleting the Search History.</value>
+  </data>
+  <data name="4080" xml:space="preserve">
+    <value>Failed to create seed </value>
+  </data>
+  <data name="1661" xml:space="preserve">
+    <value>An error occurred while creating the Predictive Coding Project.</value>
+  </data>
+  <data name="1600" xml:space="preserve">
+    <value>An error occurred while deleting the Predictive Coding Project.</value>
+  </data>
+  <data name="1662" xml:space="preserve">
+    <value>An error occurred on updating the Predictive Coding Project.</value>
+  </data>
+  <data name="1663" xml:space="preserve">
+    <value>An error occurred during add documents in Project collection.</value>
+  </data>
+  <data name="1664" xml:space="preserve">
+    <value>An error occurred during get index id for Project.</value>
+  </data>
+  <data name="1665" xml:space="preserve">
+    <value>An error occurred on create Project in database.</value>
+  </data>
+  <data name="1666" xml:space="preserve">
+    <value>An error occurred during create Project Field(s).</value>
+  </data>
+  <data name="1667" xml:space="preserve">
+    <value>An error occurred during create Project collection.</value>
+  </data>
+  <data name="1668" xml:space="preserve">
+    <value>An error occurred in update project id in Analytical Engine.</value>
+  </data>
+  <data name="1669" xml:space="preserve">
+    <value>An error occurred during Build project in Analytical Engine.</value>
+  </data>
+  <data name="1670" xml:space="preserve">
+    <value>An error occurred during add document(s)/Field(s) in Project collection.</value>
+  </data>
+  <data name="1671" xml:space="preserve">
+    <value>An error occurred on fetching Predictive Coding Project information</value>
+  </data>
+  <data name="1672" xml:space="preserve">
+    <value>Error on getting random documents for ControlSet</value>
+  </data>
+  <data name="1673" xml:space="preserve">
+    <value>ControlSet already available for Project.</value>
+  </data>
+  <data name="1684" xml:space="preserve">
+    <value>An error occurred on fetching Analytic Workflow State.</value>
+  </data>
+  <data name="1699" xml:space="preserve">
+    <value>An error occurred while updating Analytic Workflow State.</value>
+  </data>
+  <data name="1700" xml:space="preserve">
+    <value>An error occurred getting next Analytic Workflow State.</value>
+  </data>
+  <data name="1685" xml:space="preserve">
+    <value>Error on getting control set summary</value>
+  </data>
+  <data name="1688" xml:space="preserve">
+    <value>Error on getting training set summary</value>
+  </data>
+  <data name="1692" xml:space="preserve">
+    <value>Error on getting saved searches for creating the Predictive Coding Project.</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="20932" xml:space="preserve">
+    <value>Failure in getting documents from project</value>
+  </data>
+  <data name="9990" xml:space="preserve">
+    <value>Error while logging the message. MatterId: {0}; JobId: {1};</value>
+  </data>
+  <data name="1674" xml:space="preserve">
+    <value>Error in categorize Control Set in Analytical Engine.</value>
+  </data>
+  <data name="1675" xml:space="preserve">
+    <value>Error in save accuracy test.</value>
+  </data>
+  <data name="1676" xml:space="preserve">
+    <value>An error occurred in run accuracy test.</value>
+  </data>
+  <data name="1976" xml:space="preserve">
+    <value>Predict Control Set job currently running please try again after job is completed.</value>
+  </data>
+  <data name="1677" xml:space="preserve">
+    <value>Documents not available in Control Set</value>
+  </data>
+  <data name="1678" xml:space="preserve">
+    <value>Documents not available in Example Set</value>
+  </data>
+  <data name="9009" xml:space="preserve">
+    <value>Index backup failed at Analytical Server</value>
+  </data>
+  <data name="9010" xml:space="preserve">
+    <value>There were no documents to predict</value>
+  </data>
+  <data name="9304" xml:space="preserve">
+    <value>Error while scheduling the Billing Report</value>
+  </data>
+  <data name="1686" xml:space="preserve">
+    <value>No documents available for create Training Set</value>
+  </data>
+  <data name="1687" xml:space="preserve">
+    <value>Error on getting analysis set documents</value>
+  </data>
+  <data name="1689" xml:space="preserve">
+    <value>Error occurred while creating ControlSet.</value>
+  </data>
+  <data name="1690" xml:space="preserve">
+    <value>Error occurred while calculating sample size.</value>
+  </data>
+  <data name="1691" xml:space="preserve">
+    <value>Error occurred while scheduling job for export AnalysisSet documents.</value>
+  </data>
+  <data name="1693" xml:space="preserve">
+    <value>Error on getting selected document count for creating the Predictive Coding Project.</value>
+  </data>
+  <data name="1694" xml:space="preserve">
+    <value>Error on getting all tags for creating the Predictive Coding Project.</value>
+  </data>
+  <data name="1695" xml:space="preserve">
+    <value>Error on getting analysis set document by reference id</value>
+  </data>
+  <data name="1696" xml:space="preserve">
+    <value>Error on getting analysis set next uncoded document</value>
+  </data>
+  <data name="1697" xml:space="preserve">
+    <value>Error on saving analysis set document coding value</value>
+  </data>
+  <data name="1698" xml:space="preserve">
+    <value>Error occurred while creating TrainingSet.</value>
+  </data>
+  <data name="1679" xml:space="preserve">
+    <value>Error occurred while scheduling job for categorize controlset.</value>
+  </data>
+  <data name="1680" xml:space="preserve">
+    <value>Error while getting prediction discrepancies</value>
+  </data>
+  <data name="1681" xml:space="preserve">
+    <value>Error while getting prediction scores</value>
+  </data>
+  <data name="1712" xml:space="preserve">
+    <value>Error occurred while scheduling job for categorize all project documents.</value>
+  </data>
+  <data name="1682" xml:space="preserve">
+    <value>Error occurred while fetching avialble document count in the project.</value>
+  </data>
+  <data name="1683" xml:space="preserve">
+    <value>Error occurred while creating QC set.</value>
+  </data>
+  <data name="1713" xml:space="preserve">
+    <value>Error occurred while retrieving QC sets information.</value>
+  </data>
+  <data name="1715" xml:space="preserve">
+    <value>Error occurred while getting prediction discrepancies information.</value>
+  </data>
+  <data name="1716" xml:space="preserve">
+    <value>Error occurred while getting predict all summary information.</value>
+  </data>
+  <data name="1709" xml:space="preserve">
+    <value>Error occurred while validate project information.</value>
+  </data>
+  <data name="1714" xml:space="preserve">
+    <value>Error occurred while delete project records in database</value>
+  </data>
+  <data name="817" xml:space="preserve">
+    <value>Document content (.txt) file is too large</value>
+  </data>
+  <data name="1717" xml:space="preserve">
+    <value>An error occurred while creating job for add additional documents into the Predictive Coding Project.</value>
+  </data>
+  <data name="1718" xml:space="preserve">
+    <value>Error occurred while adding additional documents to training set.</value>
+  </data>
+  <data name="818" xml:space="preserve">
+    <value>Document is not part of the parent dataset search index.</value>
+  </data>
+  <data name="1719" xml:space="preserve">
+    <value>An error occurred on delete control set.</value>
+  </data>
+  <data name="4143" xml:space="preserve">
+    <value>Search server appears to be down.</value>
+  </data>
+  <data name="4144" xml:space="preserve">
+    <value>Search index seems to be having some trouble.</value>
+  </data>
+  <data name="1720" xml:space="preserve">
+    <value>An error occurred on update fields in Search sub system</value>
+  </data>
+  <data name="1721" xml:space="preserve">
+    <value>An error occurred on update training set for accuracy test</value>
+  </data>
+</root>

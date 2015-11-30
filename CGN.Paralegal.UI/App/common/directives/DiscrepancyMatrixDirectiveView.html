@@ -1,0 +1,75 @@
+﻿<div class="discrepancy-matrix text-center margin-top-15">
+    <div class="row">
+        <div class="col-xs-4 col-sm-4">
+
+        </div>
+        <div class="col-xs-4 col-sm-4">
+            <b>{{::localized.Predicted}}</b>
+
+            <b>{{::localized.Relevant}}</b>
+        </div>
+        <div class="col-xs-4 col-sm-4">
+            <b>{{::localized.Predicted}}</b>
+
+            <b>{{::localized.NotRelevant}}</b>
+        </div>
+
+        <div class="col-xs-4 col-sm-4">
+            <b>{{::localized.Actual}}</b>
+
+            <b>{{::localized.Relevant}}</b>
+        </div>
+        <div class="col-xs-4 col-sm-4">
+            <a href="javascript:void(0)"
+               id="truePositives"
+               ng-click="viewTruePositivesList()">
+                {{discrepancies[0][0]}}
+            </a>
+
+        </div>
+        <div class="col-xs-4 col-sm-4">
+            <a href="javascript:void(0)"
+               id="falseNegatives"
+               ng-click="viewFalseNegativesList()">
+                {{discrepancies[0][1]}}
+            </a>
+
+        </div>
+
+        <div class="col-xs-4 col-sm-4">
+            <b>{{::localized.Actual}}</b>
+
+            <b>{{::localized.NotRelevant}}</b>
+        </div>
+        <div class="col-xs-4 col-sm-4">
+            <a href="javascript:void(0)"
+               id="falsePositives"
+               ng-click="viewFalsePositivesList()">
+                {{discrepancies[1][0]}}
+            </a>
+
+        </div>
+        <div class="col-xs-4 col-sm-4">
+            <a href="javascript:void(0)"
+               id="trueNegatives"
+               ng-click="viewTrueNegativesList()">
+                {{discrepancies[1][1]}}
+            </a>
+
+        </div>
+    </div>
+</div>
+<div class="discrepancy-matrix">
+    <div class="row legends-block row-centered">
+        <div class="col-xs-6 col-centered">
+            <div class="legend recall"></div>
+            <h5 class="">{{::localized.Recall}} <span class="recall">{{calculatedRecall|number:1}}%</span></h5>
+        </div>
+        <div class="col-xs-6 col-centered">
+            <div class="legend precision"></div>
+            <h5 class="">{{::localized.Precision}} <span class="precision">{{calculatedPrecision|number:1}}%</span></h5>
+        </div>
+
+    </div>
+</div>
+

@@ -1,0 +1,263 @@
+﻿<div class="container-fluid">
+
+    <div class="tabbable tabs-left">
+        <ul class="nav nav-tabs">
+            <li ng-hide="ProjectWizardController.hide.ProjectSetup" ng-class="{'disabled':ProjectWizardController.disabled.ProjectSetup,
+                            'active':ProjectWizardController.tabs.ProjectSetup,
+                            'completed':ProjectWizardController.completed.ProjectSetup}">
+                <a href="javascript:void(0)"
+                   ng-disabled="ProjectWizardController.disabled.ProjectSetup"
+                   ng-click="ProjectWizardController.showTab('ProjectSetup')">
+                    {{ProjectWizardController.localized.ProjectSetup}}
+                    <span class="glyphicon glyphicon-ok-sign pull-right"></span>
+                </a>
+            </li>
+            <li ng-class="{'disabled':ProjectWizardController.disabled.SelectDocuments,
+                            'active':ProjectWizardController.tabs.SelectDocuments,
+                            'completed':ProjectWizardController.completed.SelectDocuments}">
+                <a href="javascript:void(0)"
+                   ng-disabled="ProjectWizardController.disabled.SelectDocuments"
+                   ng-click="ProjectWizardController.showTab('SelectDocuments')">
+                    {{ProjectWizardController.localized.SelectDocuments}}
+                    <span class="glyphicon glyphicon-ok-sign"></span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="tab-views">
+            <div class="tab-content panel panel-default col-sm-8 col-xs-8">
+                <div class="tab-pane panel-body active"
+                     ng-if="ProjectWizardController.tabs.ProjectSetup">
+                    <div class="form-horizontal">
+                        <h3>{{ProjectWizardController.localized.ProjectSetup}}</h3>
+                        <p>{{ProjectWizardController.localized.ProjectSetupText}}</p>
+
+                        <h5 class="content-title alert-info">{{ProjectWizardController.localized.ProjectName}}</h5>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6 col-xs-8"
+                                 ng-class="{'has-error':ProjectWizardController.invalid.Name}">
+                                <label class="control-label">
+                                    {{ProjectWizardController.localized.ProjectName}} <b class="text-danger">*</b>
+                                </label>
+                                <input type="text"
+                                       ng-model="ProjectWizardController.project.Name"
+                                       class="form-control" />
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <p class="text-danger padded-5"
+                                   ng-if="ProjectWizardController.invalid.Name">
+                                    {{ProjectWizardController.ProjectNameErrorMessage}}
+                                </p>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6 col-xs-8">
+                                <label class="control-label">
+                                    {{ProjectWizardController.localized.ProjectDescription}}
+                                </label>
+                                <textarea ng-model="ProjectWizardController.project.Description" class="form-control" />
+                            </div>
+                        </div>
+                        <br />
+                        <h5 class="content-title alert-info">{{ProjectWizardController.localized.ProjectFields}}</h5>
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <p>{{ProjectWizardController.localized.ProjectFieldsText}}</p>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-8"
+                                 ng-class="{'has-error':ProjectWizardController.invalid.FieldPrefix}">
+                                <label class="control-label">
+                                    {{ProjectWizardController.localized.ProjectFields}} -
+                                    {{ProjectWizardController.localized.Prefix}} <b class="text-danger">*</b>
+                                </label>
+                                <input type="text"
+                                       ng-model="ProjectWizardController.project.FieldPrefix"
+                                       class="form-control" />
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <p class="text-danger padded-5"
+                                   ng-if="ProjectWizardController.invalid.FieldPrefix">
+                                    {{ProjectWizardController.FieldPrefixErrorMessage}}
+                                </p>
+                            </div>
+                        </div>
+
+                        <br />
+                        <div class="row">
+                            <div class="col-sm-12 col-xs-12 btn-group-horizontal">
+                                <button type="button"
+                                        ng-click="ProjectWizardController.cancel()"
+                                        id="cancelBtn"
+                                        class="btn btn-default pull-right">
+                                    {{ProjectWizardController.localized.Cancel}}
+                                </button>
+                                <button type="button"
+                                        ng-click="ProjectWizardController.validateSetup()"
+                                        id="nextBtn"
+                                        class="btn btn-primary pull-right margin-right-5">
+                                    {{ProjectWizardController.localized.Next}}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane panel-body active"
+                     ng-if="ProjectWizardController.tabs.SelectDocuments">
+                    <div class="form-inline">
+                        <h3>{{ProjectWizardController.localized.SelectDocuments}}</h3>
+                        <p>{{ProjectWizardController.localized.SelectDocumentsText}}</p>
+
+                        <div class="row">
+                            <div class="col-sm-4 col-xs-5">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio"
+                                               ng-model="ProjectWizardController.selectedOption"
+                                               ng-click="ProjectWizardController.getAllDocumentCount()"
+                                               ng-disabled="ProjectWizardController.documentOptions.allDocuments.disable"
+                                               ng-value="ProjectWizardController.documentOptions.allDocuments" />
+                                        {{ProjectWizardController.localized.AllDocuments}}
+                                    </label>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-8 col-xs-7"></div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-sm-4 col-xs-5">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio"
+                                               id="radioBtn"
+                                               ng-model="ProjectWizardController.selectedOption"
+                                               ng-disabled="ProjectWizardController.documentOptions.tag.disable"
+                                               ng-click="ProjectWizardController.resetDocumentCount()"
+                                               ng-value="ProjectWizardController.documentOptions.tag" />
+                                        {{ProjectWizardController.localized.ByTag}}
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-8 col-xs-7"
+                                 ng-if="ProjectWizardController.isSelectedOption('tag')">
+                                <select kendo-drop-down-list=""
+                                        k-options="ProjectWizardController.tagOptions"></select>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-sm-4 col-xs-5">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio"
+                                               id="savedSearchBtn"
+                                               ng-model="ProjectWizardController.selectedOption"
+                                               ng-disabled="ProjectWizardController.documentOptions.savedSearch.disable"
+                                               ng-click="ProjectWizardController.resetDocumentCount()"
+                                               ng-value="ProjectWizardController.documentOptions.savedSearch" />
+                                        {{ProjectWizardController.localized.BySavedSearch}}
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-8 col-xs-7"
+                                 ng-if="ProjectWizardController.isSelectedOption('savedSearch')">
+                                <select kendo-drop-down-list=""
+                                        k-options="ProjectWizardController.searchOptions"></select>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-sm-3 col-xs-5">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio"
+                                               ng-model="ProjectWizardController.selectedOption"
+                                               ng-disabled="ProjectWizardController.documentOptions.query.disable"
+                                               ng-change="ProjectWizardController.resetDocumentCount()"
+                                               ng-value="ProjectWizardController.documentOptions.query" />
+                                        {{ProjectWizardController.localized.NewSearch}}
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-9 col-xs-7"
+                                 ng-if="ProjectWizardController.isSelectedOption('query')">
+                                <div class="col-sm-12 col-xs-12"
+                                     ng-class="{'has-error':ProjectWizardController.invalid.Search}">
+                                    <input type="text"
+                                           ng-model="ProjectWizardController.documentOptions.query.value"
+                                           ng-keypress="ProjectWizardController.enter($event)"
+                                           class="form-control">
+                                    <button type="button"
+                                            class="btn btn-default"
+                                            ng-click="ProjectWizardController.search()">
+                                        {{ProjectWizardController.localized.Search}}
+                                    </button>
+                                </div>
+                                <div class="col-sm-12 col-xs-12">
+                                    <b class="text-danger"
+                                       ng-if="ProjectWizardController.invalid.Search">
+                                        {{ProjectWizardController.localized.EnterTextToQuery}}
+                                    </b>
+                                </div>
+
+                            </div>
+                        </div>
+                        <br />
+                        <div class="alert alert-info"
+                             ng-class="{'alert-info':!ProjectWizardController.noDocumentsFound,
+                                'alert-danger':ProjectWizardController.noDocumentsFound}"
+                             ng-if="ProjectWizardController.invalid.Count">
+                            <b>{{ProjectWizardController.documentCount}} </b>
+                            {{ProjectWizardController.localized.DocumentsFoundFor}}
+                            <b ng-if="ProjectWizardController.isSelectedOption('all')">
+                                {{ProjectWizardController.getLabel()}}
+                            </b>
+                            <span ng-if="ProjectWizardController.isSelectedOption('tag')">
+                                {{ProjectWizardController.localized.Tag}}: <b>"{{ProjectWizardController.getLabel()}}"</b>
+                            </span>
+                            <span ng-if="ProjectWizardController.isSelectedOption('savedSearch')">
+                                {{ProjectWizardController.localized.SavedQuery}}: <b>"{{ProjectWizardController.getLabel()}}"</b>
+                            </span>
+                            <span ng-if="ProjectWizardController.isSelectedOption('query')">
+                                {{ProjectWizardController.localized.Query}}: <b>{{ProjectWizardController.getLabel()}}</b>
+                            </span>
+                        </div>
+
+                        <br />
+                        <div class="row">
+                            <div class="col-sm-12 col-xs-12 btn-group-horizontal">
+                                <button ng-if="ProjectWizardController.hide.ProjectSetup == false"  type="button"
+                                        ng-click="ProjectWizardController.cancel()"
+                                        class="btn btn-default pull-right margin-right-5">
+                                    {{ProjectWizardController.localized.Cancel}}
+                                </button>
+                                <button ng-if="ProjectWizardController.hide.ProjectSetup == true" type="button"
+                                        ng-click="ProjectWizardController.addDocumentCancel()"
+                                        class="btn btn-default pull-right margin-right-5">
+                                    {{ProjectWizardController.localized.Cancel}}
+                                </button>                                
+                                <button ng-if="ProjectWizardController.hide.ProjectSetup == false" type="button"
+                                        ng-disabled="ProjectWizardController.noDocumentsFound"
+                                        ng-click="ProjectWizardController.createProject()"
+                                        id="createBtn"
+                                        class="btn btn-primary pull-right margin-right-5">
+                                    {{ProjectWizardController.localized.Create}}
+                                </button>
+                                <button ng-if="ProjectWizardController.hide.ProjectSetup == true" type="button"
+                                        id="createBtn"
+                                        ng-disabled="ProjectWizardController.noDocumentsFound"
+                                        ng-click="ProjectWizardController.createProject()"
+                                        class="btn btn-primary pull-right margin-right-5">
+                                    {{ProjectWizardController.localized.Add}}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

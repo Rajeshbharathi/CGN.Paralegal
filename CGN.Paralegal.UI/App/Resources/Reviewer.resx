@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AdminNeedsToStartJob" xml:space="preserve">
+    <value>Admin Needs to Start Job</value>
+  </data>
+  <data name="AutoAdvance" xml:space="preserve">
+    <value>Auto advance</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Congratulations" xml:space="preserve">
+    <value>Congratulations</value>
+  </data>
+  <data name="ControlSetReview" xml:space="preserve">
+    <value>Control Set Review</value>
+  </data>
+  <data name="ControlSetReviewComplete" xml:space="preserve">
+    <value>Control Set Review Complete</value>
+  </data>
+  <data name="ContinueTrainingSetReview" xml:space="preserve">
+    <value>Continue Training Set Review</value>
+  </data>
+  <data name="documents" xml:space="preserve">
+    <value>documents</value>
+  </data>
+  <data name="DocumentControlNumber" xml:space="preserve">
+    <value>Document Control #</value>
+  </data>
+  <data name="DocumentPath" xml:space="preserve">
+    <value>Document Path</value>
+  </data>
+  <data name="Filtered" xml:space="preserve">
+    <value>Filtered</value>
+  </data>
+  <data name="FinalizeProject" xml:space="preserve">
+    <value>Finalize Project</value>
+  </data>
+  <data name="Finish" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="FinishControlText1" xml:space="preserve">
+    <value>You have completed coding all the Control Set documents.</value>
+  </data>
+  <data name="FinishControlText2" xml:space="preserve">
+    <value>Click OK to return to your project dashboard to see the results of the review, and to launch the next phase of training the system</value>
+  </data>
+  <data name="FinishTrainingRoundText1" xml:space="preserve">
+    <value>You have completed coding all the current training set</value>
+  </data>
+  <data name="FinishTrainingSetText1" xml:space="preserve">
+    <value>You have completed coding all the Training Set documents.</value>
+  </data>
+  <data name="FinishTrainingSetReview" xml:space="preserve">
+    <value>Finish Training Set Review</value>
+  </data>
+  <data name="FinishQCSetReview" xml:space="preserve">
+    <value>Finish Verification Set Review</value>
+  </data>
+  <data name="FinishQCText1" xml:space="preserve">
+    <value>You have completed coding all the Verification Set documents.</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="NextStep" xml:space="preserve">
+    <value>Next Step</value>
+  </data>
+  <data name="NotRelevant" xml:space="preserve">
+    <value>Not Relevant</value>
+  </data>
+  <data name="ProjectDashboard" xml:space="preserve">
+    <value>Project Dashboard</value>
+  </data>
+  <data name="PredictionSetReview" xml:space="preserve">
+    <value>Prediction Set Review</value>
+  </data>
+  <data name="PredictAll" xml:space="preserve">
+    <value>Predict All</value>
+  </data>
+  <data name="QCSetReview" xml:space="preserve">
+    <value>Verification Set Review</value>
+  </data>
+  <data name="QCSetReviewComplete" xml:space="preserve">
+    <value>Verification Set Review Complete</value>
+  </data>
+  <data name="Relevant" xml:space="preserve">
+    <value>Relevant</value>
+  </data>
+  <data name="Round" xml:space="preserve">
+    <value>Round</value>
+  </data>
+  <data name="SkipDocument" xml:space="preserve">
+    <value>Skip</value>
+  </data>
+  <data name="StartTraining" xml:space="preserve">
+    <value>Start Training</value>
+  </data>
+  <data name="StartTrainingReview" xml:space="preserve">
+    <value>Start Training Review</value>
+  </data>
+  <data name="StartTrainingSetRound" xml:space="preserve">
+    <value>Start Next Training Set</value>
+  </data>
+  <data name="TrainingSetReview" xml:space="preserve">
+    <value>Training Set Review</value>
+  </data>
+  <data name="TrainingSetRoundReviewComplete" xml:space="preserve">
+    <value>Training Round Review Complete</value>
+  </data>
+  <data name="TrainingSetReviewComplete" xml:space="preserve">
+    <value>Training Set Review Complete</value>
+  </data>
+  <data name="ViewSet" xml:space="preserve">
+    <value>View Set</value>
+  </data>
+  <data name="Set" xml:space="preserve">
+    <value>Set</value>
+  </data>
+  <data name="ZoomIn" xml:space="preserve">
+    <value>Zoom In</value>
+  </data>
+  <data name="ZoomOut" xml:space="preserve">
+    <value>Zoom Out</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="ContinueTraining" xml:space="preserve">
+    <value>Continue Training</value>
+  </data>
+  <data name="ContinueTrainingText" xml:space="preserve">
+    <value>The Training round did not contain at least one designation for Relevant and Not Relevant. More documents will be added to the training round.</value>
+  </data>
+  <data name="AllDocumentsReview" xml:space="preserve">
+    <value>All Documents</value>
+  </data>
+  <data name="NextStepText" xml:space="preserve">
+    <value>What would you like to do next?</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+</root>

@@ -1,0 +1,107 @@
+﻿<div ng-if="ReviewSetController.reviewerConfiguration.docView">
+    <div ln-reviewer="ReviewSetController.reviewerConfiguration"></div>
+</div>
+
+<div ng-if="ReviewSetController.reviewerConfiguration.listView">
+    <div class="container-fluid doclist">
+        <div class="row bg-primary padded-5">
+            <div class="col-xs-3 col-sm-3">
+                <h4>{{ReviewSetController.docList.ProjectName}}</h4>
+            </div>
+            <div class="col-xs-6 col-sm-6">
+                <div class="col-xs-6 col-sm-6">
+                    <input type="text"
+                           class="form-control"
+                           ng-model="ReviewSetController.searchQuery"
+                           ng-keypress="ReviewSetController.searchOnKeyPress($event)"
+                           value="ReviewSetController.searchQuery" />
+                </div>
+                <div class="col-xs-6 col-sm-6">
+                    <input type="button"
+                           class="btn btn-default"
+                           value="{{ReviewSetController.localized.Search}}"
+                           ng-click="ReviewSetController.search()" />
+                    <input type="button"
+                           class="btn btn-default"
+                           value="{{ReviewSetController.localized.Clear}}"
+                           ng-click="ReviewSetController.clear()" />
+                </div>
+            </div>
+            <div id="analysisSetsDropList" class="col-xs-3 col-sm-3 center-block">
+                <select kendo-drop-down-list="lnDropdown"
+                        k-data-source="ReviewSetController.availableAnalysisSets"
+                        k-data-value-field="'BinderId'"
+                        k-data-text-field="'Name'"
+                        k-value-primitive="false"
+                        k-on-data-bound="ReviewSetController.bindDropDownList(kendoEvent)"
+                        k-on-change="ReviewSetController.changeAnalysisSet()"
+                        k-on-select="ReviewSetController.selectSet(kendoEvent)"></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12">
+                <h5 class="text-center">
+                    <a href="javascript:void(0)"
+                       id="projectDashboard"
+                       class="subtitle text-left pull-left"
+                       ng-click="ReviewSetController.goToDashboard()">
+                        << {{ReviewSetController.localized.ProjectDashboard}}
+                    </a>
+                    <a href="javascript:void(0)"
+                       class="subtitle text-left pull-left margin-left-9"
+                       ng-click="ReviewSetController.goToReview()">
+                        {{ReviewSetController.localized.ViewDocuments}} >>
+                    </a>
+                </h5>
+                <h3 class="text-center">
+                    {{ReviewSetController.docListTitle()}}
+                </h3>
+            </div>
+            <hr />
+        </div>
+
+        <br/>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12">
+                <div class="alert alert-success"
+                     ng-if="ReviewSetController.displayJobScheduledMessage">
+                    {{ReviewSetController.localized.ExportJobMessage}}
+                    <button type="button" class="close" ng-click="ReviewSetController.hideExportMessage()">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">{{ReviewSetController.localized.Close}}</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-xs-6 text-left">
+                <span id="docListTotalItems">{{ReviewSetController.localized.TotalItems}}:{{ReviewSetController.docList.Total}}</span>
+            </div>
+            <div class="col-xs-6">
+                <button class="btn btn-default pull-right" id="btnExport"
+                        ng-click="ReviewSetController.export()">{{ReviewSetController.localized.Export}}</button>
+                <button class="btn btn-primary pull-right"
+                        ng-click="ReviewSetController.showAutoCodeModal = true"
+                        style="display:none;">Auto Code Truth Set</button>
+                <button class="btn btn-primary pull-right"
+                        ng-click="ReviewSetController.codeTillLastDocument('')"
+                        style="display:none;">Auto Code All</button>
+                <button class="btn btn-primary pull-right"
+                        ng-click="ReviewSetController.codeTillLastDocument('Not_Relevant')"
+                        style="display:none;">Code All Not-Relevant</button>
+                <button class="btn btn-primary pull-right"
+                        ng-click="ReviewSetController.codeTillLastDocument('Relevant')"
+                        style="display:none;">Code All Relevant</button>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="grid" kendo-grid="lnGrid"
+                     k-options="ReviewSetController.gridData"></div>
+            </div>
+        </div>
+    </div>
+    <div ng-include="'/App/review/modals/AutoCodingView.html'"></div>
+</div>
