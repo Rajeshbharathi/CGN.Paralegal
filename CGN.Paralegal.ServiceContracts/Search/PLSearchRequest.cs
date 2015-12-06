@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CGN.Paralegal.ServiceContracts.Search
+namespace CGN.Paralegal.SearchContracts.Search
 {
 
     public class PLSearchRequest

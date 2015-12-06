@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d9c719d7f0d745bdbabd42ad14a28430" Name="Diagram1">
+        <EntityTypeShape EntityType="PLMasterModel.C__RefactorLog" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PLMasterModel.Answer" Width="1.5" PointX="13.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PLMasterModel.Area_of_Law" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PLMasterModel.Case_Area_of_law" Width="1.5" PointX="6" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PLMasterModel.Case_location" Width="1.5" PointX="9" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PLMasterModel.Case" Width="1.5" PointX="3.75" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PLMasterModel.Law_firm" Width="1.5" PointX="0.75" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PLMasterModel.Law_firm_para_legal" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PLMasterModel.Legal_information" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PLMasterModel.Location" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PLMasterModel.Para_legal" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PLMasterModel.Para_legal_cases" Width="1.5" PointX="6" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PLMasterModel.Para_Legal_Contact" Width="1.5" PointX="3" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PLMasterModel.Para_Legal_Law_Area" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PLMasterModel.Para_Legal_Location" Width="1.5" PointX="6" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PLMasterModel.Question" Width="1.5" PointX="11" PointY="7.25" IsExpanded="true" />
+        <AssociationConnector Association="PLMasterModel.FK_Answer_Legal_info" ManuallyRouted="false" />
+        <AssociationConnector Association="PLMasterModel.FK_Answer_Question" ManuallyRouted="false" />
+        <AssociationConnector Association="PLMasterModel.FK_Case_Area_of_law_location" ManuallyRouted="false" />
+        <AssociationConnector Association="PLMasterModel.FK_Para_Legal_Law_Area" ManuallyRouted="false" />
+        <AssociationConnector Association="PLMasterModel.FK_Case_Area_of_law" ManuallyRouted="false" />
+        <AssociationConnector Association="PLMasterModel.FK_Case_location" ManuallyRouted="false" />
+        <AssociationConnector Association="PLMasterModel.FK_Case_location_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="PLMasterModel.FK_Para_legal_cases" ManuallyRouted="false" />
+        <AssociationConnector Association="PLMasterModel.FK_Law_firm_para_legal" ManuallyRouted="false" />
+        <AssociationConnector Association="PLMasterModel.FK_Law_firm_para_legal_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="PLMasterModel.FK_Question_Legal_info" ManuallyRouted="false" />
+        <AssociationConnector Association="PLMasterModel.FK_Para_Legal_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="PLMasterModel.FK_Para_Legal" ManuallyRouted="false" />
+        <AssociationConnector Association="PLMasterModel.FK_Para_Legal_Contact" ManuallyRouted="false" />
+        <AssociationConnector Association="PLMasterModel.FK_Para_legal_details" ManuallyRouted="false" />
+        <AssociationConnector Association="PLMasterModel.FK_Para_Legal_ID" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="PLMasterModel.PLByAOP" Width="1.5" PointX="6.375" PointY="0.75" />
+        <EntityTypeShape EntityType="PLMasterModel.PLByCity" Width="1.5" PointX="8.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

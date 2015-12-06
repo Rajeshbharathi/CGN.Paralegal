@@ -119,6 +119,8 @@
     <Compile Include="..\Version\SharedAssemblyFileVersion.cs">
       <Link>Properties\SharedAssemblyFileVersion.cs</Link>
     </Compile>
+    <Compile Include="Mapper\AutoMapperHelper.cs" />
+    <Compile Include="Mapper\AutoMapperProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search\SearchBO.cs" />
   </ItemGroup>
@@ -126,6 +128,10 @@
     <ProjectReference Include="..\CGN.Paralegal.BusinessEntities\CGN.Paralegal.BusinessEntities.csproj">
       <Project>{871E0448-3406-4E6C-8A75-461EC243AF60}</Project>
       <Name>CGN.Paralegal.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CGN.Paralegal.DAL\CGN.Paralegal.DAL.csproj">
+      <Project>{3596c227-7a05-4cf1-a935-a474b136ed77}</Project>
+      <Name>CGN.Paralegal.DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\CGN.Paralegal.Infrastructure\CGN.Paralegal.Infrastructure.csproj">
       <Project>{CDF65C13-5AD0-4966-AD9E-108D1AD70D23}</Project>

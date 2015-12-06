@@ -12,6 +12,6 @@ namespace CGN.Paralegal.BusinessEntities.Search
         public string Name { get; set; }
         public string Snippet { get; set; }
         public string Rating { get; set; }
-
+        public string Experience { get; set; }
     }
 }

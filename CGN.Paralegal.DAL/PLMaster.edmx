@@ -1,0 +1,1198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PLMasterModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="__RefactorLog">
+          <Key>
+            <PropertyRef Name="OperationKey" />
+          </Key>
+          <Property Name="OperationKey" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Answer">
+          <Key>
+            <PropertyRef Name="Answer_id" />
+          </Key>
+          <Property Name="Answer_id" Type="int" Nullable="false" />
+          <Property Name="Answer" Type="varchar(max)" />
+          <Property Name="Question_id" Type="int" />
+          <Property Name="Legal_information_id" Type="int" />
+          <Property Name="Created_by" Type="varchar" MaxLength="50" />
+          <Property Name="Created_at" Type="datetime" />
+          <Property Name="Last_Updated_by" Type="varchar" MaxLength="50" />
+          <Property Name="Last_Updated_at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Area_of_Law">
+          <Key>
+            <PropertyRef Name="Law_id" />
+          </Key>
+          <Property Name="Law_id" Type="int" Nullable="false" />
+          <Property Name="Law_name" Type="varchar" MaxLength="50" />
+          <Property Name="Created by" Type="varchar" MaxLength="50" />
+          <Property Name="Created at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Case_Area_of_law">
+          <Key>
+            <PropertyRef Name="Case_area_of_law_id" />
+          </Key>
+          <Property Name="Case_area_of_law_id" Type="int" Nullable="false" />
+          <Property Name="case_id" Type="int" />
+          <Property Name="law_id" Type="int" />
+          <Property Name="Created_by" Type="varchar" MaxLength="50" />
+          <Property Name="Created_at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Case_location">
+          <Key>
+            <PropertyRef Name="case_location_id" />
+          </Key>
+          <Property Name="case_location_id" Type="int" Nullable="false" />
+          <Property Name="case_id" Type="int" />
+          <Property Name="location_id" Type="int" />
+          <Property Name="Created_by" Type="varchar" MaxLength="50" />
+          <Property Name="Created_at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Cases">
+          <Key>
+            <PropertyRef Name="Case_id" />
+          </Key>
+          <Property Name="Case_id" Type="int" Nullable="false" />
+          <Property Name="Case_description" Type="varchar" MaxLength="50" />
+          <Property Name="Created_by" Type="varchar" MaxLength="50" />
+          <Property Name="Created_at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Law_firm">
+          <Key>
+            <PropertyRef Name="Law_firm_id" />
+          </Key>
+          <Property Name="Law_firm_id" Type="int" Nullable="false" />
+          <Property Name="Type" Type="varchar" MaxLength="50" />
+          <Property Name="Created_by" Type="varchar" MaxLength="50" />
+          <Property Name="Created_at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Law_firm_para_legal">
+          <Key>
+            <PropertyRef Name="Law_firm_para_legal_id" />
+          </Key>
+          <Property Name="Law_firm_para_legal_id" Type="int" Nullable="false" />
+          <Property Name="Law_firm_id" Type="int" />
+          <Property Name="Para_legal_id" Type="int" />
+          <Property Name="Created_by" Type="varchar" MaxLength="50" />
+          <Property Name="Created_at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Legal_information">
+          <Key>
+            <PropertyRef Name="Legal_information_id" />
+          </Key>
+          <Property Name="Legal_information_id" Type="int" Nullable="false" />
+          <Property Name="Legal_information_name" Type="varchar" MaxLength="50" />
+          <Property Name="Blogs" Type="varchar(max)" />
+          <Property Name="Created_by" Type="varchar" MaxLength="50" />
+          <Property Name="Created_at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Location">
+          <Key>
+            <PropertyRef Name="Location_id" />
+          </Key>
+          <Property Name="Location_id" Type="int" Nullable="false" />
+          <Property Name="Location_name" Type="varchar" MaxLength="50" />
+          <Property Name="Created_by" Type="varchar" MaxLength="50" />
+          <Property Name="Created_at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Para_legal">
+          <Key>
+            <PropertyRef Name="Para_legal_id" />
+          </Key>
+          <Property Name="Para_legal_id" Type="int" Nullable="false" />
+          <Property Name="Para_legal_name" Type="varchar" MaxLength="50" />
+          <Property Name="Short desc" Type="varchar" MaxLength="50" />
+          <Property Name="Created_by" Type="varchar" MaxLength="50" />
+          <Property Name="Created_at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Para_legal_cases">
+          <Key>
+            <PropertyRef Name="Para_legal_case_id" />
+          </Key>
+          <Property Name="Para_legal_case_id" Type="int" Nullable="false" />
+          <Property Name="Para_legal_id" Type="int" />
+          <Property Name="case_id" Type="int" />
+          <Property Name="Created_by" Type="varchar" MaxLength="50" />
+          <Property Name="Created_at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Para_Legal_Contact">
+          <Key>
+            <PropertyRef Name="Para_legal_Contact_id" />
+          </Key>
+          <Property Name="Para_legal_Contact_id" Type="int" Nullable="false" />
+          <Property Name="Para_legal_id" Type="int" />
+          <Property Name="Email_id" Type="varchar" MaxLength="50" />
+          <Property Name="Phone" Type="int" />
+          <Property Name="Fax" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="varchar" MaxLength="50" />
+          <Property Name="Website" Type="varchar" MaxLength="50" />
+          <Property Name="Created_by" Type="varchar" MaxLength="50" />
+          <Property Name="Created_at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Para_Legal_Law_Area">
+          <Key>
+            <PropertyRef Name="Para_Legal_Law_Area_id" />
+          </Key>
+          <Property Name="Para_Legal_Law_Area_id" Type="int" Nullable="false" />
+          <Property Name="Para_legal_id" Type="int" />
+          <Property Name="Law_id" Type="int" />
+          <Property Name="Created_by" Type="varchar" MaxLength="50" />
+          <Property Name="Created_at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Para_Legal_Location">
+          <Key>
+            <PropertyRef Name="Para_Legal_Location_id" />
+          </Key>
+          <Property Name="Para_Legal_Location_id" Type="int" Nullable="false" />
+          <Property Name="Para_legal_id" Type="int" />
+          <Property Name="location_id" Type="int" />
+          <Property Name="Created_by" Type="varchar" MaxLength="50" />
+          <Property Name="Created_at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Question">
+          <Key>
+            <PropertyRef Name="Question_id" />
+          </Key>
+          <Property Name="Question_id" Type="int" Nullable="false" />
+          <Property Name="Question" Type="varchar" MaxLength="200" />
+          <Property Name="Legal_information_id" Type="int" />
+          <Property Name="Created_by" Type="varchar" MaxLength="50" />
+          <Property Name="Created_at" Type="datetime" />
+          <Property Name="Last_Updated_by" Type="varchar" MaxLength="50" />
+          <Property Name="Last_Updated_at" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'PLMaster.dbo.PLByAOP' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="PLByAOP">
+          <Key>
+            <PropertyRef Name="Para_legal_id" />
+          </Key>
+          <Property Name="Para_legal_id" Type="int" Nullable="false" />
+          <Property Name="Para_legal_name" Type="varchar" MaxLength="50" />
+          <Property Name="Short desc" Type="varchar" MaxLength="50" />
+          <Property Name="Law_name" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'PLMaster.dbo.PLByCity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="PLByCity">
+          <Key>
+            <PropertyRef Name="Para_legal_id" />
+          </Key>
+          <Property Name="Para_legal_id" Type="int" Nullable="false" />
+          <Property Name="Para_legal_name" Type="varchar" MaxLength="50" />
+          <Property Name="Short desc" Type="varchar" MaxLength="50" />
+          <Property Name="Location_name" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_Answer_Legal_info">
+          <End Role="Legal_information" Type="Self.Legal_information" Multiplicity="0..1" />
+          <End Role="Answer" Type="Self.Answer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Legal_information">
+              <PropertyRef Name="Legal_information_id" />
+            </Principal>
+            <Dependent Role="Answer">
+              <PropertyRef Name="Legal_information_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Answer_Question">
+          <End Role="Question" Type="Self.Question" Multiplicity="0..1" />
+          <End Role="Answer" Type="Self.Answer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Question">
+              <PropertyRef Name="Question_id" />
+            </Principal>
+            <Dependent Role="Answer">
+              <PropertyRef Name="Question_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Case_Area_of_law">
+          <End Role="Cases" Type="Self.Cases" Multiplicity="0..1" />
+          <End Role="Case_Area_of_law" Type="Self.Case_Area_of_law" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cases">
+              <PropertyRef Name="Case_id" />
+            </Principal>
+            <Dependent Role="Case_Area_of_law">
+              <PropertyRef Name="case_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Case_Area_of_law_location">
+          <End Role="Area_of_Law" Type="Self.Area_of_Law" Multiplicity="0..1" />
+          <End Role="Case_Area_of_law" Type="Self.Case_Area_of_law" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Area_of_Law">
+              <PropertyRef Name="Law_id" />
+            </Principal>
+            <Dependent Role="Case_Area_of_law">
+              <PropertyRef Name="law_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Case_location">
+          <End Role="Location" Type="Self.Location" Multiplicity="0..1" />
+          <End Role="Case_location" Type="Self.Case_location" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Location">
+              <PropertyRef Name="Location_id" />
+            </Principal>
+            <Dependent Role="Case_location">
+              <PropertyRef Name="location_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Case_location_ID">
+          <End Role="Cases" Type="Self.Cases" Multiplicity="0..1" />
+          <End Role="Case_location" Type="Self.Case_location" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cases">
+              <PropertyRef Name="Case_id" />
+            </Principal>
+            <Dependent Role="Case_location">
+              <PropertyRef Name="case_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Law_firm_para_legal">
+          <End Role="Law_firm" Type="Self.Law_firm" Multiplicity="0..1" />
+          <End Role="Law_firm_para_legal" Type="Self.Law_firm_para_legal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Law_firm">
+              <PropertyRef Name="Law_firm_id" />
+            </Principal>
+            <Dependent Role="Law_firm_para_legal">
+              <PropertyRef Name="Law_firm_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Law_firm_para_legal_ID">
+          <End Role="Para_legal" Type="Self.Para_legal" Multiplicity="0..1" />
+          <End Role="Law_firm_para_legal" Type="Self.Law_firm_para_legal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Para_legal">
+              <PropertyRef Name="Para_legal_id" />
+            </Principal>
+            <Dependent Role="Law_firm_para_legal">
+              <PropertyRef Name="Para_legal_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Para_Legal">
+          <End Role="Para_legal" Type="Self.Para_legal" Multiplicity="0..1" />
+          <End Role="Para_Legal_Law_Area" Type="Self.Para_Legal_Law_Area" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Para_legal">
+              <PropertyRef Name="Para_legal_id" />
+            </Principal>
+            <Dependent Role="Para_Legal_Law_Area">
+              <PropertyRef Name="Para_legal_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Para_legal_cases">
+          <End Role="Cases" Type="Self.Cases" Multiplicity="0..1" />
+          <End Role="Para_legal_cases" Type="Self.Para_legal_cases" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cases">
+              <PropertyRef Name="Case_id" />
+            </Principal>
+            <Dependent Role="Para_legal_cases">
+              <PropertyRef Name="case_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Para_Legal_Contact">
+          <End Role="Para_legal" Type="Self.Para_legal" Multiplicity="0..1" />
+          <End Role="Para_Legal_Contact" Type="Self.Para_Legal_Contact" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Para_legal">
+              <PropertyRef Name="Para_legal_id" />
+            </Principal>
+            <Dependent Role="Para_Legal_Contact">
+              <PropertyRef Name="Para_legal_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Para_legal_details">
+          <End Role="Para_legal" Type="Self.Para_legal" Multiplicity="0..1" />
+          <End Role="Para_legal_cases" Type="Self.Para_legal_cases" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Para_legal">
+              <PropertyRef Name="Para_legal_id" />
+            </Principal>
+            <Dependent Role="Para_legal_cases">
+              <PropertyRef Name="Para_legal_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Para_Legal_ID">
+          <End Role="Para_legal" Type="Self.Para_legal" Multiplicity="0..1" />
+          <End Role="Para_Legal_Location" Type="Self.Para_Legal_Location" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Para_legal">
+              <PropertyRef Name="Para_legal_id" />
+            </Principal>
+            <Dependent Role="Para_Legal_Location">
+              <PropertyRef Name="Para_legal_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Para_Legal_Law_Area">
+          <End Role="Area_of_Law" Type="Self.Area_of_Law" Multiplicity="0..1" />
+          <End Role="Para_Legal_Law_Area" Type="Self.Para_Legal_Law_Area" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Area_of_Law">
+              <PropertyRef Name="Law_id" />
+            </Principal>
+            <Dependent Role="Para_Legal_Law_Area">
+              <PropertyRef Name="Law_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Para_Legal_Location">
+          <End Role="Location" Type="Self.Location" Multiplicity="0..1" />
+          <End Role="Para_Legal_Location" Type="Self.Para_Legal_Location" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Location">
+              <PropertyRef Name="Location_id" />
+            </Principal>
+            <Dependent Role="Para_Legal_Location">
+              <PropertyRef Name="location_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Question_Legal_info">
+          <End Role="Legal_information" Type="Self.Legal_information" Multiplicity="0..1" />
+          <End Role="Question" Type="Self.Question" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Legal_information">
+              <PropertyRef Name="Legal_information_id" />
+            </Principal>
+            <Dependent Role="Question">
+              <PropertyRef Name="Legal_information_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PLMasterModelStoreContainer">
+          <EntitySet Name="__RefactorLog" EntityType="Self.__RefactorLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Answer" EntityType="Self.Answer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Area_of_Law" EntityType="Self.Area_of_Law" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Case_Area_of_law" EntityType="Self.Case_Area_of_law" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Case_location" EntityType="Self.Case_location" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cases" EntityType="Self.Cases" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Law_firm" EntityType="Self.Law_firm" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Law_firm_para_legal" EntityType="Self.Law_firm_para_legal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Legal_information" EntityType="Self.Legal_information" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Location" EntityType="Self.Location" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Para_legal" EntityType="Self.Para_legal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Para_legal_cases" EntityType="Self.Para_legal_cases" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Para_Legal_Contact" EntityType="Self.Para_Legal_Contact" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Para_Legal_Law_Area" EntityType="Self.Para_Legal_Law_Area" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Para_Legal_Location" EntityType="Self.Para_Legal_Location" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Question" EntityType="Self.Question" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PLByAOP" EntityType="Self.PLByAOP" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [PLByAOP].[Para_legal_id] AS [Para_legal_id], 
+    [PLByAOP].[Para_legal_name] AS [Para_legal_name], 
+    [PLByAOP].[Short desc] AS [Short desc], 
+    [PLByAOP].[Law_name] AS [Law_name]
+    FROM [dbo].[PLByAOP] AS [PLByAOP]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="PLByCity" EntityType="Self.PLByCity" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [PLByCity].[Para_legal_id] AS [Para_legal_id], 
+    [PLByCity].[Para_legal_name] AS [Para_legal_name], 
+    [PLByCity].[Short desc] AS [Short desc], 
+    [PLByCity].[Location_name] AS [Location_name]
+    FROM [dbo].[PLByCity] AS [PLByCity]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_Answer_Legal_info" Association="Self.FK_Answer_Legal_info">
+            <End Role="Legal_information" EntitySet="Legal_information" />
+            <End Role="Answer" EntitySet="Answer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Answer_Question" Association="Self.FK_Answer_Question">
+            <End Role="Question" EntitySet="Question" />
+            <End Role="Answer" EntitySet="Answer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Case_Area_of_law" Association="Self.FK_Case_Area_of_law">
+            <End Role="Cases" EntitySet="Cases" />
+            <End Role="Case_Area_of_law" EntitySet="Case_Area_of_law" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Case_Area_of_law_location" Association="Self.FK_Case_Area_of_law_location">
+            <End Role="Area_of_Law" EntitySet="Area_of_Law" />
+            <End Role="Case_Area_of_law" EntitySet="Case_Area_of_law" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Case_location" Association="Self.FK_Case_location">
+            <End Role="Location" EntitySet="Location" />
+            <End Role="Case_location" EntitySet="Case_location" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Case_location_ID" Association="Self.FK_Case_location_ID">
+            <End Role="Cases" EntitySet="Cases" />
+            <End Role="Case_location" EntitySet="Case_location" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Law_firm_para_legal" Association="Self.FK_Law_firm_para_legal">
+            <End Role="Law_firm" EntitySet="Law_firm" />
+            <End Role="Law_firm_para_legal" EntitySet="Law_firm_para_legal" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Law_firm_para_legal_ID" Association="Self.FK_Law_firm_para_legal_ID">
+            <End Role="Para_legal" EntitySet="Para_legal" />
+            <End Role="Law_firm_para_legal" EntitySet="Law_firm_para_legal" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Para_Legal" Association="Self.FK_Para_Legal">
+            <End Role="Para_legal" EntitySet="Para_legal" />
+            <End Role="Para_Legal_Law_Area" EntitySet="Para_Legal_Law_Area" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Para_legal_cases" Association="Self.FK_Para_legal_cases">
+            <End Role="Cases" EntitySet="Cases" />
+            <End Role="Para_legal_cases" EntitySet="Para_legal_cases" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Para_Legal_Contact" Association="Self.FK_Para_Legal_Contact">
+            <End Role="Para_legal" EntitySet="Para_legal" />
+            <End Role="Para_Legal_Contact" EntitySet="Para_Legal_Contact" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Para_legal_details" Association="Self.FK_Para_legal_details">
+            <End Role="Para_legal" EntitySet="Para_legal" />
+            <End Role="Para_legal_cases" EntitySet="Para_legal_cases" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Para_Legal_ID" Association="Self.FK_Para_Legal_ID">
+            <End Role="Para_legal" EntitySet="Para_legal" />
+            <End Role="Para_Legal_Location" EntitySet="Para_Legal_Location" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Para_Legal_Law_Area" Association="Self.FK_Para_Legal_Law_Area">
+            <End Role="Area_of_Law" EntitySet="Area_of_Law" />
+            <End Role="Para_Legal_Law_Area" EntitySet="Para_Legal_Law_Area" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Para_Legal_Location" Association="Self.FK_Para_Legal_Location">
+            <End Role="Location" EntitySet="Location" />
+            <End Role="Para_Legal_Location" EntitySet="Para_Legal_Location" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Question_Legal_info" Association="Self.FK_Question_Legal_info">
+            <End Role="Legal_information" EntitySet="Legal_information" />
+            <End Role="Question" EntitySet="Question" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PLMasterModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="C__RefactorLog">
+          <Key>
+            <PropertyRef Name="OperationKey" />
+          </Key>
+          <Property Name="OperationKey" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Answer">
+          <Key>
+            <PropertyRef Name="Answer_id" />
+          </Key>
+          <Property Name="Answer_id" Type="Int32" Nullable="false" />
+          <Property Name="Answer1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Question_id" Type="Int32" />
+          <Property Name="Legal_information_id" Type="Int32" />
+          <Property Name="Created_by" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_at" Type="DateTime" Precision="3" />
+          <Property Name="Last_Updated_by" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Last_Updated_at" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Legal_information" Relationship="Self.FK_Answer_Legal_info" FromRole="Answer" ToRole="Legal_information" />
+          <NavigationProperty Name="Question" Relationship="Self.FK_Answer_Question" FromRole="Answer" ToRole="Question" />
+        </EntityType>
+        <EntityType Name="Area_of_Law">
+          <Key>
+            <PropertyRef Name="Law_id" />
+          </Key>
+          <Property Name="Law_id" Type="Int32" Nullable="false" />
+          <Property Name="Law_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_by" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_at" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Case_Area_of_law" Relationship="Self.FK_Case_Area_of_law_location" FromRole="Area_of_Law" ToRole="Case_Area_of_law" />
+          <NavigationProperty Name="Para_Legal_Law_Area" Relationship="Self.FK_Para_Legal_Law_Area" FromRole="Area_of_Law" ToRole="Para_Legal_Law_Area" />
+        </EntityType>
+        <EntityType Name="Case_Area_of_law">
+          <Key>
+            <PropertyRef Name="Case_area_of_law_id" />
+          </Key>
+          <Property Name="Case_area_of_law_id" Type="Int32" Nullable="false" />
+          <Property Name="case_id" Type="Int32" />
+          <Property Name="law_id" Type="Int32" />
+          <Property Name="Created_by" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_at" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Area_of_Law" Relationship="Self.FK_Case_Area_of_law_location" FromRole="Case_Area_of_law" ToRole="Area_of_Law" />
+          <NavigationProperty Name="Case" Relationship="Self.FK_Case_Area_of_law" FromRole="Case_Area_of_law" ToRole="Cases" />
+        </EntityType>
+        <EntityType Name="Case_location">
+          <Key>
+            <PropertyRef Name="case_location_id" />
+          </Key>
+          <Property Name="case_location_id" Type="Int32" Nullable="false" />
+          <Property Name="case_id" Type="Int32" />
+          <Property Name="location_id" Type="Int32" />
+          <Property Name="Created_by" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_at" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Location" Relationship="Self.FK_Case_location" FromRole="Case_location" ToRole="Location" />
+          <NavigationProperty Name="Case" Relationship="Self.FK_Case_location_ID" FromRole="Case_location" ToRole="Cases" />
+        </EntityType>
+        <EntityType Name="Case">
+          <Key>
+            <PropertyRef Name="Case_id" />
+          </Key>
+          <Property Name="Case_id" Type="Int32" Nullable="false" />
+          <Property Name="Case_description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_by" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_at" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Case_Area_of_law" Relationship="Self.FK_Case_Area_of_law" FromRole="Cases" ToRole="Case_Area_of_law" />
+          <NavigationProperty Name="Case_location" Relationship="Self.FK_Case_location_ID" FromRole="Cases" ToRole="Case_location" />
+          <NavigationProperty Name="Para_legal_cases" Relationship="Self.FK_Para_legal_cases" FromRole="Cases" ToRole="Para_legal_cases" />
+        </EntityType>
+        <EntityType Name="Law_firm">
+          <Key>
+            <PropertyRef Name="Law_firm_id" />
+          </Key>
+          <Property Name="Law_firm_id" Type="Int32" Nullable="false" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_by" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_at" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Law_firm_para_legal" Relationship="Self.FK_Law_firm_para_legal" FromRole="Law_firm" ToRole="Law_firm_para_legal" />
+        </EntityType>
+        <EntityType Name="Law_firm_para_legal">
+          <Key>
+            <PropertyRef Name="Law_firm_para_legal_id" />
+          </Key>
+          <Property Name="Law_firm_para_legal_id" Type="Int32" Nullable="false" />
+          <Property Name="Law_firm_id" Type="Int32" />
+          <Property Name="Para_legal_id" Type="Int32" />
+          <Property Name="Created_by" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_at" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Law_firm" Relationship="Self.FK_Law_firm_para_legal" FromRole="Law_firm_para_legal" ToRole="Law_firm" />
+          <NavigationProperty Name="Para_legal" Relationship="Self.FK_Law_firm_para_legal_ID" FromRole="Law_firm_para_legal" ToRole="Para_legal" />
+        </EntityType>
+        <EntityType Name="Legal_information">
+          <Key>
+            <PropertyRef Name="Legal_information_id" />
+          </Key>
+          <Property Name="Legal_information_id" Type="Int32" Nullable="false" />
+          <Property Name="Legal_information_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Blogs" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Created_by" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_at" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Answers" Relationship="Self.FK_Answer_Legal_info" FromRole="Legal_information" ToRole="Answer" />
+          <NavigationProperty Name="Questions" Relationship="Self.FK_Question_Legal_info" FromRole="Legal_information" ToRole="Question" />
+        </EntityType>
+        <EntityType Name="Location">
+          <Key>
+            <PropertyRef Name="Location_id" />
+          </Key>
+          <Property Name="Location_id" Type="Int32" Nullable="false" />
+          <Property Name="Location_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_by" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_at" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Case_location" Relationship="Self.FK_Case_location" FromRole="Location" ToRole="Case_location" />
+          <NavigationProperty Name="Para_Legal_Location" Relationship="Self.FK_Para_Legal_Location" FromRole="Location" ToRole="Para_Legal_Location" />
+        </EntityType>
+        <EntityType Name="Para_legal">
+          <Key>
+            <PropertyRef Name="Para_legal_id" />
+          </Key>
+          <Property Name="Para_legal_id" Type="Int32" Nullable="false" />
+          <Property Name="Para_legal_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Short_desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_by" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_at" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Law_firm_para_legal" Relationship="Self.FK_Law_firm_para_legal_ID" FromRole="Para_legal" ToRole="Law_firm_para_legal" />
+          <NavigationProperty Name="Para_Legal_Law_Area" Relationship="Self.FK_Para_Legal" FromRole="Para_legal" ToRole="Para_Legal_Law_Area" />
+          <NavigationProperty Name="Para_Legal_Contact" Relationship="Self.FK_Para_Legal_Contact" FromRole="Para_legal" ToRole="Para_Legal_Contact" />
+          <NavigationProperty Name="Para_legal_cases" Relationship="Self.FK_Para_legal_details" FromRole="Para_legal" ToRole="Para_legal_cases" />
+          <NavigationProperty Name="Para_Legal_Location" Relationship="Self.FK_Para_Legal_ID" FromRole="Para_legal" ToRole="Para_Legal_Location" />
+        </EntityType>
+        <EntityType Name="Para_legal_cases">
+          <Key>
+            <PropertyRef Name="Para_legal_case_id" />
+          </Key>
+          <Property Name="Para_legal_case_id" Type="Int32" Nullable="false" />
+          <Property Name="Para_legal_id" Type="Int32" />
+          <Property Name="case_id" Type="Int32" />
+          <Property Name="Created_by" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_at" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Case" Relationship="Self.FK_Para_legal_cases" FromRole="Para_legal_cases" ToRole="Cases" />
+          <NavigationProperty Name="Para_legal" Relationship="Self.FK_Para_legal_details" FromRole="Para_legal_cases" ToRole="Para_legal" />
+        </EntityType>
+        <EntityType Name="Para_Legal_Contact">
+          <Key>
+            <PropertyRef Name="Para_legal_Contact_id" />
+          </Key>
+          <Property Name="Para_legal_Contact_id" Type="Int32" Nullable="false" />
+          <Property Name="Para_legal_id" Type="Int32" />
+          <Property Name="Email_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="Int32" />
+          <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Website" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_by" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_at" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Para_legal" Relationship="Self.FK_Para_Legal_Contact" FromRole="Para_Legal_Contact" ToRole="Para_legal" />
+        </EntityType>
+        <EntityType Name="Para_Legal_Law_Area">
+          <Key>
+            <PropertyRef Name="Para_Legal_Law_Area_id" />
+          </Key>
+          <Property Name="Para_Legal_Law_Area_id" Type="Int32" Nullable="false" />
+          <Property Name="Para_legal_id" Type="Int32" />
+          <Property Name="Law_id" Type="Int32" />
+          <Property Name="Created_by" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_at" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Area_of_Law" Relationship="Self.FK_Para_Legal_Law_Area" FromRole="Para_Legal_Law_Area" ToRole="Area_of_Law" />
+          <NavigationProperty Name="Para_legal" Relationship="Self.FK_Para_Legal" FromRole="Para_Legal_Law_Area" ToRole="Para_legal" />
+        </EntityType>
+        <EntityType Name="Para_Legal_Location">
+          <Key>
+            <PropertyRef Name="Para_Legal_Location_id" />
+          </Key>
+          <Property Name="Para_Legal_Location_id" Type="Int32" Nullable="false" />
+          <Property Name="Para_legal_id" Type="Int32" />
+          <Property Name="location_id" Type="Int32" />
+          <Property Name="Created_by" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_at" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Location" Relationship="Self.FK_Para_Legal_Location" FromRole="Para_Legal_Location" ToRole="Location" />
+          <NavigationProperty Name="Para_legal" Relationship="Self.FK_Para_Legal_ID" FromRole="Para_Legal_Location" ToRole="Para_legal" />
+        </EntityType>
+        <EntityType Name="Question">
+          <Key>
+            <PropertyRef Name="Question_id" />
+          </Key>
+          <Property Name="Question_id" Type="Int32" Nullable="false" />
+          <Property Name="Question1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Legal_information_id" Type="Int32" />
+          <Property Name="Created_by" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_at" Type="DateTime" Precision="3" />
+          <Property Name="Last_Updated_by" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Last_Updated_at" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Answers" Relationship="Self.FK_Answer_Question" FromRole="Question" ToRole="Answer" />
+          <NavigationProperty Name="Legal_information" Relationship="Self.FK_Question_Legal_info" FromRole="Question" ToRole="Legal_information" />
+        </EntityType>
+        <Association Name="FK_Answer_Legal_info">
+          <End Role="Legal_information" Type="Self.Legal_information" Multiplicity="0..1" />
+          <End Role="Answer" Type="Self.Answer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Legal_information">
+              <PropertyRef Name="Legal_information_id" />
+            </Principal>
+            <Dependent Role="Answer">
+              <PropertyRef Name="Legal_information_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Answer_Question">
+          <End Role="Question" Type="Self.Question" Multiplicity="0..1" />
+          <End Role="Answer" Type="Self.Answer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Question">
+              <PropertyRef Name="Question_id" />
+            </Principal>
+            <Dependent Role="Answer">
+              <PropertyRef Name="Question_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Case_Area_of_law_location">
+          <End Role="Area_of_Law" Type="Self.Area_of_Law" Multiplicity="0..1" />
+          <End Role="Case_Area_of_law" Type="Self.Case_Area_of_law" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Area_of_Law">
+              <PropertyRef Name="Law_id" />
+            </Principal>
+            <Dependent Role="Case_Area_of_law">
+              <PropertyRef Name="law_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Para_Legal_Law_Area">
+          <End Role="Area_of_Law" Type="Self.Area_of_Law" Multiplicity="0..1" />
+          <End Role="Para_Legal_Law_Area" Type="Self.Para_Legal_Law_Area" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Area_of_Law">
+              <PropertyRef Name="Law_id" />
+            </Principal>
+            <Dependent Role="Para_Legal_Law_Area">
+              <PropertyRef Name="Law_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Case_Area_of_law">
+          <End Role="Cases" Type="Self.Case" Multiplicity="0..1" />
+          <End Role="Case_Area_of_law" Type="Self.Case_Area_of_law" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cases">
+              <PropertyRef Name="Case_id" />
+            </Principal>
+            <Dependent Role="Case_Area_of_law">
+              <PropertyRef Name="case_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Case_location">
+          <End Role="Location" Type="Self.Location" Multiplicity="0..1" />
+          <End Role="Case_location" Type="Self.Case_location" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Location">
+              <PropertyRef Name="Location_id" />
+            </Principal>
+            <Dependent Role="Case_location">
+              <PropertyRef Name="location_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Case_location_ID">
+          <End Role="Cases" Type="Self.Case" Multiplicity="0..1" />
+          <End Role="Case_location" Type="Self.Case_location" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cases">
+              <PropertyRef Name="Case_id" />
+            </Principal>
+            <Dependent Role="Case_location">
+              <PropertyRef Name="case_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Para_legal_cases">
+          <End Role="Cases" Type="Self.Case" Multiplicity="0..1" />
+          <End Role="Para_legal_cases" Type="Self.Para_legal_cases" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cases">
+              <PropertyRef Name="Case_id" />
+            </Principal>
+            <Dependent Role="Para_legal_cases">
+              <PropertyRef Name="case_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Law_firm_para_legal">
+          <End Role="Law_firm" Type="Self.Law_firm" Multiplicity="0..1" />
+          <End Role="Law_firm_para_legal" Type="Self.Law_firm_para_legal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Law_firm">
+              <PropertyRef Name="Law_firm_id" />
+            </Principal>
+            <Dependent Role="Law_firm_para_legal">
+              <PropertyRef Name="Law_firm_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Law_firm_para_legal_ID">
+          <End Role="Para_legal" Type="Self.Para_legal" Multiplicity="0..1" />
+          <End Role="Law_firm_para_legal" Type="Self.Law_firm_para_legal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Para_legal">
+              <PropertyRef Name="Para_legal_id" />
+            </Principal>
+            <Dependent Role="Law_firm_para_legal">
+              <PropertyRef Name="Para_legal_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Question_Legal_info">
+          <End Role="Legal_information" Type="Self.Legal_information" Multiplicity="0..1" />
+          <End Role="Question" Type="Self.Question" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Legal_information">
+              <PropertyRef Name="Legal_information_id" />
+            </Principal>
+            <Dependent Role="Question">
+              <PropertyRef Name="Legal_information_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Para_Legal_Location">
+          <End Role="Location" Type="Self.Location" Multiplicity="0..1" />
+          <End Role="Para_Legal_Location" Type="Self.Para_Legal_Location" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Location">
+              <PropertyRef Name="Location_id" />
+            </Principal>
+            <Dependent Role="Para_Legal_Location">
+              <PropertyRef Name="location_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Para_Legal">
+          <End Role="Para_legal" Type="Self.Para_legal" Multiplicity="0..1" />
+          <End Role="Para_Legal_Law_Area" Type="Self.Para_Legal_Law_Area" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Para_legal">
+              <PropertyRef Name="Para_legal_id" />
+            </Principal>
+            <Dependent Role="Para_Legal_Law_Area">
+              <PropertyRef Name="Para_legal_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Para_Legal_Contact">
+          <End Role="Para_legal" Type="Self.Para_legal" Multiplicity="0..1" />
+          <End Role="Para_Legal_Contact" Type="Self.Para_Legal_Contact" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Para_legal">
+              <PropertyRef Name="Para_legal_id" />
+            </Principal>
+            <Dependent Role="Para_Legal_Contact">
+              <PropertyRef Name="Para_legal_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Para_legal_details">
+          <End Role="Para_legal" Type="Self.Para_legal" Multiplicity="0..1" />
+          <End Role="Para_legal_cases" Type="Self.Para_legal_cases" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Para_legal">
+              <PropertyRef Name="Para_legal_id" />
+            </Principal>
+            <Dependent Role="Para_legal_cases">
+              <PropertyRef Name="Para_legal_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Para_Legal_ID">
+          <End Role="Para_legal" Type="Self.Para_legal" Multiplicity="0..1" />
+          <End Role="Para_Legal_Location" Type="Self.Para_Legal_Location" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Para_legal">
+              <PropertyRef Name="Para_legal_id" />
+            </Principal>
+            <Dependent Role="Para_Legal_Location">
+              <PropertyRef Name="Para_legal_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PLMasterEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C__RefactorLog" EntityType="Self.C__RefactorLog" />
+          <EntitySet Name="Answers" EntityType="Self.Answer" />
+          <EntitySet Name="Area_of_Law" EntityType="Self.Area_of_Law" />
+          <EntitySet Name="Case_Area_of_law" EntityType="Self.Case_Area_of_law" />
+          <EntitySet Name="Case_location" EntityType="Self.Case_location" />
+          <EntitySet Name="Cases" EntityType="Self.Case" />
+          <EntitySet Name="Law_firm" EntityType="Self.Law_firm" />
+          <EntitySet Name="Law_firm_para_legal" EntityType="Self.Law_firm_para_legal" />
+          <EntitySet Name="Legal_information" EntityType="Self.Legal_information" />
+          <EntitySet Name="Locations" EntityType="Self.Location" />
+          <EntitySet Name="Para_legal" EntityType="Self.Para_legal" />
+          <EntitySet Name="Para_legal_cases" EntityType="Self.Para_legal_cases" />
+          <EntitySet Name="Para_Legal_Contact" EntityType="Self.Para_Legal_Contact" />
+          <EntitySet Name="Para_Legal_Law_Area" EntityType="Self.Para_Legal_Law_Area" />
+          <EntitySet Name="Para_Legal_Location" EntityType="Self.Para_Legal_Location" />
+          <EntitySet Name="Questions" EntityType="Self.Question" />
+          <AssociationSet Name="FK_Answer_Legal_info" Association="Self.FK_Answer_Legal_info">
+            <End Role="Legal_information" EntitySet="Legal_information" />
+            <End Role="Answer" EntitySet="Answers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Answer_Question" Association="Self.FK_Answer_Question">
+            <End Role="Question" EntitySet="Questions" />
+            <End Role="Answer" EntitySet="Answers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Case_Area_of_law_location" Association="Self.FK_Case_Area_of_law_location">
+            <End Role="Area_of_Law" EntitySet="Area_of_Law" />
+            <End Role="Case_Area_of_law" EntitySet="Case_Area_of_law" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Para_Legal_Law_Area" Association="Self.FK_Para_Legal_Law_Area">
+            <End Role="Area_of_Law" EntitySet="Area_of_Law" />
+            <End Role="Para_Legal_Law_Area" EntitySet="Para_Legal_Law_Area" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Case_Area_of_law" Association="Self.FK_Case_Area_of_law">
+            <End Role="Cases" EntitySet="Cases" />
+            <End Role="Case_Area_of_law" EntitySet="Case_Area_of_law" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Case_location" Association="Self.FK_Case_location">
+            <End Role="Location" EntitySet="Locations" />
+            <End Role="Case_location" EntitySet="Case_location" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Case_location_ID" Association="Self.FK_Case_location_ID">
+            <End Role="Cases" EntitySet="Cases" />
+            <End Role="Case_location" EntitySet="Case_location" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Para_legal_cases" Association="Self.FK_Para_legal_cases">
+            <End Role="Cases" EntitySet="Cases" />
+            <End Role="Para_legal_cases" EntitySet="Para_legal_cases" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Law_firm_para_legal" Association="Self.FK_Law_firm_para_legal">
+            <End Role="Law_firm" EntitySet="Law_firm" />
+            <End Role="Law_firm_para_legal" EntitySet="Law_firm_para_legal" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Law_firm_para_legal_ID" Association="Self.FK_Law_firm_para_legal_ID">
+            <End Role="Para_legal" EntitySet="Para_legal" />
+            <End Role="Law_firm_para_legal" EntitySet="Law_firm_para_legal" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Question_Legal_info" Association="Self.FK_Question_Legal_info">
+            <End Role="Legal_information" EntitySet="Legal_information" />
+            <End Role="Question" EntitySet="Questions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Para_Legal_Location" Association="Self.FK_Para_Legal_Location">
+            <End Role="Location" EntitySet="Locations" />
+            <End Role="Para_Legal_Location" EntitySet="Para_Legal_Location" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Para_Legal" Association="Self.FK_Para_Legal">
+            <End Role="Para_legal" EntitySet="Para_legal" />
+            <End Role="Para_Legal_Law_Area" EntitySet="Para_Legal_Law_Area" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Para_Legal_Contact" Association="Self.FK_Para_Legal_Contact">
+            <End Role="Para_legal" EntitySet="Para_legal" />
+            <End Role="Para_Legal_Contact" EntitySet="Para_Legal_Contact" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Para_legal_details" Association="Self.FK_Para_legal_details">
+            <End Role="Para_legal" EntitySet="Para_legal" />
+            <End Role="Para_legal_cases" EntitySet="Para_legal_cases" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Para_Legal_ID" Association="Self.FK_Para_Legal_ID">
+            <End Role="Para_legal" EntitySet="Para_legal" />
+            <End Role="Para_Legal_Location" EntitySet="Para_Legal_Location" />
+          </AssociationSet>
+          <EntitySet Name="PLByAOPs" EntityType="PLMasterModel.PLByAOP" />
+          <EntitySet Name="PLByCities" EntityType="PLMasterModel.PLByCity" />
+        </EntityContainer>
+        <EntityType Name="PLByAOP">
+          <Key>
+            <PropertyRef Name="Para_legal_id" />
+          </Key>
+          <Property Name="Para_legal_id" Type="Int32" Nullable="false" />
+          <Property Name="Para_legal_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Short_desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Law_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="PLByCity">
+          <Key>
+            <PropertyRef Name="Para_legal_id" />
+          </Key>
+          <Property Name="Para_legal_id" Type="Int32" Nullable="false" />
+          <Property Name="Para_legal_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Short_desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Location_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PLMasterModelStoreContainer" CdmEntityContainer="PLMasterEntities">
+          <EntitySetMapping Name="C__RefactorLog">
+            <EntityTypeMapping TypeName="PLMasterModel.C__RefactorLog">
+              <MappingFragment StoreEntitySet="__RefactorLog">
+                <ScalarProperty Name="OperationKey" ColumnName="OperationKey" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Answers">
+            <EntityTypeMapping TypeName="PLMasterModel.Answer">
+              <MappingFragment StoreEntitySet="Answer">
+                <ScalarProperty Name="Answer_id" ColumnName="Answer_id" />
+                <ScalarProperty Name="Answer1" ColumnName="Answer" />
+                <ScalarProperty Name="Question_id" ColumnName="Question_id" />
+                <ScalarProperty Name="Legal_information_id" ColumnName="Legal_information_id" />
+                <ScalarProperty Name="Created_by" ColumnName="Created_by" />
+                <ScalarProperty Name="Created_at" ColumnName="Created_at" />
+                <ScalarProperty Name="Last_Updated_by" ColumnName="Last_Updated_by" />
+                <ScalarProperty Name="Last_Updated_at" ColumnName="Last_Updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Area_of_Law">
+            <EntityTypeMapping TypeName="PLMasterModel.Area_of_Law">
+              <MappingFragment StoreEntitySet="Area_of_Law">
+                <ScalarProperty Name="Law_id" ColumnName="Law_id" />
+                <ScalarProperty Name="Law_name" ColumnName="Law_name" />
+                <ScalarProperty Name="Created_by" ColumnName="Created by" />
+                <ScalarProperty Name="Created_at" ColumnName="Created at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Case_Area_of_law">
+            <EntityTypeMapping TypeName="PLMasterModel.Case_Area_of_law">
+              <MappingFragment StoreEntitySet="Case_Area_of_law">
+                <ScalarProperty Name="Case_area_of_law_id" ColumnName="Case_area_of_law_id" />
+                <ScalarProperty Name="case_id" ColumnName="case_id" />
+                <ScalarProperty Name="law_id" ColumnName="law_id" />
+                <ScalarProperty Name="Created_by" ColumnName="Created_by" />
+                <ScalarProperty Name="Created_at" ColumnName="Created_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Case_location">
+            <EntityTypeMapping TypeName="PLMasterModel.Case_location">
+              <MappingFragment StoreEntitySet="Case_location">
+                <ScalarProperty Name="case_location_id" ColumnName="case_location_id" />
+                <ScalarProperty Name="case_id" ColumnName="case_id" />
+                <ScalarProperty Name="location_id" ColumnName="location_id" />
+                <ScalarProperty Name="Created_by" ColumnName="Created_by" />
+                <ScalarProperty Name="Created_at" ColumnName="Created_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cases">
+            <EntityTypeMapping TypeName="PLMasterModel.Case">
+              <MappingFragment StoreEntitySet="Cases">
+                <ScalarProperty Name="Case_id" ColumnName="Case_id" />
+                <ScalarProperty Name="Case_description" ColumnName="Case_description" />
+                <ScalarProperty Name="Created_by" ColumnName="Created_by" />
+                <ScalarProperty Name="Created_at" ColumnName="Created_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Law_firm">
+            <EntityTypeMapping TypeName="PLMasterModel.Law_firm">
+              <MappingFragment StoreEntitySet="Law_firm">
+                <ScalarProperty Name="Law_firm_id" ColumnName="Law_firm_id" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Created_by" ColumnName="Created_by" />
+                <ScalarProperty Name="Created_at" ColumnName="Created_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Law_firm_para_legal">
+            <EntityTypeMapping TypeName="PLMasterModel.Law_firm_para_legal">
+              <MappingFragment StoreEntitySet="Law_firm_para_legal">
+                <ScalarProperty Name="Law_firm_para_legal_id" ColumnName="Law_firm_para_legal_id" />
+                <ScalarProperty Name="Law_firm_id" ColumnName="Law_firm_id" />
+                <ScalarProperty Name="Para_legal_id" ColumnName="Para_legal_id" />
+                <ScalarProperty Name="Created_by" ColumnName="Created_by" />
+                <ScalarProperty Name="Created_at" ColumnName="Created_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Legal_information">
+            <EntityTypeMapping TypeName="PLMasterModel.Legal_information">
+              <MappingFragment StoreEntitySet="Legal_information">
+                <ScalarProperty Name="Legal_information_id" ColumnName="Legal_information_id" />
+                <ScalarProperty Name="Legal_information_name" ColumnName="Legal_information_name" />
+                <ScalarProperty Name="Blogs" ColumnName="Blogs" />
+                <ScalarProperty Name="Created_by" ColumnName="Created_by" />
+                <ScalarProperty Name="Created_at" ColumnName="Created_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Locations">
+            <EntityTypeMapping TypeName="PLMasterModel.Location">
+              <MappingFragment StoreEntitySet="Location">
+                <ScalarProperty Name="Location_id" ColumnName="Location_id" />
+                <ScalarProperty Name="Location_name" ColumnName="Location_name" />
+                <ScalarProperty Name="Created_by" ColumnName="Created_by" />
+                <ScalarProperty Name="Created_at" ColumnName="Created_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Para_legal">
+            <EntityTypeMapping TypeName="PLMasterModel.Para_legal">
+              <MappingFragment StoreEntitySet="Para_legal">
+                <ScalarProperty Name="Para_legal_id" ColumnName="Para_legal_id" />
+                <ScalarProperty Name="Para_legal_name" ColumnName="Para_legal_name" />
+                <ScalarProperty Name="Short_desc" ColumnName="Short desc" />
+                <ScalarProperty Name="Created_by" ColumnName="Created_by" />
+                <ScalarProperty Name="Created_at" ColumnName="Created_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Para_legal_cases">
+            <EntityTypeMapping TypeName="PLMasterModel.Para_legal_cases">
+              <MappingFragment StoreEntitySet="Para_legal_cases">
+                <ScalarProperty Name="Para_legal_case_id" ColumnName="Para_legal_case_id" />
+                <ScalarProperty Name="Para_legal_id" ColumnName="Para_legal_id" />
+                <ScalarProperty Name="case_id" ColumnName="case_id" />
+                <ScalarProperty Name="Created_by" ColumnName="Created_by" />
+                <ScalarProperty Name="Created_at" ColumnName="Created_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Para_Legal_Contact">
+            <EntityTypeMapping TypeName="PLMasterModel.Para_Legal_Contact">
+              <MappingFragment StoreEntitySet="Para_Legal_Contact">
+                <ScalarProperty Name="Para_legal_Contact_id" ColumnName="Para_legal_Contact_id" />
+                <ScalarProperty Name="Para_legal_id" ColumnName="Para_legal_id" />
+                <ScalarProperty Name="Email_id" ColumnName="Email_id" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="Created_by" ColumnName="Created_by" />
+                <ScalarProperty Name="Created_at" ColumnName="Created_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Para_Legal_Law_Area">
+            <EntityTypeMapping TypeName="PLMasterModel.Para_Legal_Law_Area">
+              <MappingFragment StoreEntitySet="Para_Legal_Law_Area">
+                <ScalarProperty Name="Para_Legal_Law_Area_id" ColumnName="Para_Legal_Law_Area_id" />
+                <ScalarProperty Name="Para_legal_id" ColumnName="Para_legal_id" />
+                <ScalarProperty Name="Law_id" ColumnName="Law_id" />
+                <ScalarProperty Name="Created_by" ColumnName="Created_by" />
+                <ScalarProperty Name="Created_at" ColumnName="Created_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Para_Legal_Location">
+            <EntityTypeMapping TypeName="PLMasterModel.Para_Legal_Location">
+              <MappingFragment StoreEntitySet="Para_Legal_Location">
+                <ScalarProperty Name="Para_Legal_Location_id" ColumnName="Para_Legal_Location_id" />
+                <ScalarProperty Name="Para_legal_id" ColumnName="Para_legal_id" />
+                <ScalarProperty Name="location_id" ColumnName="location_id" />
+                <ScalarProperty Name="Created_by" ColumnName="Created_by" />
+                <ScalarProperty Name="Created_at" ColumnName="Created_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Questions">
+            <EntityTypeMapping TypeName="PLMasterModel.Question">
+              <MappingFragment StoreEntitySet="Question">
+                <ScalarProperty Name="Question_id" ColumnName="Question_id" />
+                <ScalarProperty Name="Question1" ColumnName="Question" />
+                <ScalarProperty Name="Legal_information_id" ColumnName="Legal_information_id" />
+                <ScalarProperty Name="Created_by" ColumnName="Created_by" />
+                <ScalarProperty Name="Created_at" ColumnName="Created_at" />
+                <ScalarProperty Name="Last_Updated_by" ColumnName="Last_Updated_by" />
+                <ScalarProperty Name="Last_Updated_at" ColumnName="Last_Updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PLByAOPs">
+            <EntityTypeMapping TypeName="PLMasterModel.PLByAOP">
+              <MappingFragment StoreEntitySet="PLByAOP">
+                <ScalarProperty Name="Law_name" ColumnName="Law_name" />
+                <ScalarProperty Name="Short_desc" ColumnName="Short desc" />
+                <ScalarProperty Name="Para_legal_name" ColumnName="Para_legal_name" />
+                <ScalarProperty Name="Para_legal_id" ColumnName="Para_legal_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PLByCities">
+            <EntityTypeMapping TypeName="PLMasterModel.PLByCity">
+              <MappingFragment StoreEntitySet="PLByCity">
+                <ScalarProperty Name="Location_name" ColumnName="Location_name" />
+                <ScalarProperty Name="Short_desc" ColumnName="Short desc" />
+                <ScalarProperty Name="Para_legal_name" ColumnName="Para_legal_name" />
+                <ScalarProperty Name="Para_legal_id" ColumnName="Para_legal_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

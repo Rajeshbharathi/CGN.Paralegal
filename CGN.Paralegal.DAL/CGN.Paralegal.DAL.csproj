@@ -29,9 +29,34 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Properties\AssemblyNameKey.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Elasticsearch.Net">
+      <HintPath>..\packages\Elasticsearch.Net.1.7.1\lib\net45\Elasticsearch.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Nest">
+      <HintPath>..\packages\NEST.1.7.1\lib\net45\Nest.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -39,7 +64,103 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Answer.cs">
+      <DependentUpon>PLMaster.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Area_of_Law.cs">
+      <DependentUpon>PLMaster.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Case.cs">
+      <DependentUpon>PLMaster.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Case_Area_of_law.cs">
+      <DependentUpon>PLMaster.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Case_location.cs">
+      <DependentUpon>PLMaster.tt</DependentUpon>
+    </Compile>
+    <Compile Include="C__RefactorLog.cs">
+      <DependentUpon>PLMaster.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Law_firm.cs">
+      <DependentUpon>PLMaster.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Law_firm_para_legal.cs">
+      <DependentUpon>PLMaster.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Legal_information.cs">
+      <DependentUpon>PLMaster.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Location.cs">
+      <DependentUpon>PLMaster.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Para_legal.cs">
+      <DependentUpon>PLMaster.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Para_legal_cases.cs">
+      <DependentUpon>PLMaster.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Para_Legal_Contact.cs">
+      <DependentUpon>PLMaster.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Para_Legal_Law_Area.cs">
+      <DependentUpon>PLMaster.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Para_Legal_Location.cs">
+      <DependentUpon>PLMaster.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PLByAOP.cs">
+      <DependentUpon>PLMaster.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PLByCity.cs">
+      <DependentUpon>PLMaster.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PLMaster.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLMaster.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PLMaster.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLMaster.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PLMaster.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLMaster.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Question.cs">
+      <DependentUpon>PLMaster.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="PLMaster.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PLMaster.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <None Include="PLMaster.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PLMaster.edmx</DependentUpon>
+      <LastGenOutput>PLMaster.Context.cs</LastGenOutput>
+    </None>
+    <None Include="PLMaster.edmx.diagram">
+      <DependentUpon>PLMaster.edmx</DependentUpon>
+    </None>
+    <None Include="PLMaster.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PLMaster.edmx</DependentUpon>
+      <LastGenOutput>PLMaster.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\AssemblyNameKey.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -59,7 +59,7 @@ namespace SocialMediaIntegration
                 appId: "523635924470241",
                 appSecret: "ef29066fd82cb20e746b52c00c7e34a7");
 
-            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions());
+            app.UseGoogleAuthentication(new Microsoft.Owin.Security.Google.GoogleOAuth2AuthenticationOptions() {   ClientId = "122905730574.apps.googleusercontent.com", ClientSecret = "AjLf5P2WiGXIQrKqeTBRifAr" });
         }
     }
 }
