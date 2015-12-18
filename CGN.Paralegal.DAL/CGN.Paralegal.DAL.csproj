@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CGN.Paralegal.DAL</RootNamespace>
     <AssemblyName>CGN.Paralegal.DAL</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,6 +46,7 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Nest">
       <HintPath>..\packages\NEST.1.7.1\lib\net45\Nest.dll</HintPath>
     </Reference>
@@ -82,6 +84,8 @@
     <Compile Include="C__RefactorLog.cs">
       <DependentUpon>PLMaster.tt</DependentUpon>
     </Compile>
+    <Compile Include="ESConnectionParam.cs" />
+    <Compile Include="ESConnectionSetting.cs" />
     <Compile Include="Law_firm.cs">
       <DependentUpon>PLMaster.tt</DependentUpon>
     </Compile>
@@ -134,6 +138,7 @@
     <Compile Include="Question.cs">
       <DependentUpon>PLMaster.tt</DependentUpon>
     </Compile>
+    <Compile Include="SearchAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="PLMaster.edmx">
@@ -161,6 +166,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CGN.Paralegal.BusinessEntities\CGN.Paralegal.BusinessEntities.csproj">
+      <Project>{871e0448-3406-4e6c-8a75-461ec243af60}</Project>
+      <Name>CGN.Paralegal.BusinessEntities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

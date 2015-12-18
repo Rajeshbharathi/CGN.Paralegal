@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMediaIntegration", "S
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "CGN.Paralegal.DB", "CGN.Paralegal.DB\CGN.Paralegal.DB.sqlproj", "{37C718BB-5A72-4621-8DFA-AADD291C1380}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CGN.Paralegal.ElasticSearchTestHarness", "ElasticSearchTestHarness\CGN.Paralegal.ElasticSearchTestHarness.csproj", "{C8E0C7C0-A4FB-400B-AA9A-472D1C6B35E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -149,6 +151,14 @@ Global
 		{37C718BB-5A72-4621-8DFA-AADD291C1380}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{37C718BB-5A72-4621-8DFA-AADD291C1380}.Release|x64.ActiveCfg = Release|Any CPU
 		{37C718BB-5A72-4621-8DFA-AADD291C1380}.Release|x86.ActiveCfg = Release|Any CPU
+		{C8E0C7C0-A4FB-400B-AA9A-472D1C6B35E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8E0C7C0-A4FB-400B-AA9A-472D1C6B35E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8E0C7C0-A4FB-400B-AA9A-472D1C6B35E7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C8E0C7C0-A4FB-400B-AA9A-472D1C6B35E7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C8E0C7C0-A4FB-400B-AA9A-472D1C6B35E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8E0C7C0-A4FB-400B-AA9A-472D1C6B35E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8E0C7C0-A4FB-400B-AA9A-472D1C6B35E7}.Release|x64.ActiveCfg = Release|Any CPU
+		{C8E0C7C0-A4FB-400B-AA9A-472D1C6B35E7}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

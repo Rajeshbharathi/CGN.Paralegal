@@ -484,6 +484,7 @@
     <Compile Include="Log\Instrumentation\InstrumentationOperations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RestClient\AnalyticsRestClient.cs" />
+    <Compile Include="RestClient\PLHomeRestClient.cs" />
     <Compile Include="RestClient\AppStateRestClient.cs" />
     <Compile Include="RestClient\HttpClientHelper.cs" />
     <Compile Include="Utils\ExportHelper.cs" />
