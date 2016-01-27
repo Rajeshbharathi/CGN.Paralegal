@@ -2,11 +2,14 @@
     "use strict";
 
     var DashboardController = function (DashboardService, AppStateService, WorkflowStateService, AnalysisSetService, Utils, Constants, $interval, $rootScope, $scope) {
-        var vm = this,
-            MODULES = Constants.getModuleLabels(),
+       var vm = this,
+            
+           /* MODULES = Constants.getModuleLabels(),
             STATES = Constants.getStateLabels(),
             ACTIONS = Constants.getActionLabels(),
-            STATUS = Constants.getStatusLabels(),
+            STATUS = Constants.getStatusLabels(),*/
+
+
 
             getDashboardDetails = function(config) {
                 config = config || {};
@@ -42,6 +45,22 @@
                     getDashboardDetails(config);
                     showPredictControlset();
                 });
+            },
+
+            getTopTenAOP = function () {
+                    DashboardService.getTopTenAOP().then(function (data) {
+                    return vm.topTenAOP = data;
+                })
+            },
+            getTopTenCity = function () {
+                DashboardService.getTopTenCity().then(function (data) {
+                    return vm.topTenCity = data;
+                })
+            },
+            getTopTenParaLegal = function () {
+                DashboardService.getTopTenParaLegal().then(function (data) {
+                    return vm.topTenParaLegal = data;
+                })
             },
             showPredictControlset = function() {
                 AnalysisSetService.validateCategorizeControlSetJob().then(function(response) {
@@ -97,9 +116,33 @@
             },
 
             init = function () {
-                getWorkflowStates();
-                initSignalR();
+                //getWorkflowStates();
+                getTopTenAOP();
+                getTopTenCity();
+                getTopTenParaLegal();
+                //initSignalR();
             };
+       vm.goToSearchResult = function (search_term) {
+           var searchQuery = search_term
+           if (!angular.isUndefined(searchQuery)) {
+               var PCUrl = "/app/analytics/approot#/search/" + searchQuery;
+               var EVUrl = "/app/adminapp.aspx?mod=analytics&view=dashboard";
+               Utils.loadPage(EVUrl, PCUrl);
+           }
+           else {
+               window.alert("Please enter the search query")
+           }
+
+       };
+
+       vm.goToProfile = function (paralegalid) {
+           var paraLegal = paralegalid
+           if (!angular.isUndefined(paraLegal)) {
+               var PCUrl = "/app/analytics/approot#/paralegal/" + paraLegal;
+               var EVUrl = "/app/adminapp.aspx?mod=analytics&view=dashboard";
+               Utils.loadPage(EVUrl, PCUrl);
+           }
+       };
 
         vm.activeTab = "controlset";
         vm.tabClick = function (name) {
@@ -118,11 +161,13 @@
             enableTabs();
             return false;
         };
+
+        
         vm.isActiveTab = function (name) {
             return vm.activeTab == name;
         };
 
-        vm.localized = Constants.getProjectResources();
+       // vm.localized = Constants.getProjectResources();
         vm.isLoading = false;
         vm.popupDeleteProject = function () {
             vm.projectName = "";
@@ -189,7 +234,6 @@
     };
 
     angular.module("app").controller("DashboardController", DashboardController);
-    DashboardController.$inject = ["DashboardService", "AppStateService", "WorkflowStateService",
-"AnalysisSetService", "Utils", "Constants", "$interval", "$scope"];
+    DashboardController.$inject = ["DashboardService","AnalysisSetService", "Utils", "Constants", "$interval", "$scope"];
 
 }());

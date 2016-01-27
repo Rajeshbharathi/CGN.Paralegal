@@ -49,11 +49,17 @@
         var hasEVShell = function () {
             return ($window.top !== $window);
         },
-        baseRoute = "/api/orgs/{orgid}/matters/{matterid}/datasets/{datasetid}/projects/{projectid}/",
+        baseRoute = "/api/search/",
         analysisSetsRoute = baseRoute + "analysissets/",
         projectRoute = baseRoute + "project/",
         /*TODO: refactor URLs into generic*/
         routeMapper = {
+            "GETREVIEWLISTROUTE":baseRoute + "reviews",
+            "GETSEARCHLISTROUTE": baseRoute,
+            "GETPARALEGALDETAILSROUTE": baseRoute + "paralegal",
+            "GETTOPTENAOPROUTE": baseRoute + "aop/top10",
+            "GETTOPTENCITYROUTE": baseRoute + "city/top10",
+            "GETTOPTENPARALEGALROUTE": baseRoute + "paralegal/top10",
             "AVAILABLEANALYSISSETSROUTE": analysisSetsRoute,
             "AVAILABLEDOCUMENTCOUNTROUTE": baseRoute+"availabledoccount",
             "CATEGORIZECONTROLSETROUTE": baseRoute+"controlset/categorize",
@@ -820,12 +826,7 @@
                 return obj;
             },
             getWebApiRouteString : function (methodName) {
-                var data = AppStateService.appState();
-                var str = routeMapper[methodName.toUpperCase()].replace("{orgid}", data.OrgId)
-                    .replace("{matterid}", data.MatterId)
-                    .replace("{datasetid}", data.DatasetId)
-                    .replace("{projectid}", data.ProjectId);
-
+                var str = routeMapper[methodName.toUpperCase()];
                 return str;
 
             },
@@ -835,7 +836,7 @@
 
             },
             getAnalysisSetType : function(str){
-                return analysisSets[str.toUpperCase()];
+                return analysisSets[str];
             },
             getPieSeriesCategoryObj:function(key,val){
                 return {

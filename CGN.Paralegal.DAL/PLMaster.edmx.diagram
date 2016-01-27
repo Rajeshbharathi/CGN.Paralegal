@@ -39,6 +39,8 @@
         <AssociationConnector Association="PLMasterModel.FK_Para_Legal_ID" ManuallyRouted="false" />
         <EntityTypeShape EntityType="PLMasterModel.PLByAOP" Width="1.5" PointX="6.375" PointY="0.75" />
         <EntityTypeShape EntityType="PLMasterModel.PLByCity" Width="1.5" PointX="8.375" PointY="0.75" />
+        <EntityTypeShape EntityType="PLMasterModel.Paralegal_Comment" Width="1.5" PointX="11.375" PointY="0.75" />
+        <AssociationConnector Association="PLMasterModel.FK_Paralegal_Comment_Para_legal" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

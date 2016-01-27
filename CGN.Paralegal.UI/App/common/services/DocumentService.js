@@ -53,6 +53,20 @@
                         throw err;
                     });
                 },
+
+                getSearchlist: function (postData, config) {
+                    config = config || {};
+                    var getSearchListRoute = Utils.getWebApiRouteString("getSearchListRoute");
+
+                    return WebApiClientService.post(getSearchListRoute + postData.SearchKeyword).then(function (response) {
+                        return response.data;
+                    }, function (err) {
+                        throw err;
+                    });
+                },
+
+
+               
                 autoCode: function (postData, fieldName, fieldValue, config) {
                     config = config || {};
                     var autoCodeRoute = Utils.getWebApiRouteString(postData.AnalysisSet.Type + "DocListRoute");

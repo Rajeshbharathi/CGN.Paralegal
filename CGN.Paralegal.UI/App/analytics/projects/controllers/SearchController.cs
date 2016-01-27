@@ -18,10 +18,94 @@ using Newtonsoft.Json.Linq;
 
 namespace CGN.Paralegal.UI
 {
+    using CGN.Paralegal.ClientContracts.Search;
     using CGN.Paralegal.ClientContracts.Analytics;
 
     public class SearchController : BaseApiController
     {
+        /// <summary>
+        /// Get saved searches
+        /// </summary>
+        /// <param name="orgId">The org identifier.</param>
+        /// <param name="matterId">The matter identifier.</param>
+        /// <param name="datasetId">The dataset identifier.</param>
+        /// <param name="projectId">The project identifier.</param>
+        /// <returns></returns>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic"),
+        Route("api/search/{searchkeyword}")]
+        public List<ParaLegalProfile> GetSearchList(string searchkeyword)
+        {
+            var client = GetAnalyticsRestClient();
+            var searchList = client.GetSearchList(searchkeyword);
+            return searchList;
+
+        }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic"),
+        Route("api/search/reviews/{paralegalid}")]
+        public List<string> GetReviewList(int paralegalid)
+        {
+            var client = GetAnalyticsRestClient();
+            var searchList = client.GetReviewList(paralegalid);
+            return searchList;
+
+        }
+
+        /// <summary>
+        /// Get saved searches
+        /// </summary>
+        /// <param name="orgId">The org identifier.</param>
+        /// <param name="matterId">The matter identifier.</param>
+        /// <param name="datasetId">The dataset identifier.</param>
+        /// <param name="projectId">The project identifier.</param>
+        /// <returns></returns>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic"),
+        Route("api/search/paralegal/{paralegalid}")]
+        public ParaLegalProfile GetParalegalDetails(int paralegalid)
+        {
+            var client = GetAnalyticsRestClient();
+            var paralegalDetails = client.GetParalegalDetails(paralegalid);
+            return paralegalDetails;
+
+        }
+        /// <summary>
+        /// Get saved searches
+        /// </summary>
+        /// <param name="orgId">The org identifier.</param>
+        /// <param name="matterId">The matter identifier.</param>
+        /// <param name="datasetId">The dataset identifier.</param>
+        /// <param name="projectId">The project identifier.</param>
+        /// <returns></returns>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic"),
+        Route("api/search/aop/top10")]
+        public List<AreaOfPractise> GetTopTenAOP()
+        {
+            var client = GetAnalyticsRestClient();
+            var toptenaop = client.GetTopTenAOP();
+            return toptenaop;
+
+        }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic"),
+        Route("api/search/city/top10")]
+        public List<Location> GetTopTenCity()
+        {
+            var client = GetAnalyticsRestClient();
+            var toptencity = client.GetTopTenCity();
+            return toptencity;
+
+        }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic"),
+        Route("api/search/paralegal/top10")]
+        public List<PLDetail> GetTopTenParaLegal()
+        {
+            var client = GetAnalyticsRestClient();
+            var toptenparalegal = client.GetTopTenParaLegal();
+            return toptenparalegal;
+
+        }
+
 
         /// <summary>
         /// Get saved searches

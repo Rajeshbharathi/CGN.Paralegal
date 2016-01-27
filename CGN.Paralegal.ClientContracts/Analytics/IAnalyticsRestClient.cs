@@ -3,9 +3,21 @@ namespace CGN.Paralegal.ClientContracts.Analytics
     using System.Collections.Generic;
 
     using Newtonsoft.Json.Linq;
+    using CGN.Paralegal.ClientContracts.Search;
 
     public interface IAnalyticsRestClient
     {
+        List<ParaLegalProfile> GetSearchList(string keyWord);
+
+        ParaLegalProfile GetParalegalDetails(int paralegalid);
+
+        List<string> GetReviewList(int paralegalid);
+
+        List<AreaOfPractise> GetTopTenAOP();
+
+        List<Location> GetTopTenCity();
+
+        List<PLDetail> GetTopTenParaLegal();
         /// <summary>
         /// Gets the analytic project.
         /// </summary>

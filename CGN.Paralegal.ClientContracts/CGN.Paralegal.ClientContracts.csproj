@@ -82,11 +82,22 @@
     <Compile Include="AppState\models\AppState.cs" />
     <Compile Include="AppState\IAppStateRestClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Search\models\Comment.cs" />
+    <Compile Include="Search\models\Contact.cs" />
+    <Compile Include="Search\models\ImageDetails.cs" />
+    <Compile Include="Search\models\ContactInfo.cs" />
+    <Compile Include="Search\models\ReviewList.cs" />
+    <Compile Include="Search\models\LocationDetails.cs" />
+    <Compile Include="Search\models\ParaLegalProfile.cs" />
+    <Compile Include="Search\models\Location.cs" />
+    <Compile Include="Search\models\PLDetail.cs" />
+    <Compile Include="Search\models\AreaOfPractise.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

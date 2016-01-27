@@ -14,7 +14,7 @@ namespace CGN.Paralegal.UI
     {
         private const string AspStateConStr = "ASPStateConnection";
         private static readonly Logger logger = LogManager.GetLogger("PCWeb");
-
+        private Startup startUp = new Startup();
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic")]
         public void Configuration(IAppBuilder app)
         {
@@ -31,6 +31,8 @@ namespace CGN.Paralegal.UI
             var hubConfiguration = new HubConfiguration { EnableDetailedErrors = true };
 
             app.MapSignalR(hubConfiguration);
+
+            startUp.ConfigureAuth(app);
         }
     }
 }

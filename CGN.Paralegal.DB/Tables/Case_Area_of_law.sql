@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Case_Area_of_law]
 (
-	[Case_area_of_law_id] INT NOT NULL PRIMARY KEY, 
+	[Case_area_of_law_id] INT NOT NULL PRIMARY KEY IDENTITY, 
     [case_id] INT NULL, 
     [law_id] INT NULL, 
     [Created_by] VARCHAR(50) NULL, 

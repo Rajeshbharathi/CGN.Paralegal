@@ -98,6 +98,9 @@
     <Compile Include="Location.cs">
       <DependentUpon>PLMaster.tt</DependentUpon>
     </Compile>
+    <Compile Include="Paralegal_Comment.cs">
+      <DependentUpon>PLMaster.tt</DependentUpon>
+    </Compile>
     <Compile Include="Para_legal.cs">
       <DependentUpon>PLMaster.tt</DependentUpon>
     </Compile>

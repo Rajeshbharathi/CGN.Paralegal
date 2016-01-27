@@ -10,6 +10,7 @@ namespace CGN.Paralegal.Mocks
     using System.Linq;
 
     using ClientContracts.Analytics;
+    using ClientContracts.Search;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Linq;
 
@@ -37,6 +38,15 @@ namespace CGN.Paralegal.Mocks
         private static TrainingSetSummary resultTrainingSetSummary = new TrainingSetSummary();
         private static int trainingSetCount = 0;
 
+        private ParaLegalProfile mockParalegaldetails;
+
+        private List<string> mockReviewList= new List<string>();
+
+        private List<AreaOfPractise> mockAOPList;
+
+        private List<Location> mockCityList;
+
+        private List<PLDetail> mockParaLegalList;
 
         private static List<List<int>> mockDiscrepancies;
 
@@ -60,10 +70,89 @@ namespace CGN.Paralegal.Mocks
             }
         }
 
+
+
         public List<AnalyticsWorkflowState> GetAnalyticWorkflowState(long matterId, long dataSetId, long projectId)
         {
 
             return MockWorkflowState.WorkflowState;
+        }
+
+        public List<ParaLegalProfile> GetSearchList(string keyWord)
+        {
+            List<ParaLegalProfile> paralegal = null;
+            return paralegal;
+
+        }
+
+        public List<String> GetReviewList(int paralegalid)
+        {
+            if (mockReviewList.Count == 0)
+            {
+                mockReviewList.Add("good");
+                mockReviewList.Add("bad");
+                //var resourceName = string.Format(CultureInfo.InvariantCulture, "{0}.reviews.json", MockDataNameSpace);
+
+                //var mockData = GetEmbeddedResource(resourceName);
+                //mockReviewList = JsonConvert.DeserializeObject<List<string>>(mockData);
+
+            }
+            return mockReviewList;
+        }
+
+        public ParaLegalProfile GetParalegalDetails(int paralegalid)
+        {
+            if (mockParalegaldetails == null)
+            {
+                var resourceName = string.Format(CultureInfo.InvariantCulture, "{0}.paralegal.json", MockDataNameSpace);
+
+                var mockData = GetEmbeddedResource(resourceName);
+                mockParalegaldetails = JsonConvert.DeserializeObject<ParaLegalProfile>(mockData);
+
+            }
+            return mockParalegaldetails;
+        }
+
+        public List<AreaOfPractise> GetTopTenAOP()
+        {
+            if (mockAOPList == null)
+            {
+                var resourceName = string.Format(CultureInfo.InvariantCulture, "{0}.toptenaops.json", MockDataNameSpace);
+
+                var mockData = GetEmbeddedResource(resourceName);
+                mockAOPList = JsonConvert.DeserializeObject<List<AreaOfPractise>>(mockData);
+
+            }
+            return mockAOPList;
+
+        }
+
+        public List<Location> GetTopTenCity()
+        {
+            if (mockCityList == null)
+            {
+                var resourceName = string.Format(CultureInfo.InvariantCulture, "{0}.toptencity.json", MockDataNameSpace);
+
+                var mockData = GetEmbeddedResource(resourceName);
+                mockCityList = JsonConvert.DeserializeObject<List<Location>>(mockData);
+
+            }
+            return mockCityList;
+
+        }
+
+        public List<PLDetail> GetTopTenParaLegal()
+        {
+            if (mockParaLegalList == null)
+            {
+                var resourceName = string.Format(CultureInfo.InvariantCulture, "{0}.toptenparalegal.json", MockDataNameSpace);
+
+                var mockData = GetEmbeddedResource(resourceName);
+                mockParaLegalList = JsonConvert.DeserializeObject<List<PLDetail>>(mockData);
+
+            }
+            return mockParaLegalList;
+
         }
 
         /// <summary>

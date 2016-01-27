@@ -78,6 +78,7 @@
     <Build Include="Tables\Law_firm_para_legal.sql" />
     <Build Include="Views\PLByAOP.sql" />
     <Build Include="Views\PLByCity.sql" />
+    <Build Include="Tables\Paralegal_Comment.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="cgi.para_legal.refactorlog" />

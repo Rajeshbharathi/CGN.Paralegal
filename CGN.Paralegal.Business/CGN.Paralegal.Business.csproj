@@ -119,8 +119,10 @@
     <Compile Include="..\Version\SharedAssemblyFileVersion.cs">
       <Link>Properties\SharedAssemblyFileVersion.cs</Link>
     </Compile>
+    <Compile Include="Analytics\AnalyticsBO.cs" />
     <Compile Include="Mapper\AutoMapperHelper.cs" />
     <Compile Include="Mapper\AutoMapperProfile.cs" />
+    <Compile Include="Paralegal\ParalegalBO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search\SearchBO.cs" />
   </ItemGroup>
@@ -162,9 +164,7 @@
     <None Include="packages.config" />
     <None Include="Properties\AssemblyNameKey.snk" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Paralegal\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

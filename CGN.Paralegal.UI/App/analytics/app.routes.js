@@ -12,7 +12,7 @@
         angular.extend({}, $routeProvider, {
             "when": function(path, route){
                 route.resolve = (route.resolve) ? route.resolve : {};
-                angular.extend(route.resolve, AppStateResolver);
+                //angular.extend(route.resolve, AppStateResolver);
                 $routeProvider.when(path, route);
                 return this;
             }
@@ -20,10 +20,10 @@
                 controller: "DashboardController",
                 controllerAs: "DashboardController",
                 templateUrl: "/app/analytics/projects/dashboard/AdminDashboardView.html"
-            }).when("/olddashboard", {
-                controller: "ProjectDashboardController",
-                controllerAs: "ProjectDashboardController",
-                templateUrl: "/app/analytics/projects/dashboard/ProjectDashboardView.html"
+            }).when("/search/:searchteam", {
+                controller: "SearchController",
+                controllerAs: "SearchController",
+                templateUrl: "/app/analytics/projects/dashboard/SearchResult.html"
             }).when("/wizard", {
                 controller: "ProjectWizardController",
                 controllerAs: "ProjectWizardController",
@@ -32,6 +32,10 @@
                 controller: "ProjectWizardController",
                 controllerAs: "ProjectWizardController",
                 templateUrl: "/app/analytics/projects/projectWizard/ProjectWizardView.html"
+            }).when("/paralegal/:paralegalid", {
+                controller: "ParalegalController",
+                controllerAs: "ParalegalController",
+                templateUrl: "/app/analytics/projects/dashboard/Paralegal.html"
             }).when("/dashboard", {
                 controller: "DashboardController",
                 controllerAs: "DashboardController",

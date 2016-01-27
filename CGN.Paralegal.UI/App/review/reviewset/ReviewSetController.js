@@ -5,8 +5,6 @@
 
     ReviewSetController = function(AnalysisSetService,DocumentService, AppStateService, Utils,Constants) {
         var vm,
-            isDocView = Utils.getRouteParam("to_view").toLowerCase().indexOf("doclist") === -1,
-            isAdminModule = Utils.getRouteParam("from_module").toLowerCase().indexOf("admin")!== -1,
             setType = Utils.getAnalysisSetType(Utils.getRouteParam("setType")),
             setId = Utils.getRouteParam("setId"),
             setRoundNumber = Utils.getRouteParam("setRound");
@@ -441,34 +439,7 @@
         };
 
         function getAvailableSets() {
-            AnalysisSetService.getAvailableAnalysisSets().then(function (data) {
-                var roundNumber = 1;
-                angular.forEach(data, function (obj, idx) {
-                    if (obj.Type.toUpperCase() === "TRAININGSET") {
-                        obj.CurrentRound = roundNumber;
-                        roundNumber += 1;
-                    }
-                    if (obj.Type.toUpperCase() === setType.toUpperCase()) {
-                        if (vm.reviewerConfiguration.currentSetBinderId === "0") {
-                            vm.currentAnalysisSet = obj;
-                            vm.reviewerConfiguration.currentSetArrayIndex = idx;
-                            vm.reviewerConfiguration.currentSetBinderId = obj.BinderId;
-                            vm.reviewerConfiguration.documentQueryContext.AnalysisSet = obj;
-                        } else {
-                            if (obj.BinderId === setId) {
-                                vm.currentAnalysisSet = obj;
-                                vm.reviewerConfiguration.currentSetArrayIndex = idx;
-                                vm.reviewerConfiguration.currentSetBinderId = obj.BinderId;
-                                vm.reviewerConfiguration.documentQueryContext.AnalysisSet = obj;
-                            }
-                        }
-
-                    }
-                });
-                vm.availableAnalysisSets = data;
-
-                getDoclist();
-            });
+            getDoclist();
         }
 
         vm.docListTitle = function () {

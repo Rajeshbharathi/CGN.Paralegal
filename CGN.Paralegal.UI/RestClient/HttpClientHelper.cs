@@ -23,7 +23,7 @@ namespace CGN.Paralegal.UI.RestClient
         /// <returns></returns>
         public static HttpResponseMessage Execute(string uri, Method method, object model = null)
         {
-            var sessionId = GetSessionId();
+            /*var sessionId = GetSessionId();
             if (string.IsNullOrWhiteSpace(sessionId))
             {
                 throw new HttpResponseException(HttpStatusCode.Unauthorized);
@@ -34,7 +34,14 @@ namespace CGN.Paralegal.UI.RestClient
             {
                 Authorization(client, cookieContainer, sessionId);
                 return SendRequest(client, uri, method, model);
+            }*/
+            var cookieContainer = new CookieContainer();
+            using (var handler = new HttpClientHandler { CookieContainer = cookieContainer })
+            using (var client = new HttpClient(handler))
+            {
+                return SendRequest(client, uri, method, model);
             }
+
         }
 
         /// <summary>

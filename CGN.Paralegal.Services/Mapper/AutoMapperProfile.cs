@@ -21,7 +21,7 @@
 using System;
 using AutoMapper;
 using CGN.Paralegal.BusinessEntities.Search;
-using CGN.Paralegal.SearchContracts.Search;
+using CGN.Paralegal.ServiceContracts.Search;
 namespace CGN.Paralegal.Services
 {
 	/// <summary>
@@ -50,6 +50,8 @@ namespace CGN.Paralegal.Services
             Mapper.CreateMap<BusinessEntities.Search.AreaOfPractise, ServiceContracts.Search.AreaOfPractise>();
 
             Mapper.CreateMap<BusinessEntities.Search.Location, ServiceContracts.Search.Location>();
+
+            Mapper.CreateMap<BusinessEntities.Search.PLDetail, ServiceContracts.Search.PLDetail>();
         } 
         #endregion
 

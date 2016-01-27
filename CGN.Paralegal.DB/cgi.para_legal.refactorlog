@@ -112,4 +112,11 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="Law_firm_para_legal_id" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="34732ec4-5167-4a4e-9dde-2c4863a53136" ChangeDateTime="01/26/2016 09:11:02">
+    <Property Name="ElementName" Value="[dbo].[Paralegal_Comment].[Paralegal_id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Paralegal_Comment]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Para_legal_id" />
+  </Operation>
 </Operations>

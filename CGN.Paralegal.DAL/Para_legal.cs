@@ -21,6 +21,7 @@ namespace CGN.Paralegal.DAL
             this.Para_Legal_Contact = new HashSet<Para_Legal_Contact>();
             this.Para_legal_cases = new HashSet<Para_legal_cases>();
             this.Para_Legal_Location = new HashSet<Para_Legal_Location>();
+            this.Paralegal_Comment = new HashSet<Paralegal_Comment>();
         }
     
         public int Para_legal_id { get; set; }
@@ -34,5 +35,6 @@ namespace CGN.Paralegal.DAL
         public virtual ICollection<Para_Legal_Contact> Para_Legal_Contact { get; set; }
         public virtual ICollection<Para_legal_cases> Para_legal_cases { get; set; }
         public virtual ICollection<Para_Legal_Location> Para_Legal_Location { get; set; }
+        public virtual ICollection<Paralegal_Comment> Paralegal_Comment { get; set; }
     }
 }

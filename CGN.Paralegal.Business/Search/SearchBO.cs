@@ -42,6 +42,42 @@ namespace CGN.Paralegal.Business.Search
                 new Converter<DAL.Location, BusinessEntities.Search.Location>(ConvertLocation));
         }
 
+        public static List<PLDetail> GetTop10PLs()
+        {
+            var plEntity = new PLMasterEntities();
+            var searchResults = plEntity.Para_legal.Take(10).ToList();
+
+            var plDetails = searchResults.ConvertAll<PLDetail>(fn =>
+            {
+                var plDetail = new PLDetail()
+                {
+                    ParalegalId = fn.Para_legal_id,
+                    Name = fn.Para_legal_name
+                };
+
+                return plDetail;
+            });
+            return plDetails; 
+
+        }
+
+        public static List<AreaOfPractise> GetTop10AOP()
+        {
+            var plEntity = new PLMasterEntities();
+            var searchResults = plEntity.Area_of_Law.Take(10).ToList();
+            var allaops = searchResults.ConvertAll<AreaOfPractise>(new Converter<Area_of_Law, AreaOfPractise>(ConvertAOP));
+            return allaops.Take<AreaOfPractise>(10).ToList<AreaOfPractise>();
+        }
+
+        public static List<BusinessEntities.Search.Location> GetTop10Cities()
+        {
+            var plEntity = new PLMasterEntities();
+            var searchResults = plEntity.Locations.Take(10).ToList();
+            var allCities = searchResults.ConvertAll<BusinessEntities.Search.Location>(
+                new Converter<DAL.Location, BusinessEntities.Search.Location>(ConvertLocation));
+            return allCities.Take<BusinessEntities.Search.Location>(10).ToList<BusinessEntities.Search.Location>();
+
+        }
         public static List<PLSearchResult> GetParalegalByAOP(PLSearchRequest srcRequest)
         {
             var plEntity = new PLMasterEntities();

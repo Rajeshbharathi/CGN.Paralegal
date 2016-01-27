@@ -49,6 +49,34 @@ namespace CGN.Paralegal.Services.Controllers
                 new Converter<BusinessEntities.Search.Location, Location>
                     (ConvertToSrcLocation));
         }
+
+        [Route("api/search/gettop10aop")]
+        public List<AreaOfPractise> GetTop10AOPs()
+        {
+            var srcResult = SearchBO.GetTop10AOP();
+            return srcResult.ConvertAll<AreaOfPractise>(
+                new Converter<BusinessEntities.Search.AreaOfPractise, AreaOfPractise>
+                    (ConvertToSrcAOP));
+        }
+
+        [Route("api/search/gettop10cities")]
+        public List<Location> GetTop10Cities()
+        {
+            var srcResult = SearchBO.GetTop10Cities();
+            return srcResult.ConvertAll<Location>(
+                new Converter<BusinessEntities.Search.Location, Location>
+                    (ConvertToSrcLocation));
+        }
+
+        [Route("api/search/gettop10pls")]
+        public List<PLDetail> GetTop10PLs()
+        {
+            var srcResult = SearchBO.GetTop10PLs();
+            return srcResult.ConvertAll<PLDetail>(
+                new Converter<BusinessEntities.Search.PLDetail, PLDetail>
+                    (ConvertToPLDetail));
+        }
+
         private AreaOfPractise ConvertToSrcAOP(BusinessEntities.Search.AreaOfPractise AOP)
         {
             return AOP.toAOP();
@@ -57,12 +85,15 @@ namespace CGN.Paralegal.Services.Controllers
         {
             return location.toLocation();
         }
-        private PLSearchResult ConvertToSearchResult( CGN.Paralegal.BusinessEntities.Search.PLSearchResult searchResult)
+        private PLDetail ConvertToPLDetail( CGN.Paralegal.BusinessEntities.Search.PLDetail searchResult)
+        {
+            return searchResult.toPLDetail();
+        }
+
+        private PLSearchResult ConvertToSearchResult(CGN.Paralegal.BusinessEntities.Search.PLSearchResult searchResult)
         {
             return searchResult.toSearchResult();
         }
-
-
 
     }
 }

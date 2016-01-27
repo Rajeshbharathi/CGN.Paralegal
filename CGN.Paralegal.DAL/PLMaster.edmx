@@ -15,7 +15,7 @@
           <Key>
             <PropertyRef Name="Answer_id" />
           </Key>
-          <Property Name="Answer_id" Type="int" Nullable="false" />
+          <Property Name="Answer_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Answer" Type="varchar(max)" />
           <Property Name="Question_id" Type="int" />
           <Property Name="Legal_information_id" Type="int" />
@@ -28,7 +28,7 @@
           <Key>
             <PropertyRef Name="Law_id" />
           </Key>
-          <Property Name="Law_id" Type="int" Nullable="false" />
+          <Property Name="Law_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Law_name" Type="varchar" MaxLength="50" />
           <Property Name="Created by" Type="varchar" MaxLength="50" />
           <Property Name="Created at" Type="datetime" />
@@ -37,7 +37,7 @@
           <Key>
             <PropertyRef Name="Case_area_of_law_id" />
           </Key>
-          <Property Name="Case_area_of_law_id" Type="int" Nullable="false" />
+          <Property Name="Case_area_of_law_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="case_id" Type="int" />
           <Property Name="law_id" Type="int" />
           <Property Name="Created_by" Type="varchar" MaxLength="50" />
@@ -47,7 +47,7 @@
           <Key>
             <PropertyRef Name="case_location_id" />
           </Key>
-          <Property Name="case_location_id" Type="int" Nullable="false" />
+          <Property Name="case_location_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="case_id" Type="int" />
           <Property Name="location_id" Type="int" />
           <Property Name="Created_by" Type="varchar" MaxLength="50" />
@@ -57,7 +57,7 @@
           <Key>
             <PropertyRef Name="Case_id" />
           </Key>
-          <Property Name="Case_id" Type="int" Nullable="false" />
+          <Property Name="Case_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Case_description" Type="varchar" MaxLength="50" />
           <Property Name="Created_by" Type="varchar" MaxLength="50" />
           <Property Name="Created_at" Type="datetime" />
@@ -66,7 +66,7 @@
           <Key>
             <PropertyRef Name="Law_firm_id" />
           </Key>
-          <Property Name="Law_firm_id" Type="int" Nullable="false" />
+          <Property Name="Law_firm_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Type" Type="varchar" MaxLength="50" />
           <Property Name="Created_by" Type="varchar" MaxLength="50" />
           <Property Name="Created_at" Type="datetime" />
@@ -75,7 +75,7 @@
           <Key>
             <PropertyRef Name="Law_firm_para_legal_id" />
           </Key>
-          <Property Name="Law_firm_para_legal_id" Type="int" Nullable="false" />
+          <Property Name="Law_firm_para_legal_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Law_firm_id" Type="int" />
           <Property Name="Para_legal_id" Type="int" />
           <Property Name="Created_by" Type="varchar" MaxLength="50" />
@@ -85,7 +85,7 @@
           <Key>
             <PropertyRef Name="Legal_information_id" />
           </Key>
-          <Property Name="Legal_information_id" Type="int" Nullable="false" />
+          <Property Name="Legal_information_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Legal_information_name" Type="varchar" MaxLength="50" />
           <Property Name="Blogs" Type="varchar(max)" />
           <Property Name="Created_by" Type="varchar" MaxLength="50" />
@@ -95,7 +95,7 @@
           <Key>
             <PropertyRef Name="Location_id" />
           </Key>
-          <Property Name="Location_id" Type="int" Nullable="false" />
+          <Property Name="Location_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Location_name" Type="varchar" MaxLength="50" />
           <Property Name="Created_by" Type="varchar" MaxLength="50" />
           <Property Name="Created_at" Type="datetime" />
@@ -104,7 +104,7 @@
           <Key>
             <PropertyRef Name="Para_legal_id" />
           </Key>
-          <Property Name="Para_legal_id" Type="int" Nullable="false" />
+          <Property Name="Para_legal_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Para_legal_name" Type="varchar" MaxLength="50" />
           <Property Name="Short desc" Type="varchar" MaxLength="50" />
           <Property Name="Created_by" Type="varchar" MaxLength="50" />
@@ -114,7 +114,7 @@
           <Key>
             <PropertyRef Name="Para_legal_case_id" />
           </Key>
-          <Property Name="Para_legal_case_id" Type="int" Nullable="false" />
+          <Property Name="Para_legal_case_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Para_legal_id" Type="int" />
           <Property Name="case_id" Type="int" />
           <Property Name="Created_by" Type="varchar" MaxLength="50" />
@@ -124,7 +124,7 @@
           <Key>
             <PropertyRef Name="Para_legal_Contact_id" />
           </Key>
-          <Property Name="Para_legal_Contact_id" Type="int" Nullable="false" />
+          <Property Name="Para_legal_Contact_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Para_legal_id" Type="int" />
           <Property Name="Email_id" Type="varchar" MaxLength="50" />
           <Property Name="Phone" Type="int" />
@@ -138,7 +138,7 @@
           <Key>
             <PropertyRef Name="Para_Legal_Law_Area_id" />
           </Key>
-          <Property Name="Para_Legal_Law_Area_id" Type="int" Nullable="false" />
+          <Property Name="Para_Legal_Law_Area_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Para_legal_id" Type="int" />
           <Property Name="Law_id" Type="int" />
           <Property Name="Created_by" Type="varchar" MaxLength="50" />
@@ -148,17 +148,31 @@
           <Key>
             <PropertyRef Name="Para_Legal_Location_id" />
           </Key>
-          <Property Name="Para_Legal_Location_id" Type="int" Nullable="false" />
+          <Property Name="Para_Legal_Location_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Para_legal_id" Type="int" />
           <Property Name="location_id" Type="int" />
           <Property Name="Created_by" Type="varchar" MaxLength="50" />
           <Property Name="Created_at" Type="datetime" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Paralegal.dbo.Paralegal_Comment' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Paralegal_Comment">
+          <Key>
+            <PropertyRef Name="CommentID" />
+          </Key>
+          <Property Name="CommentID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Para_legal_id" Type="int" Nullable="false" />
+          <Property Name="CommentText" Type="varchar(max)" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="LastUpdatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="LastUpdatedDate" Type="datetime" />
+        </EntityType>
         <EntityType Name="Question">
           <Key>
             <PropertyRef Name="Question_id" />
           </Key>
-          <Property Name="Question_id" Type="int" Nullable="false" />
+          <Property Name="Question_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Question" Type="varchar" MaxLength="200" />
           <Property Name="Legal_information_id" Type="int" />
           <Property Name="Created_by" Type="varchar" MaxLength="50" />
@@ -167,7 +181,7 @@
           <Property Name="Last_Updated_at" Type="datetime" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PLMaster.dbo.PLByAOP' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'Paralegal.dbo.PLByAOP' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PLByAOP">
           <Key>
             <PropertyRef Name="Para_legal_id" />
@@ -178,7 +192,7 @@ warning 6002: The table/view 'PLMaster.dbo.PLByAOP' does not have a primary key 
           <Property Name="Law_name" Type="varchar" MaxLength="50" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PLMaster.dbo.PLByCity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'Paralegal.dbo.PLByCity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PLByCity">
           <Key>
             <PropertyRef Name="Para_legal_id" />
@@ -368,6 +382,18 @@ warning 6002: The table/view 'PLMaster.dbo.PLByCity' does not have a primary key
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Paralegal_Comment_Para_legal">
+          <End Role="Para_legal" Type="Self.Para_legal" Multiplicity="1" />
+          <End Role="Paralegal_Comment" Type="Self.Paralegal_Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Para_legal">
+              <PropertyRef Name="Para_legal_id" />
+            </Principal>
+            <Dependent Role="Paralegal_Comment">
+              <PropertyRef Name="Para_legal_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Question_Legal_info">
           <End Role="Legal_information" Type="Self.Legal_information" Multiplicity="0..1" />
           <End Role="Question" Type="Self.Question" Multiplicity="*" />
@@ -397,6 +423,17 @@ warning 6002: The table/view 'PLMaster.dbo.PLByCity' does not have a primary key
           <EntitySet Name="Para_Legal_Law_Area" EntityType="Self.Para_Legal_Law_Area" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Para_Legal_Location" EntityType="Self.Para_Legal_Location" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Question" EntityType="Self.Question" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Paralegal_Comment" EntityType="Self.Paralegal_Comment" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Paralegal_Comment].[CommentID] AS [CommentID], 
+    [Paralegal_Comment].[Para_legal_id] AS [Para_legal_id], 
+    [Paralegal_Comment].[CommentText] AS [CommentText], 
+    [Paralegal_Comment].[CreatedBy] AS [CreatedBy], 
+    [Paralegal_Comment].[CreatedDate] AS [CreatedDate], 
+    [Paralegal_Comment].[LastUpdatedBy] AS [LastUpdatedBy], 
+    [Paralegal_Comment].[LastUpdatedDate] AS [LastUpdatedDate]
+    FROM [dbo].[Paralegal_Comment] AS [Paralegal_Comment]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="PLByAOP" EntityType="Self.PLByAOP" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [PLByAOP].[Para_legal_id] AS [Para_legal_id], 
@@ -472,6 +509,10 @@ warning 6002: The table/view 'PLMaster.dbo.PLByCity' does not have a primary key
           <AssociationSet Name="FK_Para_Legal_Location" Association="Self.FK_Para_Legal_Location">
             <End Role="Location" EntitySet="Location" />
             <End Role="Para_Legal_Location" EntitySet="Para_Legal_Location" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Paralegal_Comment_Para_legal" Association="Self.FK_Paralegal_Comment_Para_legal">
+            <End Role="Para_legal" EntitySet="Para_legal" />
+            <End Role="Paralegal_Comment" EntitySet="Paralegal_Comment" />
           </AssociationSet>
           <AssociationSet Name="FK_Question_Legal_info" Association="Self.FK_Question_Legal_info">
             <End Role="Legal_information" EntitySet="Legal_information" />
@@ -609,6 +650,7 @@ warning 6002: The table/view 'PLMaster.dbo.PLByCity' does not have a primary key
           <NavigationProperty Name="Para_Legal_Contact" Relationship="Self.FK_Para_Legal_Contact" FromRole="Para_legal" ToRole="Para_Legal_Contact" />
           <NavigationProperty Name="Para_legal_cases" Relationship="Self.FK_Para_legal_details" FromRole="Para_legal" ToRole="Para_legal_cases" />
           <NavigationProperty Name="Para_Legal_Location" Relationship="Self.FK_Para_Legal_ID" FromRole="Para_legal" ToRole="Para_Legal_Location" />
+          <NavigationProperty Name="Paralegal_Comment" Relationship="PLMasterModel.FK_Paralegal_Comment_Para_legal" FromRole="Para_legal" ToRole="Paralegal_Comment" />
         </EntityType>
         <EntityType Name="Para_legal_cases">
           <Key>
@@ -950,6 +992,11 @@ warning 6002: The table/view 'PLMaster.dbo.PLByCity' does not have a primary key
           </AssociationSet>
           <EntitySet Name="PLByAOPs" EntityType="PLMasterModel.PLByAOP" />
           <EntitySet Name="PLByCities" EntityType="PLMasterModel.PLByCity" />
+          <EntitySet Name="Paralegal_Comment" EntityType="PLMasterModel.Paralegal_Comment" />
+          <AssociationSet Name="FK_Paralegal_Comment_Para_legal" Association="PLMasterModel.FK_Paralegal_Comment_Para_legal">
+            <End Role="Para_legal" EntitySet="Para_legal" />
+            <End Role="Paralegal_Comment" EntitySet="Paralegal_Comment" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="PLByAOP">
           <Key>
@@ -969,6 +1016,31 @@ warning 6002: The table/view 'PLMaster.dbo.PLByCity' does not have a primary key
           <Property Name="Short_desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Location_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="Paralegal_Comment">
+          <Key>
+            <PropertyRef Name="CommentID" />
+          </Key>
+          <Property Name="CommentID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CommentText" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="Para_legal_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Para_legal" Relationship="PLMasterModel.FK_Paralegal_Comment_Para_legal" FromRole="Paralegal_Comment" ToRole="Para_legal" />
+        </EntityType>
+        <Association Name="FK_Paralegal_Comment_Para_legal">
+          <End Type="PLMasterModel.Para_legal" Role="Para_legal" Multiplicity="1" />
+          <End Type="PLMasterModel.Paralegal_Comment" Role="Paralegal_Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Para_legal">
+              <PropertyRef Name="Para_legal_id" />
+            </Principal>
+            <Dependent Role="Paralegal_Comment">
+              <PropertyRef Name="Para_legal_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1169,6 +1241,19 @@ warning 6002: The table/view 'PLMaster.dbo.PLByCity' does not have a primary key
                 <ScalarProperty Name="Short_desc" ColumnName="Short desc" />
                 <ScalarProperty Name="Para_legal_name" ColumnName="Para_legal_name" />
                 <ScalarProperty Name="Para_legal_id" ColumnName="Para_legal_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Paralegal_Comment">
+            <EntityTypeMapping TypeName="PLMasterModel.Paralegal_Comment">
+              <MappingFragment StoreEntitySet="Paralegal_Comment">
+                <ScalarProperty Name="Para_legal_id" ColumnName="Para_legal_id" />
+                <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CommentText" ColumnName="CommentText" />
+                <ScalarProperty Name="CommentID" ColumnName="CommentID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

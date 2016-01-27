@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Para_Legal_Contact]
 (
-	[Para_legal_Contact_id] INT NOT NULL PRIMARY KEY, 
+	[Para_legal_Contact_id] INT NOT NULL PRIMARY KEY IDENTITY, 
     [Para_legal_id] INT NULL, 
     [Email_id] VARCHAR(50) NULL, 
     [Phone] INT NULL, 

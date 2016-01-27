@@ -56,10 +56,15 @@
                 "~/App/common/services/AnalysisSetService.js",
                 "~/App/common/services/DocumentService.js",
                 "~/App/common/services/WorkflowStateService.js",
+                "~/App/common/services/ParalegalService.js",
                 "~/App/analytics/projects/projectWizard/ProjectWizardController.js",
                 "~/App/common/controllers/DashboardController.js",
                 "~/App/common/controllers/ControlSetController.js",
+                "~/App/common/controllers/SearchController.js",
                 "~/App/common/controllers/TrainingSetController.js",
+                "~/App/common/controllers/HeaderController.js",
+                "~/App/common/controllers/ParalegalController.js",
+                "~/App/review/reviewset/ReviewSetController.js",
                 "~/App/common/controllers/VerificationSetController.js");
 
             bundle.Transforms.Clear();

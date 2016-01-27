@@ -19,7 +19,7 @@ using System;
 using AutoMapper;
 using System.Collections.Generic;
 using CGN.Paralegal.BusinessEntities.Search;
-using CGN.Paralegal.SearchContracts.Search;
+using CGN.Paralegal.ServiceContracts.Search;
 using CGN.Paralegal.Infrastructure.ExceptionManagement;
 
 namespace CGN.Paralegal.Services
@@ -59,6 +59,11 @@ namespace CGN.Paralegal.Services
         public static ServiceContracts.Search.Location toLocation(this BusinessEntities.Search.Location location)
         {
             return Mapper.Map<BusinessEntities.Search.Location, ServiceContracts.Search.Location>(location);
+        }
+
+        public static ServiceContracts.Search.PLDetail toPLDetail(this BusinessEntities.Search.PLDetail plDetail)
+        {
+            return Mapper.Map<BusinessEntities.Search.PLDetail, ServiceContracts.Search.PLDetail>(plDetail);
         }
     }
 }

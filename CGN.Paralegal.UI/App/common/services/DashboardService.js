@@ -24,6 +24,31 @@
             value: "5"
         }],
 
+         
+         getTopTenAOP = function () {
+             var url =  Utils.getWebApiRouteString("gettoptenaoproute");
+             return WebApiClientService.get(url).then(function (result) {
+                 return result.data;
+             }, function (err) {
+                 throw err;
+             });
+         },
+         getTopTenCity = function () {
+             var url = Utils.getWebApiRouteString("gettoptencityroute");
+             return WebApiClientService.get(url).then(function (result) {
+                 return result.data;
+             }, function (err) {
+                 throw err;
+             });
+         },
+         getTopTenParaLegal = function () {
+             var url = Utils.getWebApiRouteString("gettoptenparalegalroute");
+             return WebApiClientService.get(url).then(function (result) {
+                 return result.data;
+             }, function (err) {
+                 throw err;
+             });
+         },
         getDashboardDetails = function (config) {
             config=config || {};
             var url = Utils.getWebApiRouteString("dashboardDetailsRoute");
@@ -139,7 +164,10 @@
             getAvailableDocumentCount:getAvailableDocumentCount,
             validateProjectInfo: validateProjectInfo,
             validatePredictionCoding: validatePredictionCoding,
-            deleteProject:deleteProject
+            deleteProject:deleteProject,
+            getTopTenAOP: getTopTenAOP,
+            getTopTenCity: getTopTenCity,
+            getTopTenParaLegal: getTopTenParaLegal
         };
     };
 

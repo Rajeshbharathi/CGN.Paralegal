@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Case_location]
 (
-	[case_location_id] INT NOT NULL PRIMARY KEY, 
+	[case_location_id] INT NOT NULL PRIMARY KEY IDENTITY, 
     [case_id] INT NULL, 
     [location_id] INT NULL, 
     [Created_by] VARCHAR(50) NULL, 

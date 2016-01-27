@@ -43,5 +43,6 @@ namespace CGN.Paralegal.DAL
         public virtual DbSet<Question> Questions { get; set; }
         public virtual DbSet<PLByAOP> PLByAOPs { get; set; }
         public virtual DbSet<PLByCity> PLByCities { get; set; }
+        public virtual DbSet<Paralegal_Comment> Paralegal_Comment { get; set; }
     }
 }

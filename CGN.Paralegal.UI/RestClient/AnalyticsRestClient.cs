@@ -21,12 +21,67 @@ using Newtonsoft.Json.Linq;
 namespace CGN.Paralegal.UI.RestClient
 {
     using ClientContracts.Analytics;
+    using ClientContracts.Search;
 
     public class AnalyticsRestClient : IAnalyticsRestClient
     {
         const string AnalyticsService = "AnalyticsService";
         const string EvWebApi = "EvWebApi";
 
+
+        public List<ParaLegalProfile> GetSearchList(string keyWord)
+        {
+            List<ParaLegalProfile> paralegal = null;
+            return paralegal;
+
+        }
+        public ParaLegalProfile GetParalegalDetails(int paralegalid)
+        {
+            ParaLegalProfile paralegal = null;
+            return paralegal;
+        }
+
+        public List<string> GetReviewList(int paralegalid)
+        {
+            List<string> review = null;
+            return review;
+        }
+
+        public List<AreaOfPractise> GetTopTenAOP()
+        {
+            var serviceUri = ConfigurationManager.AppSettings.Get(EvWebApi);
+            var uri = string.Format(CultureInfo.InvariantCulture, "{0}search/gettop10aop", serviceUri);
+
+            var response = HttpClientHelper.Execute(uri, Method.Get);
+            var json = response.Content.ReadAsStringAsync().Result;
+            var jObj = JArray.Parse(json);
+            return jObj.ToObject<List<AreaOfPractise>>();            
+        }
+
+        public List<Location> GetTopTenCity()
+        {
+            var serviceUri = ConfigurationManager.AppSettings.Get(EvWebApi);
+            var uri = string.Format(CultureInfo.InvariantCulture, "{0}search/gettop10cities", serviceUri);
+
+            var response = HttpClientHelper.Execute(uri, Method.Get);
+            var json = response.Content.ReadAsStringAsync().Result;
+            var jObj = JArray.Parse(json);
+            return jObj.ToObject<List<Location>>();    
+        }
+
+        public List<PLDetail> GetTopTenParaLegal()
+        {
+            var serviceUri = ConfigurationManager.AppSettings.Get(EvWebApi);
+            var uri = string.Format(CultureInfo.InvariantCulture, "{0}search/gettop10pls", serviceUri);
+
+            var response = HttpClientHelper.Execute(uri, Method.Get);
+            var json = response.Content.ReadAsStringAsync().Result;
+            var jObj = JArray.Parse(json);
+
+            
+            return jObj.ToObject<List<PLDetail>>();    
+
+        }
         /// <summary>
         /// Gets the analytic project.
         /// </summary>

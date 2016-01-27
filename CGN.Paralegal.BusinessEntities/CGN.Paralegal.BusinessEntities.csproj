@@ -99,7 +99,10 @@
     <Compile Include="ErrorEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search\AreaOfPractise.cs" />
+    <Compile Include="Search\Comment.cs" />
+    <Compile Include="Search\Contact.cs" />
     <Compile Include="Search\Location.cs" />
+    <Compile Include="Search\PLDetail.cs" />
     <Compile Include="Search\PLSearchRequest.cs" />
     <Compile Include="Search\PLSearchResult.cs" />
     <Compile Include="Search\SearchType.cs" />

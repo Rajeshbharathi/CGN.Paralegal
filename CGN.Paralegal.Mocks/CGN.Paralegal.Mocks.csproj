@@ -111,6 +111,21 @@
   <ItemGroup>
     <EmbeddedResource Include="MockData\matter_1-dataset_1-project_1-additionaltrainingsetdocuments.json" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MockData\toptenaops.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MockData\toptenparalegal.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MockData\toptencity.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MockData\paralegal.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MockData\reviews.json" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

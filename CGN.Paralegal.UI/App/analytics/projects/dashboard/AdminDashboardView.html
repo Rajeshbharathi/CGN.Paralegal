@@ -1,101 +1,52 @@
 ﻿<div id="dashboard" class="panel-body dashboard-heading">
-    <div class="row">
-        <div class="col-xs-12">
-            <h1 class="project-title">{{DashboardController.dashboardDetails.Name}}</h1>
-            <div class="project-actions">
-                <i id="addDocumentstoProject"
-                   class="fa fa-plus-circle fa-2x margin-right-10"
-                   ng-show="DashboardController.showAddDocumentMenu"
-                   ng-click="DashboardController.addDocument()"
-                   title="{{DashboardController.localized.AddDocumentstoProject}}">
-                </i>
-
-                <!--<i id="predictControlset"
-                    class="fa fa-files-o fa-2x margin-right-10"
-                    ng-show="DashboardController.showPredictControlsetMenu"
-                    ng-click="DashboardController.categorizeControlSet()"
-                    title="{{DashboardController.localized.PredictControlset}}">
-                </i>-->
-
-                <i id="deleteProject"
-                   class="fa fa-trash fa-2x"
-                   ng-click="DashboardController.popupDeleteProject()"
-                   title="{{DashboardController.localized.DeleteProject}}"></i>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-12">
-            <h5>
-                <span id="totalDocumentCount" class="margin-right-5">
-                    {{DashboardController.dashboardDetails.TotalDocumentCount|number:0}} {{DashboardController.localized.TotalDocuments | lowercase}}
-                </span>
-                |
-                <a id="viewAllDocuments" class="margin-left-5"
-                   ng-click="DashboardController.viewAllDocs()"
-                   href="javascript:void(0)">
-                    {{DashboardController.localized.ViewAllDocuments}}
-                </a>
-
-            </h5>
-        </div>
-    </div>
+  
+        <div ng-include="'/App/analytics/projects/dashboard/Header.html'"></div>
+    
 
     <br />
 
     <div class="row text-center">
-        <div class="col-xs-4">
-            <a href="javascript:void(0)" id="controlSetTab"
-               ng-click="DashboardController.tabClick('controlset')">
-                <span ng-class="DashboardController.isActiveTab('controlset') ? 'active-tab':
-                    (DashboardController.enableControlSet() ? 'enabled-tab' : 'disabled-tab')">
-                    {{DashboardController.localized.ControlSet}}
-                </span>
-            </a>
-            <div ng-show="DashboardController.activeTab == 'controlset'" class="controlset-navbar"></div>
+        <div class="col-lg-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Top Area of Practices</h3>
+                </div>
+               <div>
+                   <p ng-repeat="aop in DashboardController.topTenAOP" ng-class-odd="'odd'" ng-class-even="'even'">
+                        <a ng-click="DashboardController.goToSearchResult(aop.AOPName)">{{aop.AOPName}}</a>
+                   </p>
+                </div>
+            </div>
         </div>
-        <div class="col-xs-4">
-            <a id="trainingSetTab" href="javascript:void(0)"
-               ng-click="DashboardController.tabClick('trainingset')">
-                <span ng-class="DashboardController.isActiveTab('trainingset') ? 'active-tab':
-                    (DashboardController.enableTrainingSet() ? 'enabled-tab' : 'disabled-tab')">
-                    {{DashboardController.localized.TrainingSet}}
-                </span>
-            </a>
-            <div ng-show="DashboardController.activeTab == 'trainingset'" class="trainingset-navbar"></div>
+
+        <div class="col-lg-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Top Locations</h3>
+                </div>
+                <div>
+                    <p ng-repeat="loc in DashboardController.topTenCity" ng-class-odd="'odd'" ng-class-even="'even'">
+                        <a ng-click="DashboardController.goToSearchResult(loc.LocationName)"> {{loc.LocationName}}</a>
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="col-xs-4">
-            <a href="javascript:void(0)" id="verificationSetTab"
-               ng-click="DashboardController.tabClick('verificationset')">
-                <span ng-class="DashboardController.isActiveTab('verificationset') ? 'active-tab':
-                    (DashboardController.enableVerificationSet() ? 'enabled-tab' : 'disabled-tab')">
-                    {{DashboardController.localized.VerificationSet}}
-                </span>
-            </a>
-            <div ng-show="DashboardController.activeTab == 'verificationset'" class="verificationset-navbar"></div>
-        </div>
-    </div>
-</div>
-<div>
-    <!--Control set tab goes here-->
-    <div id="tabControlset" ng-show="DashboardController.activeTab == 'controlset'">
-        <div ng-controller="ControlSetController as ControlSetController">
-            <div ng-include="'/App/analytics/projects/dashboard/AdminControlSetView.html'"></div>
-        </div>
-    </div>
-    <!--Training set tab goes here-->
-    <div id="trainingSetTab" ng-show="DashboardController.activeTab == 'trainingset'">
-        <div ng-controller="TrainingSetController as TrainingSetController">
-            <div ng-include="'/App/analytics/projects/dashboard/AdminTrainingSetView.html'"></div>
+
+        <div class="col-lg-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Top ParaLegals</h3>
+                </div>
+                <div>
+                    <p ng-repeat="paralegal in DashboardController.topTenParaLegal" ng-class-odd="'odd'" ng-class-even="'even'">
+                        <a ng-click="DashboardController.goToProfile(paralegal.ParaLegalID)"> {{paralegal.Name}}</a>
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
-    <!--Verification set tab goes here-->
-    <div id="tabVerificationset" ng-show="DashboardController.activeTab == 'verificationset'">
-        <div ng-controller="VerificationSetController as VerificationSetController">
-            <div ng-include="'/App/analytics/projects/dashboard/AdminVerificationSetView.html'"></div>
-        </div>
-    </div>
+
+    
 </div>
 
-<div ng-include="'/App/analytics/projects/modals/DeleteProjectView.html'"></div>
+
